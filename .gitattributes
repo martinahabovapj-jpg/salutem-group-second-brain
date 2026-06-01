@@ -1,0 +1,2 @@
+# Shell skripty musí mít LF konce řádků, ať fungují na macOS/Linuxu
+*.sh text eol=lf
