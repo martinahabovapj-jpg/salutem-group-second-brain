@@ -9,6 +9,7 @@ složce a má soubor `SKILL.md` s hlavičkou (`name`, `description`) a návodem.
 | Skill | K čemu slouží | Kdy se spustí |
 |-------|---------------|---------------|
 | [`freelo-projekt-z-prepisu`](freelo-projekt-z-prepisu/SKILL.md) | Z přepisu callu (porady, schůzky) postaví projekt ve Freelu — projekt, to-do listy, úkoly a podúkoly. Určuje, jak projekt strukturovat, pojmenovat a věrně zachytit realitu z callu. | Když zmíníš přepis/zápis z hovoru nebo řekneš „založ z toho projekt ve Freelu", „vytvoř to-do listy z callu" apod. |
+| [`freelo-rozpracovat-ukol-z-prepisu`](freelo-rozpracovat-ukol-z-prepisu/SKILL.md) | Vezme **jeden existující úkol** ve Freelu a z přepisu callu (+ nahrávky z Teams) k němu dopracuje podúkoly, výjimečně checklisty — kompletní cestu k cíli. Nezakládá nový projekt ani nové úkoly, pracuje uvnitř jednoho úkolu. | Když řekneš „dopracuj tenhle úkol", „doplň podúkoly k úkolu z callu", „rozpracuj úkol podle přepisu", „naplánuj kroky k tomuhle úkolu" apod. |
 
 ## Jak skilly nainstalovat do Claude Code
 
