@@ -1,109 +1,162 @@
 ---
-name: freelo-projekt-z-prepisu
-description: Použij tento skill VŽDY, když máš z přepisu callu (porady, schůzky, hovoru s kolegy) vytvořit projekt ve Freelu — tedy projekt, to-do listy, úkoly a podúkoly. Spouštěj ho kdykoli uživatel zmíní přepis, zápis z hovoru, "založ projekt", "udělej z toho projekt ve Freelu", "vytvoř to-do listy z callu" a podobně, i když to neřekne přesně takhle. Skill určuje, JAK se má projekt strukturovat, pojmenovat a jak věrně přepsat realitu z callu — samotné zakládání přes Freelo API řeší existující skript.
+name: freelo-rozpracovat-ukol-z-prepisu
+description: Použij tento skill VŽDY, když máš rozpracovat JEDEN existující úkol ve Freelu na podúkoly (a případně checklisty) na základě přepisu callu / schůzky a nahrávky z Teams. Spouštěj ho, když uživatel řekne něco jako "dopracuj tenhle úkol", "doplň podúkoly k úkolu z callu", "rozpracuj úkol podle přepisu", "naplánuj kroky k tomuhle úkolu" apod. — i když to neřekne přesně takhle. Na rozdíl od skillu freelo-projekt-z-prepisu tady NEZAKLÁDÁŠ nový projekt ani nové úkoly — pracuješ uvnitř jednoho konkrétního, již existujícího úkolu. Skill určuje JAK rozpracovat; samotné zakládání přes Freelo API řeší existující skript.
 ---
 
-# Tvorba projektu ve Freelu z přepisu callu
+# Rozpracování existujícího úkolu ve Freelu z přepisu callu
 
-Tento skill říká, jak z přepisu callu postavit projekt ve Freelu tak, aby vypadal, jako by ho založil zkušený projektový manažer, který na tom callu seděl — na míru našemu kontextu, kompletní, přehledný a okamžitě pochopitelný i pro člověka, který na callu nebyl.
+Tento skill říká, jak vzít **jeden konkrétní, už existující úkol** ve Freelu a na základě přepisu callu (+ nahrávky z Teams) k němu dopracovat podúkoly tak, aby z toho byla jasná, kompletní cesta k cíli — jako by ji rozkreslil zkušený projektový manažer, který byl na tom callu.
 
-Skill řeší jen **obsah a strukturu** projektu (jak přemýšlet, pojmenovávat, kolik toho dělat, jak věrně zachytit realitu). Samotné zakládání přes Freelo API obstará existující skript — tím se nezabývej.
+Sdílí filozofii se skillem `freelo-projekt-z-prepisu` (věrnost přepisu, lidské názvosloví, transparentní nejasnosti). Liší se **rozsahem**: nezakládáš projekt ani neplníš víc to-do listů — soustředíš se dovnitř jednoho úkolu.
+
+Skill řeší jen **obsah a strukturu**. Samotné zakládání přes Freelo API obstará existující skript — tím se nezabývej.
+
+## Typická situace
+
+Někdo nám dal zadání → z něj vznikl jeden úkol ve Freelu → my si s tím člověkem voláme, abychom zjistili detaily. Jsme tedy skoro vždy **na úplném začátku**: existuje jen ten jeden úkol a k němu je potřeba rozkreslit kroky. Prakticky nikdy není nic z toho hotové — nepředpokládej tedy splněné kroky a neřeš „co už je vyřešené".
 
 ## Hlavní princip: věrnost před vynalézavostí
 
-Nejdůležitější pravidlo celého skillu. Uživatel se na výstup potřebuje **spolehnout** — že je v projektu všechno tak, jak to na callu zaznělo, a že nic není tiše domyšlené nebo vynechané.
+Stejný princip jako u tvorby projektu. Uživatel se na výstup potřebuje **spolehnout** — že je tam všechno tak, jak na callu zaznělo, a nic není tiše domyšlené ani vynechané.
 
-Z toho plyne:
+- **Zachyť vše konkrétní z přepisu** — jména, termíny, čísla, konkrétní rozhodnutí, připomínky, insighty, varování. Když na callu padlo "tohle ještě musí schválit Milada", je z toho podúkol "Odsouhlasit návrh s Miladou", ne obecné "schválit".
+- **Nic si nevymýšlej.** Co v přepisu nezaznělo, do úkolu nepatří jako fakt.
+- **Co je nejasné, jde transparentně nahoru** (viz "Práce s nejasnostmi"), nikdy se neschovává do domyšleného podúkolu.
 
-- **Zachyť vše konkrétní z přepisu.** Jména lidí, termíny, čísla, konkrétní rozhodnutí, připomínky, insighty, varování — to všechno patří do projektu, ne jen obecná kostra. Když na callu padlo "tohle musí schválit Milada do pátku", výstupem je úkol "Odsouhlasit návrh s Miladou" s termínem, ne obecné "Schválit návrh".
-- **Nic si nevymýšlej.** Co v přepisu nezaznělo, do projektu nepatří jako fakt. Raději úplný a o něco delší projekt než krátký a osekaný — strop počtu úkolů (viz níže) nikdy nesmí jít proti úplnosti.
-- **Co je nejasné, jde transparentně nahoru** (viz sekce "Práce s nejasnostmi"). Nejistota se nikdy neschovává do domyšleného textu úkolu.
+Skill řídí *formu*, přepis řídí *obsah*. Když na callu zaznělo hodně, podúkolů bude víc — úplnost má přednost před stručností.
 
-Když přepis odporuje tomuto skillu jen zdánlivě (např. na callu zaznělo hodně věcí → vznikne hodně úkolů), má přednost věrnost přepisu. Skill řídí *formu*, přepis řídí *obsah*.
+## Rozsah: zůstáváš uvnitř jednoho úkolu
 
-## Struktura projektu
+**Defaultně přidáváš výhradně podúkoly do toho jednoho konkrétního existujícího úkolu.** Nezakládáš nové úkoly ani nesaháš do jiných úkolů v projektu.
 
-Postupuj vždy podle této logiky:
+**Výjimka — když z briefu logicky vyvstane potřeba úplně nového úkolu:** nezakládej ho sám. Nejdřív ho **navrhni** (název + proč by měl vzniknout + co by obsahoval) a **počkej na schválení**, jestli ho založit. Teprve po odsouhlasení.
 
-**Projekt = jedna iniciativa z callu.** Co se na callu řešilo jako jeden celek, je jeden projekt.
+## Povinné podúkoly (vždy)
 
-**To-do listy = fáze.** Projekt vždy rozděl do logických fází a každá fáze je samostatný to-do list. Fáze odvoď z toho, co dává smysl pro daný projekt — nemáme pevné checklisty. U většiny projektů přirozeně vyjde něco jako Příprava → Realizace → Testování/Pilot → Nasazení/Předání, ale neber to jako šablonu k vyplnění: pojmenuj a poskládej fáze podle reality konkrétního projektu. U menšího projektu klidně stačí méně fází.
+Ke každému rozpracovávanému úkolu **vždy** doplň tyto dva podúkoly — nezávisle na tom, co zaznělo na callu. Název i popis vlož přesně tak, jak je uvedeno níže.
 
-**Úkoly = konkrétní kroky uvnitř fáze.** Do každého to-do listu patří konkrétní, srozumitelné úkoly. Fázi už nese název seznamu, takže **nikdy nedávej fázi do názvu úkolu** — žádné `[Příprava] Sestavit seznam`. To je přesně ten nelidský styl, kterému se vyhýbáme. Správně je seznam "Příprava" a v něm úkol "Sestavit seznam konkurenčních objektů".
+### 1. Analýza podílníků
 
-**Podúkoly = jen tam, kde to dává smysl.** Selský rozum: když je úkol velký blok práce a chceš v něm vidět, že postupně logicky kráčíte k cíli, rozpad ho na pár podúkolů. U jednoduchého úkolu, který se udělá najednou, žádné podúkoly nedělej. Nedrob mechanicky.
+Popis podúkolu:
 
-## Granularita
+```
+Podílník  - jméno nebo oddělení
+Role (spolupracuje, akceptuje, pracuje s tím)  Vztah k procesu  Odpovědnost  Co očekává?
+Jaké vzniknou výstupy, kolik zhruba zaberou času
+```
 
-Cílem je přehlednost. Orientačně:
+### 2. Kvalifikace požadavku
 
-- **Na jeden to-do list (fázi) maximálně ~5–7 úkolů.** Když ti vychází víc, nejspíš jde o dvě fáze, nebo některé "úkoly" jsou ve skutečnosti podúkoly jednoho většího úkolu.
-- **Podúkoly dělej jen u velkých bloků** a i tam střídmě — pár kroků, které ukazují postup, ne vyčerpávající rozpis.
-- **Pozor na opačný extrém:** dřív vznikaly projekty s 15+ úkoly v jednom seznamu a fází nacpanou do názvů. Tomu se vyhýbáme strukturou (fáze = seznamy), ne tím, že bychom zahazovali obsah z callu.
+Popis podúkolu:
 
-Pokud je toho z callu opravdu hodně, projekt bude větší — ale pořád čistě rozdělený do fází se zvládnutelnými seznamy. Úplnost a přehlednost jdou ruku v ruce, ne proti sobě.
+```
+Ověřuje, jestli požadavek skutečně patří do AI Adopce a jestli máme dost informací, abychom s ním mohli pracovat. K tomu slouží checklist, cheat sheet a kalkulačka.
 
-## Pojmenování
+odkaz na kalkulačku: [AI-Hub-kalkulacka-business-case.html](https://pjcapital-my.sharepoint.com/:u:/g/personal/martina_habova_pj-capital_cz/IQA4ybv3_yyzTp8dpDbTmWZ7ASBvOCTxGnMS1EXd3zaJsYo?e=kvfHwA)
 
-**Název projektu** má fungovat jako okamžitý kontext. Řešíme hodně věcí napříč oblastmi a člověk si potřebuje hned vybavit, o co jde. Proto:
+ Checklist 
 
-- Krátký, lidský, úderný. Každý, kdo si ho přečte, hned ví, co se v projektu řeší.
-- Žádná fancy slova, žádné odbornosti, žádný akademický jazyk. Čistá lidština, k věci.
-- Klidně oblast/štítek na začátek pro rychlou orientaci, když to pomůže (např. "Pronájmy – Ceny pokojů podle konkurence").
+* Má požadavek AI nebo automatizační komponentu? Pokud ne, patří spíš do Alfy.
+* Je zadavatel uvnitř hranice služby, tedy nejde o externí síť?
+* Neexistuje už podobné řešení?
+* Máme zadavatele, oddělení, popis problému a popis současného ručního procesu?
+* Víme, jaká data a systémy jsou potřeba?
+* Víme, kdo budou uživatelé a kdo řešení schvaluje?
+* Pracuje se s ostrými klientskými daty? Pokud ano, požadavek dostává compliance flag.
+* Máme alespoň hrubý odhad přínosu a investice?
+Cheat sheet — devět otázek AI týmu
 
-**Příklady:**
+1. Jaký problém řešíme a komu vadí?
+2. Jak často se problém opakuje a kolika lidí se týká?
+3. Jak dnes vypadá ruční proces krok za krokem?
+4. Jaká data a systémy jsou potřeba? Jsou mezi nimi ostrá klientská data?
+5. Jaký je očekávaný dopad a jak složité bude řešení?
+6. Neexistuje už podobné řešení?
+7. Kdo je vlastník a kdo schvalovatel?
+8. Dá se udělat malý PoC?
+9. Je řešení vratné a jaké nese riziko?
+```
 
-- Dobře: `Ceny pokojů podle konkurence`
-- Dobře: `Pronájmy – Automatický sběr recenzí`
-- Špatně: `Implementace systému dynamické cenotvorby na bázi konkurenční analýzy` (akademické, dlouhé)
+Tyto dva podúkoly se do orientačního limitu ~10 podúkolů **nepočítají** — jsou povinný základ, ostatní podúkoly z přepisu přidáváš navíc.
 
-**Názvy úkolů** — neutrální infinitiv, spisovná čeština, lidská a srozumitelná. Tak, jak by úkol napsal kolega, ne stroj.
+## Hierarchie a kdy jít do hloubky
 
-- Dobře: `Sestavit seznam konkurenčních objektů`
-- Dobře: `Ověřit, že objekty mají ceny na vlastních webech`
-- Dobře: `Odsouhlasit návrh řešení s Miladou`
-- Špatně: `Client materials preparation` (cizí jazyk, neosobní)
-- Špatně: `[Příprava] Competitor objects list assembly task` (fáze v názvu, nelidské, anglicky)
+Pracuješ ve struktuře: **úkol → podúkoly → (výjimečně) checklist uvnitř podúkolu.**
 
-## Onboarding brief (shrnutí projektu)
+### Podúkoly (běžná úroveň)
 
-K projektu vždy připoj stručné shrnutí, podle kterého se za půl minuty naloďuje i člověk, který na callu nebyl. Umísti ho na začátek — buď do popisu projektu, nebo jako první to-do list pojmenovaný např. "Shrnutí projektu" / "O co jde".
+Hlavní výstup skillu. Rozkresli cestu k cíli úkolu na konkrétní podúkoly v lidské češtině. Použij podúkol vždy, když krok:
+- potřebuje vlastní odpovědnou osobu nebo vlastní termín, nebo
+- chceš u něj vidět postup (že se logicky kráčí k cíli).
 
-Brief je věcný, žádná vata. Obsahuje (jen to, co z callu skutečně zaznělo):
+Drž selský rozum: podúkol = smysluplný krok, ne mechanické drobení. Orientačně **3–7 podúkolů** bývá tak akorát; když ti vychází výrazně víc než ~10, je to signál, že úkol je ve skutečnosti spíš projekt — pak to vyřeš návrhem nového úkolu (viz výjimka výše), ne nekonečným seznamem.
 
-- **Proč** — důvod a motivace, co se má vyřešit.
-- **Co teď bolí** — současný problém / bolístka, kterou to má odstranit.
-- **Cíl** — čeho chceme dosáhnout.
-- **Kdo to chce / kdo to řeší** — zadavatel a lidé zapojení do realizace.
-- **Timeline** — termíny, milníky, deadline, pokud zazněly.
+### Checklist uvnitř podúkolu (třetí úroveň — výjimka)
 
-Když některý z těchto bodů na callu nezazněl, **nevymýšlej ho** — uveď ho s poznámkou, že chybí a je potřeba doplnit (viz dál). Lepší přiznané "timeline na callu nezazněl, doplnit" než smyšlené datum.
+Checklist použij **jen tehdy**, když platí všechno z tohoto:
+- jde o **drobné krok-za-krokem položky**, které dělá **tatáž osoba** jako podúkol,
+- položky **nepotřebují vlastní termín ani přiřazení jiné osobě**,
+- slouží jako „na nic nezapomenout" nebo jako definice hotovo (např. před nasazením textu projít: gramatika, tón, soulad se zadáním).
+
+**Jakmile krok potřebuje jiného člověka, vlastní deadline, nebo chceš vidět jeho postup v přehledu → je to podúkol, ne položka checklistu.** (Příklad: „Odsouhlasit text s marketingem" vtahuje jiný tým → patří to jako podúkol, ne jako položka checklistu.)
+
+Ve sporu volit jednodušší variantu — radši žádný checklist. Největší chyba je překomplikovat strukturu tak, že správa zabere víc času než práce. Nejdeš nikdy hlouběji než tři úrovně; potřeba čtvrté úrovně je signál pro návrh samostatného úkolu.
+
+## Existující úkol: název a popis
+
+Úkol už pojmenoval a popsal někdo jiný. Přesto:
+
+- **Smíš navrhnout přejmenování úkolu** do našeho jednotného stylu (lidská spisovná čeština, neutrální infinitiv, krátké, úderné, bez odborností) — kvůli konzistentnímu názvosloví napříč firmou. Ale jen jako **návrh ke schválení**, původní název nikdy nepřepisuj potichu.
+- **Smíš navrhnout doplnění popisu úkolu**, když z přepisu vyplyne důležitý kontext, který v popisu chybí — opět jako návrh, ne tiše.
+
+Příklady názvosloví (stejná logika jako u projektů):
+- Dobře: `Sestavit seznam konkurenčních objektů`, `Ověřit ceny na vlastních webech klienta`, `Odsouhlasit návrh řešení s Miladou`
+- Špatně: `[Příprava] Competitor list task`, `Client materials preparation` (fáze v názvu, cizí jazyk, neosobní)
+
+## Reference na nahrávku z Teams
+
+Vstupem je přepis (doc) a obvykle i odkaz na nahrávku schůzky z Teams. **S obsahem pracuj z přepisu** — interní Teams/SharePoint odkaz je chráněný přihlášením a neslouží jako zdroj dat.
+
+Odkaz na nahrávku ale **vlož do úkolu jako dohledatelnou referenci** tam, kde to logicky sedí — typicky do popisu úkolu nebo jako úvodní podúkol/poznámku „Zdroj: nahrávka z Teams (datum callu)". Ať se k originálu kdokoli časem proklikne.
 
 ## Práce s nejasnostmi
 
-Přepisy bývají věcné, ale ne vždy. Lidé myslí nahlas, odbíhají, něco řeknou a zase zavrhnou. Když něčemu nerozumíš, něco si v přepisu protiřečí, nebo si nejsi jistý — **finální slovo má vždy člověk, ne ty.** Princip:
+Přepisy bývají věcné, ale ne vždy. Když něčemu nerozumíš, něco si protiřečí, nebo si nejsi jistý — **finální slovo má vždy člověk.**
 
-- **Nejasnosti nikdy neschovávej do domyšleného úkolu.** Když nevíš, co přesně bylo myšleno, neudělej z toho sebejistě znějící úkol.
-- **Vytvoř sběrný to-do list** pojmenovaný např. `⚠️ K vyjasnění / doplnit`. Sem dej všechno, co jsi nepochytil, čemu jsi nerozuměl, co si protiřečilo nebo co v briefu chybí. Formuluj to jako konkrétní dotazy: "Na callu nezaznělo, kdo realizaci schvaluje — doplnit", "Padlo API i scraping, není jasné, pro co jste se rozhodli — rozhodnout". Uživatel pak na jednom místě vidí, kde rozhodnout, místo aby to lovil napříč úkoly.
-- **Drobnosti smíš navrhnout** podle nejlepšího úsudku zkušeného PM — ale viditelně označené jako návrh (např. úkol s poznámkou "(návrh – ověřit)"), ať je jasné, že to není z callu a člověk to má potvrdit nebo smazat.
+- **Nejasnosti neschovávej do domyšleného podúkolu.**
+- **Posbírej je viditelně** — buď jako zvlášť označené podúkoly `⚠️ K vyjasnění: …` přímo v úkolu, nebo do souhrnné poznámky na konci. Formuluj je jako konkrétní dotazy: „Na callu nezaznělo, kdo schvaluje finální verzi — doplnit", „Padlo řešení A i B, není jasné, pro co jste se rozhodli — rozhodnout".
+- **Drobnosti smíš navrhnout** podle nejlepšího úsudku, ale viditelně označené jako návrh (např. „(návrh – ověřit)"), ať je jasné, že to není z callu a člověk to potvrdí nebo smaže.
 
 ## Postup práce
 
-1. **Přečti celý přepis** a udělej si obraz: o co jde, proč, kdo, jaké padly konkrétní věci, rozhodnutí, termíny, jména, insighty.
-2. **Sestav onboarding brief** (proč / co bolí / cíl / kdo / timeline) z toho, co reálně zaznělo.
-3. **Navrhni fáze** projektu (= to-do listy) odvozené z reality projektu.
-4. **Naplň fáze úkoly** — konkrétními, v lidské češtině, neutrální infinitiv, se všemi konkrétními detaily z callu (jména, termíny, čísla, připomínky). U velkých bloků přidej pár podúkolů na sledování postupu.
-5. **Posbírej nejasnosti** do listu `⚠️ K vyjasnění / doplnit`.
-6. **Navrhni krátký, úderný název projektu.**
-7. **Ukaž uživateli návrh celé struktury a počkej na schválení**, teprve pak zakládej ve Freelu. Tím se předejde tomu, že vznikne projekt, který se pak pracně upravuje. Při náhledu uveď: název, fáze (to-do listy), úkoly a podúkoly v nich, brief a seznam nejasností.
+1. **Přečti existující úkol** (název, popis) a **celý přepis**. Udělej si obraz: jaký je cíl úkolu, co k němu na callu zaznělo — kroky, jména, termíny, čísla, rozhodnutí, připomínky, insighty.
+2. **Rozkresli podúkoly** — konkrétní kroky vedoucí k cíli úkolu, v lidské spisovné češtině, neutrální infinitiv, se všemi konkrétními detaily z callu. **Vždy přidej i dva povinné podúkoly** „Analýza podílníků" a „Kvalifikace požadavku" s přesnými popisy (viz „Povinné podúkoly").
+3. **Kde dává smysl, přidej checklist** dovnitř podúkolu (jen podle pravidel výše).
+4. **Vlož referenci na nahrávku z Teams** na logické místo.
+5. **Případně navrhni úpravu názvu / popisu úkolu** do jednotného stylu (jako návrh).
+6. **Posbírej nejasnosti** a chybějící informace viditelně.
+7. **Pokud z briefu vyplývá potřeba úplně nového úkolu**, připrav jeho návrh (nezakládej).
+8. **Ukaž uživateli náhradem celý návrh a počkej na schválení**, teprve pak zakládej ve Freelu.
+
+## Obsah náhledu před založením
+
+Ukaž uživateli vždy:
+- navržený (pře)název úkolu, je-li nějaký,
+- případnou navrženou úpravu popisu úkolu,
+- seznam podúkolů (a v nich checklisty, kde dávají smysl),
+- referenci na nahrávku z Teams a kam ji vkládáš,
+- zvlášť vypíchnuté nejasnosti k doplnění,
+- případný návrh nového samostatného úkolu (pokud vznikl).
 
 ## Rychlý kontrolní seznam před založením
 
-- Název je krátký, lidský, úderný, bez odborností?
-- Fáze jsou to-do listy a žádná fáze není v názvu úkolu?
-- Úkoly jsou v lidské spisovné češtině, neutrální infinitiv?
-- Jsou v úkolech všechny konkrétní věci z callu (jména, termíny, čísla, připomínky)?
-- Podúkoly jen u velkých bloků, ne mechanicky všude?
-- Žádný seznam nemá výrazně přes ~7 úkolů?
-- Je v projektu onboarding brief pro člověka, který na callu nebyl?
-- Jsou všechny nejasnosti a chybějící informace v listu `⚠️ K vyjasnění / doplnit`, a ne tiše domyšlené?
+- Zůstal jsem uvnitř toho jednoho úkolu (nezaložil jsem svévolně nové úkoly)?
+- Přidal jsem oba povinné podúkoly „Analýza podílníků" a „Kvalifikace požadavku" s přesnými popisy?
+- Jsou podúkoly v lidské spisovné češtině, neutrální infinitiv?
+- Jsou v podúkolech všechny konkrétní věci z callu (jména, termíny, čísla, připomínky)?
+- Podúkoly nedrobím mechanicky; není jich výrazně přes ~10 (jinak → návrh nového úkolu)?
+- Checklist je jen tam, kde jsou drobné kroky téže osoby bez vlastního termínu/přiřazení?
+- Nejdu hlouběji než tři úrovně?
+- Je v úkolu reference na nahrávku z Teams?
+- Jsou nejasnosti a chybějící informace viditelně označené, ne tiše domyšlené?
+- Případné přejmenování/úprava popisu i nový úkol jsou jen návrhem ke schválení, ne provedené potichu?
