@@ -9,6 +9,7 @@ složce a má soubor `SKILL.md` s hlavičkou (`name`, `description`) a návodem.
 | Skill | K čemu slouží | Kdy se spustí |
 |-------|---------------|---------------|
 | [`freelo-projekt-z-prepisu`](freelo-projekt-z-prepisu/SKILL.md) | Z přepisu callu (porady, schůzky) postaví projekt ve Freelu — projekt, to-do listy, úkoly a podúkoly. Určuje, jak projekt strukturovat, pojmenovat a věrně zachytit realitu z callu. | Když zmíníš přepis/zápis z hovoru nebo řekneš „založ z toho projekt ve Freelu", „vytvoř to-do listy z callu" apod. |
+| [`freelo-rozpracovat-ukol-z-prepisu`](freelo-rozpracovat-ukol-z-prepisu/SKILL.md) | Vezme **jeden existující úkol** ve Freelu a rozpracuje ho na podúkoly (případně checklisty) podle přepisu callu. Nezakládá projekt ani nové úkoly — pracuje uvnitř jednoho konkrétního úkolu. | Když řekneš „dopracuj tenhle úkol", „doplň podúkoly k úkolu z callu", „rozpracuj úkol podle přepisu", „naplánuj kroky k tomuhle úkolu" apod. |
 | [`sync-zdroju`](sync-zdroju/SKILL.md) | Pravidelné **dobírání nových zdrojů** do second brainu: zjistí, co v hlídaných složkách (Alfa, přepisy, podklady, SReal, IT Governance) přibylo od posledního syncu, roztřídí to na znalost × pracovní soubor × stav a řekne, kam se zapisuje, že je to vytěžené. Používá skript [`skripty/sync-zdroju.py`](../skripty/sync-zdroju.py). | Sám od sebe na začátku práce se second brainem a na konci session; nebo když řekneš „co je nového", „přibylo něco", „projdi Alfu", „doplň second brain". |
 | [`freelo-triage-poptavky`](freelo-triage-poptavky/SKILL.md) | Vezme **jednu nebo více poptávek** (use-casů na AI automatizaci) a provede každou celou kvalifikací podle operačního modelu produkční větve: checklist „patří to nám?", devět otázek, compliance brána, ROI výpočet, verdikt dráhy a analýza podílníků. Výstup je triage report u poptávky (+ souhrnná prioritizační tabulka u dávky). | Když řekneš „vyhodnoť tuhle poptávku", „projeď triage", „kvalifikuj požadavek", „patří to nám?", „spočítej business case", „projeď těchhle 5 poptávek", „srovnej požadavky podle priority" apod. |
 
@@ -22,6 +23,20 @@ Skill musí být tam, kde ho Claude Code hledá. Máš dvě možnosti:
 > ⚠️ **Pozor na zanoření.** Soubor `SKILL.md` musí ležet **přímo** ve složce
 > skillu — `~/.claude/skills/freelo-projekt-z-prepisu/SKILL.md`. Když ho
 > omylem zanoříš o úroveň hloub, Claude skill nenajde.
+
+> ⚠️ **Nový skill = nová složka. Nikdy nepřepisuj obsah existující složky
+> jiným skillem.** Název složky musí odpovídat poli `name` v `SKILL.md`.
+>
+> Doložený omyl (červen–srpen 2026): obsah nového skillu na rozpracování
+> úkolu se vložil do složky `freelo-projekt-z-prepisu`. Tím **zmizel skill
+> na zakládání projektu z přepisu**, složka přestala odpovídat svému
+> `name:` a otevřený pull request se stejným obsahem zůstal dva měsíce
+> viset. Opraveno 11. 8. 2026 — obsah se přesunul do vlastní složky
+> a původní skill se vrátil z historie.
+>
+> **Kontrola, která to odchytí:** po každé změně projdi složky a porovnej
+> název s polem `name`. `install.ps1` na konci hlásí chybějící `SKILL.md`,
+> nesoulad názvu ale neodhalí.
 
 Nejjednodušší je použít skript [`install.sh`](../install.sh) z kořene repa —
 projde tuhle složku a všechny skilly nasype do `~/.claude/skills/`:
