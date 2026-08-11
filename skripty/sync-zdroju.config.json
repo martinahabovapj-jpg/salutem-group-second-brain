@@ -1,0 +1,44 @@
+{
+  "_popis": "Hlídané zdroje pro second brain. Klíč = jak se zdroj jmenuje v reportu. Cestu uprav podle svého počítače; kdo repo zdědí, jen sem dopíše svoje cesty.",
+  "_zasada": "Hlídej složky se ZNALOSTÍ (výstupy, směrnice, manuály, popisy procesů). Nikdy nehlídej klientské složky ani zálohy — je to tisíce souborů a osobní data. Když nějaký zdroj hlásí stovky změn, je zabraný moc široko.",
+  "zdroje": {
+    "Alfa (projekty)": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\01 SG\\Projekty\\Alfa",
+      "poznamka": "Živé projektové úložiště. Do second brainu jde jen to, co má výsledek. Log: 02 Use casy/alfa-prehled-projektu.md"
+    },
+    "Přepisy hovorů": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\AI - Dokumenty\\99 Archiv zdrojů\\prepisy",
+      "poznamka": "Log: _prehled.md v téže složce."
+    },
+    "Podklady": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\AI - Dokumenty\\99 Archiv zdrojů\\podklady",
+      "poznamka": "Log: _prehled.md v téže složce."
+    },
+    "SReal — manuály a školení": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\03 SReal\\Manuály, školení",
+      "poznamka": "Hotové manuály a školicí materiály pro obchod a správu."
+    },
+    "SReal — Sales": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\03 SReal\\Sales",
+      "poznamka": "Podklady pro obchod: vzory e-mailů, argumentace, ceníky."
+    },
+    "IT Governance — AI": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\AI",
+      "poznamka": "Nejdůležitější zdroj v IT Governance pro nás."
+    },
+    "IT Governance — přístupy, licence, evidence": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\06. Evidence",
+      "poznamka": "Firemní softwarová evidence — zdroj pro tabulku AI nástrojů na Hubu."
+    },
+    "IT Governance — návody pro uživatele": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\04. Návody – uživatel",
+      "poznamka": "Uživatelské návody k systémům."
+    }
+  },
+  "_nehlidat": {
+    "03 SReal/Klienti": "45 tisíc souborů, klientská data — do second brainu nikdy",
+    "03 SReal/Projekty Salutem Real": "11 tisíc souborů provozní dokumentace; vzory smluv se berou cíleně, ne hlídáním",
+    "IT Governance/03. TNS": "7 tisíc souborů technické dokumentace TNS; hlídat až bude důvod",
+    "IT Governance/Zálohy": "zálohy, nikdy"
+  }
+}
