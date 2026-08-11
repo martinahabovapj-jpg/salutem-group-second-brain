@@ -30,4 +30,22 @@ projde tuhle složku a všechny skilly nasype do `~/.claude/skills/`:
 bash install.sh
 ```
 
+**Na Windows** není `bash` na PATH (Git for Windows ho má schovaný ve svém
+adresáři), takže použij PowerShellovou verzi:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install.ps1
+```
+
+Oba skripty dělají totéž. `-Symlink` (resp. `--symlink`) vytvoří místo kopií
+symlinky — po `git pull` máš rovnou aktuální verzi.
+
 **Po instalaci restartuj session Claude Code**, aby se nové skilly načetly.
+
+> ⚠️ **Skill, který je jen na nemergnuté branch, `install` nenajde** — bere
+> jen to, co je v tvém working tree. Když ho potřebuješ hned, dotáhni si ho
+> bez přepínání branchí:
+>
+> ```
+> git show origin/<branch>:skills/<nazev>/SKILL.md
+> ```
