@@ -41,7 +41,9 @@ PRILIS_SIROKO = 200
 def load_json(path, default):
     if not os.path.isfile(path):
         return default
-    with open(path, "r", encoding="utf-8") as f:
+    # utf-8-sig: Windows editory (a PowerShell Set-Content -Encoding utf8)
+    # pisou BOM, na kterem by json.load spadl
+    with open(path, "r", encoding="utf-8-sig") as f:
         return json.load(f)
 
 

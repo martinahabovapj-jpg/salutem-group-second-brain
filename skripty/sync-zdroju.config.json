@@ -8,7 +8,11 @@
     },
     "Přepisy hovorů": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\AI - Dokumenty\\99 Archiv zdrojů\\prepisy",
-      "poznamka": "Log: _prehled.md v téže složce."
+      "poznamka": "Log: _prehled.md v téže složce. Podsložka auto-whisper = strojové přepisy z nahrávek (zkomolené, jména a čísla ověřuj)."
+    },
+    "Nahrávky schůzek (OneDrive)": {
+      "cesta": "C:\\Users\\habova\\OneDrive - P&J Capital s.r.o\\Nahrávky",
+      "poznamka": "Jen kontrolní pohled — detail řeší nahravky-sync.py (běží každé pondělí) a jeho report prepisy/_nove-k-vytezeni.md. Soubory '-Přepis schůzky.mp4' jsou prázdné placeholdery bez zvuku; text existuje jen v Teams a s expirací nahrávky zmizí i on."
     },
     "Podklady": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\AI - Dokumenty\\99 Archiv zdrojů\\podklady",

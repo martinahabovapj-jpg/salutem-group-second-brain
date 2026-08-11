@@ -35,6 +35,21 @@ Skript **nic nemění a nic nemaže.** Stav (datum posledního syncu a počet
 souborů na zdroj) drží v `sync-zdroju.stav.json`. Hlídané zdroje jsou
 v `sync-zdroju.config.json` — cesty se tam upravují, ne ve skriptu.
 
+> 🔴 **Nejdůležitější pravidlo: `--commit` znamená „roztříděno", ne
+> „vytěženo".** Commit řekne „tyhle soubory jsem viděl" — a od té chvíle je
+> sync **už nikdy nepřipomene.** Takže se smí spustit **jen u zdroje, kde
+> je každý vypsaný soubor rozhodnutý** (vytěžit / pracovní soubor / vědomě
+> nechat) **a to rozhodnutí je zapsané v logu.**
+>
+> Když je roztříděný jen jeden zdroj, commitni **jen jeho**:
+> `python sync-zdroju.py --root Alfa --commit`. Zdroj, na který jsi ještě
+> nekoukl, nechej bez commitu — jinak z něj tiše zmizí desítky souborů,
+> které nikdo neviděl.
+>
+> Doložený omyl (11. 8. 2026): commit proběhl přes všechny zdroje najednou
+> a označil tím za viděných 1 162 souborů ve SReal a IT Governance, které
+> nikdo neotevřel. Řešení: ty zdroje se ze stavu zase odebraly.
+
 **Klesající počet souborů skript nahlásí** („něco zmizelo") — to je signál
 k ručnímu pohledu, ne k panice; nejčastěji jde o přejmenování.
 
