@@ -85,6 +85,18 @@ def parse_nazev(name):
     return tema, kdy, kind
 
 
+def stopka(name):
+    """'Tema-20260806_132908-Prepis schuzky.docx' -> '20260806_132908'.
+
+    Prepisy, ktere zaradil skript (nebo ktere se ulozily pod nazvem nahravky),
+    nesou stejnou casovou znacku jako mp4 — pak se nemusi hadat podle tematu.
+    """
+    m = re.search(r"(\d{8}_\d{6})", os.path.splitext(name)[0])
+    if m:
+        return m.group(1)
+    return None
+
+
 def delka_minut(path):
     """Delka mp4 z atomu moov/mvhd. None, kdyz to nejde precist."""
     import struct
@@ -133,7 +145,12 @@ def delka_minut(path):
 
 
 def existujici_prepisy(prepisy_dir):
-    """[(normalizovany nazev, soubor)] vsech prepisu vcetne podslozek."""
+    """[(normalizovany nazev, soubor)] vsech prepisu vcetne podslozek.
+
+    Soubor drzime i v puvodni podobe — normalizace sice cislice zachova, ale
+    parovani podle casove znacky chceme cist z nazvu, ne z normalizovaneho
+    textu.
+    """
     out = []
     for root, _dirs, files in os.walk(prepisy_dir):
         for f in files:
@@ -147,7 +164,11 @@ def existujici_prepisy(prepisy_dir):
 def skore(tema, ne):
     nt = norm(tema)
     r = difflib.SequenceMatcher(None, nt, ne).ratio()
-    if nt and len(nt) > 8 and (nt in ne or ne in nt):
+    # Kdyz je tema cele obsazene v nazvu prepisu, je to shoda i kdyz ratio
+    # klesne kvuli tomu, co je v nazvu navic (datum, "Prepis schuzky").
+    # Hranice 5 znaku, ne 9: kratke nazvy schuzek existuji ("PSUMHA", "AI mktg")
+    # a s hranici 9 se hlasily jako nepokryte, i kdyz prepis lezel v archivu.
+    if nt and len(nt) >= 5 and (nt in ne or ne in nt):
         r = max(r, 0.90)
     return r
 
@@ -163,15 +184,38 @@ def sparuj(schuzky, existing, prah=0.86):
 
     Vraci {klic schuzky: nazev prepisu}.
     """
+    prirazeno, obsazene = {}, set()
+
+    # 1) presna shoda podle casove znacky. Prepis pojmenovany po nahravce nese
+    #    stejne "yyyymmdd_hhmmss" — pak vime i to, KTERA z opakujicich se
+    #    schuzek je pokryta, a fuzzy hadani se do toho uz neplete.
+    for key, s in schuzky.items():
+        stopky = set(filter(None, (stopka(n) for n in s.get("soubory") or [])))
+        stopky.add(stopka(s["soubor"]))
+        stopky.discard(None)
+        if not stopky:
+            continue
+        for _ne, orig in existing:
+            if orig in obsazene:
+                continue
+            if stopka(orig) in stopky:
+                prirazeno[key] = orig
+                obsazene.add(orig)
+                break
+
+    # 2) zbytek fuzzy podle tematu — rucne pojmenovane .docx casovou znacku
+    #    nemaji, tam datum nezname a plati jen "kolik jich pokryto neni".
     pary = []
     for key, s in schuzky.items():
+        if key in prirazeno:
+            continue
         for ne, orig in existing:
+            if orig in obsazene:
+                continue
             r = skore(s["tema"], ne)
             if r >= prah:
                 pary.append((r, key, orig))
     pary.sort(key=lambda p: -p[0])
-
-    prirazeno, obsazene = {}, set()
     for r, key, orig in pary:
         if key in prirazeno or orig in obsazene:
             continue
