@@ -1,0 +1,23 @@
+{
+  "_popis": "Konfigurace pro nahravky-sync.py. Cesty s diakritikou drzime tady, ne ve skriptu.",
+
+  "nahravky": "C:\\Users\\habova\\OneDrive - P&J Capital s.r.o\\Nahrávky",
+  "prepisy": "C:\\Users\\habova\\P&J Capital s.r.o\\AI - Dokumenty\\99 Archiv zdrojů\\prepisy",
+  "auto_podslozka": "auto-whisper",
+
+  "_model": "Whisper model pro cesky prepis. medium = 1.6x realtime na tomhle CPU a solidni kvalita. small = 3x rychlejsi, vic chyb.",
+  "model": "medium",
+
+  "_retence_dnu": "Po kolika dnech Teams maze nahravku i s prepisem. Default politika je 120 dni; kdyz prijde upozorneni driv, uprav.",
+  "retence_dnu": 120,
+
+  "_varovat_dnu": "Kolik dni pred expiraci se ma nahravka oznacit jako urgentni.",
+  "varovat_dnu": 30,
+
+  "_min_minut": "Nahravky kratsi nez tolik minut se povazuji za bezobsazne (omylem spustene) a jen se eviduji.",
+  "min_minut": 5,
+
+  "_stream_base": "Zaklad URL do Stream prehravace. Prefix ':v:/r/' je podstatny — bez nej OneDrive soubor jen stahne a panel Prepis se vubec nezobrazi.",
+  "stream_base": "https://pjcapital-my.sharepoint.com/:v:/r/personal/martina_habova_pj-capital_cz/Documents/Nahr%C3%A1vky",
+  "stream_suffix": "?csf=1&web=1"
+}

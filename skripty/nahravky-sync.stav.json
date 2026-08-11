@@ -1,0 +1,122 @@
+{
+  "vyresene": {
+    "Call-20260420_093426-Přepis schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Call.docx",
+      "kdy": "2026-08-11"
+    },
+    "sync-20260429_092615-Přepis schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "sync.docx",
+      "kdy": "2026-08-11"
+    },
+    "Setkání - co děláme-20260506_100109-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Setkání - co děláme_.docx",
+      "kdy": "2026-08-11"
+    },
+    "sync PŠu-20260506_150731-Přepis schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "sync PŠu.docx",
+      "kdy": "2026-08-11"
+    },
+    "JDU,JHO,MHA-20260513_141752-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "JDU,JHO,MHA.docx",
+      "kdy": "2026-08-11"
+    },
+    "Hovor s Petr Suchý-20260514_151432-Přepis schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Hovor s_ Petr Suchý.docx",
+      "kdy": "2026-08-11"
+    },
+    "KzK aktuální stav-20260519_091357-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "KzK aktuální stav.docx",
+      "kdy": "2026-08-11"
+    },
+    "Hovor s Jakub a 1 další-20260519_130426-Přepis schůzky.mp4": {
+      "stav": "preskocit",
+      "duvod": "kratka",
+      "kdy": "2026-08-11"
+    },
+    "Porovnávání nájemních cen s konkurencí - Copilot - krok za krokem-20260529_130253-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Porovnávání nájemních cen s konkurencí - Copilot - krok za krokem-20260529_130253-Záznam schůzky.txt",
+      "kdy": "2026-08-11"
+    },
+    "Porovnávání nájemních cen s konkurencí - Copilot-20260601_152656-Přepis schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Porovnávání nájemních cen s konkurencí - Copilot.docx",
+      "kdy": "2026-08-11"
+    },
+    "Automatizace převodu hovoru na person.email a nabídku pro klienta - obchod-20260602_100154-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Automatizace převodu hovoru na person.email a nabídku pro klienta - obchod.docx",
+      "kdy": "2026-08-11"
+    },
+    "Report KŠMHA-20260603_100322-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Report KŠ_MHA.docx",
+      "kdy": "2026-08-11"
+    },
+    "Jak můžeme pomoci na účtárně-20260604_100500-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Jak můžeme pomoci na účtárně-20260604_100500-Záznam schůzky.txt",
+      "kdy": "2026-08-11"
+    },
+    "Hovor s Petr Suchý-20260608_120553-Přepis schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Hovor s_ Petr Suchý (1).docx",
+      "kdy": "2026-08-11"
+    },
+    "30 min s AI-20260617_110024-Záznam schůzky.mp4": {
+      "stav": "preskocit",
+      "duvod": "kratka",
+      "kdy": "2026-08-11"
+    },
+    "30 min s AI-20260611_111432-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "30 min s AI-20260611_111432-Záznam schůzky.txt",
+      "kdy": "2026-08-11"
+    },
+    "30 min s AI-20260611_152947-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "30 min s AI-20260611_152947-Záznam schůzky.txt",
+      "kdy": "2026-08-11"
+    },
+    "Workshop Claude Design NL-20260702_130536-Záznam schůzky.mp4": {
+      "stav": "prepis-existuje",
+      "kam": "Workshop Claude Design NL-20260702_130536-Záznam schůzky.txt",
+      "kdy": "2026-08-11"
+    }
+  },
+  "posledni_beh": "2026-08-11",
+  "delky": {
+    "Hovor s Pavel Langer-20260512_103514-Přepis schůzky.mp4": 35.1,
+    "Hovor s Jakub a 1 další-20260519_130426-Přepis schůzky.mp4": 2.4,
+    "Jak může AI pomoci na účtárně-20260604_132919-Přepis schůzky.mp4": 26.3,
+    "PSUMHA-20260608_100444-Přepis schůzky.mp4": 44.3,
+    "30 min s AI-20260611_111432-Záznam schůzky.mp4": 31.477333333333334,
+    "Hovor s Petr Suchý-20260611_134231-Záznam schůzky.mp4": 48.702083333333334,
+    "30 min s AI-20260611_152947-Záznam schůzky.mp4": 32.82346666666667,
+    "Projekt Alfa - pravidelná slaďovací schůzka-20260616_130007-Přepis schůzky.mp4": 24.5,
+    "30 min s AI-20260617_110024-Záznam schůzky.mp4": 1.2544,
+    "AHrMHA - vzdělávání AI-20260617_135946-Přepis schůzky.mp4": 61.5,
+    "AI mktg-20260619_100409-Přepis schůzky.mp4": 12.3,
+    "Projekt Alfa - pravidelná slaďovací schůzka-20260623_130036-Přepis schůzky.mp4": 19.8,
+    "Hovor s Jakub Hovorka-20260626_095950-Přepis schůzky.mp4": 35.9,
+    "Projekt Alfa - pravidelná slaďovací schůzka-20260630_130716-Přepis schůzky.mp4": 15.8,
+    "díváme se na návrhy řešení-20260701_141437-Přepis schůzky.mp4": 45.0,
+    "Workshop Claude Design NL-20260702_130536-Záznam schůzky.mp4": 86.38436666666666,
+    "feedback na Evolution-20260717_131050-Přepis schůzky.mp4": 20.2,
+    "Hovor s Jakub Hovorka-20260721_093615-Přepis schůzky.mp4": 15.2,
+    "Vizuální zpracování dat obchodu-20260721_103005-Přepis schůzky.mp4": 54.8,
+    "Hovor s Petr Suchý-20260721_143400-Přepis schůzky.mp4": 41.6,
+    "CF - automatizované reporty-20260722_085852-Přepis schůzky.mp4": 36.4,
+    "Projekt Alfa - pravidelná slaďovací schůzka-20260728_140123-Přepis schůzky.mp4": 19.8,
+    "AI x Právní školení-20260729_091107-Přepis schůzky.mp4": 135.3,
+    "Automatizovaný report CF a automatizované pondělní inkasa-20260804_110030-Přepis schůzky.mp4": 49.9,
+    "Bezpečné napojení Claude do Raynetu-20260806_132908-Přepis schůzky.mp4": 45.6
+  }
+}
