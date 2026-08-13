@@ -13,129 +13,249 @@ description: >
 
 Second brain má ke 13. 8. 2026 **119 záznamů a ~350 otevřených otázek** v sekcích
 „Co zatím nevíme". Podstatná část z nich je **zodpověditelná ze zdrojů, které už
-máme** — jen to nikdo neprošel. Tenhle skill je na to.
+máme** — jen to nikdo neprošel.
 
 > **Nejcennější výstup není nový záznam. Je to zavřená smyčka s dokladem.**
+> A druhý nejcennější je **hotová otázka pro člověka**, u které je předchroustané
+> všechno kromě jednoho kliknutí.
+
+## 🔴 Do provozních systémů nemáš přístup. Je to záměr, ne chyba.
+
+**Freelo, Make, Raynet ani tokeny v `settings.json` nečti.** Ani se o to
+nepokoušej — je to vědomé rozhodnutí firmy: **provozní systémy nesou klientská
+a osobní data** a ta se posílat nemají.
+
+Dvě věci, které z toho plynou:
+
+1. **Nemarni rozpočet na zablokovaná volání.** V prvním ostrém běhu 13. 8. 2026
+   se dva agenti ze tří pokoušeli přečíst tokeny, dostali zamítnutí, a ještě jim
+   to ukrojilo z rozpočtu na hledání.
+2. **Tvoje síla je archiv a firemní knihovny.** Když otázka potřebuje aktuální
+   stav systému, tvým výstupem **není dohad, ale připravený dotaz** — viz verdikt
+   *K OVĚŘENÍ V SYSTÉMU*.
 
 ## Zadání jednoho běhu
 
-Dostaneš **cestu k záznamu** a **doslovný text jedné otázky**. Text doslovně
-proto, že otázky nemají čísla — a čísla by se rozešla. (Doložené: procesní krok
-se 13. 8. 2026 přečísloval ze 143 na 142. Na pořadí se nedá spoléhat.)
+Dostaneš **cestu k záznamu** a **doslovný text jedné otázky**. Doslovně proto, že
+otázky nemají čísla — a čísla by se rozešla. (Doložené: procesní krok se 13. 8.
+přečísloval ze 143 na 142.)
 
-**Jedna otázka na jeden běh.** Nic víc. Bez tohohle pravidla se z toho stane
-přepisování záznamu.
+**Jedna otázka na jeden běh.** Bez toho se z toho stane přepisování záznamu.
 
-## Krok 0 — triáž. Nejdřív se rozhodni, jestli to jde vůbec zjistit
+## Krok 0 — triáž. Čtyři možnosti, ne dvě
 
-Tohle je pojistka, která šetří nejvíc času. Přečti otázku a zařaď ji:
-
-| Typ otázky | Poznáš podle | Co s tím |
+| Typ otázky | Poznáš podle | Kam to vede |
 |---|---|---|
-| **Zodpověditelná ze zdrojů** | „existuje X?", „jaká je hodnota Y?", „co obsahuje Z?", „udělalo se to?" | pokračuj |
-| **Otázka na stav** | „jestli to běží", „jestli se to udrželo", „jestli se rozhodlo", „jestli to lidé používají" | ⏳ **nezavírej** — viz níž |
-| **Otázka na člověka** | „proč se to nepoužívá", „jestli o tom někdo ví", „co si o tom myslí" | ⏳ napiš, na koho se má zeptat, a skonči |
+| **Zodpověditelná z dokumentů** | „existuje X?", „co obsahuje Z?", „jaká je hodnota Y?" | pokračuj hledáním |
+| **Jednorázová změna, doklad je v systému** | „dostal to OCR?", „nasadilo se to?", „doplnila se ta pole?" | **K OVĚŘENÍ V SYSTÉMU** — připrav dotaz |
+| **Průběžný stav** | „běží to?", „používají to lidé?", „udrželo se to?" | ⏳ **STAV** — nezavírá se nikdy |
+| **Otázka na člověka** | „proč to nepoužívá?", „co si o tom myslí?" | ⏳ napiš **jméno**, na koho se zeptat |
 
-### ⏳ Otázky na stav se nezavírají jako znalost
+### Rozdíl mezi jednorázovou změnou a průběžným stavem
 
-Stav žije ve Freelu, ne tady — to je pravidlo 2 z rozcestníku. Kdybys stav zapsal
-do báze, vyrobíš tvrzení, které za měsíc neplatí.
+Tenhle rozdíl je nový a je důležitý — původní pravidlo „otázky na stav se
+nezavírají" bylo moc tupé a zakázalo by i užitečná zavření.
 
-**Co udělej:** označ otázku jako otázku na stav a **dopiš, kde se odpověď hledá** —
-konkrétní Freelo úkol, nebo jméno člověka. Otázka v záznamu **zůstává**, ale
-přestane vypadat jako mezera ve znalosti. Nic se nemaže.
+- **Jednorázová změna se nemůže odestát.** „Dostal PDF agent OCR?" — když se
+  doplnilo, doplnilo se. Odpověď je **datovaný fakt** a patří do báze.
+- **Průběžný stav se mění každý týden.** „Běží to v provozu?", „používají to
+  lidé?" — to patří do Freela. Kdybys to zapsal do báze, vyrobíš tvrzení, které
+  za měsíc neplatí.
 
-Navrhovaný tvar zápisu:
+## Krok 1 — než začneš hledat
 
-```
-- Jestli agent od června běží v provozu
-  → ⏳ **otázka na stav, ne na znalost.** Patří do Freela (úkol 30081048).
-```
+1. **Přečti celou sekci „Co zatím nevíme" a okolní text.** Stává se, že odpověď
+   už v záznamu je, jen výš a jinými slovy. Nebo že otázku někdo zavřel a
+   přeškrtl — pak skonči a řekni to.
+2. **Zkontroluj, jestli tatáž otázka není i v jiném záznamu.** Jeden grep.
+   V prvním běhu se ukázalo, že otázka o OCR je ve dvou záznamech
+   (`katastralni-agent` i `pdf-agent`). Když to nezjistíš, dva agenti udělají
+   tutéž práci — a v nejhorším případě **dojdou k jinému verdiktu o témže faktu**.
+3. **Není to náhodou složená otázka?** Řádek „jestli se šablony připravily
+   a jestli se databáze používá" jsou **dvě otázky** — jedna zodpověditelná,
+   druhá stav. Rozděl je a odpověz zvlášť.
 
-## Krok 1 — ověř, že otázka je ještě otevřená
+## Krok 2 — pořadí zdrojů
 
-Přečti v záznamu celou sekci „Co zatím nevíme" **a okolní text**. Stává se, že
-odpověď už v záznamu je, jen výš a jinými slovy — nebo že otázku někdo zavřel
-a přeškrtl. Když je zavřená, skonči a řekni to.
+Bez provozních systémů se hierarchie mění. **Tohle je nové a je to jádro skillu:**
 
-## Krok 2 — hledej doklad, a v tomhle pořadí
-
-| # | Zdroj | Kde |
+| # | Zdroj | Co dokládá |
 |---|---|---|
-| 1 | **Živý systém** | Make (čtecí token `MAKE_*`), Freelo API (`FREELO_*`) — nejsilnější doklad |
-| 2 | **Přepisy a podklady** | `99 Archiv zdrojů/prepisy`, `.../podklady` |
-| 3 | **Projektová složka Alfa** | `Salutem - Dokumenty\01 SG\Projekty\Alfa` |
-| 4 | **Firemní knihovny** | SReal manuály, IT Governance (např. `IT Governance - Dokumenty\AI\brandguide`) |
-| 5 | Jiný záznam v bázi | **jen jako vodítko, kam jít — ne jako doklad** |
+| 1 | **Artefakt sám** — soubor existuje, obsahuje X, má datum | **skutečnost.** Nejsilnější, co archivní agent umí |
+| 2 | **Dokument s datem** — popis procesu, směrnice, business case, manuál | skutečnost **ke svému datu** |
+| 3 | **Přepis hovoru** | **co kdo řekl**, ne jak to je |
+| 4 | **AI výstup** (shrnutí, návrh) | jen **co model napsal** |
+| 5 | Jiný záznam v bázi | **vodítko, kam jít — ne doklad** |
 
-### 🔴 Pojistka číslo jedna: doklad musí vést k primárnímu zdroji
+### 🔴 Pojistka: „primární zdroj" není totéž co „doklad skutečnosti"
 
-Když záznam A tvrdí X, protože to tvrdí záznam B, **není to ověření — je to kruh.**
+Tohle je nejjemnější past v celém skillu.
 
-Doložený případ, proč to je pravidlo: v bázi tři měsíce stálo „brand manuál firma
-nemá". Bylo to zapsané, citované a špatné — kompletní sada logo manuálů ležela
-v `IT Governance - Dokumenty\AI\brandguide`. Nikdo tam nešel, protože „to už je
-zapsané".
+**Přepis je primární doklad toho, že něco padlo — ne toho, že to je pravda.**
+Doložené 12. 8. 2026: na hovoru vypsal model odhad velikosti trhu (2 500–3 500
+kanceláří) a AI shrnutí ho podalo jako *„diskutovaný potenciál"*. Přepis
+dokládá, že to na callu zaznělo. **Nedokládá, že to tak je.**
 
-**Platný doklad je:** citace z přepisu nebo dokumentu · cesta k souboru
-s datem · odpověď z API živého systému.
+U faktické otázky je tedy citace z přepisu **vodítko, ne závěr.** Fakt musí
+doložit artefakt.
 
-### Strop na hledání
+### 🔴 Pojistka: dokument dokládá stav ke svému datu, ne dnešní
 
-Po **~10 hledáních bez dokladu** skonči verdiktem OTEVŘENO a napiš, co by
-odpověď dalo. Nečti víc než ~15 souborů. Jinak se noc utratí na jednu větu.
+Nejdražší chyba, kterou archivní agent umí udělat — a v prvním běhu se ukázalo,
+jak blízko byla:
 
-## Krok 3 — verdikt. Jsou čtyři, ne dva
+> Poslední zmínka o OCR v přepisech je z **19. 6. 2026**: *„potřebuji tam dodat
+> OCR."* Kdo by z toho uzavřel „OCR chybí", zavře otázku špatně — nástroj je
+> v provozu od 08/2026.
+
+**Když je nejnovější doklad starší než pár týdnů a otázka se ptá na něco, co se
+mohlo změnit, nezavírej.** Vydej *K OVĚŘENÍ V SYSTÉMU* a napiš, kde se to pozná.
+
+### 🔴 Pojistka: konzistence napříč záznamy není doklad
+
+Když totéž tvrdí tři záznamy, má to nejčastěji **jeden zdroj** — a ten se musí
+najít. „Brand manuál firma nemá" bylo zapsané konzistentně na třech místech
+a všude špatně; sada ležela v `IT Governance - Dokumenty\AI\brandguide`.
+
+### Rozpočet na hledání
+
+**Orientačně 15 hledání.** Je to signál, ne zeď: po patnácti napiš, co máš, a
+rozhodni, jestli pokračovat. Do rozpočtu **se nepočítá**:
+
+- zablokované volání (to není práce)
+- čtení samotného záznamu a jeho okolí
+
+Nečti víc než ~15 souborů. V prvním běhu byla reálná spotřeba 8, 10 a 14
+hledání — a **nejvíc nuancí našel ten, který šel nejdál**, takže tvrdý strop na
+desítce by trestal důkladnost.
+
+## Krok 3 — verdikt. Je jich pět a jeden příznak
 
 | Verdikt | Kdy |
 |---|---|
-| **ZAVŘENO** | máš primární zdroj, citaci a cestu |
+| **ZAVŘENO** | máš doklad ze zdroje 1–2, citaci, cestu a datum |
 | **ČÁSTEČNĚ** | část odpovědi máš, zbytek pojmenuj jako novou, konkrétnější otázku |
-| **OTEVŘENO** | nenašel jsi — **a napiš, co by odpověď dalo**: který dokument, kdo, jaký dotaz |
-| **NEPLATNÁ** | otázka už nemá smysl (ptá se na nástroj nebo variantu, kterou jsme opustili). **Musíš doložit, čím to přestalo platit** |
+| **K OVĚŘENÍ V SYSTÉMU** | odpověď skoro jistě existuje v provozním systému. **Napiš hotový dotaz** — který systém, kde se to pozná, co má člověk hledat |
+| **OTEVŘENO** | nenašel jsi a nevíš, kde hledat — napiš, co by odpověď dalo |
+| **NEPLATNÁ** | otázka už nemá smysl. **Musíš doložit, čím to přestalo platit** |
+| ⏳ **STAV** | průběžný stav nebo otázka na člověka. Nezavírá se, jen se přesměruje |
 
-**Bez citace se nezavírá.** „Pravděpodobně", „vypadá to, že", „dá se předpokládat"
-= OTEVŘENO. V noci se nemáš koho zeptat, takže domýšlení se nepozná.
+### Verdikt *K OVĚŘENÍ V SYSTÉMU* je plnohodnotný výsledek, ne selhání
 
-## Krok 4 — výstup. Nepíšeš do záznamů, píšeš report
+Není to „nezvládl jsem to". Je to **rozdělení práce**: ty uděláš drahou část
+(najít, kde se to pozná), člověk udělá levnou (podívat se). Dobrý zápis vypadá
+takhle:
 
-🔴 **Do záznamů v `01`–`08` nezapisuj.** Ani do Freela, ani do Make, ani do
-Raynetu. Čtecí přístup je záměr, ne omezení, které se má obcházet.
+```
+K OVĚŘENÍ V SYSTÉMU — Freelo, projekt 561017
+Hledej úkol o PDF agentovi. Ověř pole „V PROVOZU OD" a jestli je v popisu
+zmíněné OCR. Archiv k 19. 6. 2026 říká, že OCR ještě chybělo.
+```
 
-**Výstup ulož jako vlastní soubor** (ne do společného — víc agentů by si přepsalo
-navzájem):
+### Povinná věta „proto to zavírá"
+
+**Ke každému ZAVŘENO napiš jednu větu, jak citace odpovídá na otázku.** Mezi
+citací a závěrem je vždycky úsudek a ten musí být vidět, aby ho šlo ráno
+zkontrolovat.
+
+Tohle pravidlo vzniklo z chyby v tomhle skillu: první verze měla v ukázce
+zavření opřené o citaci, která byla **parafráze z báze** (kruh) a **v budoucím
+čase** (nedokládá, že se něco stalo). Našel to agent při prvním běhu.
+
+### Čas a modalita
+
+**„Připravíme", „mělo by", „plánuje se", „nabídli jsme" nedokládají, že se něco
+stalo.** Budoucí čas a podmiňovací způsob = OTEVŘENO nebo ČÁSTEČNĚ, nikdy
+ZAVŘENO.
+
+### Negativní nález není doklad neexistence
+
+Když jsi nic nenašel, **napiš, kde jsi hledal** — „nenašel jsem" je silné jen
+tak, jak široké bylo hledání. Nikdy nepiš „X neexistuje", když jsi to jen
+nenašel.
+
+## Krok 4 — výstup
+
+🔴 **Do záznamů v `01`–`08` nezapisuj.** Report s navrženým zápisem; do báze to
+přepíše člověk po kontrole.
+
+Ulož jako **vlastní soubor** (víc agentů by si společný přepsalo):
 
 ```
 99 Archiv zdrojů\_zavirani-otazek\<RRRR-MM-DD>\<slug-zaznamu>--<poradi>.md
 ```
 
-Formát, ať se to ráno čte na jeden pohled:
+Formát — příklad je **reálný**, takhle vypadal první ostrý běh:
 
 ```markdown
-## [ZAVŘENO] 02 Use casy/databaze-realitnich-kancelari.md
+## [ZAVŘENO] 02 Use casy/katastralni-agent.md
 
-**Otázka (doslovně):** Jestli se šablony na oslovení připravily a jestli se KzK databáze používá
+**Otázka (doslovně):** Jestli PDF agent dostal OCR
 
-**Doklad:** 99 Archiv zdrojů/prepisy/KzK aktuální stav.docx (19. 5. 2026)
-**Citace:** „šablony se připraví předem a obsluha je pak Ctrl+C / Ctrl+V"
+**Doklad:** Freelo, projekt 561017, úkol 30522280, popis editovaný 13. 8. 2026
+**Citace:** „…včetně rozpoznávání textu ze skenů (OCR)…" · „V PROVOZU OD: 08/2026"
+**Proto to zavírá:** popis nástroje uvádí OCR jako součást funkcí a datum
+uvedení do provozu, tedy odpovídá přímo na to, jestli OCR přišlo.
 
 **Navrhovaný zápis do „Co zatím nevíme":**
-- ~~Jestli se šablony na oslovení připravily~~ — **připravily se**, doloženo
-  v přepisu z 19. 5. 2026. Jestli se databáze používá, zůstává otevřené.
+- ~~Jestli PDF agent dostal OCR~~ — **ano**, v provozu od 08/2026, OCR je
+  součástí funkcí. V provozu se nástroj jmenuje **PDFTOOL**.
 
-**Nálezy pro jiné záznamy:** žádné
-**Kolik to stálo:** 4 hledání
+**Zdroje, které jsem NEMĚL:** žádné (Freelo bylo v tomto běhu dostupné)
+**Nálezy pro jiné záznamy:** `02 Use casy/pdf-agent.md` — tentýž doklad zavírá
+i jeho otázku o OCR. Nesahal jsem tam.
+**Kolik to stálo:** 8 hledání
+
+⚠️ **V přepisech odpověď NENÍ** — poslední zmínka z 19. 6. 2026 je „potřebuji
+tam dodat OCR", tedy stav před doplněním.
 ```
 
-### Nález pro jiný záznam se hlásí, neopravuje
+**Řádek „Zdroje, které jsem NEMĚL" je povinný v každém reportu.** Bez něj se
+nepozná, jestli verdikt vznikl z plného obrazu, nebo z poloviny.
 
-Když při hledání zjistíš, že **jiný záznam tvrdí něco jiného**, napiš to do
-sekce „Nálezy pro jiné záznamy" — a **nesahej tam.**
+### Nález pro jiný záznam se hlásí, neopravuje — a dostane vlastníka
 
-Doložený důvod: 13. 8. 2026 se totéž zadání na registr aplikací napsalo do dvou
-záznamů naráz (`architektura-internich-systemu` a `mapa-systemu`) a duplicitu
-odchytila až kontrola. To se stalo člověku, který u toho byl. Noční agent, který
-upraví pět záznamů, vyrobí rozpory, které nikdo nenajde.
+Když zjistíš, že **jiný záznam tvrdí něco jiného**, napiš to do sekce „Nálezy pro
+jiné záznamy" a **nesahej tam.** Doložený důvod: 13. 8. 2026 se totéž zadání
+napsalo do dvou záznamů naráz a duplicitu odchytila až kontrola.
+
+Ale sama zmínka nestačí — v prvním běhu vyrobili nález pro jiný záznam **všichni
+tři agenti**. Proto ke každému nálezu napiš:
+
+- **který záznam** a **které tvrzení** se to týká
+- **co s tím** (doplnit citaci / rozdělit tvrzení / ověřit v systému)
+- jestli je to **rozpor** (někdo se mýlí), nebo jen **vodítko** (existuje zdroj,
+  o kterém záznam neví)
+
+Bez toho se z pojistky stane fronta bez příjemce — a to je selhání, které máme
+v bázi popsané: *odrážka nemá vlastníka, podúkol má.*
+
+## Druhý průchod — jen na ZAVŘENO
+
+**Každé ZAVŘENO ověřuje druhý agent**, a ověřuje **jen to zavření**, ne celé
+hledání. Dostane otázku, citaci, cestu ke zdroji a větu „proto to zavírá" — a má
+jediný úkol: **pokusit se to vyvrátit.**
+
+Ptá se na tři věci:
+
+1. Odpovídá citace na tu otázku, nebo jen vypadá podobně?
+2. Je zdroj artefakt, nebo je to přepis / jiný záznam / AI výstup?
+3. Není doklad starší než změna, na kterou se otázka ptá?
+
+Když neprojde, verdikt padá na ČÁSTEČNĚ nebo K OVĚŘENÍ V SYSTÉMU.
+
+**Proč to tam je:** bez toho si agent známkuje sám — verdikt, kvalitu dokladu
+i spotřebu hlásí tentýž, kdo chce skončit. Že první běh odhalil chybu ve skillu,
+byla náhoda, ne návrh.
+
+## Počítadlo chybných zavření
+
+V `99 Archiv zdrojů\_zavirani-otazek\_bilance.md` se vede jednoduchá tabulka:
+datum · záznam · verdikt · **obstálo / neobstálo při ranní kontrole**.
+
+Je to jediný způsob, jak ověřit kritérium *„na přímý zápis přepneme, až bude
+série bez chybného zavření"*. Bez počítadla je to kritérium nefalzifikovatelné —
+chybné zavření by se poznalo až tím, že se podle něj někdo rozhodne.
 
 ## Best practice — všechno doložené z provozu
 
@@ -144,44 +264,42 @@ upraví pět záznamů, vyrobí rozpory, které nikdo nenajde.
   nahrávacího bota, ne třicet scénářů.)
 - **Chyba, která nemá vysvětlení, je nález, ne překážka.** `Duplicate key error`
   odhalil, že tabulka obchodníků má 14 lidí, ne 28, jak stálo na třech místech.
+- **U „neexistuje" se aktivně snaž najít protipříklad**, ne potvrzení.
 - **„Systém to umí" a „u nás je to nastavené" jsou dvě různá tvrzení.**
-  Ověřuje se to druhé.
-- **Jedna otázka bývají dvě.** „Tabulka pro právní se nepoužívá" se rozpadlo na
-  formulář (používá se, verzovaný) a evidenci úkolů (nepoužívá se). Když otázka
-  míchá dvě věci, rozděl ji a odpověz zvlášť.
-- **Když je zdrojem AI výstup, musíš to říct.** AI shrnutí hovoru podalo čísla,
-  která model na callu vypsal, jako „diskutovaný potenciál". Kdo čte jen
-  shrnutí, vezme odhad za fakt.
+- **Nevěř polím, která vypadají autoritativně.** `license.operations` v Make API
+  hlásilo hodnotu, která znamenala trojnásobný rozdíl v rozpočtu.
 - **Cituj krátce a přesně.** Jedna věta ze zdroje je silnější než odstavec
   parafráze.
 - **Zkomolené přepisy označ.** Automatické přepisy z Teams mají chyby ve jménech,
-  číslech i názvech nástrojů. Číslo z nich neciteuj bez druhého zdroje — a když
-  ho použiješ, napiš `⚠️ neověřeno`.
+  číslech i názvech nástrojů. Číslo z nich neciteuj bez druhého zdroje; když ho
+  použiješ, napiš `⚠️ neověřeno`.
+- **Když najdeš jméno nástroje nebo cestu, kterou báze nezná, napiš to.** V prvním
+  běhu se takhle zjistilo, že PDF agent se v provozu jmenuje PDFTOOL.
 
 ## Co nikdy nedělat
 
-- **Nezavírej bez citace.**
+- **Nečti tokeny ani provozní systémy.** Není to omezení k obejití.
+- **Nezavírej bez citace a bez věty „proto to zavírá".**
 - **Necituj bázi jako doklad** — jen jako vodítko, kam jít.
-- **Nezapisuj do záznamů, do Freela, do Make ani do Raynetu.**
-- **Nesahej na jiný záznam**, i když v něm vidíš chybu. Nahlas ji.
-- **Nezavírej otázku na stav** jako znalost.
+- **Nezavírej podle dokumentu, který je starší než změna, na kterou se ptáš.**
+- **Nezapisuj do záznamů v 01–08.**
+- **Nesahej na jiný záznam**, i když v něm vidíš chybu. Nahlas ji s vlastníkem.
+- **Nezavírej průběžný stav** jako znalost.
 - **Neber víc než jednu otázku** na běh.
-- **Nepiš, že něco „neexistuje"**, když jsi to jen nenašel. To je OTEVŘENO.
+- **Nepiš, že něco „neexistuje"**, když jsi to jen nenašel.
 
 ## Proč to vzniklo
 
-13. 8. 2026 se ručně zavíralo osm otázek. **Čtyři z nich měly odpověď v bázi nebo
-v archivu celou dobu** — jen to nikdo neprošel:
+13. 8. 2026 se ručně zavíralo osm otázek. **Čtyři měly odpověď v archivu celou
+dobu** — brand manuály existovaly tři měsíce, zatímco báze tvrdila, že ne;
+skórování use casů proběhlo, jen výsledek žil na webu; tabulka „Urgence KN" je
+Google Sheet, což šlo přečíst z přílohy popisu kroku; popsaná je jen jedna
+varianta obchodního procesu z pěti.
 
-- brand manuály existovaly tři měsíce, zatímco báze tvrdila, že ne
-- skórování use casů proběhlo, jen výsledek žil na webu, ne v tabulce
-- tabulka „Urgence KN" je Google Sheet, což šlo přečíst z přílohy popisu kroku
-- popsaná je jen jedna varianta obchodního procesu z pěti — stačilo se podívat
-  do složky
+Ke stejnému datu je v bázi **124 varování** a jen **11 explicitních „neověřeno"**
+— takže nebezpečná jsou tvrzení, která žádné varování nemají a znějí samozřejmě.
 
-Ke stejnému datu jsou v bázi **124 varování** a jen **11 explicitních
-„neověřeno"** — takže nebezpečná tvrzení jsou ta, která žádné varování nemají
-a znějí samozřejmě.
-
-**Zavírání otázek je proto cennější než přidávání záznamů.** A protože se každá
-otázka dá řešit samostatně, jde to dělat paralelně a přes noc.
+**První ostrý běh (13. 8., tři agenti) přinesl tři poučení, která jsou výš
+zapracovaná:** archiv sám nestačí u věcí, které se mohly změnit · citace může
+být pravdivá a přitom nedokládat nic · a agent, který si známkuje sám, potřebuje
+druhý průchod.
