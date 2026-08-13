@@ -253,9 +253,18 @@ byla náhoda, ne návrh.
 V `99 Archiv zdrojů\_zavirani-otazek\_bilance.md` se vede jednoduchá tabulka:
 datum · záznam · verdikt · **obstálo / neobstálo při ranní kontrole**.
 
-Je to jediný způsob, jak ověřit kritérium *„na přímý zápis přepneme, až bude
-série bez chybného zavření"*. Bez počítadla je to kritérium nefalzifikovatelné —
+Bez počítadla by kritérium pro přepnutí na přímý zápis bylo nefalzifikovatelné —
 chybné zavření by se poznalo až tím, že se podle něj někdo rozhodne.
+
+**Rozhodnuto 13. 8. 2026:** zkušební doba je **15 zavření**, a i po ní se
+odemkne přímý zápis **jen pro zavření doložená artefaktem nebo datovaným
+dokumentem**, po druhém průchodu. Zavření opřené o **přepis a úsudek** zůstává
+návrhem natrvalo. **NEPLATNÁ se nikdy nezapisuje automaticky** — ruší otázku,
+a když se to splete, mezera v poznání zmizí ze seznamu.
+
+Úvaha za tím rozhodnutím (včetně toho, proč vysoké číslo bezpečí nekoupí)
+i **předem domluvené čtení výsledků** jsou v `_bilance.md`. Kdo bude branku
+posouvat, ať si to přečte — je tam napsané, co má z jakého pozorování vyplynout.
 
 ## Best practice — všechno doložené z provozu
 
