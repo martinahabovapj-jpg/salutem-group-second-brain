@@ -67,7 +67,7 @@ Záznam si svá nosná tvrzení **označuje sám.** Nejvyšší výnos mají:
 | # | Typ | Příklad z provozu | Čím se ověřuje |
 |---|---|---|---|
 | 1 | **Číslo** | „pool má 28 obchodníků", „zbývá 108 tis. operací" | dopočítat ze zdroje, nikdy nepřebírat |
-| 2 | **Negativní existence** | „brand manuál neexistuje", „retence nikde stanovená není" | 🔴 **nejdražší typ** — vyvrátí ho jediný nález |
+| 2 | **Negativní existence** | „brand manuál neexistuje", „retence nikde stanovená není" | 🔴 **nejdražší typ** — vyvrátí ho jediný nález. Platí pro něj povinný postup níž |
 | 3 | **Schopnost živého systému** | „Raynet umí založit koncept", „Make má modul" | **nemůžeš** → K OVĚŘENÍ V SYSTÉMU |
 | 4 | **Přiřazení** | „vlastní to IT", „dodal to X", „rozhodl Y" | primární zdroj, kde to padlo |
 | 5 | **Stav vydávaný za znalost** | „běží", „je nasazené", „používá se" | ⏳ patří do Freela, ne do báze |
@@ -95,6 +95,34 @@ jako potvrzení. Není.
 **Když najdeš tvrzení potvrzené jen jinými záznamy, je to NEDOLOŽENO** —
 a napiš, že se opakuje, protože to je samo o sobě nález.
 
+### 🔴 Pojistka číslo dvě: rekurzivní hledání ti tiše zamlčí celé knihovny
+
+**Doložený případ 13. 8. 2026:** agent hledal rekurzivně od kořene
+`C:\Users\habova\P&J Capital s.r.o` a **celý strom `Salutem - Dokumenty` se ve
+výsledcích neobjevil.** Cílené hledání přímo v té knihovně soubory našlo. Žádná
+chyba se nevypsala — hledání prostě vrátilo méně, než existuje.
+
+To je nejhorší možná porucha právě pro tenhle skill: **vyrábí falešná tvrzení
+o neexistenci** — tedy přesně ten typ chyby, kvůli kterému vznikl.
+
+Proto u **každého** tvrzení typu „X neexistuje" nebo „nikde není" platí:
+
+1. projdi **každou knihovnu zvlášť**, jmenovitě — ne jedním rekurzivním záběrem;
+   knihovny jsou `AI - Dokumenty`, `Salutem - Dokumenty`, `IT Governance -
+   Dokumenty`, `SReal - Dokumenty`, `OneDrive - P&J Capital s.r.o`
+2. do reportu vypiš, **které knihovny jsi opravdu prošel** a kterou ne
+3. knihovnu, ke které se nedostaneš, uveď v řádku „Zdroje, které jsem NEMĚL"
+
+**Nenapiš „hledal jsem v celé složce".** Napiš, ve kterých knihovnách — jinak
+nikdo nepozná, jestli je negativní nález nález, nebo slepé místo nástroje.
+
+### Umíš čist .docx, neumíš .pdf
+
+Přepisy jsou `.docx` a ty se čtou přes `skripty\docx2txt.py`. **PDF přečíst
+neumíš** (chybí poppler), takže část archivu je pro tebe nedostupná. Když nosné
+tvrzení stojí na PDF, není to NEDOLOŽENO — je to řádek do „Zdroje, které jsem
+NEMĚL" s cestou k tomu souboru.
+
 ### Kontrola hlavičky: sirotčí tvrzení
 
 Levná kontrola s dobrým výnosem. Hlavička záznamu má pole `zdroj:` a to je
@@ -107,6 +135,26 @@ později a zdroj nedoplnil. Nahlas to — i když se tvrzení nakonec potvrdí.
 
 **Pravdivé tvrzení může být prošlé.** „Cowork je dostupný" byla v červnu pravda.
 U každého tvrzení se ptej nejen *je to pravda*, ale *je to pravda dnes*.
+
+### Nedotažená oprava — nejvýnosnější místo v celém záznamu
+
+Když v záznamu **najdeš datovanou revizi nebo přeškrtnutý text**, nepřeskoč to
+jako „tohle už je vyřešené". Naopak: **je to nejpravděpodobnější místo, kde je
+chyba pořád.** Opravit se totiž musí dvě věci a obvykle se opraví jen jedna:
+
+1. samotné tvrzení
+2. **důsledek, který z něj plynul** — doporučení, návrh, číslo v business casu
+
+**Doložený případ 13. 8. 2026:** tvrzení „brand manuál firma nemá" bylo opravené
+téhož dne, ale věta o tom, že *„pokaždé, když má cokoli držet brand, začíná to
+ručním dolováním barev pipetou"*, zůstala stát — přitom vektorová loga nesou
+přesné kódy (`#25db7a`). Oprava tvrzení, doporučení dál špatné.
+
+Postup: u každé revize dohledej, **co ze původního tvrzení plynulo**, a ověř to
+zvlášť. A **kontroluj i data v revizích samotných** — ve stejném záznamu byla
+v opravě věta „o dva dny později (19. 6.)", přičemž 19. 6. je čtyři dny **před**
+uvedeným 23. 6. Text, který někdo psal ve spěchu jako opravu, prochází kontrolou
+nejmíň.
 
 ## Krok 3 — verdikty
 
@@ -211,8 +259,21 @@ Druhý agent má jediný úkol: **pokusit se ten protidoklad zneplatnit.** Ptá 
 
 Ta trojka je nejčastější záměna a plete se nejvíc.
 
-Bilance se vede v `99 Archiv zdrojů\_overovani-zaznamu\_bilance.md` stejně jako
-u zavírače: datum · záznam · verdikt · obstálo / neobstálo.
+## Do `_bilance.md` nezapisuj
+
+Bilance se vede v `99 Archiv zdrojů\_overovani-zaznamu\_bilance.md` — ale
+**zapisuje do ní ten, kdo tě spustil, ne ty.** Běhů jde na jeden záznam víc
+paralelně a společný soubor si navzájem přepíšou.
+
+Doložený případ 13. 8. 2026: ze tří paralelních běhů zapsal do bilance jeden,
+druhý si problém uvědomil a řádek nechal ve svém reportu, třetí ho nechal taky.
+Výsledek: bilance ukazovala jeden ověřený záznam ze tří.
+
+**Ty místo toho dej na konec svého reportu hotový řádek k překopírování:**
+
+```
+| 13. 8. 2026 | `05 Nástroje a systémy/roztristenost-uloziste.md` | 8 / 3 / 5 | — | nespouštěn |
+```
 
 ## Best practice
 
@@ -230,6 +291,16 @@ u zavírače: datum · záznam · verdikt · obstálo / neobstálo.
 - **Jedno tvrzení bývají dvě.** Když se dá rozdělit, rozděl ho.
 - **Cituj krátce a přesně.** Jedna věta ze zdroje je silnější než odstavec
   parafráze.
+- **Pozor na termín, který nikdo nikdy neřekl.** Slovo, které se v bázi tváří
+  jako firemní pojem, ale v žádném přepisu není a v AI výstupech má **různé
+  autory**, bývá zkomolenina z jednoho hovoru. Doložený případ: „Paspil" bylo
+  „paskvil", jedno slovo jednoho člověka o IT infrastruktuře — a v bázi z toho
+  byl termín, název záznamu a název projektu za milion. Signál je právě ta
+  **rozcházející se atribuce**: kdyby to byl pojem, autor by byl jeden.
+- **Počítej s tím, že jsi drahý.** Reálná spotřeba prvních tří běhů byla
+  **22, 20 a 32 hledání** (zavírač měl 8–14). Rozpočet je měkký, ale když
+  překročíš 30, dopiš do reportu, **na čem se to protočilo** — ať se pozná,
+  jestli to byl záznam, nebo nástroj.
 
 ## Co nikdy nedělat
 
@@ -243,6 +314,9 @@ u zavírače: datum · záznam · verdikt · obstálo / neobstálo.
 - **Nevydávej VYVRÁCENO bez artefaktu.** Přepis proti přepisu není vyvrácení,
   je to rozpor mezi tvrzeními a hlásí se jako NEDOLOŽENO.
 - **Nedělej víc než jeden záznam a osm tvrzení** na běh.
+- **Nezapisuj do `_bilance.md`** — ten soubor patří tomu, kdo tě spustil.
+- **Netvrď „neexistuje" po jednom rekurzivním hledání.** Knihovny jmenovitě,
+  jinak je to slepé místo nástroje vydávané za nález.
 
 ## Proč to vzniklo
 
