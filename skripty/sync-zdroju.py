@@ -52,11 +52,21 @@ def save_json(path, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def walk(root):
-    """Vrati (soubory, slozky). Soubor = (relativni cesta, mtime, velikost)."""
+def walk(root, ignorovat=None):
+    """Vrati (soubory, slozky). Soubor = (relativni cesta, mtime, velikost).
+
+    ignorovat = seznam relativnich prefixu, ktere se do zdroje nepocitaji
+    (napr. podslozka s osobnimi daty). Duvod se pise do configu.
+    """
+    ignorovat = [i.replace("/", os.sep).rstrip(os.sep).lower() for i in (ignorovat or [])]
     files, folders = [], []
     for dirpath, dirnames, filenames in os.walk(root):
         rel_dir = os.path.relpath(dirpath, root)
+        if ignorovat and rel_dir != ".":
+            low = rel_dir.lower()
+            if any(low == i or low.startswith(i + os.sep) for i in ignorovat):
+                dirnames[:] = []
+                continue
         if rel_dir != ".":
             folders.append(rel_dir)
         for name in filenames:
@@ -96,7 +106,7 @@ def report_root(name, cfg, state, dny, sirka=110):
         hranice = dt.datetime(2000, 1, 1)
         od_popis = "zacatku (jeste nikdy nesyncovano)"
 
-    files, folders = walk(path)
+    files, folders = walk(path, cfg.get("ignorovat"))
     hranice_ts = hranice.timestamp()
     nove = [f for f in files if f[1] > hranice_ts]
     nove.sort(key=lambda f: -f[1])

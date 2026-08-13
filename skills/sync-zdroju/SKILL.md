@@ -62,9 +62,26 @@ k ručnímu pohledu, ne k panice; nejčastěji jde o přejmenování.
 souborů a osobní data. Co se vědomě nehlídá, je vypsané v konfiguraci
 v sekci `_nehlidat` (a je tam i důvod).
 
+**Zúžení zdroje se dělá dvěma způsoby:** buď se v konfiguraci upraví `cesta`,
+nebo se u zdroje vypíše `"ignorovat": ["Podslozka"]` — seznam relativních
+prefixů, které se do zdroje nepočítají. Použij `ignorovat` tam, kde ve
+sledované složce leží **osobní data nebo právní dokumenty** vedle znalosti,
+a napiš důvod do `_nehlidat`.
+
+> 🔴 **Past, na kterou se snadno narazí: přesun souboru do hlídané složky
+> ho neudělá „novým".** Sync porovnává **mtime**, a přesun mtime zachovává —
+> takže dokument z května přesunutý dnes do `podklady` se ve výpisu
+> **nikdy neobjeví.** Doloženo 13. 8. 2026 při úklidu kořene
+> `AI - Dokumenty`, kdy se do archivu přesunulo šest zdrojů.
+>
+> **Pravidlo:** co sám přesuneš do hlídané složky, **zapiš rovnou do logu**
+> (`_prehled.md`) jako `⬜`. Na sync se u přesunů nespoléhej — ten hlídá
+> přírůstky, ne přesuny.
+
 Aktuálně hlídané: **Alfa · přepisy · podklady · SReal (manuály a Sales) ·
-IT Governance (AI, evidence softwaru, návody)**. Stav k 11. 8. 2026:
-1 452 souborů celkem.
+IT Governance (AI, evidence softwaru, návody)**. Stav k 13. 8. 2026:
+~1 000 souborů po zúžení dvou nejširších zdrojů (SReal Sales 296 → 42
+bez vzorů smluv, IT Governance evidence 626 → 11 bez karet majetku lidí).
 
 ## Jak to interpretovat — tři koše
 

@@ -24,7 +24,8 @@
     },
     "SReal — Sales": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\03 SReal\\Sales",
-      "poznamka": "Podklady pro obchod: vzory e-mailů, argumentace, ceníky."
+      "poznamka": "Podklady pro obchod: 2pager, Investiční Klíč, personalizovaná nabídka, zadání k úpravám Raynetu.",
+      "ignorovat": ["Smlouvy"]
     },
     "IT Governance — AI": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\AI",
@@ -32,7 +33,8 @@
     },
     "IT Governance — přístupy, licence, evidence": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\06. Evidence",
-      "poznamka": "Firemní softwarová evidence — zdroj pro tabulku AI nástrojů na Hubu."
+      "poznamka": "Firemní softwarová evidence — zdroj pro tabulku AI nástrojů na Hubu.",
+      "ignorovat": ["Uživatelé a zaměstnanci"]
     },
     "IT Governance — návody pro uživatele": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\04. Návody – uživatel",
@@ -40,6 +42,8 @@
     }
   },
   "_nehlidat": {
+    "06. Evidence/Uživatelé a zaměstnanci": "cca 600 souborů, karty majetku jmenovitých lidí — osobní data a stav, do second brainu nikdy (nastaveno přes 'ignorovat' 12. 8. 2026)",
+    "03 SReal/Sales/Smlouvy": "254 vzorů smluv a dodatků. Právní dokumenty, ne znalost o procesu; berou se cíleně, ne hlídáním (nastaveno přes 'ignorovat' 12. 8. 2026)",
     "03 SReal/Klienti": "45 tisíc souborů, klientská data — do second brainu nikdy",
     "03 SReal/Projekty Salutem Real": "11 tisíc souborů provozní dokumentace; vzory smluv se berou cíleně, ne hlídáním",
     "IT Governance/03. TNS": "7 tisíc souborů technické dokumentace TNS; hlídat až bude důvod",
