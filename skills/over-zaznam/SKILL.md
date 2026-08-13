@@ -116,6 +116,32 @@ Proto u **každého** tvrzení typu „X neexistuje" nebo „nikde není" platí
 **Nenapiš „hledal jsem v celé složce".** Napiš, ve kterých knihovnách — jinak
 nikdo nepozná, jestli je negativní nález nález, nebo slepé místo nástroje.
 
+**Konkrétní past, potvrzená dvakrát 13. 8. 2026:** `Get-ChildItem -Recurse
+-Include` umí **tiše nefiltrovat** a vrátit méně, než existuje. Žádná chyba se
+nevypíše. Když na výsledku něco stojí, **zopakuj hledání jinak** — např.
+`-Recurse | Where-Object { $_.Name -like ... }`. V jednom běhu se tím našel
+doklad, na kterém stál celý verdikt; bez druhého pokusu by vyšel opačný.
+
+### Časové značky souborů nejsou datum vzniku
+
+`CreationTime` na Windows je u kopírovaného souboru **čas kopie** — umí být
+i *pozdější* než `LastWriteTime`. Sada souborů s časem zápisu ve čtyřech
+sekundách je stažená kopie, ne originál.
+
+Když má tvrzení stát na tom, **odkdy něco existovalo**, `CreationTime` to
+nedokládá. Doklad dává `LastWriteTime` **plus nezávislá druhá kopie jinde**,
+nejlépe s totožným hashem (`Get-FileHash`). Doložený případ: nález se opřel
+o `CreationTime` 12. 3. 2026 a měl pravdu, ale ze špatného důvodu — skutečný
+doklad byl bit po bitu totožný soubor v jiné knihovně se zápisem 28. 8. 2024.
+
+### Nedatovaný zdroj se dá často datovat zvnitřku
+
+Nepiš „přepis bez data, nelze použít". Hledej v textu **den v týdnu, termín,
+událost, jméno, které se objevilo jen v určitém období**. Doložený případ:
+přepis s hlavičkou „Invalid Date" se datoval na 14.–16. 1. 2026 podle zmínky
+„do pátku 16." a podle onboardingu — a tím se rozhodlo mezi VYVRÁCENO
+a ZASTARALÉ.
+
 ### Umíš čist .docx, neumíš .pdf
 
 Přepisy jsou `.docx` a ty se čtou přes `skripty\docx2txt.py`. **PDF přečíst
@@ -259,6 +285,17 @@ Druhý agent má jediný úkol: **pokusit se ten protidoklad zneplatnit.** Ptá 
 
 Ta trojka je nejčastější záměna a plete se nejvíc.
 
+> **Druhý průchod neověřuje, jestli je nález pravdivý.** Ověřuje, jestli
+> **verdikt, odůvodnění a navržená oprava** odpovídají tomu, co se doložilo.
+>
+> Doložený případ 13. 8. 2026: nález „datum 19. 6. je špatně" byl věcně správný,
+> ale druhý průchod shodil jeho odůvodnění (na tom datu nestál žádný argument,
+> takže to nebylo VYVRÁCENO, ale oprava pěti slov), zablokoval navrženou revizi
+> (*„přeformulovat nadpis"* u řádku, kde nadpis není — provedení doslova by
+> přepsalo správný nadpis na chybný) a našel citaci vydávanou za doslovnou
+> z textu, která byla z názvu souboru. **Pravdivý nález v příliš silném verdiktu
+> je pořád škoda.**
+
 ## Do `_bilance.md` nezapisuj
 
 Bilance se vede v `99 Archiv zdrojů\_overovani-zaznamu\_bilance.md` — ale
@@ -315,6 +352,10 @@ Výsledek: bilance ukazovala jeden ověřený záznam ze tří.
   je to rozpor mezi tvrzeními a hlásí se jako NEDOLOŽENO.
 - **Nedělej víc než jeden záznam a osm tvrzení** na běh.
 - **Nezapisuj do `_bilance.md`** — ten soubor patří tomu, kdo tě spustil.
+- **Nenavrhuj editaci bez citace textu, kterého se týká.** „Přeformulovat
+  nadpis", „změnit tu větu", „upravit odstavec" se nedá provést, aniž by to
+  někdo uhádl — a když to uhádne špatně, poškodí správný text. Vždy uveď
+  **původní znění** a **nové znění**.
 - **Netvrď „neexistuje" po jednom rekurzivním hledání.** Knihovny jmenovitě,
   jinak je to slepé místo nástroje vydávané za nález.
 
