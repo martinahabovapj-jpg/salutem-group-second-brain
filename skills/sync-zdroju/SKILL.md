@@ -69,14 +69,18 @@ sledované složce leží **osobní data nebo právní dokumenty** vedle znalost
 a napiš důvod do `_nehlidat`.
 
 > 🔴 **Past, na kterou se snadno narazí: přesun souboru do hlídané složky
-> ho neudělá „novým".** Sync porovnává **mtime**, a přesun mtime zachovává —
-> takže dokument z května přesunutý dnes do `podklady` se ve výpisu
-> **nikdy neobjeví.** Doloženo 13. 8. 2026 při úklidu kořene
-> `AI - Dokumenty`, kdy se do archivu přesunulo šest zdrojů.
+> ho neudělá „novým".** Sync porovnává **mtime** a přesun mtime zachovává —
+> takže dokument z května přesunutý dnes do `podklady` **se ve výpisu
+> neobjeví**. Doloženo 13. 8. 2026 při úklidu kořene `AI - Dokumenty`,
+> odkud se do archivu přesunulo šest zdrojů.
+>
+> Neujde to úplně: **počet souborů se změní** a skript to na dalším běhu
+> nahlásí (`pocet souboru: +3 proti poslednimu syncu`). Je to ale jen
+> signál, že se něco stalo — **který soubor to byl, ti nikdo neřekne.**
 >
 > **Pravidlo:** co sám přesuneš do hlídané složky, **zapiš rovnou do logu**
-> (`_prehled.md`) jako `⬜`. Na sync se u přesunů nespoléhej — ten hlídá
-> přírůstky, ne přesuny.
+> (`_prehled.md`) jako `⬜`, včetně toho, co v tom čeká. Na sync se
+> u přesunů nespoléhej — hlídá přírůstky, ne přesuny.
 
 Aktuálně hlídané: **Alfa · přepisy · podklady · SReal (manuály a Sales) ·
 IT Governance (AI, evidence softwaru, návody)**. Stav k 13. 8. 2026:
