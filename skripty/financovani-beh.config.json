@@ -1,0 +1,153 @@
+{
+  "_popis": "Konfigurace mesicniho behu nad Master databazi poskytovatelu financovani. Vsechny texty s diakritikou (nazvy listu a sloupcu) patri sem, ne do .py — skript zustava ciste ASCII.",
+  "_pravidlo": "Struktura sloupcu v sesitu se rucne nemeni. Pridavat lze, prejmenovat a presouvat ne — skript sloupce hleda podle nazvu z teto konfigurace.",
+  "master": "O:/AAA POHLEDÁVKY, REALITY NEKOUPENÉ/MDU/Seznamy FKI a FO_WM/Master_databaze_financovani_20260813.xlsx",
+  "_master_todo": "Master lezi na sitovem disku O: (\\172.30.180.10\\public) ve slozce Martina Dudjaka. Kopie ve slozce Downloads na notebooku Martiny Habove NEJSOU master - jsou to pracovni pozustatky a Master_databaze_financovani_202608.xlsx je navic poskozeny (chybi 60 ICO a 33 kontaktnich jmen). Datum v nazvu souboru je zdrojem zmatku - az bude prilezitost, prejmenovat na Master_databaze_financovani.xlsx a upravit tuhle cestu.",
+  "zalohy": "zalohy",
+  "stranky": "stranky",
+  "k_precteni": "k-precteni",
+  "listy": {
+    "subjekty": "1 Subjekty",
+    "kontakty": "2 Kontakty",
+    "financovani": "3 Role Financování",
+    "zdroje": "4 Zdroje",
+    "navrhy": "5 Návrhy změn",
+    "investor": "6 Role Investor"
+  },
+  "sloupce": {
+    "subjekty": {
+      "id": "ID",
+      "nazev": "Název",
+      "ico": "IČO",
+      "zeme": "Země",
+      "web": "Web",
+      "stav": "Stav",
+      "overeno": "Ověřeno",
+      "poznamka": "Poznámka"
+    },
+    "kontakty": {
+      "id": "ID subjektu",
+      "subjekt": "Subjekt",
+      "osoba": "Jméno a pozice",
+      "telefon": "Telefon",
+      "email": "E-mail",
+      "overeno": "Ověřeno",
+      "poznamka": "Poznámka"
+    },
+    "financovani": {
+      "id": "ID",
+      "subjekt": "Subjekt",
+      "ticket_od": "Ticket od",
+      "ticket_do": "Ticket do",
+      "ltv": "LTV max"
+    },
+    "navrhy": {
+      "datum": "Datum běhu",
+      "id": "ID subjektu",
+      "subjekt": "Subjekt",
+      "co": "Co",
+      "bylo": "Bylo",
+      "navrzeno": "Navrženo",
+      "zdroj": "Zdroj (URL)",
+      "schvalit": "Schválit",
+      "poznamka": "Poznámka schvalovatele",
+      "pruh": "Pruh"
+    }
+  },
+  "stavy": {
+    "aktivni": "aktivní",
+    "vyrazen": "VYŘAZEN",
+    "nenalezeno": "nenalezeno",
+    "insolvence": "v insolvenci",
+    "zanikly": "zaniklý",
+    "likvidace": "v likvidaci"
+  },
+  "pruhy": {
+    "_popis": "Routuje se podle toho, KTERE POLE se meni a ODKUD informace prisla — nikdy podle obsahu zmeny. Model nikdy nerozhoduje o svem vlastnim pruhu. Kdyz se ukaze, ze neco chodi do spatneho pruhu, prehodi se to TADY, ne v kodu.",
+    "insolvence": "A",
+    "zanik": "A",
+    "likvidace": "A",
+    "zmena_nazvu": "A",
+    "zmena_sidla": "A",
+    "web_nedostupny": "A",
+    "mail_domena_neexistuje": "A",
+    "ico_nesedi": "B",
+    "typ_financovani": "B",
+    "ticket": "B",
+    "ltv": "B",
+    "kontaktni_osoba": "B",
+    "novy_subjekt": "B",
+    "transakce": "B",
+    "text_bez_dopadu": "C"
+  },
+  "prahy": {
+    "_popis": "Pod prahem jde zmena do pruhu C (jen log). Drzi frontu pruhu B na 10-20 polozkach mesicne.",
+    "ticket_procent": 20,
+    "ltv_procentni_body": 5,
+    "novy_typ_financovani_vzdy": true,
+    "kontaktni_osoba_vzdy": true
+  },
+  "pojistky": {
+    "_popis": "Ctyri pojistky, bez kterych by pruh A (automaticky zapis bez cloveka) nemel bezet.",
+    "strop_pruh_a_procent": 10,
+    "sitove_selhani_dvakrat": true,
+    "insolvence_vyzaduje_ares_i_isir": true,
+    "nikdy_nemaze": true
+  },
+  "rotace": {
+    "_popis": "Do hloubky (cteni modelem) jde mesicne jen zlomek subjektu. Otisk stranky se pocita u vsech — je zadarmo.",
+    "delitel": 3,
+    "max_k_precteni": 25
+  },
+  "sit": {
+    "timeout_s": 20,
+    "pauza_mezi_dotazy_s": 0.3,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) salutem-financovani-beh/1.0"
+  },
+  "endpointy": {
+    "_overeno": "2026-08-26 z pocitace Martiny Habove — oba dostupne, drive povazovane za blokovane.",
+    "ares": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/{ico}",
+    "isir": "https://isir.justice.cz:8443/isir_cuzk_ws/IsirWsCuzkService",
+    "isir_dokumentace": "https://isir.justice.cz/isir/help/Popis_WS_2_v1_13.pdf",
+    "rpo_sk_hledani": "https://api.statistics.sk/rpo/v1/search?identifier={ico}",
+    "_rpo_poznamka": "Slovensky Register pravnickych osob. ARES je cesky - na SK ICO vraci 404, coz NENI doklad o zaniku. Slovenska insolvence (Register upadcov, ru.justice.sk) zatim neni pokryta."
+  },
+  "texty": {
+    "_popis": "Vsechny retezce s diakritikou, ktere skript zapisuje do sesitu nebo vypisuje. V .py zdrojaku zadna diakritika nesmi byt.",
+    "pole_nazev_rejstrik": "Název v rejstříku",
+    "pole_sidlo": "Sídlo",
+    "pole_poznamka": "Poznámka",
+    "pole_email": "E-mail",
+    "web_nedostupny": "web nedostupný {n}x po sobě (HTTP {kod})",
+    "mail_domena": "doména {domena} neexistuje ({n}x po sobě)",
+    "dns_bez_zaznamu": "DNS bez záznamu",
+    "ico_nesedi": "ARES toto IČO nezná — ověřit ručně",
+    "prijmout": "přijmout",
+    "zamitnout": "zamítnout",
+    "ukazkovy_radek": "Ukázkov",
+    "zastaveno_stropem": "[zastaveno stropem pruhu A]",
+    "automat_poznamka": "[{datum} automat] {co}: {detail}. Zdroj: {zdroj}",
+    "pole_ico": "IČO",
+    "pole_stav": "Stav",
+    "rpo_nesedi": "RPO (SK) toto IČO nezná — ověřit ručně"
+  },
+  "registry_podle_zeme": {
+    "_popis": "Ktery registr se pta pro kterou zemi. Zeme, ktera tu neni, se v registrech nekontroluje vubec a beh to nahlasi jako nepokryte - mlceni by cetlo jako 'zkontrolovano'.",
+    "CZ": "ares",
+    "SK": "rpo"
+  },
+  "otisk_ignoruj": {
+    "_popis": "Regulerni vyrazy, ktere se ze stranky vyhodi jeste pred vypoctem otisku. Patri sem to, co se meni pri kazdem nacteni a nikdy to neznamena zmenu udaje. Kdyz nejaky subjekt hlasi zmenu kazdy mesic a model u nej pokazde rekne 'nic', patri jeho pricina sem.",
+    "vzory": [
+      "Sečtěte a zaokrouhlete \\(.*?\\)",
+      "(?i)ověřte, že nejste robot",
+      "(?i)pokud jste člověk, nevyplňujte",
+      "(?i)csrf|nonce|sessionid"
+    ],
+    "_poradi_radku": "Otisk se pocita z abecedne serazenych unikatnich radku. Duvod: nekolik webu michá poradi poli ve formularich pri kazdem nacteni jako ochranu proti robotum (napr. matuskapartners.sk). Zajima nas, jestli se zmenil OBSAH, ne poradi.",
+    "subjekty": {
+      "_popis": "Subjekty, jejichz stranka hlasi zmenu pri kazdem nacteni z duvodu, ktery nejde odfiltrovat vzorem. Jejich zmena jde do pruhu C (jen log) a beh je POKAZDE vypise jako nesledovane - mlceni by cetlo jako 'zkontrolovano'. Kazdy zaznam musi mit duvod.",
+      "123": "matuskapartners.sk michá slova v popiskach formulare do nahodnych kombinaci (ochrana proti robotum) — kazde nacteni vyrobi nove unikatni radky, vzorem to odfiltrovat nejde"
+    }
+  }
+}

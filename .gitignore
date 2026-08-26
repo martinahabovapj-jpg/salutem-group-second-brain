@@ -1,2 +1,13 @@
-﻿__pycache__/
+__pycache__/
 *.pyc
+
+# mesicni beh nad databazi financovani: provozni cache, ne znalost
+# pamet mezi behy patri VEDLE MASTERU na O:, ne do repa. Kdyby byla
+# verzovana tady, vznikly by dva ruzne stavy a druhy spoustec by pri prvnim
+# behu dostal zaplavu falesnych zmen.
+skripty/financovani-beh.stav.json
+skripty/stranky/
+skripty/k-precteni/
+skripty/zalohy/
+skripty/navrhy.json
+skripty/*.log
