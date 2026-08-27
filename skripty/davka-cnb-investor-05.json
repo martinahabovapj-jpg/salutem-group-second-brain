@@ -1,0 +1,67 @@
+[
+ {
+  "ico": "60192941",
+  "nazev": "BH Securities a.s.",
+  "web": "https://www.bhs.cz",
+  "typ": "Obchodník s cennými papíry",
+  "verdikt": "zaradit",
+  "segment": "klientský kapitál - prvotřídní komerční nemovitosti s výnosem z dlouhodobého nájemného; podfond BHS Real Estate Fund SICAV",
+  "aum": "",
+  "gatekeeper": "licencovaný obchodník s cennými papíry, klienti individuální, municipality i institucionální; přes 30 let na trhu",
+  "duvod": "Obchodník s cennými papíry s vlastním nemovitostním fondem. Dvojí užitek: sám alokuje do komerčních nemovitostí a zároveň je kanálem k institucionálním investorům a municipalitám.",
+  "citace": "Konzervativní sektor ekonomiky určený pro investory, kteří ocení aktiva, na které si lze sáhnout a preferují investice do prvotřídních komerčních nemovitostí, které generují výnos na základě dlouhodobého nájemného.",
+  "zdroj": "https://www.bhs.cz/nemovitostni-fond"
+ },
+ {
+  "ico": "28545320",
+  "nazev": "CREAM SICAV, a.s.",
+  "web": "https://cream-reality.cz",
+  "typ": "FKI nemovitostní",
+  "verdikt": "zaradit",
+  "segment": "pronájem nemovitostí - přes 100 objektů po celé ČR: skladové, komerční, kancelářské i rezidenční jednotky",
+  "aum": "",
+  "gatekeeper": "skupina CREAM, provozní firma CREAM Real Estate s.r.o.",
+  "duvod": "Nájemní model se širokým portfoliem po celé ČR včetně regionů. POZOR: web ze seznamu (creamsicav.cz) neexistuje, skupina jede pod cream-reality.cz - proto se ke fondu špatně dohledávalo.",
+  "citace": "Skupina CREAM se specializuje na poskytování služeb v oblasti pronájmu nemovitostí a společnost má více než 100 nemovitostí po celé České republice, se širokým výběrem skladových, komerčních, kancelářských a rezidenčních jednotek.",
+  "zdroj": "https://cream-reality.cz/cs"
+ },
+ {
+  "ico": "03451488",
+  "nazev": "Compact Property Fund",
+  "web": "https://www.amista.cz",
+  "typ": "FKI nemovitostní",
+  "verdikt": "zaradit",
+  "segment": "nemovitosti v EU - Slovensko, Velká Británie a Španělsko, k tomu české regiony s očekávaným růstem cen; umí i nabýt nemovitost výstavbou",
+  "aum": "",
+  "gatekeeper": "obhospodařovatel AMISTA investiční společnost",
+  "duvod": "Zajímavé je, že fond umí nabýt nemovitost výstavbou nebo výstavbu na svých pozemcích umožnit - to je bližší developerské spolupráci než u čistě nájemních fondů. Zaměření je ale z velké části mimo ČR.",
+  "citace": "Investiční strategie fondu je zaměřena na aktiva na území EU, zejména na Slovensku, ve Velké Británii a ve Španělsku.",
+  "zdroj": "https://www.amista.cz/files/compact/2026-03-05-statut-compact-property-fund-p-.pdf"
+ },
+ {
+  "ico": "",
+  "nazev": "Luxent Fund SICAV",
+  "web": "https://www.luxent.cz",
+  "typ": "Realitní kancelář / FKI",
+  "verdikt": "zaradit",
+  "segment": "realitní kancelář s vlastním fondem kvalifikovaných investorů; cílí na nadstandardní výnosy v rámci realitního trhu",
+  "aum": "",
+  "gatekeeper": "realitní kancelář pro prémiový segment, spolupracuje s developery",
+  "duvod": "Dvojí role - realitní kancelář a zároveň správce FKI. Výslovně zmiňuje spolupráci s developery, což je pro nás relevantní kanál. IČO fondu se nepodařilo jednoznačně určit, v ARESu jsou jen provozní entity LUXENT - doplnit ručně.",
+  "citace": "Luxent Fund SICAV - pro investory máme strategii, jejímž cílem je dosahovat stabilní a v rámci realitního trhu nadstandardní výnosy.",
+  "zdroj": "https://www.luxent.cz/"
+ },
+ {
+  "ico": "",
+  "nazev": "PREMIOT",
+  "web": "https://www.premiot.com",
+  "typ": "Investiční skupina",
+  "verdikt": "nevim",
+  "segment": "",
+  "aum": "",
+  "gatekeeper": "",
+  "duvod": "Web má prošlý certifikát, obsah nešel načíst. Posoudit znovu z jiného vstupu.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
