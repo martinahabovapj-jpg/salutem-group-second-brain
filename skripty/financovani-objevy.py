@@ -218,7 +218,7 @@ def priprav(kandidati, cfg, stav):
 def verdikty(cesta, cfg, modul, sesit, stav, opravdu):
     vstup = load_json(cesta, [])
     pamet = stav.setdefault("objevy", {})
-    navrhy, zahozeno = [], []
+    navrhy, zahozeno, do8 = [], [], []
 
     for v in vstup:
         ico = str(v.get("ico") or "").strip()
@@ -235,6 +235,11 @@ def verdikty(cesta, cfg, modul, sesit, stav, opravdu):
                       "nazev": norm(v.get("nazev")),
                       "duvod": norm(v.get("duvod")),
                       "zdroj": norm(v.get("zdroj"))}
+        if verdikt == "nevim":
+            # nevim neni zamitnuti - patri cloveku pred oci do listu 8
+            do8.append({"datum": pamet[ico]["datum"], "ico": ico,
+                        "nazev": norm(v.get("nazev")), "web": norm(v.get("zdroj")),
+                        "co_vime": "", "duvod": norm(v.get("duvod"))})
         if verdikt == "zaradit":
             navrhy.append(modul.navrh(
                 ico, norm(v.get("nazev")), "novy_subjekt", T["pole_stav"],
@@ -258,6 +263,12 @@ def verdikty(cesta, cfg, modul, sesit, stav, opravdu):
         if pribylo:
             vypis("Do listu '%s' pribylo %d zamitnutych."
                   % (sesit.listy["zamitnuto"], pribylo))
+
+    if opravdu and do8:
+        pribylo8 = modul.zapis_nerozhodnute(sesit, do8, T["nerozhodnuto_kde_obj"])
+        if pribylo8:
+            vypis("Do listu '%s' pribylo %d nerozhodnutych."
+                  % (sesit.listy["nerozhodnuto"], pribylo8))
 
     zamitnuto = sum(1 for v in pamet.values() if v["verdikt"] == "zamitnout")
     vypis("Zapamatovano verdiktu celkem: %d (z toho zamitnutych %d - ti se uz "
@@ -398,7 +409,7 @@ def priprav_investor(kandidati, cfg, stav):
 def verdikty_investor(cesta, cfg, modul, sesit, stav, opravdu):
     vstup = load_json(cesta, [])
     pamet = stav.setdefault("objevy_investor", {})
-    navrhy, zahozeno, do7 = [], [], []
+    navrhy, zahozeno, do7, do8i = [], [], [], []
 
     for v in vstup:
         klic = norm(v.get("klic"))
@@ -414,6 +425,11 @@ def verdikty_investor(cesta, cfg, modul, sesit, stav, opravdu):
                        "nazev": norm(v.get("nazev")),
                        "duvod": norm(v.get("duvod")),
                        "zdroj": norm(v.get("zdroj"))}
+        if verdikt == "nevim":
+            do8i.append({"datum": pamet[klic]["datum"],
+                         "ico": klic.split(":", 1)[1] if klic.startswith("ico:") else "",
+                         "nazev": norm(v.get("nazev")), "web": norm(v.get("zdroj")),
+                         "co_vime": "", "duvod": norm(v.get("duvod"))})
         if verdikt == "zaradit":
             # klic rozhoduje, jestli jde o novy subjekt, nebo o roli navic
             # u subjektu, ktery v listu 1 uz je
@@ -436,6 +452,11 @@ def verdikty_investor(cesta, cfg, modul, sesit, stav, opravdu):
     if zahozeno:
         vypis("Zahozeno %d verdiktu - chybi citace, URL nebo neplatny verdikt."
               % len(zahozeno))
+    if opravdu and do8i:
+        pribylo8 = modul.zapis_nerozhodnute(sesit, do8i, T["nerozhodnuto_kde_inv"])
+        if pribylo8:
+            vypis("Do listu '%s' pribylo %d nerozhodnutych."
+                  % (sesit.listy["nerozhodnuto"], pribylo8))
     if opravdu and do7:
         modul.zajisti_list(sesit, "zamitnuto")
         pribylo = modul.zapis_zamitnute(sesit, do7, T["zamitnuto_kde_inv"])

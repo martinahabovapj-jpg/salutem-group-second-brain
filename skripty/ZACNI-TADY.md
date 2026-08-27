@@ -165,6 +165,28 @@ signál) a teprve web s citací rozhodne. Máš nové jméno? Přidej ho do sezn
 > i spolky a cestovky. A family office o sobě záměrně mnoho nepíše, takže
 > „nevím" je u nich častá a správná odpověď.
 
+## Kde se co ukládá — tři různé osudy
+
+Když se posuzuje nový subjekt, jsou tři možné konce a **každý má svoje místo**:
+
+| Verdikt | Kam to jde | Co to znamená |
+|---|---|---|
+| **zařadit** | list 1 + role, k tomu citace do listu 4 | patří do databáze |
+| **zamítnout** | list **„7 Zamítnuto při hledání"** | rozhodnuto natrvalo, znovu se nenabídne |
+| **nevím** | list **„8 K ověření"** | **nerozhodnuto** — nedalo se nic doložit |
+
+Ten třetí je důležitý a snadno se přehlédne. **„Nevím" není zamítnutí.** Nejčastěji
+znamená jen, že subjektu nefunguje web nebo o sobě nic nezveřejňuje — z 46 řádků,
+které v listu 8 leží dnes, je většina z toho důvodu.
+
+V listu 8 je u každého vidět **proč se nerozhodlo**, takže se dá projít a rozhodnout
+ručně. **Jakmile se subjekt zařadí nebo zamítne, řádek z listu 8 zmizí sám** — nemusí
+se odtud nic mazat.
+
+> Dřív se „nevím" zahazovalo a nikdo se k takovému subjektu už nevrátil. To byla
+> chyba: mezi nimi jsou i firmy, které do databáze patří, jen se to zrovna
+> nepodařilo doložit.
+
 ## Když se něco pokazí
 
 **Nástroj něco zapsal a nemělo se to stát.** Vrátit to je jeden příkaz.

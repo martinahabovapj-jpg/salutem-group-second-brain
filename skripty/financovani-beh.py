@@ -1260,6 +1260,74 @@ def zapis_zamitnute(sesit, polozky, kde):
     return pocet
 
 
+
+def klic_radku(ico, nazev):
+    """Identita radku v pomocnych listech. ICO, kdyz je; jinak nazev."""
+    i = norm(ico)
+    return i if re.fullmatch(r"\d{6,10}", i or "") else "nazev:%s" % norm(nazev).lower()
+
+
+def zapis_nerozhodnute(sesit, polozky, kde):
+    """Verdikt 'nevim' patri clovek pred oci, ne do zapomneni.
+
+    Dosud se zahazoval: subjekt, u ktereho se nepodarilo nic dolozit, zmizel
+    a nikdo uz se k nemu nevratil. Pritom to NENI zamitnuti - vetsinou jen
+    nefunguje web. V listu 8 je videt, da se rozhodnout rucne, a jakmile se
+    subjekt zaradi nebo zamitne, radek zmizi sam (viz vyres_nerozhodnute).
+    """
+    if not polozky:
+        return 0
+    zajisti_list(sesit, "nerozhodnuto")
+    ws = sesit.ws("nerozhodnuto")
+    mapa = sesit.cfg["sloupce"]["nerozhodnuto"]
+    h = sesit.hlavicka("nerozhodnuto")
+    if ws.max_row == 1:
+        ws.cell(row=1, column=len(mapa) + 2).value = T["nerozhodnuto_nadpis"]
+    i_ico = h.get(norm(mapa["ico"]))
+    i_naz = h.get(norm(mapa["nazev"]))
+    zname = set()
+    for r in range(2, ws.max_row + 1):
+        zname.add(klic_radku(ws.cell(row=r, column=i_ico).value if i_ico else "",
+                             ws.cell(row=r, column=i_naz).value if i_naz else ""))
+    r = ws.max_row + 1
+    pocet = 0
+    for p in polozky:
+        k = klic_radku(p.get("ico"), p.get("nazev"))
+        if k in zname:
+            continue
+        hodnoty = {"datum": p.get("datum") or DNES, "ico": p.get("ico") or "-",
+                   "nazev": p.get("nazev"), "web": p.get("web") or "-",
+                   "co_vime": p.get("co_vime") or "", "duvod": p.get("duvod"),
+                   "kde": kde}
+        for pole in hodnoty:
+            i = h.get(norm(mapa[pole]))
+            if i:
+                ws.cell(row=r, column=i).value = hodnoty[pole]
+        zname.add(k)
+        r += 1
+        pocet += 1
+    return pocet
+
+
+def vyres_nerozhodnute(sesit, ico, nazev):
+    """Subjekt se rozhodl - radek v listu 8 uz nema co delat."""
+    if sesit.listy["nerozhodnuto"] not in sesit.wb.sheetnames:
+        return False
+    ws = sesit.ws("nerozhodnuto")
+    mapa = sesit.cfg["sloupce"]["nerozhodnuto"]
+    h = sesit.hlavicka("nerozhodnuto")
+    i_ico = h.get(norm(mapa["ico"]))
+    i_naz = h.get(norm(mapa["nazev"]))
+    hledany = klic_radku(ico, nazev)
+    for r in range(ws.max_row, 1, -1):
+        k = klic_radku(ws.cell(row=r, column=i_ico).value if i_ico else "",
+                       ws.cell(row=r, column=i_naz).value if i_naz else "")
+        if k == hledany:
+            ws.delete_rows(r)
+            return True
+    return False
+
+
 def aplikuj(sesit, cfg, stav, opravdu):
     """Projde list 5 a vyridi vsechno, u ceho schvalovatel rozhodl."""
     zajisti_sloupce(sesit, "navrhy")

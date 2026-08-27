@@ -98,6 +98,7 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
     zmena_stavu = []
     slaba_shoda = []
     do7 = []
+    do8 = []
 
     for z in zaznamy:
         verdikt = (z.get("verdikt") or "").lower()
@@ -108,7 +109,11 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         zdroj = m.norm(z.get("zdroj"))
 
         if verdikt == "nevim":
+            # nevim se NEZAHAZUJE - jde do listu 8, aby to clovek videl
             preskoceno.append((nazev, m.norm(z.get("duvod"))))
+            do8.append({"datum": m.DNES, "ico": ico, "nazev": nazev, "web": web,
+                        "co_vime": m.norm(z.get("segment")) or m.norm(z.get("typ")),
+                        "duvod": m.norm(z.get("duvod"))})
             continue
         if verdikt not in ("zaradit", "zamitnout") or not (citace and zdroj):
             preskoceno.append((nazev, "chybi citace, URL nebo neplatny verdikt"))
@@ -117,6 +122,9 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         klic = "ico:%s" % ico if ico else "nazev:%s" % nazev.lower()
         pamet[klic] = {"datum": m.DNES, "verdikt": verdikt, "nazev": nazev,
                        "duvod": m.norm(z.get("duvod")), "zdroj": zdroj}
+
+        if opravdu:
+            m.vyres_nerozhodnute(sesit, ico, nazev)
 
         if verdikt == "zamitnout":
             zamitnuto.append(nazev)
@@ -217,8 +225,11 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
 
         (zapsano if novy else doplneno).append((sid, nazev))
 
+    pocet8 = 0
     if opravdu and do7:
         m.zapis_zamitnute(sesit, do7, T["zamitnuto_kde_inv"])
+    if opravdu and do8:
+        pocet8 = m.zapis_nerozhodnute(sesit, do8, T["nerozhodnuto_kde_inv"])
 
     vypis("")
     vypis("=" * 64)
@@ -242,9 +253,13 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
     vypis("  Zamitnuto (do listu 7):         %d" % len(zamitnuto))
     for nazev in zamitnuto:
         vypis("     %s" % nazev[:50])
-    vypis("  Nezapsano (nevim / bez citace): %d" % len(preskoceno))
+    vypis("  Nerozhodnuto - do listu '%s': %d"
+          % (sesit.listy["nerozhodnuto"], len(preskoceno)))
     for nazev, duvod in preskoceno:
         vypis("     %-40s %s" % (nazev[:40], duvod[:60]))
+    if pocet8 != len(preskoceno) and opravdu:
+        vypis("     (z toho %d uz v listu 8 bylo, radky se nezdvojuji)"
+              % (len(preskoceno) - pocet8))
     vypis("=" * 64)
 
     if opravdu:
