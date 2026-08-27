@@ -27,7 +27,8 @@ CONFIG = os.path.join(HERE, "financovani-beh.config.json")
 DO_BEHU = ["financovani-beh.py", "financovani-beh.config.json",
            "financovani-objevy.py", "financovani-objevy.zadani.md",
            "kontrola-prostredi.py", "kontrola-prostredi.texty.json",
-           "KONTROLA.cmd", "refresh.cmd", "ZAPSAT.cmd", "OBJEVY.cmd"]
+           "KONTROLA.cmd", "refresh.cmd", "ZAPSAT.cmd", "OBJEVY.cmd",
+           "INVESTORI.cmd", "financovani-cnb.py", "FONDY-CNB.cmd"]
 VEDLE_MASTERU = ["ZACNI-TADY.md"]
 
 

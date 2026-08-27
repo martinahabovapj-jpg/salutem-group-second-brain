@@ -245,6 +245,20 @@ def verdikty(cesta, cfg, modul, sesit, stav, opravdu):
         vypis("Zahozeno %d verdiktu - chybi citace, URL nebo neplatny verdikt."
               % len(zahozeno))
 
+    # zamitnuti patri i do sesitu - stroj si je pamatuje v JSONu, ale clovek
+    # se na ne musi dostat taky. Jinak na otazku "koukali jsme na X?" neni
+    # v databazi odpoved a subjekt se posoudi znovu od nuly.
+    do_listu7 = [{"datum": pamet[i]["datum"], "ico": i, "nazev": pamet[i]["nazev"],
+                  "duvod": pamet[i]["duvod"], "citace": pamet[i]["duvod"],
+                  "zdroj": pamet[i]["zdroj"]}
+                 for i in pamet if pamet[i]["verdikt"] == "zamitnout"]
+    if opravdu and do_listu7:
+        modul.zajisti_list(sesit, "zamitnuto")
+        pribylo = modul.zapis_zamitnute(sesit, do_listu7, T["zamitnuto_kde_obj"])
+        if pribylo:
+            vypis("Do listu '%s' pribylo %d zamitnutych."
+                  % (sesit.listy["zamitnuto"], pribylo))
+
     zamitnuto = sum(1 for v in pamet.values() if v["verdikt"] == "zamitnout")
     vypis("Zapamatovano verdiktu celkem: %d (z toho zamitnutych %d - ti se uz "
           "nabizet nebudou)." % (len(pamet), zamitnuto))
@@ -257,6 +271,186 @@ def verdikty(cesta, cfg, modul, sesit, stav, opravdu):
     return navrhy
 
 
+# ------------------------------------------------------- investorska strana
+# Hledani do listu 6. Nejde pres NACE: family office nema vlastni kod a v
+# rejstriku je k nerozeznani od bezne s.r.o. Postup je proto opacny nez u
+# financovani - vyjde se ze jmena, ARES dohleda cely firemni trs (obvykle
+# nekolik entit na jedne adrese) a teprve web s citaci rozhodne.
+
+
+def ares_podle_jmena(jmeno, ctx, ua, pocet=50):
+    telo = {"obchodniJmeno": jmeno, "start": 0, "pocet": pocet}
+    req = urllib.request.Request(URL_HLEDAT, data=json.dumps(telo).encode("utf-8"),
+                                 headers={"Content-Type": "application/json",
+                                          "Accept": "application/json",
+                                          "User-Agent": ua})
+    try:
+        d = json.load(urllib.request.urlopen(req, timeout=30, context=ctx))
+    except Exception as e:
+        return [], type(e).__name__
+    return d.get("ekonomickeSubjekty", []), None
+
+
+def najdi_investory(cfg, sesit, stav):
+    """Vraci (kandidati, chyby). Kandidat nese bud ICO (novy), nebo ID
+    subjektu, ktery uz v listu 1 je a jen se prehodnocuje."""
+    o = cfg["objevy_investor"]
+    try:
+        import certifi
+        ctx = ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        ctx = ssl.create_default_context()
+    ua = cfg["sit"]["user_agent"]
+    socket.setdefaulttimeout(cfg["sit"]["timeout_s"])
+
+    znama = znama_ica(sesit, cfg)
+    pamet = stav.setdefault("objevy_investor", {})
+
+    kandidati, chyby = [], []
+    videna = set()
+
+    # --- a) subjekty, ktere v listu 1 uz jsou a maji se prehodnotit
+    chci = set(str(x) for x in o.get("prehodnotit", []))
+    if chci:
+        for _, d in sesit.radky("subjekty"):
+            sid = str(d.get("id"))
+            if sid not in chci:
+                continue
+            kandidati.append({
+                "klic": "id:%s" % sid,
+                "id": sid,
+                "ico": norm(d.get("ico")),
+                "nazev": norm(d.get("nazev")),
+                "web": norm(d.get("web")),
+                "sidlo": "",
+                "duvod_zarazeni": "prehodnoceni - v listu 1 veden jako %s"
+                                  % norm(d.get("stav")),
+            })
+            videna.add(sid)
+
+    # --- b) jmena: ARES dohleda cely trs
+    for jmeno in o.get("jmena", []):
+        subj, chyba = ares_podle_jmena(jmeno, ctx, ua)
+        if chyba:
+            chyby.append((jmeno, chyba))
+            continue
+        for z in subj:
+            ico = str(z.get("ico") or "")
+            if not ico or ico in videna:
+                continue
+            videna.add(ico)
+            if ico in znama:
+                continue           # uz ho v databazi mame
+            if ico in pamet:
+                continue           # uz jsme o nem jednou rozhodli
+            kandidati.append({
+                "klic": "ico:%s" % ico,
+                "id": "",
+                "ico": ico,
+                "nazev": norm(z.get("obchodniJmeno")),
+                "web": "",
+                "sidlo": norm((z.get("sidlo") or {}).get("textovaAdresa")),
+                "duvod_zarazeni": "hledano podle jmena '%s'" % jmeno,
+            })
+        time.sleep(0.2)
+
+    # trs na jedne adrese je silny signal - stejne sidlo u vic entit napred
+    podle_adresy = {}
+    for k in kandidati:
+        if k["sidlo"]:
+            podle_adresy.setdefault(k["sidlo"], []).append(k)
+    for k in kandidati:
+        k["_trs"] = len(podle_adresy.get(k["sidlo"], [])) if k["sidlo"] else 0
+    kandidati.sort(key=lambda k: (not k["id"], -k["_trs"], k["nazev"]))
+    return kandidati, chyby
+
+
+def priprav_investor(kandidati, cfg, stav):
+    d = os.path.join(HERE, cfg["objevy_investor"].get("k_posouzeni", "k-posouzeni-investor"))
+    if os.path.isdir(d):
+        import shutil
+        shutil.rmtree(d)
+    os.makedirs(d)
+
+    strop = cfg["objevy_investor"].get("max_kandidatu", 40)
+    davka = kandidati[:strop]
+    mimo = kandidati[strop:]
+
+    radky = [T["investor_nadpis_souboru"], "", T["investor_hlavicka"],
+             "|---|---|---|---|---|"]
+    for k in davka:
+        radky.append("| %s | %s | %s | %s | %s |" % (
+            k["id"] or "-", k["ico"] or "-", k["nazev"],
+            k["sidlo"] or "-", k["duvod_zarazeni"]))
+    with io.open(os.path.join(d, "kandidati.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(radky) + "\n")
+
+    zadani = T["investor_zadani"]
+    if mimo:
+        zadani += T["objevy_useknuto"].format(
+            celkem=len(kandidati), davka=len(davka),
+            ica=", ".join(k["ico"] or k["id"] for k in mimo))
+    with io.open(os.path.join(d, "_ZADANI.md"), "w", encoding="utf-8") as f:
+        f.write(zadani)
+    return len(davka), len(mimo)
+
+
+def verdikty_investor(cesta, cfg, modul, sesit, stav, opravdu):
+    vstup = load_json(cesta, [])
+    pamet = stav.setdefault("objevy_investor", {})
+    navrhy, zahozeno, do7 = [], [], []
+
+    for v in vstup:
+        klic = norm(v.get("klic"))
+        verdikt = (v.get("verdikt") or "").lower()
+        if not klic or verdikt not in ("zaradit", "zamitnout", "nevim"):
+            zahozeno.append(v)
+            continue
+        if verdikt in ("zaradit", "zamitnout") and not (v.get("citace") and v.get("zdroj")):
+            zahozeno.append(v)
+            continue
+        pamet[klic] = {"datum": dt.date.today().isoformat(),
+                       "verdikt": verdikt,
+                       "nazev": norm(v.get("nazev")),
+                       "duvod": norm(v.get("duvod")),
+                       "zdroj": norm(v.get("zdroj"))}
+        if verdikt == "zaradit":
+            # klic rozhoduje, jestli jde o novy subjekt, nebo o roli navic
+            # u subjektu, ktery v listu 1 uz je
+            if klic.startswith("id:"):
+                druh, ident = "role_investor", klic[3:]
+            else:
+                druh, ident = "novy_investor", klic[4:]
+            navrhy.append(modul.navrh(
+                ident, norm(v.get("nazev")), druh, T["pole_stav"],
+                "", T["investor_zaradit"], v.get("zdroj"),
+                citace=norm(v.get("citace")), jistota=""))
+        elif verdikt == "zamitnout":
+            do7.append({"datum": pamet[klic]["datum"],
+                        "ico": klic.split(":", 1)[1],
+                        "nazev": norm(v.get("nazev")),
+                        "duvod": norm(v.get("duvod")),
+                        "citace": norm(v.get("citace")),
+                        "zdroj": norm(v.get("zdroj"))})
+
+    if zahozeno:
+        vypis("Zahozeno %d verdiktu - chybi citace, URL nebo neplatny verdikt."
+              % len(zahozeno))
+    if opravdu and do7:
+        modul.zajisti_list(sesit, "zamitnuto")
+        pribylo = modul.zapis_zamitnute(sesit, do7, T["zamitnuto_kde_inv"])
+        if pribylo:
+            vypis("Do listu '%s' pribylo %d zamitnutych."
+                  % (sesit.listy["zamitnuto"], pribylo))
+
+    if navrhy:
+        vysledek = modul.zapis(sesit, navrhy, cfg, stav, opravdu)
+        vypis("K zarazeni jde do pruhu B: %d" % len(vysledek["B"]))
+    else:
+        vypis(T["investor_zadny"])
+    return navrhy
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -265,6 +459,10 @@ def main():
     ap.add_argument("--verdikty", help="soubor objevy.json od modelu")
     ap.add_argument("--zapis", action="store_true", help="opravdu zapsat")
     ap.add_argument("--master", help="jina cesta k sesitu (test, kdyz je disk O: pryc)")
+    ap.add_argument("--investor", action="store_true",
+                    help="hleda na investorske strane (list 6) - podle jmen, ne podle NACE")
+    ap.add_argument("--verdikty-investor", dest="verdikty_investor",
+                    help="soubor objevy-investor.json od modelu")
     args = ap.parse_args()
 
     cfg, modul = kontext()
@@ -273,6 +471,34 @@ def main():
         vypis("POZOR: bezi proti jinemu sesitu nez podle konfigurace - %s" % args.master)
     stav = load_json(STATE, {"behy": [], "subjekty": {}, "log": []})
     sesit = modul.Sesit(cfg)
+
+    if args.verdikty_investor:
+        verdikty_investor(args.verdikty_investor, cfg, modul, sesit, stav, args.zapis)
+        if args.zapis:
+            sesit.uloz(os.path.join(HERE, cfg["zalohy"]))
+        save_json(STATE, stav)
+        return
+
+    if args.investor:
+        vypis("=" * 62)
+        vypis("  " + T["nadpis_investor"])
+        vypis("=" * 62)
+        kandidati, chyby = najdi_investory(cfg, sesit, stav)
+        for jmeno, chyba in chyby:
+            vypis("  ARES neodpovedel na jmeno '%s': %s" % (jmeno, chyba))
+        if not kandidati:
+            vypis(T["investor_zadny"])
+            save_json(STATE, stav)
+            return
+        davka, mimo = priprav_investor(kandidati, cfg, stav)
+        vypis("Kandidatu celkem: %d" % len(kandidati))
+        vypis("Pripraveno k posouzeni: %d (slozka %s)"
+              % (davka, cfg["objevy_investor"].get("k_posouzeni", "k-posouzeni-investor")))
+        if mimo:
+            vypis("POZOR: %d kandidatu se do davky neveslo - neni to "
+                  "'nic dalsiho neni'." % mimo)
+        save_json(STATE, stav)
+        return
 
     if args.verdikty:
         verdikty(args.verdikty, cfg, modul, sesit, stav, args.zapis)

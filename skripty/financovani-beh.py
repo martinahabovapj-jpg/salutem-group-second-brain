@@ -151,8 +151,14 @@ class Sesit(object):
         return h
 
     def sl(self, klic, pole):
-        """Index sloupce podle logickeho nazvu pole z konfigurace."""
-        nazev = self.cfg["sloupce"][klic][pole]
+        """Index sloupce podle logickeho nazvu pole z konfigurace.
+
+        Vraci None i tehdy, kdyz pole v konfiguraci daneho listu vubec neni -
+        list 3 nema sloupec Overeno a ptat se na nej je legitimni.
+        """
+        nazev = self.cfg["sloupce"][klic].get(pole)
+        if not nazev:
+            return None
         h = self.hlavicka(klic)
         if nazev not in h:
             return None
@@ -454,6 +460,7 @@ def projdi(sesit, sit, stav, cfg, limit=None, jen_registry=False):
     st_subj = stav.setdefault("subjekty", {})
     preskoceno_ico = []
     preskocena_zeme = []
+    bez_zeme = []
     podle_zeme = {k: v for k, v in cfg["registry_podle_zeme"].items()
                   if not k.startswith("_")}
 
@@ -470,7 +477,14 @@ def projdi(sesit, sit, stav, cfg, limit=None, jen_registry=False):
         # o zaniku firmy, je to jen dukaz, ze se ptame spatneho registru.
         registr = podle_zeme.get(zeme)
         if registr is None:
-            preskocena_zeme.append((sid, nazev, zeme or "?"))
+            # Dva ruzne problemy, ktere se nesmi slit do jedne hlasky:
+            # "zeme nema napojeny registr" je vlastnost sveta a nic s tim
+            # nenadelame; "zeme neni vyplnena" je dira v datech a spravit
+            # se da. Kdyz se hlasi stejne, ta druha se ztrati mezi prvni.
+            if not zeme:
+                bez_zeme.append((sid, nazev))
+            else:
+                preskocena_zeme.append((sid, nazev, zeme))
             continue
         if not re.match(r"^\d{6,8}$", ico):
             preskoceno_ico.append((sid, nazev, ico))
@@ -552,6 +566,12 @@ def projdi(sesit, sit, stav, cfg, limit=None, jen_registry=False):
               "NEKONTROLUJI vubec:" % len(preskocena_zeme))
         for sid, nazev, zeme in preskocena_zeme:
             vypis("    #%s %s (%s)" % (sid, nazev, zeme))
+    if bez_zeme:
+        vypis("  ZEME NENI VYPLNENA u %d subjektu - neni podle ceho vybrat "
+              "registr. Tohle jde spravit, staci doplnit sloupec Zeme:"
+              % len(bez_zeme))
+        for sid, nazev in bez_zeme:
+            vypis("    #%s %s" % (sid, nazev))
 
     if jen_registry:
         return navrhy, zmenene
@@ -609,7 +629,9 @@ def projdi(sesit, sit, stav, cfg, limit=None, jen_registry=False):
                                     citace=nesledovane[sid]))
             else:
                 zmenene.append({"id": sid, "subjekt": nazev, "url": web,
-                                "stary": stary_text, "novy": text})
+                                "stary": stary_text, "novy": text,
+                                "role_fin": norm(d.get("role_financovani")),
+                                "role_inv": norm(d.get("role_investor"))})
         s["otisk"] = novy
         with open(cesta, "w", encoding="utf-8") as f:
             f.write(text)
@@ -681,8 +703,14 @@ def priprav_k_precteni(zmenene, cfg, stav):
             z["stary"].splitlines(), z["novy"].splitlines(),
             fromfile="minule", tofile="ted", lineterm="", n=2))
         zajimave = [r for r in rozdil if r.startswith(("+", "-")) and not r.startswith(("+++", "---"))]
+        role = []
+        if z.get("role_fin"):
+            role.append("poskytovatel financovani (list 3)")
+        if z.get("role_inv"):
+            role.append("investor (list 6)")
         obsah = ["# %s (#%s)" % (z["subjekt"], z["id"]),
-                 "", "URL: %s" % z["url"], "",
+                 "", "URL: %s" % z["url"],
+                 "Role: %s" % (", ".join(role) or "neurcena"), "",
                  "Zmenenych radku: %d" % len(zajimave), "",
                  "## Rozdil proti minulemu behu", "", "```diff"]
         obsah += rozdil if rozdil else ["(bez textoveho rozdilu)"]
@@ -720,6 +748,15 @@ Sleduj jen tato pole:
   kontaktni_osoba   jmenovita osoba, jeji pozice, telefon, e-mail
   transakce         dolozena nova transakce (kdo, kolik, kdy)
 
+Kdyz ma subjekt v hlavicce souboru roli "investor (list 6)", sleduj navic:
+  segment           do ceho investuje (nemovitosti, private debt, private
+                    equity, venture, dluhopisy...)
+  aum               objem spravovanych aktiv
+  gatekeeper        pres koho se k nemu chodi - platforma, poradce, banka
+
+U subjektu, ktery ma obe role, sleduj obe skupiny poli. Roli si nevymyslej -
+je v hlavicce souboru a bere se z listu 1.
+
 PRAVIDLO, KTERE SE NEPORUSUJE:
 Ke kazdemu navrhu musis dodat DOSLOVNOU CITACI ze stranky a URL. Kdyz neumis
 citovat, navrh nevznika. Necituj z rozdilu to, co v nem neni.
@@ -754,6 +791,15 @@ def zapis(sesit, navrhy, cfg, stav, opravdu):
     scfg = cfg["sloupce"]["subjekty"]
     subjekty = {str(d.get("id")): (r, d) for r, d in sesit.radky("subjekty")}
     pocet_radku = max(1, len(subjekty))
+
+    # co uz schvalovatel jednou zamitnul, se nenabizi podruhe
+    pamet = stav.get("neopakovat", {})
+    if pamet:
+        pred = len(navrhy)
+        navrhy = [n for n in navrhy if klic_neopakuj(n) not in pamet]
+        if pred != len(navrhy):
+            vypis("Preskoceno %d navrhu, ktere uz byly jednou zamitnuty."
+                  % (pred - len(navrhy)))
 
     a, b, c = [], [], []
     for n in navrhy:
@@ -821,11 +867,10 @@ def zapis_navrhy(sesit, navrhy, cfg):
     mapa = cfg["sloupce"]["navrhy"]
     h = sesit.hlavicka("navrhy")
 
-    # sloupec Pruh smi pribyt (pridavat lze, prejmenovat ne)
-    if mapa["pruh"] not in h:
-        ws.cell(row=1, column=ws.max_column + 1).value = mapa["pruh"]
-        sesit._hlavicky.pop("navrhy", None)
+    # chybejici sloupce smi pribyt (pridavat lze, prejmenovat ne)
+    if zajisti_sloupce(sesit, "navrhy"):
         h = sesit.hlavicka("navrhy")
+    roletka(sesit, cfg)
 
     # ukazkove radky ze sablony pryc - sesit sam v listu 5 rika, ze se maji smazat
     i_subj = h.get(mapa["subjekt"])
@@ -849,9 +894,11 @@ def zapis_navrhy(sesit, navrhy, cfg):
             "bylo": n["bylo"],
             "navrzeno": n["navrzeno"],
             "zdroj": n["zdroj"],
-            "schvalit": predvyplneno(n),
+            "schvalit": predvyplneno(n, cfg),
             "poznamka": n.get("citace", ""),
             "pruh": n["pruh"],
+            "druh": n["druh"],
+            "vyrizeno": "",
         }
         for pole, hodnota in hodnoty.items():
             i = h.get(mapa[pole])
@@ -860,8 +907,13 @@ def zapis_navrhy(sesit, navrhy, cfg):
         r += 1
 
 
-def predvyplneno(n):
-    """Schvalovatel nema delat 15 rozhodnuti - ma projet seznam a par prepsat."""
+def predvyplneno(n, cfg):
+    """Dokud byl sloupec Schvalit dekorace, davalo predvyplneni smysl. Ted je to
+    spoustec: co je predvyplnene jako 'prijmout', to ZAPSAT.cmd opravdu zapise.
+    Kdo se na frontu nepodiva, ten ji tim odsouhlasil - proto ve vychozim stavu
+    zustava prazdne a schvalovatel vybira z roletky."""
+    if not cfg["pojistky"].get("predvyplnovat_schvaleni"):
+        return ""
     if n.get("jistota") in ("vysoka", "high"):
         return T["prijmout"]
     if n.get("jistota") in ("nizka", "low"):
@@ -871,23 +923,467 @@ def predvyplneno(n):
     return T["prijmout"]
 
 
+# ---------------------------------------------------------------- odtok fronty
+# Fronta, ktera se jen plni, prestane byt frontou a stane se seznamem. Tahle
+# cast ji vyprazdnuje: co schvalovatel v listu 5 oznaci, to se zapise tam, kam
+# to patri, nebo se natrvalo zapamatuje jako "uz nenabizet".
+
+
+def klic_neopakuj(n):
+    """Identita navrhu. Kdyz se hodnota na webu zmeni znovu, je to novy navrh."""
+    return "%s|%s|%s|%s" % (n.get("id"), norm(n.get("druh")),
+                            norm(n.get("co")), norm(n.get("navrzeno")))
+
+
+def zajisti_sloupce(sesit, klic):
+    """Chybejici sloupce z konfigurace dopise do hlavicky. Pridavat lze, prejmenovat ne."""
+    ws = sesit.ws(klic)
+    mapa = sesit.cfg["sloupce"][klic]
+    h = sesit.hlavicka(klic)
+    pribylo = []
+    for pole in mapa:
+        nazev = mapa[pole]
+        if norm(nazev) not in h:
+            ws.cell(row=1, column=ws.max_column + 1).value = nazev
+            pribylo.append(nazev)
+    if pribylo:
+        sesit._hlavicky.pop(klic, None)
+    return pribylo
+
+
+def zajisti_list(sesit, klic):
+    """Zalozi list, kdyz v sesitu jeste neni. Struktura se tim nemeni - pridava se."""
+    nazev = sesit.listy[klic]
+    if nazev in sesit.wb.sheetnames:
+        zajisti_sloupce(sesit, klic)
+        return False
+    ws = sesit.wb.create_sheet(nazev)
+    mapa = sesit.cfg["sloupce"][klic]
+    for i, pole in enumerate(mapa, start=1):
+        ws.cell(row=1, column=i).value = mapa[pole]
+    sesit._hlavicky.pop(klic, None)
+    return True
+
+
+def roletka(sesit, cfg):
+    """Sloupec Schvalit jako rozbalovaci seznam - schvalovatel nic nepise."""
+    try:
+        from openpyxl.worksheet.datavalidation import DataValidation
+        from openpyxl.utils import get_column_letter
+    except ImportError:
+        return False
+    ws = sesit.ws("navrhy")
+    i = sesit.sl("navrhy", "schvalit")
+    if not i:
+        return False
+    pismeno = get_column_letter(i)
+    rozsah = "%s2:%s1000" % (pismeno, pismeno)
+    # stara validace na tomtez sloupci pryc, at jich tam nesedi pet pres sebe
+    for dv in list(ws.data_validations.dataValidation):
+        if pismeno in str(dv.sqref or ""):
+            ws.data_validations.dataValidation.remove(dv)
+    dv = DataValidation(type="list",
+                        formula1='"%s,%s"' % (T["prijmout"], T["zamitnout"]),
+                        allow_blank=True,
+                        showDropDown=False)   # OOXML naopak: False = sipka se ZOBRAZI
+    dv.promptTitle = T["roletka_titulek"]
+    dv.prompt = T["roletka_zprava"]
+    dv.errorTitle = T["roletka_titulek"]
+    dv.error = T["roletka_chyba"]
+    dv.showInputMessage = True
+    dv.showErrorMessage = True
+    ws.add_data_validation(dv)
+    dv.add(rozsah)
+    return True
+
+
+def najdi_radek(sesit, klic, sid):
+    """Radek subjektu v listu podle ID. Vraci cislo radku nebo None."""
+    i_id = sesit.sl(klic, "id")
+    if not i_id:
+        return None
+    ws = sesit.ws(klic)
+    for r in range(2, ws.max_row + 1):
+        if norm(ws.cell(row=r, column=i_id).value) == norm(sid):
+            return r
+    return None
+
+
+def smaz_vysvetlivku(sesit, klic):
+    """Prazdny list casto nese pod hlavickou vetu pro cloveka ('sem se preklopi
+    ...'). Jakmile do nej pribudou data, je z te vety falesny prvni radek."""
+    ws = sesit.ws(klic)
+    if ws.max_row < 2:
+        return
+    for r in range(2, min(ws.max_row, 5) + 1):
+        bunky = [ws.cell(row=r, column=i).value for i in range(1, ws.max_column + 1)]
+        vyplnene = [i for i, v in enumerate(bunky) if not prazdne(v)]
+        if len(vyplnene) == 1 and vyplnene[0] == 0 and len(norm(bunky[0])) > 60:
+            ws.delete_rows(r)
+            return
+
+
+def zaloz_radek(sesit, klic, sid, subjekt):
+    """Podrizeny list nema radek pro kazdy subjekt - kdyz chybi, zalozi se."""
+    smaz_vysvetlivku(sesit, klic)
+    ws = sesit.ws(klic)
+    r = ws.max_row + 1
+    while r > 2 and all(ws.cell(row=r - 1, column=i).value in (None, "")
+                        for i in range(1, ws.max_column + 1)):
+        r -= 1
+    i_id = sesit.sl(klic, "id")
+    if i_id:
+        ws.cell(row=r, column=i_id).value = sid
+    for pole in ("subjekt", "nazev"):
+        i = sesit.sl(klic, pole)
+        if i:
+            ws.cell(row=r, column=i).value = subjekt
+            break
+    return r
+
+
+def zapis_zdroj(sesit, sid, subjekt, k_cemu, citace, url):
+    """Kazda zapsana hodnota musi mit v listu 4 doslovnou citaci a URL."""
+    if not citace or not url:
+        return
+    mapa = sesit.cfg["sloupce"].get("zdroje")
+    if not mapa or "zdroje" not in sesit.listy:
+        return
+    if sesit.listy["zdroje"] not in sesit.wb.sheetnames:
+        return
+    ws = sesit.ws("zdroje")
+    h = sesit.hlavicka("zdroje")
+    r = ws.max_row + 1
+    hodnoty = {"id": sid, "subjekt": subjekt, "k_cemu": k_cemu,
+               "citace": citace, "url": url, "overeno": DNES}
+    for pole in hodnoty:
+        nazev = mapa.get(pole)
+        if not nazev:
+            continue
+        i = h.get(norm(nazev))
+        if i:
+            ws.cell(row=r, column=i).value = hodnoty[pole]
+
+
+def pripis_poznamku(sesit, radek, text):
+    i = sesit.sl("subjekty", "poznamka")
+    if not i:
+        return
+    ws = sesit.ws("subjekty")
+    stara = ws.cell(row=radek, column=i).value or ""
+    ws.cell(row=radek, column=i).value = (stara + "\n" + text).strip()
+
+
+def aplikuj_jeden(sesit, cfg, d, stav, opravdu):
+    """Zapise jeden schvaleny navrh. Vraci (povedlo se, kam to slo)."""
+    druh = norm(d.get("druh"))
+    pravidlo = cfg["aplikace"].get(druh)
+    if not isinstance(pravidlo, dict):
+        return False, "druh '%s' nema pravidlo v sekci aplikace" % (druh or "?")
+
+    klic = pravidlo["list"]
+    sloupec = pravidlo["sloupec"]
+    sid = norm(d.get("id"))
+    subjekt = norm(d.get("subjekt"))
+    co = norm(d.get("co"))
+    hodnota = norm(d.get("navrzeno"))
+    citace = norm(d.get("poznamka"))
+    zdroj = norm(d.get("zdroj"))
+    log = stav.setdefault("log", [])
+    popis = T["aplikovano_pozn"].format(datum=DNES, co=co,
+                                        detail=citace or hodnota, zdroj=zdroj)
+
+    # --- novy subjekt: novy radek v listu 1
+    if sloupec == "novy_radek":
+        if not opravdu:
+            return True, "%s (novy radek)" % sesit.listy["subjekty"]
+        ws = sesit.ws("subjekty")
+        i_id = sesit.sl("subjekty", "id")
+        nejvyssi = 0
+        for r in range(2, ws.max_row + 1):
+            v = cislo(ws.cell(row=r, column=i_id).value)
+            if v and v > nejvyssi:
+                nejvyssi = v
+        nove_id = int(nejvyssi) + 1
+        r = zaloz_radek(sesit, "subjekty", nove_id, subjekt)
+        for pole, val in (("ico", sid), ("stav", cfg["stavy"]["aktivni"]), ("overeno", DNES)):
+            i = sesit.sl("subjekty", pole)
+            if i:
+                ws.cell(row=r, column=i).value = val
+        pripis_poznamku(sesit, r, popis)
+        zapis_zdroj(sesit, nove_id, subjekt, co, citace, zdroj)
+        log.append({"datum": DNES, "id": nove_id, "pole": "novy radek",
+                    "bylo": "", "nove": subjekt, "pruh": "B", "druh": druh,
+                    "zdroj": zdroj, "list": "subjekty", "radek": r,
+                    "nevratne": True})
+        return True, "%s (nove ID %d)" % (sesit.listy["subjekty"], nove_id)
+
+    # --- investorska strana. Listy 1 a 2 jsou spolecny registr, list 3 nese
+    # roli poskytovatele financovani a list 6 roli investora - jeden subjekt
+    # muze mit obe. Zarazeni investora tedy neni novy zaznam vedle databaze,
+    # ale role na radku v listu 1 plus radek v listu 6.
+    if sloupec in ("role_investor", "novy_investor"):
+        ws = sesit.ws("subjekty")
+        if sloupec == "novy_investor":
+            if not opravdu:
+                return True, "%s (novy radek) + %s" % (sesit.listy["subjekty"],
+                                                       sesit.listy["investor"])
+            i_id = sesit.sl("subjekty", "id")
+            nejvyssi = 0
+            for r in range(2, ws.max_row + 1):
+                v = cislo(ws.cell(row=r, column=i_id).value)
+                if v and v > nejvyssi:
+                    nejvyssi = v
+            radek = zaloz_radek(sesit, "subjekty", int(nejvyssi) + 1, subjekt)
+            sid_v_listu = int(nejvyssi) + 1
+            for pole, val in (("ico", sid), ("stav", cfg["stavy"]["aktivni"]),
+                              ("overeno", DNES)):
+                i = sesit.sl("subjekty", pole)
+                if i:
+                    ws.cell(row=radek, column=i).value = val
+            bylo_stav = ""
+        else:
+            radek = najdi_radek(sesit, "subjekty", sid)
+            if not radek:
+                return False, "subjekt #%s v listu 1 neni" % sid
+            sid_v_listu = sid
+            if not opravdu:
+                return True, "%s / Role: investor + %s" % (sesit.listy["subjekty"],
+                                                           sesit.listy["investor"])
+            # VYRAZEN znamenalo "nepujcuje z vlastni bilance". Pro roli
+            # investora je to jina otazka, tak se stav vraci na aktivni -
+            # jinak by ho mesicni beh preskakoval a nehlidal.
+            i_stav = sesit.sl("subjekty", "stav")
+            bylo_stav = ws.cell(row=radek, column=i_stav).value
+            ws.cell(row=radek, column=i_stav).value = cfg["stavy"]["aktivni"]
+            i_over = sesit.sl("subjekty", "overeno")
+            if i_over:
+                ws.cell(row=radek, column=i_over).value = DNES
+
+        i_role = sesit.sl("subjekty", "role_investor")
+        if i_role:
+            ws.cell(row=radek, column=i_role).value = T["ano"]
+        pripis_poznamku(sesit, radek, T["role_investor_pozn"].format(
+            datum=DNES, detail=(citace or hodnota), zdroj=zdroj))
+        # radek v listu 6 - jen zalozit, hodnoty (segment, AUM) chodi zvlast
+        if not najdi_radek(sesit, "investor", sid_v_listu):
+            zaloz_radek(sesit, "investor", sid_v_listu, subjekt)
+        zapis_zdroj(sesit, sid_v_listu, subjekt, co, citace, zdroj)
+        log.append({"datum": DNES, "id": sid_v_listu, "pole": "Role: investor",
+                    "bylo": bylo_stav, "nove": T["ano"], "pruh": "B", "druh": druh,
+                    "zdroj": zdroj, "list": "subjekty", "radek": radek,
+                    "nevratne": True})
+        return True, "%s / Role: investor + %s" % (sesit.listy["subjekty"],
+                                                   sesit.listy["investor"])
+
+    # --- jen poznamka: hodnota nema cilove pole, ale stopa zustat musi
+    if sloupec == "jen_poznamka":
+        radek = najdi_radek(sesit, "subjekty", sid)
+        if not radek:
+            return False, "subjekt #%s v listu 1 neni" % sid
+        if opravdu:
+            pripis_poznamku(sesit, radek, popis)
+            zapis_zdroj(sesit, sid, subjekt, co, citace, zdroj)
+            log.append({"datum": DNES, "id": sid, "pole": T["pole_poznamka"],
+                        "bylo": "", "nove": popis, "pruh": "B", "druh": druh,
+                        "zdroj": zdroj, "list": "subjekty", "radek": radek,
+                        "nevratne": True})
+        return True, "%s / %s" % (sesit.listy["subjekty"], T["pole_poznamka"])
+
+    # --- bezne pole: nazev sloupce bud z konfigurace, nebo ho nese sam navrh
+    nazev_sl = co if sloupec == "podle_co" else sloupec
+    h = sesit.hlavicka(klic)
+    i = h.get(norm(nazev_sl))
+    if not i:
+        return False, "sloupec '%s' v listu '%s' neexistuje" % (nazev_sl, sesit.listy[klic])
+
+    radek = najdi_radek(sesit, klic, sid)
+    if not radek:
+        if not opravdu:
+            return True, "%s (novy radek) / %s" % (sesit.listy[klic], nazev_sl)
+        radek = zaloz_radek(sesit, klic, sid, subjekt)
+    if not opravdu:
+        return True, "%s / %s" % (sesit.listy[klic], nazev_sl)
+
+    ws = sesit.ws(klic)
+    bylo = ws.cell(row=radek, column=i).value
+    ws.cell(row=radek, column=i).value = hodnota
+    i_over = sesit.sl(klic, "overeno")
+    if i_over:
+        ws.cell(row=radek, column=i_over).value = DNES
+    zapis_zdroj(sesit, sid, subjekt, nazev_sl, citace, zdroj)
+    log.append({"datum": DNES, "id": sid, "pole": nazev_sl,
+                "bylo": bylo, "nove": hodnota, "pruh": "B", "druh": druh,
+                "zdroj": zdroj, "list": klic, "radek": radek, "sloupec": nazev_sl})
+    return True, "%s / %s" % (sesit.listy[klic], nazev_sl)
+
+
+def zapis_zamitnute(sesit, polozky, kde):
+    """Zamitnuti patri do sesitu, ne jen do JSONu. Za rok se nekdo zepta proc."""
+    if not polozky:
+        return 0
+    zajisti_list(sesit, "zamitnuto")
+    ws = sesit.ws("zamitnuto")
+    mapa = sesit.cfg["sloupce"]["zamitnuto"]
+    h = sesit.hlavicka("zamitnuto")
+    if ws.max_row == 1:
+        ws.cell(row=1, column=len(mapa) + 2).value = T["zamitnuto_nadpis"]
+    # Klic je ICO, ale jen kdyz opravdu ICO je. Zahranicni firmy a nedohledane
+    # subjekty maji v tom sloupci pomlcku - kdyby se dedupovalo podle ni,
+    # zapsal by se z nich jen prvni a zbytek by zmizel beze slova.
+    def klic7(ico, nazev):
+        i = norm(ico)
+        return i if re.fullmatch(r"\d{6,10}", i or "") else "nazev:%s" % norm(nazev).lower()
+
+    zname = set()
+    i_ico = h.get(norm(mapa["ico"]))
+    i_naz = h.get(norm(mapa["nazev"]))
+    if i_ico:
+        for r in range(2, ws.max_row + 1):
+            zname.add(klic7(ws.cell(row=r, column=i_ico).value,
+                            ws.cell(row=r, column=i_naz).value if i_naz else ""))
+    r = ws.max_row + 1
+    pocet = 0
+    for p in polozky:
+        if klic7(p.get("ico"), p.get("nazev")) in zname:
+            continue
+        hodnoty = {"datum": p.get("datum") or DNES, "ico": p.get("ico"),
+                   "nazev": p.get("nazev"), "duvod": p.get("duvod"),
+                   "citace": p.get("citace"), "zdroj": p.get("zdroj"), "kde": kde}
+        for pole in hodnoty:
+            i = h.get(norm(mapa[pole]))
+            if i:
+                ws.cell(row=r, column=i).value = hodnoty[pole]
+        zname.add(klic7(p.get("ico"), p.get("nazev")))
+        r += 1
+        pocet += 1
+    return pocet
+
+
+def aplikuj(sesit, cfg, stav, opravdu):
+    """Projde list 5 a vyridi vsechno, u ceho schvalovatel rozhodl."""
+    zajisti_sloupce(sesit, "navrhy")
+    ws5 = sesit.ws("navrhy")
+    mapa5 = cfg["sloupce"]["navrhy"]
+    h5 = sesit.hlavicka("navrhy")
+    i_vyriz = h5.get(norm(mapa5["vyrizeno"]))
+
+    pamet = stav.setdefault("neopakovat", {})
+    prijato, zamitnuto, nezname = [], [], []
+    ceka = 0
+    do_listu7 = []
+
+    ano = norm(T["prijmout"]).lower()
+    ne = norm(T["zamitnout"]).lower()
+
+    for r, d in sesit.radky("navrhy"):
+        if not prazdne(d.get("vyrizeno")):
+            continue
+        subj = norm(d.get("subjekt"))
+        # pod tabulkou byva poznamka pro cloveka - neni to navrh, jen text
+        if prazdne(d.get("id")) and prazdne(subj):
+            continue
+        if subj.startswith(T["ukazkovy_radek"]) or subj.startswith("Ukazkov"):
+            continue
+        rozhodnuti = norm(d.get("schvalit")).lower()
+        if rozhodnuti not in (ano, ne):
+            if rozhodnuti:
+                nezname.append((r, "ve sloupci Schvalit stoji '%s'" % rozhodnuti))
+            else:
+                ceka += 1
+            continue
+
+        if rozhodnuti == ano:
+            ok, kam = aplikuj_jeden(sesit, cfg, d, stav, opravdu)
+            if not ok:
+                nezname.append((r, kam))
+                continue
+            prijato.append((d, kam))
+        else:
+            pamet[klic_neopakuj(d)] = {
+                "datum": DNES, "id": norm(d.get("id")), "subjekt": subj,
+                "co": norm(d.get("co")), "navrzeno": norm(d.get("navrzeno"))}
+            zamitnuto.append(d)
+            if norm(d.get("druh")) == "novy_subjekt":
+                do_listu7.append({"datum": DNES, "ico": norm(d.get("id")),
+                                  "nazev": subj, "duvod": norm(d.get("poznamka")),
+                                  "citace": norm(d.get("poznamka")),
+                                  "zdroj": norm(d.get("zdroj"))})
+
+        if opravdu and i_vyriz:
+            ws5.cell(row=r, column=i_vyriz).value = DNES
+
+    do7 = 0
+    if opravdu and do_listu7:
+        do7 = zapis_zamitnute(sesit, do_listu7, T["zamitnuto_kde_5"])
+
+    return {"prijato": prijato, "zamitnuto": zamitnuto, "ceka": ceka,
+            "nezname": nezname, "do_listu7": do7, "zapsano": opravdu}
+
+
+def prehled_aplikace(v, sesit):
+    r = ["", "=" * 64, T["nadpis_aplikace"], "=" * 64]
+    r.append("  prijato a zapsano: %d" % len(v["prijato"]))
+    for d, kam in v["prijato"][:40]:
+        r.append("    #%s %s -> %s: %s" % (d.get("id"), norm(d.get("subjekt"))[:34],
+                                           kam, norm(d.get("navrzeno"))[:40]))
+    r.append("  zamitnuto (uz se nenabidne): %d" % len(v["zamitnuto"]))
+    for d in v["zamitnuto"][:40]:
+        r.append("    #%s %s - %s" % (d.get("id"), norm(d.get("subjekt"))[:34],
+                                      norm(d.get("co"))[:30]))
+    if v["do_listu7"]:
+        r.append("  do listu '%s' pribylo: %d"
+                 % (sesit.listy["zamitnuto"], v["do_listu7"]))
+    r.append("  ceka na rozhodnuti: %d" % v["ceka"])
+    if v["nezname"]:
+        r.append("  NEVYRIZENO - skript nevi kam s tim: %d" % len(v["nezname"]))
+        for radek, duvod in v["nezname"][:20]:
+            r.append("    radek %s: %s" % (radek, duvod))
+        r.append("  Tyhle radky zustavaji ve fronte. Bud je to preklep ve sloupci")
+        r.append("  Schvalit, nebo chybi pravidlo v sekci 'aplikace' v konfiguraci.")
+    if not v["zapsano"]:
+        r.append("")
+        r.append("  (nanecisto - nic se nezapsalo; pro skutecny zapis pridej --zapis)")
+    return "\n".join(r)
+
 # ---------------------------------------------------------------- vraceni
 
 def vrat(sesit, stav, datum, opravdu):
     log = stav.get("log", [])
-    k_vraceni = [z for z in log if z["datum"] == datum and z["pruh"] == "A"]
+    k_vraceni = [z for z in log if z["datum"] == datum and z["pruh"] in ("A", "B")]
     if not k_vraceni:
-        vypis("Z behu %s neni co vracet (zadna automaticka zmena)." % datum)
+        vypis("Z behu %s neni co vracet (zadna zapsana zmena)." % datum)
         return
-    ws = sesit.ws("subjekty")
-    i_stav = sesit.sl("subjekty", "stav")
+    vracene, nevratne = [], []
     for z in k_vraceni:
-        vypis("  #%s: stav '%s' -> zpet '%s'" % (z["id"], z["nove"], z["bylo"]))
-        if opravdu and z.get("radek"):
-            ws.cell(row=z["radek"], column=i_stav).value = z["bylo"]
+        # novy radek a pripsana poznamka se nevraci - mazat radek z databaze
+        # kvuli kroku zpet je horsi nez ho tam nechat a rict o nem nahlas
+        if z.get("nevratne"):
+            nevratne.append(z)
+            continue
+        klic = z.get("list", "subjekty")
+        ws = sesit.ws(klic)
+        if z.get("sloupec"):
+            i = sesit.hlavicka(klic).get(norm(z["sloupec"]))
+        else:
+            i = sesit.sl("subjekty", "stav")
+        if not i or not z.get("radek"):
+            nevratne.append(z)
+            continue
+        vypis("  #%s %s: '%s' -> zpet '%s'"
+              % (z["id"], z.get("pole", ""), z["nove"], z["bylo"]))
+        if opravdu:
+            ws.cell(row=z["radek"], column=i).value = z["bylo"]
+        vracene.append(z)
+    if nevratne:
+        vypis("  NEVRACI SE %d zaznamu (novy radek nebo pripsana poznamka):" % len(nevratne))
+        for z in nevratne:
+            vypis("    #%s %s: %s" % (z["id"], z.get("pole", ""), str(z["nove"])[:60]))
+        vypis("  Tohle musis vzit zpatky rucne - zaloha sesitu je ve slozce zalohy\\.")
     if opravdu:
-        stav["log"] = [z for z in log if not (z["datum"] == datum and z["pruh"] == "A")]
-        vypis("Vraceno %d zmen." % len(k_vraceni))
+        vracene_id = [id(z) for z in vracene]
+        stav["log"] = [z for z in log if id(z) not in vracene_id]
+        vypis("Vraceno %d zmen." % len(vracene))
     else:
         vypis("(nanecisto - pro skutecne vraceni pridej --zapis)")
 
@@ -941,7 +1437,10 @@ def main():
     ap.add_argument("--jen-registry", action="store_true", help="jen faze 1 (ARES + ISIR)")
     ap.add_argument("--limit", type=int, help="jen prvnich N subjektu (test)")
     ap.add_argument("--navrhy", help="soubor navrhy.json z faze 4")
-    ap.add_argument("--vrat", help="vrati automaticke zmeny z behu daneho data (YYYY-MM-DD)")
+    ap.add_argument("--vrat", help="vrati zapsane zmeny z behu daneho data (YYYY-MM-DD)")
+    ap.add_argument("--master", help="jina cesta k sesitu (test, kdyz je disk O: pryc)")
+    ap.add_argument("--aplikovat", action="store_true",
+                    help="vyridi list 5: co je schvalene, zapise; co zamitnute, zapamatuje")
     args = ap.parse_args()
 
     cfg = load_json(CONFIG, None)
@@ -950,10 +1449,23 @@ def main():
     T.update(cfg["texty"])
     stav = load_json(STATE, {"behy": [], "subjekty": {}, "log": []})
 
+    if args.master:
+        cfg["master"] = args.master
+
     sesit = Sesit(cfg)
 
     if args.vrat:
         vrat(sesit, stav, args.vrat, args.zapis)
+        if args.zapis:
+            sesit.uloz(os.path.join(HERE, cfg["zalohy"]))
+            save_json(STATE, stav)
+        return
+
+    if args.aplikovat:
+        zajisti_list(sesit, "zamitnuto")
+        roletka(sesit, cfg)
+        vysledek = aplikuj(sesit, cfg, stav, args.zapis)
+        vypis(prehled_aplikace(vysledek, sesit))
         if args.zapis:
             sesit.uloz(os.path.join(HERE, cfg["zalohy"]))
             save_json(STATE, stav)

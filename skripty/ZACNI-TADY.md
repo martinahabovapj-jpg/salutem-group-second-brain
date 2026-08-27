@@ -49,17 +49,43 @@ Otevři master sešit, list **„5 Návrhy změn"**. Každý řádek říká:
 | Bylo → Navrženo | stará a nová hodnota |
 | Zdroj (URL) | odkaz, ze kterého to je |
 | Poznámka schvalovatele | doslovná citace ze stránky |
-| **Schválit** | **předvyplněné rozhodnutí — přepiš, když nesouhlasíš** |
+| **Schválit** | **tady rozhoduješ ty — klikni do buňky a vyber z roletky** |
+| Vyřízeno | datum, kdy to skript zapsal. Prázdné = pořád ve frontě |
 
-Rozhodnutí je předvyplněné schválně. Nemáš dělat deset rozhodnutí — máš
-projet seznam a u dvou tří přepsat, co ti nesedí.
+Ve sloupci **Schválit** je rozbalovací seznam se dvěma možnostmi:
+**přijmout** nebo **zamítnout**. Nic se nepíše, jen se vybírá. Cokoli jiného
+skript nepřečte a řádek nechá ve frontě.
+
+Sloupec je **schválně prázdný**. Dřív býval předvyplněný, ale to bylo v době,
+kdy byl jen na okrasu — dnes je to spouštěč: co je označené jako „přijmout",
+to `ZAPSAT.cmd` **opravdu zapíše** do listů 1–3. Kdo se na frontu nepodívá,
+ten by ji tím odsouhlasil.
+
+- **přijmout** → hodnota se zapíše tam, kam patří (ticket a LTV do listu 3,
+  kontakt do listu 2, nový subjekt jako nový řádek v listu 1), doplní se
+  datum ověření a do listu „4 Zdroje" přibude citace s odkazem
+- **zamítnout** → skript si to **zapamatuje natrvalo** a příští měsíc už to
+  nenabídne. Zamítnuté nové subjekty navíc přistanou v listu
+  „7 Zamítnuto při hledání", aby se za rok dalo dohledat proč
+
+Řádek, který vyřídíš, dostane datum ve sloupci **Vyřízeno** a víc se ho nikdo
+nedotkne. Fronta se tím vyprazdňuje — nezůstane v ní sto řádků, u kterých
+nikdo nepozná, které už jsou hotové.
 
 > **Bez odkazu a citace se návrh vůbec neobjeví.** Když nástroj neumí doložit,
 > odkud to má, návrh nevytvoří. To je záměr, ne chyba.
 
 ### 3. Zapiš
 
-Dvojklik na **`ZAPSAT.cmd`**. Zeptá se, jestli to myslíš vážně.
+Dvojklik na **`ZAPSAT.cmd`**. Zeptá se, jestli to myslíš vážně, a pak udělá
+dvě věci za sebou:
+
+1. **vyřídí frontu** — zapíše, co jsi schválil, a zapamatuje si, co jsi zamítl
+2. **spustí kontrolu** a zapíše, co našla
+
+Na konci ti vypíše, co kam šlo. Když si s něčím neví rady — třeba proto, že
+je ve sloupci Schválit překlep — **nechá ten řádek ve frontě a řekne to
+nahlas**. Nikdy nehádá.
 
 **Master sešit musí být zavřený v Excelu**, jinak zápis neprojde — Excel si
 soubor zamyká pro sebe. Nic se nerozbije, jen se nic nezapíše.
@@ -82,8 +108,62 @@ musí někdo rozhodnout, jestli patří do databáze. **Rejstřík to sám nepoz
 u fondů vychází poměr použitelných k nepoužitelným zhruba půl na půl a rozhoduje
 to, co subjekt reálně dělá, ne pod jakým kódem je zapsaný.
 
-To posouzení dělá Martina s Claudem. Ty se pak uvidíš jen výsledek v listu
+To posouzení dělá Martina s Claudem. Ty pak uvidíš jen výsledek v listu
 „5 Návrhy změn" jako řádek „nový subjekt".
+
+Ty, které posouzením neprošly, skončí v listu **„7 Zamítnuto při hledání"** —
+s datem, důvodem a odkazem. Ten seznam je aktivum, ne odpad: bez něj by se
+tytéž fondy nabízely znovu každý měsíc a na otázku „koukali jsme někdy na
+Satoshi Bridge?" by v databázi nebyla odpověď.
+
+## Třetí věc: kontrola proti ČNB
+
+`refresh.cmd` se ptá subjektů, které známe. `OBJEVY.cmd` se ptá obchodního
+rejstříku. **`FONDY-CNB.cmd` se ptá regulátora** — a ten ví něco, co ARES neví.
+
+ČNB vede u každého investičního fondu **kategorii podle skutečné investiční
+strategie**, a jedna z nich je přímo **„úvěrový"**. V ARESu mají všechny fondy
+týž kód 64310 a nerozliší se nic.
+
+Těch úvěrových je v celé republice **řádově deset**, takže je to seznam, který
+jde projít celý — a hned je vidět, které v databázi chybí.
+
+> **Kategorie sama k zařazení nestačí.** Fond, který úvěruje výhradně projekty
+> vlastní skupiny, je pro ČNB pořád „úvěrový", ale pro nás je kaptivní a do
+> databáze nepatří. Rozhodnout to musí člověk s citací.
+
+Pouštět stačí jednou měsíčně — ČNB seznam v té kadenci vydává. Nic nezapisuje,
+připraví složku `k-posouzeni-cnb`.
+
+## Čtvrtá věc: investorská strana (list 6)
+
+Databáze má **dvě role, ne dvě databáze**. Listy 1 a 2 jsou společný registr —
+subjekty a kontakty. Na něm stojí dvě různé otázky:
+
+| List | Otázka |
+|---|---|
+| **3 Role Financování** | kdo mi to **půjčí** z vlastní bilance |
+| **6 Role Investor** | kdo do toho **investuje** — family office, wealth management |
+
+**Jeden subjekt může mít obě role.** Když ho zařadíš jako investora, přibude
+mu v listu 1 ve sloupci „Role: investor" hodnota ANO a v listu 6 vlastní řádek.
+Zůstává to jeden řádek v jednom registru — proto ho **měsíční kontrola hlídá
+úplně stejně** jako všechny ostatní: rejstřík, insolvence, funkční web, změny
+na stránkách. Nic navíc se pro to spouštět nemusí.
+
+Rozdíl je jen v tom, **co se na jeho webu sleduje**: u investora navíc segment
+(do čeho investuje), AUM a gatekeeper. Skript to pozná sám podle role
+zapsané v listu 1.
+
+Hledání nových je **`INVESTORI.cmd`**. Nejde přes rejstříkové kódy jako
+`OBJEVY.cmd` — family office nemá vlastní NACE a v ARESu vypadá jako běžné
+s.r.o. Hledá se **podle jmen** ze seznamu v konfiguraci: ARES ke jménu dohledá
+celý firemní trs (často několik entit na jedné adrese, což je samo o sobě
+signál) a teprve web s citací rozhodne. Máš nové jméno? Přidej ho do seznamu.
+
+> **Pozor na dvě věci.** Shoda jména sama o sobě neznamená nic — v dávce budou
+> i spolky a cestovky. A family office o sobě záměrně mnoho nepíše, takže
+> „nevím" je u nich častá a správná odpověď.
 
 ## Když se něco pokazí
 
@@ -108,8 +188,13 @@ ve sloupci Poznámka s datem a odkazem, a záloha sešitu je ve složce `zalohy\
 
 ## Co nástroj nedělá
 
-- **Nepíše nic sám do sešitu kromě rejstříkových věcí.** Nové typy financování,
-  tickety, LTV a kontaktní osoby jdou vždycky přes tebe.
+- **Nerozhoduje.** Nové typy financování, tickety, LTV a kontaktní osoby zapíše
+  jen tehdy, když je v listu 5 označíš jako „přijmout". Sám od sebe opraví
+  jen to, co se dá ověřit v rejstříku — insolvenci, zánik, nefunkční web.
+- **Nevrátí nový řádek.** Příkaz `--vrat` umí vzít zpátky přepsané hodnoty,
+  ale nově založený subjekt nesmaže a připsanou poznámku neodmaže — mazat
+  řádky z databáze kvůli kroku zpět je horší než je tam nechat. Řekne o tom
+  nahlas a záloha sešitu je ve složce `zalohy\`.
 - **Nehlídá slovenskou insolvenci.** České ano, slovenské ne — vede je jiný
   registr, který zatím není napojený. Týká se to 13 subjektů.
 - **Nesmaže vyřazené subjekty.** Zůstávají v databázi i s důvodem vyřazení,
@@ -139,6 +224,8 @@ nebo jestli to prostě nedoběhlo.
 | `Kdo_mi_to_zafinancuje_LIVE.html` | vyhledávač — otevři v prohlížeči, načti si sešit |
 | `beh\KONTROLA.cmd` | jednou na začátku — projde na tomhle počítači vůbec? |
 | `beh\OBJEVY.cmd` | hledání nových subjektů, které na trhu přibyly |
+| `beh\FONDY-CNB.cmd` | kontrola proti seznamu fondů ČNB — najde úvěrové fondy, které nemáme |
+| `beh\INVESTORI.cmd` | hledání na investorské straně — family office, wealth management |
 | `beh\refresh.cmd` | spustí kontrolu |
 | `beh\ZAPSAT.cmd` | zapíše schválené změny |
 | `beh\zalohy\` | zálohy sešitu před každým zápisem |

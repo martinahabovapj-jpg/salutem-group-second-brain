@@ -11,3 +11,12 @@ skripty/k-precteni/
 skripty/zalohy/
 skripty/navrhy.json
 skripty/*.log
+
+# stazena data a pracovni slozky, ktere se pokazde vyrobi znovu
+# seznam CNB je 4,7 MB a stahuje se mesicne - verzovat ho znamena
+# nafouknout repo o kopii, kterou nikdo nikdy neotevre
+skripty/cnb-fki.xlsx
+skripty/k-posouzeni/
+skripty/k-posouzeni-investor/
+skripty/k-posouzeni-cnb/
+skripty/dossier40.json
