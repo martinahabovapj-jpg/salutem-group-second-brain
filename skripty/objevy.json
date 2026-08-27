@@ -1,18 +1,61 @@
 [
  {
-  "ico": "75166011",
-  "nazev": "RHAPSODY IV, podfond APS CREDIT FUND",
-  "verdikt": "zamitnout",
-  "duvod": "Výkupčí pohledávek, ne věřitel. Fond nakupuje pohledávky po splatnosti (NPL portfolia od bank) se značným diskontem a vymáhá je. Nové financování třetím stranám neposkytuje. Cílený výnos 12 % p.a. a více.",
-  "citace": "Cílem fondu je nakupovat pohledávky po splatnosti se značným diskontem oproti nominální hodnotě",
-  "zdroj": "https://www.fki-fondy.cz/fondy/rhapsody-aps-credit-fund/"
+  "ico": "75166160",
+  "nazev": "Satoshi Bridge Fond SICAV a.s., Podfond A",
+  "verdikt": "zaradit",
+  "duvod": "Půjčuje třetím stranám: drží úvěry zajištěné bitcoinem, které umožňují držitelům BTC získat likviditu bez prodeje jejich aktiv. To je poskytování financování externím dlužníkům, ne kaptivní struktura. ČNB vede podfond v kategorii úvěrový. Zajištění je ale výhradně bitcoin, ne nemovitost - pro naše projekty to bude relevantní jen okrajově a při oslovení to zohlednit. Obhospodařovatel AMISTA, depozitář UniCredit Bank.",
+  "citace": "Investiční společnost Satoshi Bridge SICAV — Most mezi FIAT měnou a BITCOINEM. Přibližně 90 % portfolia tvoří úvěry zajištěné BTC; platforma umožňuje držitelům bitcoinu získat likviditu, aniž by museli svá digitální aktiva prodat.",
+  "zdroj": "https://static1.squarespace.com/static/681b2d082be724084d221fa8/t/68de653f0da8734f31d726c5/1759405375247/SatoshiBridge+Fond+one+pager+new.pdf"
  },
  {
-  "ico": "75166381",
-  "nazev": "FLOWPAY Debt Sub-fund",
+  "ico": "21049939",
+  "nazev": "SNP INVEST, investiční fond, a.s.",
   "verdikt": "zamitnout",
-  "duvod": "Kaptivní podfond - financuje výhradně aktivity vlastní skupiny FLOWPAY a zároveň v ní drží majetkový podíl. Třetím stranám nepůjčuje. Samotný Flowpay, který úvěruje malé firmy, je v databázi veden samostatně (měsíční běh u něj 26. 8. hlásil nedostupný web).",
-  "citace": "U dluhového zhodnocení fond financuje aktivity skupiny FLOWPAY a výnos plyne z úroků a správy portfolia.",
-  "zdroj": "https://www.avantfunds.cz/fondy/flowpay-fund-sicav-a-s/flowpay-debt-sub-fund/"
+  "duvod": "Výkupčí pohledávek, ne věřitel. Nakupuje pohledávky z nesplácených úvěrů (NPL) a podíly ve firmách, které je vymáhají - nové financování třetím stranám neposkytuje. Stejný profil jako RHAPSODY / APS CREDIT FUND, který se zamítl 27. 8. 2026. Územně navíc míří i mimo Evropu (jihovýchodní Asie, Jižní Amerika).",
+  "citace": "Hlavní investiční strategií fondu je v dlouhodobém horizontu dosáhnout zhodnocení svěřených prostředků prostřednictvím investic zejména do pohledávek z nesplácených úvěrů (NPL)",
+  "zdroj": "https://www.snpinvest.cz/jak-fond-funguje"
+ },
+ {
+  "ico": "75166313",
+  "nazev": "Partners Innovation podfond",
+  "verdikt": "zamitnout",
+  "duvod": "Kaptivní holdingová struktura, ne úvěrový fond pro třetí strany. Fond drží 100 % akcií Partners HoldCo a cílem je pod něj dostat celou skupinu včetně Partners Banky. ČNB ho vede jako úvěrový kvůli vnitroskupinovému financování, ale pro nás je to vlastnická struktura Partners, ne poskytovatel financování.",
+  "citace": "Na počátku bude Partners Innovation Fund držet 100 % akcií Partners HoldCo, a tedy vše, co je pod Partners HoldCo.",
+  "zdroj": "https://www.jsmepartners.cz/portfolio/10842-fond-kterym-budeme-ridit-a-rozvijet-celou-skupinu"
+ },
+ {
+  "ico": "04939361",
+  "nazev": "LOAN MANAGEMENT investiční fond, a.s.",
+  "verdikt": "nevim",
+  "duvod": "ČNB ho vede v kategorii úvěrový a existuje od 29. 3. 2016 (Pobřežní 394/12, Karlín) - není to nový fond, jen v databázi nikdy nebyl. Vlastní web ani zveřejněné materiály se nepodařilo najít; v seznamech fondů se objevuje jen jako záznam z rejstříku. Bez doložení, komu půjčuje, se nezařazuje ani nezamítá.",
+  "zdroj": "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/"
+ },
+ {
+  "ico": "75166828",
+  "nazev": "ČNFE LOAN podfond",
+  "verdikt": "nevim",
+  "duvod": "ČNB ho vede v kategorii úvěrový, vznik 19. 6. 2026. Patří pod ČNFE SICAV a.s. (obhospodařovatel AVANT), který má čtyři podfondy - DEVELOPMENT, ENERGY, LAND DEVELOPMENT a LOAN. AVANT k němu nezveřejňuje žádné materiály a fond nemá vlastní web. Posoudit znovu za pár měsíců, až vyjde statut.",
+  "zdroj": "https://www.avantfunds.cz/informace-o-fondech/"
+ },
+ {
+  "ico": "75166143",
+  "nazev": "Mariposa podfond I.",
+  "verdikt": "nevim",
+  "duvod": "ČNB ho vede v kategorii úvěrový, vznik 24. 11. 2025 (Pernerova 691/42, Karlín). Vlastní web ani mateřský fond se nepodařilo dohledat, ve vyhledávačích ani v přehledech fondů se neobjevuje. Posoudit znovu.",
+  "zdroj": "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/"
+ },
+ {
+  "ico": "75166283",
+  "nazev": "Podfond Ta Meri Automotive",
+  "verdikt": "nevim",
+  "duvod": "ČNB ho vede v kategorii úvěrový, vznik 23. 1. 2026, sídlo Hvězdova 1716/2b (AVANT). Název naznačuje financování v automotive, ale doložit se to nedá - AVANT k němu nic nezveřejňuje. Kdyby šlo o financování vozového parku či dealerů, pro naše projekty by to relevantní nebylo; ověřit, až budou materiály.",
+  "zdroj": "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/"
+ },
+ {
+  "ico": "75166747",
+  "nazev": "SF Investments Podfond III",
+  "verdikt": "nevim",
+  "duvod": "ČNB ho vede v kategorii úvěrový, vznik 26. 5. 2026, sídlo Hvězdova 1716/2b (AVANT). Třetí podfond v řadě, takže mateřská struktura existuje déle - o to podivnější, že se k ní nedá nic najít. Posoudit znovu.",
+  "zdroj": "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/"
  }
 ]
