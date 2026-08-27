@@ -1,0 +1,67 @@
+[
+ {
+  "ico": "27567117",
+  "nazev": "REICO investiční společnost Erste Asset Management, a.s.",
+  "web": "https://www.reico.cz",
+  "typ": "Investiční společnost",
+  "verdikt": "zaradit",
+  "segment": "klientský kapitál - nemovitostní fondy; 2 fondy v seznamu ČNB (REICO LONG LEASE a další)",
+  "aum": "",
+  "gatekeeper": "skupina Erste / Česká spořitelna, retailová distribuce",
+  "duvod": "Sám se označuje za největší český realitní fond. Patří pod Erste Asset Management, tedy kanál k retailovým i privátním klientům České spořitelny. Objem majetku web neuvádí - dohledat při oslovení.",
+  "citace": "Specialisté v oblasti zakládání a obhospodařování nemovitostních fondů a investování do nemovitostí.",
+  "zdroj": "https://www.reico.cz/"
+ },
+ {
+  "ico": "14094568",
+  "nazev": "DEKINVEST investiční společnost a.s.",
+  "web": "https://www.dekinvest.cz",
+  "typ": "Investiční společnost",
+  "verdikt": "zaradit",
+  "segment": "vlastní kapitál koncernu DEK - komerční nemovitosti; 2 fondy (podfond Alfa, otevřený podílový fond Beta)",
+  "aum": "",
+  "gatekeeper": "",
+  "duvod": "POZOR na kaptivitu: fond spravuje komerční nemovitosti koncernu DEK a zakladatelé drží přes 80 % fondového kapitálu. Je to alokátor vlastního kapitálu skupiny, ne otevřená platforma pro cizí projekty - při oslovení to zohlednit.",
+  "citace": "Za fondem stojí členové představenstva – zakladatelé koncernu DEK a zkušený manažer s praxí ve strukturování investičních fondů. Zakladatelé drží více než 80 % fondového kapitálu.",
+  "zdroj": "https://www.dekinvest.cz/"
+ },
+ {
+  "ico": "04564111",
+  "nazev": "FIDUROCK Nemovitosti a.s.",
+  "web": "https://www.fidurock.com",
+  "typ": "FKI nemovitostní",
+  "verdikt": "zaradit",
+  "segment": "nemovitostní investice, středoevropský region; 2 podfondy (FIDUROCK I. nemovitostní, Residential)",
+  "aum": "",
+  "gatekeeper": "administrace přes Conseq; obhospodařovatel FIDUROCK nemovitostní fond SICAV, a.s.",
+  "duvod": "Vlastní web fidurock.com vrátil HTTP 403, citace je proto z karty fondu u administrátora Conseq. Skupina má v ARESu víc entit (CAPITAL CZ, Nemovitosti, Brno, Venture Holding, Fund Administration) - jako protistrana je vzatá FIDUROCK Nemovitosti a.s., při oslovení ověřit.",
+  "citace": "Třída aktiv: Nemovitostní investice / Regionální zaměření: Středoevropský region",
+  "zdroj": "https://www.conseq.cz/investice/prehled-fondu/fidurock-i-nemovitostni-podfond-sicav-i1-czk"
+ },
+ {
+  "ico": "24917788",
+  "nazev": "OFO Project ONE SICAV, a.s.",
+  "web": "https://onefamilyoffice.cz",
+  "typ": "FKI nemovitostní",
+  "verdikt": "zaradit",
+  "segment": "fondová platforma ONE FAMILY OFFICE - 2 nemovitostní podfondy (OFO Project ONE, OFO Project TWO); vedle toho globální private equity",
+  "aum": "OFO Globální Private Equity spravuje přes 50 mil. USD, cca 300 investorů; CYRRUS a ONE FAMILY OFFICE do něj vložily 100 mil. Kč vlastního kapitálu",
+  "gatekeeper": "partnerství ONE FAMILY OFFICE (#143) a skupiny CYRRUS (#161); členem představenstva je CYRRUS investiční společnost",
+  "duvod": "OFO je fondová platforma ONE FAMILY OFFICE. Propojuje tři záznamy v databázi: #143 ONE FAMILY OFFICE, #161 CYRRUS a tenhle fond. Pro nemovitostní projekty je to konkrétní vehikl, kterým se k ONE FAMILY OFFICE dá dostat.",
+  "citace": "V červenci 2025 byl spuštěn OFO Globální Private Equity Semi-likvidní otevřený podílový fond na základě strategického partnerství ONE FAMILY OFFICE a skupiny CYRRUS.",
+  "zdroj": "https://zpravy.kurzy.cz/825808-cyrrus-a-one-family-office-spousti-flexibilni-fond-globalnich-private-equity-investic/"
+ },
+ {
+  "ico": "",
+  "nazev": "Velvet SICAV a.s.",
+  "web": "",
+  "typ": "FKI nemovitostní",
+  "verdikt": "nevim",
+  "segment": "",
+  "aum": "",
+  "gatekeeper": "",
+  "duvod": "Dva nemovitostní podfondy (Velvet Hotel, Velvet Logistics) na adrese Karoliny Světlé 208/34, Praha 1. Vlastní web ani obhospodařovatele se nepodařilo dohledat - v rejstříku i vyhledávačích jsou jen samotné podfondy. Posoudit znovu.",
+  "citace": "",
+  "zdroj": ""
+ }
+]

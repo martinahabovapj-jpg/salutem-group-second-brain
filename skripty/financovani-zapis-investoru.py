@@ -95,6 +95,8 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         podle_nazvu.setdefault(m.norm(d.get("nazev")).lower(), (r, sid))
 
     zapsano, doplneno, zamitnuto, preskoceno = [], [], [], []
+    zmena_stavu = []
+    slaba_shoda = []
     do7 = []
 
     for z in zaznamy:
@@ -132,6 +134,22 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         elif nazev.lower() in podle_nazvu:
             radek, sid = podle_nazvu[nazev.lower()]
 
+        # Jak silne je sparovani rozhoduje o tom, jestli se smi zapsat ICO.
+        # Shoda pres ICO je doklad totoznosti. Shoda pres domenu nebo nazev
+        # je jen indicie: skupina a jeji fond casto sdileji web, takze by se
+        # na radek skupiny zapsalo ICO fondu - a mesicni beh by se pak ptal
+        # rejstriku na jiny subjekt, nez ktery na tom radku stoji.
+        slabe = radek is not None and not (ico and ico in podle_ica)
+        if slabe and ico:
+            # Zaznam ma ICO, ale radek se nasel jen podle webu nebo nazvu.
+            # Skupina a jeji fond sdileji web, takze tohle NEJSOU tytez
+            # subjekty - Conseq Investment Management vs Conseq Venture Debt.
+            # Drive se to slilo do jednoho radku: fond dostal roli i segment
+            # spravcovske firmy. Zaklada se proto novy radek a blizka shoda
+            # se hlasi, aby to clovek mohl spojit, kdyz to tataz firma je.
+            slaba_shoda.append((sid, nazev, ico))
+            radek, sid = None, None
+
         novy = radek is None
         if novy:
             nejvyssi += 1
@@ -140,14 +158,25 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
                 radek = m.zaloz_radek(sesit, "subjekty", sid, nazev)
 
         if opravdu:
-            hodnoty = {"ico": ico, "web": web, "typ": m.norm(z.get("typ")),
+            # VYRAZEN nebo nenalezeno znamenalo "nepujcuje z vlastni bilance",
+            # coz je odpoved na JINOU otazku. Pro roli investora je to casto
+            # presne ten hledany profil - a kdyby stav zustal, mesicni beh by
+            # radek preskakoval a zarazeni by bylo jen naoko.
+            i_stav = sesit.sl("subjekty", "stav")
+            bylo_stav = m.norm(ws1.cell(row=radek, column=i_stav).value) if (i_stav and not novy) else ""
+            ozivene = bylo_stav and bylo_stav != cfg["stavy"]["aktivni"]
+            hodnoty = {"ico": ico,
+                       "web": web, "typ": m.norm(z.get("typ")),
                        "stav": cfg["stavy"]["aktivni"], "overeno": m.DNES,
                        "role_investor": T["ano"]}
+            if ozivene:
+                zmena_stavu.append((sid, nazev, bylo_stav))
             for pole, val in hodnoty.items():
                 if not val:
                     continue
                 i = sesit.sl("subjekty", pole)
                 if i and (novy or pole in ("role_investor", "overeno")
+                          or (pole == "stav" and ozivene)
                           or m.prazdne(ws1.cell(row=radek, column=i).value)):
                     ws1.cell(row=radek, column=i).value = val
             m.pripis_poznamku(sesit, radek, T["aplikovano_pozn"].format(
@@ -199,6 +228,17 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
     vypis("  Role investor doplnena stavajicim: %d" % len(doplneno))
     for sid, nazev in doplneno:
         vypis("     #%s %s" % (sid, nazev[:50]))
+    if zmena_stavu:
+        vypis("  Stav vracen na aktivni u %d subjektu (byly vyrazene pro roli"
+              " financovani, pro roli investora se hledaji):" % len(zmena_stavu))
+        for sid, nazev, bylo in zmena_stavu:
+            vypis("     #%s %-40s bylo '%s'" % (sid, nazev[:40], bylo))
+    if slaba_shoda:
+        vypis("  BLIZKA SHODA u %d zaznamu - podobny radek uz v databazi je,"
+              " ale ma jine ICO. Zalozil jsem novy radek:" % len(slaba_shoda))
+        for sid, nazev, ico in slaba_shoda:
+            vypis("     %-42s (podobny radek #%s)" % (nazev[:42], sid))
+        vypis("     Kdyz je to tataz firma, radky spoj rucne.")
     vypis("  Zamitnuto (do listu 7):         %d" % len(zamitnuto))
     for nazev in zamitnuto:
         vypis("     %s" % nazev[:50])
