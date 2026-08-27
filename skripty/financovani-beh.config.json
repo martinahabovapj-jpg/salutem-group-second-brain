@@ -227,7 +227,9 @@
   "nerozhodnuto_nadpis": "Subjekty, u kterých posouzení skončilo na „nevím“. NEJSOU zamítnuté — jen se o nich nepodařilo doložit dost na rozhodnutí. Nejčastěji proto, že jim nefunguje web nebo o sobě nic nezveřejňují. Řádek zmizí sám, jakmile se subjekt zařadí nebo zamítne.",
   "nerozhodnuto_kde_inv": "posuzování investorů (list 6)",
   "nerozhodnuto_kde_obj": "hledání nových subjektů",
-  "nerozhodnuto_kde_cnb": "seznam fondů ČNB"
+  "nerozhodnuto_kde_cnb": "seznam fondů ČNB",
+  "ico_dohledano": "[{datum} doplněno] IČO {ico} dohledáno z webu subjektu a ověřeno v ARESu jako „{nazev}“. Zdroj: {web}",
+  "ico_citace": "IČO {ico} uvedené na webu subjektu; ARES pod ním vede „{nazev}“."
  },
  "registry_podle_zeme": {
   "_popis": "Ktery registr se pta pro kterou zemi. Zeme, ktera tu neni, se v registrech nekontroluje vubec a beh to nahlasi jako nepokryte - mlceni by cetlo jako 'zkontrolovano'.",
@@ -445,5 +447,22 @@
    "slov_ve_skupine": 1,
    "_slov_popis": "Kolik prvních významových slov názvu tvoří klíč skupiny. Jedno slovo sloučí RSJ Development, RSJ Real i RSJ Logistics do jediné skupiny RSJ (17 fondů), což je pro oslovení správně — je to jedna adresa. Dvě slova by z toho udělala tři skupiny. Ověřeno 27. 8. 2026: při jednom slově nevznikla žádná skupina, která by slučovala nesouvisející firmy. Když se něco slučuje špatně, přidej to slovo do vyhodit_ze_jmena nebo tady zvyš na 2."
   }
+ },
+ "dohledani_ica": {
+  "_popis": "Vzory, kterými se na webu subjektu hledá IČO. Firmy ho uvádějí v patičce, na kontaktech nebo v obchodních podmínkách. Když se u některého webu IČO nenajde, přidej sem vzor nebo podstránku — ne do kódu.",
+  "vzor_ico": "(?:I[CČ]O?|Identifika[cč]n[ií]\\s+[cč][ií]slo|Company\\s+ID|Reg\\.?\\s*No\\.?)[^0-9]{0,20}(\\d{8})",
+  "vzor_dic": "\bCZ(\\d{8})\b",
+  "podstranky": [
+   "",
+   "/kontakt",
+   "/kontakty",
+   "/o-nas",
+   "/obchodni-podminky",
+   "/impressum",
+   "/kontakt.html",
+   "/cs/kontakt"
+  ],
+  "prah_shody": 0.6,
+  "_prah_popis": "Od jaké shody názvu (0–1) se nález považuje za jistý. Počítá se jako podíl společných slov ke kratšímu z obou názvů, po odstranění právní formy a diakritiky."
  }
 }
