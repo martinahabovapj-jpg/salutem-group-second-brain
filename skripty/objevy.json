@@ -1,0 +1,18 @@
+[
+ {
+  "ico": "75166011",
+  "nazev": "RHAPSODY IV, podfond APS CREDIT FUND",
+  "verdikt": "zamitnout",
+  "duvod": "Výkupčí pohledávek, ne věřitel. Fond nakupuje pohledávky po splatnosti (NPL portfolia od bank) se značným diskontem a vymáhá je. Nové financování třetím stranám neposkytuje. Cílený výnos 12 % p.a. a více.",
+  "citace": "Cílem fondu je nakupovat pohledávky po splatnosti se značným diskontem oproti nominální hodnotě",
+  "zdroj": "https://www.fki-fondy.cz/fondy/rhapsody-aps-credit-fund/"
+ },
+ {
+  "ico": "75166381",
+  "nazev": "FLOWPAY Debt Sub-fund",
+  "verdikt": "zamitnout",
+  "duvod": "Kaptivní podfond - financuje výhradně aktivity vlastní skupiny FLOWPAY a zároveň v ní drží majetkový podíl. Třetím stranám nepůjčuje. Samotný Flowpay, který úvěruje malé firmy, je v databázi veden samostatně (měsíční běh u něj 26. 8. hlásil nedostupný web).",
+  "citace": "U dluhového zhodnocení fond financuje aktivity skupiny FLOWPAY a výnos plyne z úroků a správy portfolia.",
+  "zdroj": "https://www.avantfunds.cz/fondy/flowpay-fund-sicav-a-s/flowpay-debt-sub-fund/"
+ }
+]

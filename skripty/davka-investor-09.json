@@ -1,0 +1,28 @@
+[
+ {
+  "ico": "",
+  "nazev": "Fiduciam",
+  "web": "https://fiduciam.co.uk",
+  "typ": "Nebankovní poskytovatel financování",
+  "verdikt": "zamitnout",
+  "segment": "",
+  "aum": "",
+  "gatekeeper": "",
+  "duvod": "Není investor, ale VĚŘITEL - poskytuje bridging loans, komerční hypotéky a development finance zajištěné nemovitostmi (1-35 mil. GBP/EUR, LTV do 70 %, cca 200 mil. GBP ročně). Do listu 6 nepatří. Profilem by patřil na stranu financování (list 3), ale mezi zeměmi, kde působí (UK, Irsko, Španělsko, Nizozemsko, Německo, Francie, Lucembursko, Belgie, Švýcarsko), Česko ani Slovensko není - proto se nezařazuje ani tam. Přehodnotit, kdyby na český trh vstoupil.",
+  "citace": "We are an institutionally funded and pension-fund owned marketplace lender to entrepreneurs and small and medium-sized enterprises all over the UK and Europe. We provide bridging loans, commercial mortgages and development finance.",
+  "zdroj": "https://fiduciam.co.uk/about-us/"
+ },
+ {
+  "ico": "",
+  "nazev": "365.bank",
+  "web": "https://365.bank",
+  "typ": "Banka",
+  "verdikt": "nevim",
+  "segment": "",
+  "aum": "",
+  "gatekeeper": "",
+  "duvod": "Web vrátil jen název banky bez obsahu - nešlo z něj nic doložit. Slovenská banka, ARES ji nezná. Posoudit znovu z jiného vstupu.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
