@@ -79,6 +79,48 @@ seznam a u dvou tří přepsat default.
 3 změny aplikovány automaticky, nic ke schválení." Ticho je dvojznačné —
 nepozná se, jestli je klid, nebo běh spadl.
 
+## Druhá úloha: hledání nových subjektů
+
+Měsíční běh se ptá **známých** subjektů, jestli se u nich něco změnilo.
+Nenajde toho, kdo v databázi vůbec není. Na to je `OBJEVY.cmd`
+(`financovani-objevy.py`).
+
+```
+python financovani-objevy.py                 # najde přírůstky, nic nezapíše
+python financovani-objevy.py --verdikty objevy.json --zapis
+```
+
+Skript projde obchodní rejstřík po kombinacích NACE × právní forma, odečte
+všechno, co už v databázi je — **včetně vyřazených** — a co už jednou
+posoudil, a zbytek připraví do složky `k-posouzeni/`. Zadání je
+v `k-posouzeni/_ZADANI.md`.
+
+> **Registr umí najít přírůstek, ale neumí ho kvalifikovat.** Změřeno
+> 27. 8. 2026 na 107 českých subjektech v databázi: u kódu 64310 je poměr
+> použitelných k vyřazeným **22:17**, u 68200 dokonce 14:15. Z NACE se
+> nepozná nic — rozhoduje to, co subjekt reálně dělá, a to je jen na webu.
+
+Tvoje role je stejná jako u fáze 4: **rozhodnout s doslovnou citací a URL.**
+Verdikty jsou tři — `zaradit`, `zamitnout`, `nevim`. Když si nejsi jistý,
+je správná odpověď `nevim`. Polovina subjektů, které se tváří jako private
+debt, jím není.
+
+**Zamítnutí se pamatuje natrvalo** a subjekt se už nikdy nenabídne. Piš proto
+důvod tak, aby za rok dával smysl někomu, kdo ten běh neviděl.
+
+### Dvě věci, které o tom hledání musíš vědět
+
+**Úzké úvěrové kódy jsou prázdné.** Kódy 6492x, 64999 a 66190 daly za dvanáct
+měsíců **tři** nové subjekty. Skutečný přírůstek je pod kódem 64310 (trusty
+a fondy) — 164 za rok, převážně podfondy SICAV. Kdyby se hlídaly jen úvěrové
+kódy, běh by hlásil nulu a vypadalo by to, že se na trhu nic neděje.
+
+**Dvě kombinace se neprohledávají.** `64929 × s.r.o.` (2 629 subjektů)
+a `66190 × s.r.o.` — ARES odmítá dotazy nad 1 000 výsledků a nemá filtr
+na datum vzniku. Běh to **pokaždé vypíše**; není to „nic tam není",
+je to nepokryté místo. Kdo bude hledat řešení: potřebujeme kompletní
+otevřená data ARES, ne vyhledávací API.
+
 ## Tři pruhy
 
 Pruh **není systém**. Je to hodnota ve sloupci listu *Návrhy změn*.

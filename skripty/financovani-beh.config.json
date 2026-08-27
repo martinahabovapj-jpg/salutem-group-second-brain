@@ -129,7 +129,13 @@
     "automat_poznamka": "[{datum} automat] {co}: {detail}. Zdroj: {zdroj}",
     "pole_ico": "IČO",
     "pole_stav": "Stav",
-    "rpo_nesedi": "RPO (SK) toto IČO nezná — ověřit ručně"
+    "rpo_nesedi": "RPO (SK) toto IČO nezná — ověřit ručně",
+    "objevy_nadpis": "HLEDÁNÍ NOVÝCH SUBJEKTŮ",
+    "objevy_zadny": "Žádný nový subjekt, který bychom už neznali.",
+    "objevy_nadpis_souboru": "# Kandidáti k posouzení",
+    "objevy_hlavicka": "| IČO | Název | Vznik | NACE | Sídlo |",
+    "objevy_useknuto": "\n\nPOZOR: kandidátů bylo {celkem}, do dávky jich šlo {davka} (strop max_kandidatu). Nezpracovaní: {ica}. Není to „nic dalšího nebylo\", je to vědomé useknutí.\n",
+    "objevy_zaradit": "zařadit do databáze"
   },
   "registry_podle_zeme": {
     "_popis": "Ktery registr se pta pro kterou zemi. Zeme, ktera tu neni, se v registrech nekontroluje vubec a beh to nahlasi jako nepokryte - mlceni by cetlo jako 'zkontrolovano'.",
@@ -149,5 +155,41 @@
       "_popis": "Subjekty, jejichz stranka hlasi zmenu pri kazdem nacteni z duvodu, ktery nejde odfiltrovat vzorem. Jejich zmena jde do pruhu C (jen log) a beh je POKAZDE vypise jako nesledovane - mlceni by cetlo jako 'zkontrolovano'. Kazdy zaznam musi mit duvod.",
       "123": "matuskapartners.sk michá slova v popiskach formulare do nahodnych kombinaci (ochrana proti robotum) — kazde nacteni vyrobi nove unikatni radky, vzorem to odfiltrovat nejde"
     }
+  },
+  "objevy": {
+    "_popis": "Hledani NOVYCH subjektu, ktere vznikly od minule. Jina uloha nez mesicni kontrola: ta se pta znamych subjektu, tohle hleda ty, o kterych nevime.",
+    "_zjisteni_26_8": "NACE neodlisuje pouzitelne od vyrazenych. U 107 ceskych subjektu v databazi ma 64310 pomer 22:17 ve prospech pouzitelnych, 68200 dokonce 14:15. Registr tedy umi najit NOVE PRIRUSTKY, ale NEUMI je kvalifikovat - to musi model z webu, s citaci.",
+    "_objem": "Zmereno 27. 8. 2026: uzke uverove kody (6492x, 64999, 66190) daly za 12 mesicu 3 nove subjekty. Kod 64310 (trusty a fondy) dal 164. Kdyby se hlidaly jen uverove kody, beh by nehlasil nic a vypadalo by to, ze se nic nedeje.",
+    "nace": [
+      "64310",
+      "64920",
+      "64924",
+      "64929",
+      "64999",
+      "66190",
+      "64190",
+      "64220"
+    ],
+    "pravni_formy": [
+      "121",
+      "112",
+      "541"
+    ],
+    "dnu_zpet": 400,
+    "max_kandidatu": 40,
+    "napovedy_v_nazvu": [
+      "loan",
+      "uver",
+      "úvěr",
+      "debt",
+      "bridge",
+      "credit",
+      "kredit",
+      "financ",
+      "mezanin",
+      "mezzanin",
+      "lend"
+    ],
+    "_napovedy_poznamka": "Slova v nazvu, ktera kandidata oznaci jako pravdepodobneho. NEFILTRUJI - jen radi poradi. Filtrovat podle nazvu by vynechalo vericele s neutralnim jmenem."
   }
 }

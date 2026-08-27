@@ -112,8 +112,21 @@ class Sesit(object):
         self.cfg = cfg
         self.cesta = cfg["master"]
         if not os.path.isfile(self.cesta):
+            # Rozlisit "disk je pryc" od "cesta je spatne". Sitovy disk se
+            # odpojuje sam od sebe a poslat kolegu opravovat konfiguraci,
+            # kdyz staci pockat nebo obnovit pripojeni, je spatna rada.
+            koren = os.path.splitdrive(self.cesta)[0]
+            if koren and not os.path.isdir(koren + os.sep):
+                raise SystemExit(
+                    "Disk %s neni pripojeny, takze na master sesit nevidime.\n"
+                    "Konfigurace je v poradku - nic v ni nemen.\n"
+                    "Otevri Pruzkumnik souboru, klikni na %s a spust beh znovu.\n"
+                    "Kdyz se disk neobjevi, je problem v siti nebo na serveru."
+                    % (koren, koren))
             raise SystemExit("Master sesit nenalezen: %s\n"
-                             "Uprav cestu v financovani-beh.config.json." % self.cesta)
+                             "Zkontroluj, jestli soubor nekdo neprejmenoval nebo "
+                             "neprestehoval. Cesta se meni v financovani-beh.config.json."
+                             % self.cesta)
         self.wb = openpyxl.load_workbook(self.cesta)
         self.listy = cfg["listy"]
         self._hlavicky = {}
@@ -364,7 +377,7 @@ def ocisti(html_bytes, vzory=()):
 def otisk(text):
     """Otisk se pocita ze SERAZENYCH unikatnich radku, ne z textu v poradi.
 
-    Nekolik webu michá poradi poli ve formularich pri kazdem nacteni jako
+    Nekolik webu micha poradi poli ve formularich pri kazdem nacteni jako
     ochranu proti robotum. Bez tohohle by takova stranka hlasila zmenu kazdy
     mesic, model by u ni pokazde rekl "nic" a fronta by se zaplnila sumem.
     """

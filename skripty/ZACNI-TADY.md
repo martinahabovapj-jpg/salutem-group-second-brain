@@ -68,6 +68,23 @@ Před zápisem se sám udělá záložní kopie sešitu do složky `zalohy\`.
 
 ---
 
+## Druhá věc: nové subjekty
+
+`refresh.cmd` hlídá subjekty, které v databázi **už jsou**. Nenajde toho,
+kdo do ní ještě nepatří.
+
+Na to je **`OBJEVY.cmd`** — projde obchodní rejstřík a vypíše subjekty, které
+od minule vznikly a my o nich nevíme. Stačí pouštět jednou za měsíc nebo za
+čtvrtletí, přírůstek je zhruba **čtrnáct subjektů měsíčně**.
+
+Nic nezapisuje. Vyrobí seznam kandidátů ve složce `k-posouzeni`, u kterých
+musí někdo rozhodnout, jestli patří do databáze. **Rejstřík to sám nepozná** —
+u fondů vychází poměr použitelných k nepoužitelným zhruba půl na půl a rozhoduje
+to, co subjekt reálně dělá, ne pod jakým kódem je zapsaný.
+
+To posouzení dělá Martina s Claudem. Ty se pak uvidíš jen výsledek v listu
+„5 Návrhy změn" jako řádek „nový subjekt".
+
 ## Když se něco pokazí
 
 **Nástroj něco zapsal a nemělo se to stát.** Vrátit to je jeden příkaz.
@@ -121,6 +138,7 @@ nebo jestli to prostě nedoběhlo.
 | `Master_databaze_financovani_*.xlsx` | **hlavní soubor.** Tenhle jediný platí |
 | `Kdo_mi_to_zafinancuje_LIVE.html` | vyhledávač — otevři v prohlížeči, načti si sešit |
 | `beh\KONTROLA.cmd` | jednou na začátku — projde na tomhle počítači vůbec? |
+| `beh\OBJEVY.cmd` | hledání nových subjektů, které na trhu přibyly |
 | `beh\refresh.cmd` | spustí kontrolu |
 | `beh\ZAPSAT.cmd` | zapíše schválené změny |
 | `beh\zalohy\` | zálohy sešitu před každým zápisem |
