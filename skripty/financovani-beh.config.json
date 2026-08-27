@@ -207,7 +207,12 @@
   "cnb_nadpis": "# Kandidáti ze seznamu investičních fondů ČNB",
   "cnb_uvod": "Zdroj: měsíční Seznam investičních fondů ČNB, list `{list}` ({platnost}), celkem {celkem} fondů.\nVypsané fondy má ČNB v jedné ze sledovaných kategorií a v naší databázi nejsou.",
   "cnb_hlavicka": "| IČO | Název | Kategorie ČNB | Podfond | Sídlo |",
-  "cnb_zadani": "# Zadání pro posouzení fondů ze seznamu ČNB\n\nV `kandidati.md` jsou investiční fondy, které ČNB vede ve své měsíční\nstatistice pod kategorií, o kterou stojíme — a v naší databázi nejsou.\n\n> **Tohle je jiný typ kandidáta než z `OBJEVY.cmd`.** Tam je zdrojem ARES,\n> který o fondu ví jen to, že vznikl, a NACE má u všech fondů stejné (64310).\n> Tady je zdrojem **regulátor**, který fond zařadil podle jeho skutečné\n> investiční strategie. Kategorie „úvěrový\" je tedy silný doklad, ne domněnka.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | poskytuje financování **třetím stranám** a jde to doložit citací |\n| `zamitnout` | kaptivní (půjčuje jen uvnitř skupiny) · výkupčí pohledávek · zprostředkovatel bez vlastní bilance |\n| `nevim` | kategorie od ČNB sedí, ale nic dalšího se nedá doložit |\n\n**Kategorie sama nestačí k zařazení.** Říká, čím se fond zabývá, ne komu\npůjčuje. Fond, který úvěruje výhradně projekty vlastní skupiny, je pro ČNB\npořád „úvěrový\", ale pro nás je kaptivní a nepatří do databáze.\n\n**Kategorie ale stačí k tomu, aby se fond neztratil.** Když se nedá nic\ndoložit, dej `nevim` — ne `zamitnout`. Zamítnutí se pamatuje natrvalo a\nu fondu, který regulátor vede jako úvěrový, je to škoda.\n\n## Na co si dát pozor\n\n**Podfond vs. mateřský fond.** Sloupec `podfond` říká, co je co. Investiční\nstrategii nese statut podfondu, ne mateřského SICAVu — u mateřských fondů\nje proto „nevím\" časté a správné.\n\n**Seznam je platný k poslednímu dni měsíce.** Fond zapsaný později v něm\nještě není. „Není v seznamu ČNB\" neznamená „není fond\".\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**. Kategorie od ČNB je vodítko, kde hledat — ne náhrada citace.\n\n## Výstup\n\nZapiš `objevy.json` vedle skriptu ve stejném tvaru jako u `OBJEVY.cmd`\na spusť:\n\n```\npython financovani-objevy.py --verdikty objevy.json --zapis\n```\n"
+  "cnb_zadani": "# Zadání pro posouzení fondů ze seznamu ČNB\n\nV `kandidati.md` jsou investiční fondy, které ČNB vede ve své měsíční\nstatistice pod kategorií, o kterou stojíme — a v naší databázi nejsou.\n\n> **Tohle je jiný typ kandidáta než z `OBJEVY.cmd`.** Tam je zdrojem ARES,\n> který o fondu ví jen to, že vznikl, a NACE má u všech fondů stejné (64310).\n> Tady je zdrojem **regulátor**, který fond zařadil podle jeho skutečné\n> investiční strategie. Kategorie „úvěrový\" je tedy silný doklad, ne domněnka.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | poskytuje financování **třetím stranám** a jde to doložit citací |\n| `zamitnout` | kaptivní (půjčuje jen uvnitř skupiny) · výkupčí pohledávek · zprostředkovatel bez vlastní bilance |\n| `nevim` | kategorie od ČNB sedí, ale nic dalšího se nedá doložit |\n\n**Kategorie sama nestačí k zařazení.** Říká, čím se fond zabývá, ne komu\npůjčuje. Fond, který úvěruje výhradně projekty vlastní skupiny, je pro ČNB\npořád „úvěrový\", ale pro nás je kaptivní a nepatří do databáze.\n\n**Kategorie ale stačí k tomu, aby se fond neztratil.** Když se nedá nic\ndoložit, dej `nevim` — ne `zamitnout`. Zamítnutí se pamatuje natrvalo a\nu fondu, který regulátor vede jako úvěrový, je to škoda.\n\n## Na co si dát pozor\n\n**Podfond vs. mateřský fond.** Sloupec `podfond` říká, co je co. Investiční\nstrategii nese statut podfondu, ne mateřského SICAVu — u mateřských fondů\nje proto „nevím\" časté a správné.\n\n**Seznam je platný k poslednímu dni měsíce.** Fond zapsaný později v něm\nještě není. „Není v seznamu ČNB\" neznamená „není fond\".\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**. Kategorie od ČNB je vodítko, kde hledat — ne náhrada citace.\n\n## Výstup\n\nZapiš `objevy.json` vedle skriptu ve stejném tvaru jako u `OBJEVY.cmd`\na spusť:\n\n```\npython financovani-objevy.py --verdikty objevy.json --zapis\n```\n",
+  "cnb_inv_nadpis": "# Investorská strana ze seznamu ČNB — po skupinách",
+  "cnb_inv_uvod": "Zdroj: měsíční Seznam investičních fondů ČNB, list `{list}` ({platnost}), kategorie **{kategorie}**.\n{fondu} fondů, které v databázi nejsou, tvoří **{skupin} skupin**. Oslovuje se správce skupiny, ne každý podfond zvlášť.",
+  "cnb_inv_hlavicka": "| Skupina | Fondů | Reprezentativní fond | Sídlo | IČO fondů |",
+  "cnb_inv_zadani": "# Zadání pro posouzení investorské strany ze seznamu ČNB\n\nV `kandidati.md` jsou **skupiny nemovitostních fondů**, které ČNB vede ve své\nměsíční statistice a které v naší databázi nejsou.\n\n> **Proč po skupinách a ne po fondech.** WOOD & Company má sedm nemovitostních\n> fondů, RSJ dvanáct ve třech větvích. Oslovuje se správce skupiny, ne každý\n> podfond zvlášť. Kdyby se do fronty sypal každý fond, měla by sedm řádků pro\n> tutéž firmu — a schvalovatel by se ji naučil přeskakovat.\n\n> **Tohle je investorská strana, ne financování.** Nemovitostní fond nepůjčuje,\n> ale alokuje kapitál do nemovitostí. Patří do listu 6, ne do listu 3.\n\n## Co u každé skupiny zjistit\n\n1. **Kdo je protistrana k oslovení.** Sloupec „Reprezentativní fond\" je jen\n   vodítko — u podfondů je skutečnou protistranou **obhospodařovatel nebo\n   správce**, kterého v seznamu ČNB není. Ten se dohledá z webu fondu nebo\n   z obchodního rejstříku.\n2. **Do čeho konkrétně investuje** — rezidence, logistika, kanceláře, retail,\n   půda, hotely. To rozhoduje, jestli je pro naše projekty relevantní.\n3. **Objem** (NAV nebo AUM), pokud je zveřejněný.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | alokuje kapitál do nemovitostí a dá se doložit, do čeho |\n| `zamitnout` | kaptivní fond jedné skupiny bez zájmu o cizí projekty · fond v likvidaci |\n| `nevim` | fond existuje, ale nic dalšího se nedá doložit |\n\n**Kategorie od ČNB nestačí k zařazení**, stačí ale k tomu, aby se skupina\nneztratila. Když se nedá nic doložit, dej `nevim` — ne `zamitnout`.\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**.\n\n## Výstup\n\nDávku zapiš do JSON ve tvaru pro `financovani-zapis-investoru.py` — tedy\ns poli `ico`, `nazev`, `web`, `typ`, `verdikt`, `segment`, `aum`,\n`gatekeeper`, `duvod`, `citace`, `zdroj`. U skupiny použij IČO té entity,\nkterou jsi vyhodnotil jako protistranu.\n\n```\npython financovani-zapis-investoru.py davka.json --zapis\n```\n",
+  "nadpis_cnb_investor": "NEMOVITOSTNÍ FONDY PO SKUPINÁCH (list 6)"
  },
  "registry_podle_zeme": {
   "_popis": "Ktery registr se pta pro kterou zemi. Zeme, ktera tu neni, se v registrech nekontroluje vubec a beh to nahlasi jako nepokryte - mlceni by cetlo jako 'zkontrolovano'.",
@@ -398,6 +403,32 @@
    "mesto": "MĚSTO",
    "ulice": "ULICE",
    "hlavicka_prvni": "RIAD_CODE"
+  },
+  "investor": {
+   "_popis": "Investorská větev zdroje ČNB. Kategorie „nemovitostní“ nejsou věřitelé, ale alokátoři kapitálu do nemovitostí — tedy list 6. Je jich 190 a jeden správce jich často má několik, proto se chodí PO SKUPINÁCH: oslovuje se správce, ne každý podfond.",
+   "_zjisteni_27_8": "K 30. 6. 2026 vede ČNB 190 nemovitostních fondů, v databázi jsme měli 4. Zbylých 186 tvoří 165 skupin — WOOD & Company 7 fondů, RSJ dohromady 12 ve třech větvích (Development 5, Real 4, Logistics 3), KB Amundi 3.",
+   "kategorie": "nemovitostní",
+   "k_posouzeni": "k-posouzeni-cnb-investor",
+   "vyhodit_ze_jmena": [
+    "otevřený",
+    "uzavřený",
+    "podílový",
+    "fond",
+    "fondů",
+    "podfond",
+    "SICAV",
+    "a.s.",
+    "s.r.o.",
+    "investiční",
+    "společnost",
+    "realitní",
+    "nemovitostní",
+    "kvalifikovaných",
+    "investorů"
+   ],
+   "_vyhodit_popis": "Slova, která se z názvu vyhodí, než se určí skupina. Kdyby zůstala, spadly by do jedné skupiny všechny fondy, co začínají slovem „otevřený“. Když se něco slučuje špatně, upraví se to tady, ne v kódu.",
+   "slov_ve_skupine": 1,
+   "_slov_popis": "Kolik prvních významových slov názvu tvoří klíč skupiny. Jedno slovo sloučí RSJ Development, RSJ Real i RSJ Logistics do jediné skupiny RSJ (17 fondů), což je pro oslovení správně — je to jedna adresa. Dvě slova by z toho udělala tři skupiny. Ověřeno 27. 8. 2026: při jednom slově nevznikla žádná skupina, která by slučovala nesouvisející firmy. Když se něco slučuje špatně, přidej to slovo do vyhodit_ze_jmena nebo tady zvyš na 2."
   }
  }
 }
