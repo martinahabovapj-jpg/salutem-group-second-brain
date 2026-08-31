@@ -871,6 +871,7 @@ def zapis_navrhy(sesit, navrhy, cfg):
     if zajisti_sloupce(sesit, "navrhy"):
         h = sesit.hlavicka("navrhy")
     roletka(sesit, cfg)
+    roletka_kolega(sesit, cfg)
 
     # ukazkove radky ze sablony pryc - sesit sam v listu 5 rika, ze se maji smazat
     i_subj = h.get(mapa["subjekt"])
@@ -996,6 +997,49 @@ def roletka(sesit, cfg):
     dv.add(rozsah)
     return True
 
+
+def roletka_kolega(sesit, cfg):
+    """Sloupec "Kdo komunikuje" v listu Kontakty jako rozbalovaci seznam kolegu.
+
+    Jmena kolegu jsou v konfiguraci (sekce "komunikace"), ne v kodu - pridat
+    kolegu znamena dopsat jmeno tam a pustit zapis znovu. Sloupec se do listu
+    dopise sam, kdyz tam jeste neni; hodnoty uz vyplnene zustavaji.
+    """
+    try:
+        from openpyxl.worksheet.datavalidation import DataValidation
+        from openpyxl.utils import get_column_letter
+    except ImportError:
+        return False
+    kolegove = [k for k in (cfg.get("komunikace") or {}).get("kolegove") or []
+                if k and "," not in k]   # carka by rozbila inline seznam v Excelu
+    if not kolegove:
+        return False
+    zajisti_sloupce(sesit, "kontakty")
+    i = sesit.sl("kontakty", "komunikuje")
+    if not i:
+        return False
+    ws = sesit.ws("kontakty")
+    pismeno = get_column_letter(i)
+    rozsah = "%s2:%s1000" % (pismeno, pismeno)
+    # stara validace na tomtez sloupci pryc, at jich tam nesedi pet pres sebe.
+    # Sloupec musi sedet cely - "H" se nesmi chytit na "AH2:AH1000".
+    vzor = "(?<![A-Z])%s[0-9]" % pismeno
+    for dv in list(ws.data_validations.dataValidation):
+        if re.search(vzor, str(dv.sqref or "")):
+            ws.data_validations.dataValidation.remove(dv)
+    dv = DataValidation(type="list",
+                        formula1='"%s"' % ",".join(kolegove),
+                        allow_blank=True,
+                        showDropDown=False)   # OOXML naopak: False = sipka se ZOBRAZI
+    dv.promptTitle = T["roletka_kolega_titulek"]
+    dv.prompt = T["roletka_kolega_zprava"]
+    dv.errorTitle = T["roletka_kolega_titulek"]
+    dv.error = T["roletka_kolega_chyba"]
+    dv.showInputMessage = True
+    dv.showErrorMessage = True
+    ws.add_data_validation(dv)
+    dv.add(rozsah)
+    return True
 
 def najdi_radek(sesit, klic, sid):
     """Radek subjektu v listu podle ID. Vraci cislo radku nebo None."""
@@ -1507,6 +1551,8 @@ def main():
     ap.add_argument("--navrhy", help="soubor navrhy.json z faze 4")
     ap.add_argument("--vrat", help="vrati zapsane zmeny z behu daneho data (YYYY-MM-DD)")
     ap.add_argument("--master", help="jina cesta k sesitu (test, kdyz je disk O: pryc)")
+    ap.add_argument("--sloupce", action="store_true",
+                    help="jen srovna sloupce a roletky v sesitu podle konfigurace")
     ap.add_argument("--aplikovat", action="store_true",
                     help="vyridi list 5: co je schvalene, zapise; co zamitnute, zapamatuje")
     args = ap.parse_args()
@@ -1522,6 +1568,22 @@ def main():
 
     sesit = Sesit(cfg)
 
+    if args.sloupce:
+        pribylo = []
+        for klic in ("kontakty", "navrhy"):
+            pribylo += zajisti_sloupce(sesit, klic)
+        roletka(sesit, cfg)
+        roletka_kolega(sesit, cfg)
+        vypis("Pribylo sloupcu: %d%s" % (
+            len(pribylo), (" (" + ", ".join(pribylo) + ")") if pribylo else ""))
+        vypis("Roletky srovnany podle konfigurace.")
+        if args.zapis:
+            sesit.uloz(os.path.join(HERE, cfg["zalohy"]))
+            vypis("Zapsano do sesitu.")
+        else:
+            vypis("Nanecisto - nic se nezapsalo. Pro zapis pridej --zapis.")
+        return
+
     if args.vrat:
         vrat(sesit, stav, args.vrat, args.zapis)
         if args.zapis:
@@ -1532,6 +1594,7 @@ def main():
     if args.aplikovat:
         zajisti_list(sesit, "zamitnuto")
         roletka(sesit, cfg)
+        roletka_kolega(sesit, cfg)
         vysledek = aplikuj(sesit, cfg, stav, args.zapis)
         vypis(prehled_aplikace(vysledek, sesit))
         if args.zapis:

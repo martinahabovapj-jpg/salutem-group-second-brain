@@ -92,13 +92,26 @@ Sešit má úvodní přehled a osm očíslovaných listů. Tři z nich jsou pro 
 | List | Co v něm je | Sáháš na něj? |
 |---|---|---|
 | **1 Subjekty** | hlavní seznam firem — kdo, IČO, web, stav, jaké má role | čteš |
-| 2 Kontakty | jména, telefony, maily | čteš |
+| **2 Kontakty** | jména, telefony, maily — a **kdo z nás s kým komunikuje** | **vybíráš z roletky** |
 | 3 Role Financování | kdo co půjčuje — typy financování, ticket, LTV | čteš |
 | 4 Zdroje | **doslovné citace a odkazy ke každému údaji** | čteš, když něčemu nevěříš |
 | **5 Návrhy změn** | **fronta, ve které rozhoduješ** | **tady pracuješ** |
 | 6 Role Investor | kdo do projektů investuje — family office, fondy | čteš |
 | **7 Zamítnuto při hledání** | firmy, které se posuzovaly a nezařadily, i s důvodem | čteš |
 | **8 K ověření** | firmy, u kterých se **nepodařilo rozhodnout** | čteš, když máš čas |
+
+### Sloupec „Kdo komunikuje“ v listu 2
+
+Poslední sloupec listu **„2 Kontakty“** je roletka se jmény kolegů — dnes
+**Dudjak** a **Nečas**. Vybírá se v ní, kdo z nás je s tím konkrétním člověkem
+v komunikaci, aby ho neoslovili dva lidé nezávisle na sobě.
+
+**Prázdné znamená „zatím nikdo“**, ne chybu. Nástroj do toho sloupce sám nikdy
+nic nezapíše ani nic nepřepíše — je celý tvůj.
+
+Přibyde další kolega? Neopravuje se to v Excelu, ale v konfiguraci
+(`beh\financovani-beh.config.json`, sekce `komunikace`) — jinak by se jméno
+při dalším zápisu z roletky ztratilo. Řekni Martině.
 
 ### Proč jsou listy 7 a 8 dva, a ne jeden
 
