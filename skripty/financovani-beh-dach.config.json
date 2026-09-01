@@ -1,0 +1,552 @@
+{
+ "_popis": "Konfigurace databaze poskytovatelu financovani pro region DACH (DE, AT, CH). Strukturne shodna s ceskou; lisi se v tom, ze pro tyhle zeme neni napojeny zadny registr - viz sekce registry_podle_zeme a list 0 Prehled v sesitu.",
+ "_pravidlo": "Struktura sloupcu v sesitu se rucne nemeni. Pridavat lze, prejmenovat a presouvat ne — skript sloupce hleda podle nazvu z teto konfigurace.",
+ "master": "O:/AAA POHLEDÁVKY, REALITY NEKOUPENÉ/MDU/Seznamy FKI a FO_WM/Master_databaze_financovani_DACH.xlsx",
+ "stav": "financovani-beh-dach.stav.json",
+ "_master_todo": "Zamerne bez data v nazvu - cesky master ma v nazvu 20260813 a od te doby se resi, jak ho prejmenovat, aniz se rozbijou odkazy. Tuhle chybu neopakujeme.",
+ "zalohy": "zalohy",
+ "stranky": "stranky",
+ "k_precteni": "k-precteni",
+ "listy": {
+  "subjekty": "1 Subjekty",
+  "kontakty": "2 Kontakty",
+  "financovani": "3 Role Financování",
+  "zdroje": "4 Zdroje",
+  "navrhy": "5 Návrhy změn",
+  "investor": "6 Role Investor",
+  "zamitnuto": "7 Zamítnuto při hledání",
+  "nerozhodnuto": "8 K ověření"
+ },
+ "sloupce": {
+  "subjekty": {
+   "id": "ID",
+   "nazev": "Název",
+   "ico": "IČO",
+   "zeme": "Země",
+   "web": "Web",
+   "stav": "Stav",
+   "overeno": "Ověřeno",
+   "poznamka": "Poznámka",
+   "role_investor": "Role: investor",
+   "role_financovani": "Role: financování",
+   "typ": "Typ subjektu",
+   "resi": "Kdo řeší"
+  },
+  "kontakty": {
+   "id": "ID subjektu",
+   "subjekt": "Subjekt",
+   "osoba": "Jméno a pozice",
+   "telefon": "Telefon",
+   "email": "E-mail",
+   "overeno": "Ověřeno",
+   "poznamka": "Poznámka",
+   "komunikuje": "Kdo komunikuje"
+  },
+  "financovani": {
+   "id": "ID",
+   "subjekt": "Subjekt",
+   "ticket_od": "Ticket od",
+   "ticket_do": "Ticket do",
+   "ltv": "LTV max"
+  },
+  "investor": {
+   "id": "ID subjektu",
+   "subjekt": "Subjekt",
+   "segment": "Segment",
+   "aum": "AUM",
+   "gatekeeper": "Gatekeeper / platforma",
+   "stav_osloveni": "Stav oslovení",
+   "zodpovedny": "Zodpovědný",
+   "posledni_kontakt": "Poslední kontakt",
+   "poznamka": "Poznámka"
+  },
+  "zdroje": {
+   "id": "ID subjektu",
+   "subjekt": "Subjekt",
+   "k_cemu": "K čemu se váže",
+   "citace": "Doslovná citace",
+   "url": "URL",
+   "overeno": "Ověřeno"
+  },
+  "navrhy": {
+   "datum": "Datum běhu",
+   "id": "ID subjektu",
+   "subjekt": "Subjekt",
+   "co": "Co",
+   "bylo": "Bylo",
+   "navrzeno": "Navrženo",
+   "zdroj": "Zdroj (URL)",
+   "schvalit": "Schválit",
+   "poznamka": "Poznámka schvalovatele",
+   "pruh": "Pruh",
+   "druh": "Druh",
+   "vyrizeno": "Vyřízeno"
+  },
+  "zamitnuto": {
+   "datum": "Datum",
+   "ico": "IČO",
+   "nazev": "Název",
+   "duvod": "Proč zamítnuto",
+   "citace": "Doslovná citace",
+   "zdroj": "Zdroj (URL)",
+   "kde": "Kde vzniklo"
+  },
+  "nerozhodnuto": {
+   "datum": "Datum",
+   "ico": "IČO",
+   "nazev": "Název",
+   "web": "Web",
+   "co_vime": "Co o něm víme",
+   "duvod": "Proč se nerozhodlo",
+   "kde": "Kde vzniklo"
+  }
+ },
+ "komunikace": {
+  "_popis": "Kdo z kolegů má subjekt na starosti. Seznam jmen patří sem, ne do kódu — roletky se z něj generují. Obsluhuje dva sloupce: „Kdo řeší“ v listu 1 Subjekty (kdo má na starosti celou firmu) a „Kdo komunikuje“ v listu 2 Kontakty (kdo mluví s konkrétním člověkem). Přidat kolegu = přidat jméno sem a spustit ZAPSAT.cmd.",
+  "kolegove": [
+   "Dudjak",
+   "Nečas"
+  ]
+ },
+ "spravci": {
+  "_popis": "Domeny spravcu, administratoru a agregatoru fondu. Na tehle domene sedi desitky ruznych fondu, takze shoda domeny NEZNAMENA, ze jde o tentyz subjekt - zapis investoru je proto pri parovani ignoruje a rovnou zaklada novy radek. Zaroven to neni web fondu, ktery by mel smysl hlidat v mesicnim behu. Kdyz na takovou domenu narazis, patri do pole Gatekeeper, ne do Webu.",
+  "domeny": [
+   "avantfunds.cz",
+   "codyainvest.cz",
+   "amista.cz",
+   "deltais.cz",
+   "conseq.cz",
+   "winstor.cz",
+   "jtis.cz",
+   "jtbank.cz",
+   "tillerfunds.cz",
+   "versuteis.cz",
+   "partnersis.cz",
+   "fki-fondy.cz",
+   "fondykvalifikovane.cz",
+   "nemovitostni-fondy.cz",
+   "kurzy.cz",
+   "penize.cz",
+   "finmag.cz",
+   "podnikatel.cz",
+   "detail.cz",
+   "zivefirmy.cz",
+   "hlidacstatu.cz",
+   "rejstrik-firem.kurzy.cz",
+   "mesec.cz"
+  ]
+ },
+ "stavy": {
+  "aktivni": "aktivní",
+  "vyrazen": "VYŘAZEN",
+  "nenalezeno": "nenalezeno",
+  "insolvence": "v insolvenci",
+  "zanikly": "zaniklý",
+  "likvidace": "v likvidaci"
+ },
+ "pruhy": {
+  "_popis": "Routuje se podle toho, KTERE POLE se meni a ODKUD informace prisla — nikdy podle obsahu zmeny. Model nikdy nerozhoduje o svem vlastnim pruhu. Kdyz se ukaze, ze neco chodi do spatneho pruhu, prehodi se to TADY, ne v kodu.",
+  "insolvence": "A",
+  "zanik": "A",
+  "likvidace": "A",
+  "zmena_nazvu": "A",
+  "zmena_sidla": "A",
+  "web_nedostupny": "A",
+  "mail_domena_neexistuje": "A",
+  "ico_nesedi": "B",
+  "typ_financovani": "B",
+  "ticket": "B",
+  "ltv": "B",
+  "kontaktni_osoba": "B",
+  "novy_subjekt": "B",
+  "transakce": "B",
+  "text_bez_dopadu": "C",
+  "segment": "B",
+  "aum": "B",
+  "gatekeeper": "B",
+  "role_investor": "B",
+  "novy_investor": "B"
+ },
+ "prahy": {
+  "_popis": "Pod prahem jde zmena do pruhu C (jen log). Drzi frontu pruhu B na 10-20 polozkach mesicne.",
+  "ticket_procent": 20,
+  "ltv_procentni_body": 5,
+  "novy_typ_financovani_vzdy": true,
+  "kontaktni_osoba_vzdy": true
+ },
+ "pojistky": {
+  "_popis": "Ctyri pojistky, bez kterych by pruh A (automaticky zapis bez cloveka) nemel bezet.",
+  "strop_pruh_a_procent": 10,
+  "sitove_selhani_dvakrat": true,
+  "insolvence_vyzaduje_ares_i_isir": true,
+  "nikdy_nemaze": true,
+  "predvyplnovat_schvaleni": false,
+  "_predvyplnovat_popis": "Dokud byl sloupec Schválit jen dekorace, dávalo smysl ho předvyplnit slovem „přijmout“ — schvalovatel měl jen pár řádků přepsat. Od chvíle, kdy skript schválené řádky OPRAVDU zapisuje do listů 1–3, je předvyplnění spouštěč: kdo se na frontu nepodívá, ten ji tím odsouhlasil. Proto false. Zapnout lze, ale vědomě."
+ },
+ "rotace": {
+  "_popis": "Do hloubky (cteni modelem) jde mesicne jen zlomek subjektu. Otisk stranky se pocita u vsech — je zadarmo.",
+  "delitel": 3,
+  "max_k_precteni": 25
+ },
+ "sit": {
+  "timeout_s": 20,
+  "pauza_mezi_dotazy_s": 0.3,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) salutem-financovani-beh/1.0"
+ },
+ "endpointy": {
+  "_overeno": "2026-08-26 z pocitace Martiny Habove — oba dostupne, drive povazovane za blokovane.",
+  "ares": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/{ico}",
+  "isir": "https://isir.justice.cz:8443/isir_cuzk_ws/IsirWsCuzkService",
+  "isir_dokumentace": "https://isir.justice.cz/isir/help/Popis_WS_2_v1_13.pdf",
+  "rpo_sk_hledani": "https://api.statistics.sk/rpo/v1/search?identifier={ico}",
+  "_rpo_poznamka": "Slovensky Register pravnickych osob. ARES je cesky - na SK ICO vraci 404, coz NENI doklad o zaniku. Slovenska insolvence (Register upadcov, ru.justice.sk) zatim neni pokryta."
+ },
+ "texty": {
+  "_popis": "Vsechny retezce s diakritikou, ktere skript zapisuje do sesitu nebo vypisuje. V .py zdrojaku zadna diakritika nesmi byt.",
+  "pole_nazev_rejstrik": "Název v rejstříku",
+  "pole_sidlo": "Sídlo",
+  "pole_poznamka": "Poznámka",
+  "pole_email": "E-mail",
+  "web_nedostupny": "web nedostupný {n}x po sobě (HTTP {kod})",
+  "mail_domena": "doména {domena} neexistuje ({n}x po sobě)",
+  "dns_bez_zaznamu": "DNS bez záznamu",
+  "ico_nesedi": "ARES toto IČO nezná — ověřit ručně",
+  "prijmout": "přijmout",
+  "zamitnout": "zamítnout",
+  "ukazkovy_radek": "Ukázkov",
+  "zastaveno_stropem": "[zastaveno stropem pruhu A]",
+  "automat_poznamka": "[{datum} automat] {co}: {detail}. Zdroj: {zdroj}",
+  "pole_ico": "IČO",
+  "pole_stav": "Stav",
+  "rpo_nesedi": "RPO (SK) toto IČO nezná — ověřit ručně",
+  "objevy_nadpis": "HLEDÁNÍ NOVÝCH SUBJEKTŮ",
+  "objevy_zadny": "Žádný nový subjekt, který bychom už neznali.",
+  "objevy_nadpis_souboru": "# Kandidáti k posouzení",
+  "objevy_hlavicka": "| IČO | Název | Vznik | NACE | Sídlo |",
+  "objevy_useknuto": "\n\nPOZOR: kandidátů bylo {celkem}, do dávky jich šlo {davka} (strop max_kandidatu). Nezpracovaní: {ica}. Není to „nic dalšího nebylo\", je to vědomé useknutí.\n",
+  "objevy_zaradit": "zařadit do databáze",
+  "roletka_titulek": "Rozhodnutí schvalovatele",
+  "roletka_zprava": "Vyber z rozbalovacího seznamu: přijmout nebo zamítnout. Nic jiného skript nepřečte a řádek zůstane ve frontě.",
+  "roletka_chyba": "Sem patří jen „přijmout“ nebo „zamítnout“.",
+  "aplikovano_pozn": "[{datum} schváleno] {co}: {detail}. Zdroj: {zdroj}",
+  "zamitnuto_kde_5": "list 5 – zamítl schvalovatel",
+  "zamitnuto_kde_obj": "hledání nových subjektů",
+  "nadpis_aplikace": "SCHVÁLENÉ NÁVRHY",
+  "zamitnuto_nadpis": "Subjekty, které se posuzovaly a nezařadily. Seznam je aktivum: bez něj by je hledání nabízelo znovu a znovu.",
+  "ano": "ANO",
+  "role_investor_pozn": "[{datum} schváleno] zařazen jako investor (dřív VYŘAZEN pro roli financování): {detail} Zdroj: {zdroj}",
+  "nadpis_investor": "HLEDÁNÍ INVESTORŮ (family office / wealth management)",
+  "investor_zadny": "Žádný nový kandidát na investorskou stranu.",
+  "investor_zaradit": "zařadit jako investora",
+  "investor_nadpis_souboru": "# Kandidáti na investorskou stranu (list 6)",
+  "investor_hlavicka": "| ID v listu 1 | IČO | Název | Sídlo | Proč je v seznamu |",
+  "investor_zadani": "# Zadání pro posouzení investorské strany (list 6)\n\nV `kandidati.md` je seznam subjektů, u kterých máme podezření, že patří na\n**investorskou stranu** — family office, wealth management, správce rodinného\nmajetku. Vznikly dvěma cestami: buď je ARES dohledal podle jména, nebo v\nlistu 1 už jsou vedené jako VYŘAZEN a mají se přehodnotit.\n\n> **Tohle je jiná otázka než u financování.** Databáze doteď odpovídala na\n> „kdo mi to zafinancuje z vlastní bilance\". Family office nepůjčuje — investuje.\n> Přesně proto se tři z nich už jednou vyřadily, a vyřadily se správně.\n> Pro list 6 je to naopak ten hledaný profil.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | investuje **vlastní nebo rodinný kapitál** do nemovitostí, private debt, private equity či dluhopisů — a je to doložitelné z veřejného zdroje |\n| `zamitnout` | běžná provozní firma bez investiční činnosti · poradce či zprostředkovatel bez vlastního kapitálu · retailový fond nabízený veřejnosti · shoda jména bez souvislosti (spolek, e-shop, cestovka) |\n| `nevim` | z veřejných zdrojů to nejde rozhodnout |\n\n## Na co si dát pozor\n\n**Shoda jména nic neznamená.** Hledá se podle jména, takže dávka obsahuje\ni spolky, designové firmy a cestovky. Ty se zamítají bez váhání.\n\n**Trs na jedné adrese je signál, ne důkaz.** Když na téže adrese sedí SICAV,\nAdvisory, Capital a Management Services, je to typická struktura family office\n— ale pořád to musí potvrdit web s citací.\n\n**Neveřejnost je normální.** Family office o sobě záměrně mnoho nepíše. Když\nweb neexistuje nebo mlčí, správná odpověď je `nevim`, ne `zaradit`.\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**. Když neumíš citovat, verdikt je `nevim`.\n\n## Výstup\n\nZapiš do `objevy-investor.json` vedle skriptu. **Klíč `klic` opiš z tabulky\nbeze změny** — podle něj se pozná, jestli jde o nový subjekt, nebo o roli\nnavíc u toho, který v listu 1 už je.\n\n```json\n[\n  {\n    \"klic\": \"ico:17140200\",\n    \"nazev\": \"Verdi SICAV a.s.\",\n    \"verdikt\": \"zaradit\",\n    \"duvod\": \"family office skupiny Verdi, investuje vlastní kapitál do nemovitostí\",\n    \"citace\": \"doslovná věta ze stránky\",\n    \"zdroj\": \"https://...\"\n  }\n]\n```\n\nPak spusť:  `python financovani-objevy.py --verdikty-investor objevy-investor.json --zapis`\n",
+  "zamitnuto_kde_inv": "hledání investorů (list 6)",
+  "import_nadpis": "# Kandidáti na investorskou stranu (list 6)",
+  "import_uvod": "Zdroj jmen: `{zdroj}` — staré podklady, přeneseno jen jméno a web.\nIČO dohledal ARES živě. Celkem {celkem} firem, z toho **{novych} nových k posouzení** a {znamych} už v masteru je.",
+  "import_hlavicka": "| IČO | Firma | Web | Typ (starý, jen vodítko) | Jak se IČO našlo |",
+  "import_znami_nadpis": "## Tyhle v masteru už jsou — neposuzují se znovu\n\nMůžou ale potřebovat roli investora navíc (sloupec „Role: investor“ v listu 1).",
+  "import_zadani": "# Zadání pro posouzení investorské strany (list 6)\n\nV `kandidati.md` jsou firmy ze **starých podkladů** — sešitu\n`Wealth management_FO.xlsx` z června 2026, který vznikl v dřívějším způsobu\npráce. Ze starého sešitu se přeneslo **jen jméno a web**, protože právě ty\nnezestárly. IČO dohledal ARES živě.\n\n> **Ze starých podkladů se NEPŘEBÍRÁ nic dalšího.** AUM, kontakty, strategie\n> ani „typ\" v posledním sloupci nejsou doklad — jsou to tři měsíce stará\n> data z jiné metodiky. Slouží nanejvýš jako vodítko, kde na webu hledat.\n> Do databáze smí jen to, co se dá teď doložit citací.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | investuje **vlastní nebo rodinný kapitál** do nemovitostí, private debt, private equity či dluhopisů — doložitelné z webu |\n| `zamitnout` | poradce, právník či auditor bez vlastního kapitálu · retailová banka nebo pojišťovna · zprostředkovatel · firma, která už zanikla |\n| `nevim` | web mlčí nebo neexistuje |\n\n**Pozor na banky a poradce.** V podkladech je řada bank (Komerční banka,\nČeská spořitelna, UniCredit) a poradenských domů (Deloitte, RSM, Dentons).\nPrivátní bankovnictví ani daňové poradenství není family office —\nspravuje cizí peníze za poplatek, neinvestuje vlastní. Většina z nich\nse má zamítnout, ale **rozhodni to z webu, ne z názvu**.\n\n**Neveřejnost je normální.** Family office o sobě záměrně mnoho nepíše.\nKdyž web mlčí, správná odpověď je `nevim`, ne `zaradit`.\n\n**Firmy bez dohledaného IČO** jsou v tabulce se znakem `-`. Bez IČO je\nměsíční běh nemůže hlídat v rejstříku, takže u nich verdikt `zaradit`\nznamená, že IČO musí někdo doplnit ručně. Napiš to do `duvod`.\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**. Když neumíš citovat, verdikt je `nevim`.\n\n## Výstup\n\nZapiš do `objevy-investor.json` vedle skriptu. Klíč `klic` sestav jako\n`ico:<IČO>` u firem s IČO. U firem bez IČO verdikt `zaradit` nedávej —\nnapiš `nevim` a do `duvod` uveď, že chybí IČO.\n\n```json\n[\n  {\n    \"klic\": \"ico:24814326\",\n    \"nazev\": \"Verdi Capital s.r.o.\",\n    \"verdikt\": \"zaradit\",\n    \"duvod\": \"family office, investuje vlastní kapitál do nemovitostí\",\n    \"citace\": \"doslovná věta ze stránky\",\n    \"zdroj\": \"https://verdicapital.cz/...\"\n  }\n]\n```\n\nPak spusť:  `python financovani-objevy.py --verdikty-investor objevy-investor.json --zapis`\n",
+  "import_znami_hlavicka": "| V masteru | Firma v podkladech | Jak se spárovaly |",
+  "parovano_ico": "IČO {ico}",
+  "parovano_web": "web {dom}",
+  "parovano_nazev": "název",
+  "role_investor_co": "Role investor",
+  "cnb_nadpis": "# Kandidáti ze seznamu investičních fondů ČNB",
+  "cnb_uvod": "Zdroj: měsíční Seznam investičních fondů ČNB, list `{list}` ({platnost}), celkem {celkem} fondů.\nVypsané fondy má ČNB v jedné ze sledovaných kategorií a v naší databázi nejsou.",
+  "cnb_hlavicka": "| IČO | Název | Kategorie ČNB | Podfond | Sídlo |",
+  "cnb_zadani": "# Zadání pro posouzení fondů ze seznamu ČNB\n\nV `kandidati.md` jsou investiční fondy, které ČNB vede ve své měsíční\nstatistice pod kategorií, o kterou stojíme — a v naší databázi nejsou.\n\n> **Tohle je jiný typ kandidáta než z `OBJEVY.cmd`.** Tam je zdrojem ARES,\n> který o fondu ví jen to, že vznikl, a NACE má u všech fondů stejné (64310).\n> Tady je zdrojem **regulátor**, který fond zařadil podle jeho skutečné\n> investiční strategie. Kategorie „úvěrový\" je tedy silný doklad, ne domněnka.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | poskytuje financování **třetím stranám** a jde to doložit citací |\n| `zamitnout` | kaptivní (půjčuje jen uvnitř skupiny) · výkupčí pohledávek · zprostředkovatel bez vlastní bilance |\n| `nevim` | kategorie od ČNB sedí, ale nic dalšího se nedá doložit |\n\n**Kategorie sama nestačí k zařazení.** Říká, čím se fond zabývá, ne komu\npůjčuje. Fond, který úvěruje výhradně projekty vlastní skupiny, je pro ČNB\npořád „úvěrový\", ale pro nás je kaptivní a nepatří do databáze.\n\n**Kategorie ale stačí k tomu, aby se fond neztratil.** Když se nedá nic\ndoložit, dej `nevim` — ne `zamitnout`. Zamítnutí se pamatuje natrvalo a\nu fondu, který regulátor vede jako úvěrový, je to škoda.\n\n## Na co si dát pozor\n\n**Podfond vs. mateřský fond.** Sloupec `podfond` říká, co je co. Investiční\nstrategii nese statut podfondu, ne mateřského SICAVu — u mateřských fondů\nje proto „nevím\" časté a správné.\n\n**Seznam je platný k poslednímu dni měsíce.** Fond zapsaný později v něm\nještě není. „Není v seznamu ČNB\" neznamená „není fond\".\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**. Kategorie od ČNB je vodítko, kde hledat — ne náhrada citace.\n\n## Výstup\n\nZapiš `objevy.json` vedle skriptu ve stejném tvaru jako u `OBJEVY.cmd`\na spusť:\n\n```\npython financovani-objevy.py --verdikty objevy.json --zapis\n```\n",
+  "cnb_inv_nadpis": "# Investorská strana ze seznamu ČNB — po skupinách",
+  "cnb_inv_uvod": "Zdroj: měsíční Seznam investičních fondů ČNB, list `{list}` ({platnost}), kategorie **{kategorie}**.\n{fondu} fondů, které v databázi nejsou, tvoří **{skupin} skupin**. Oslovuje se správce skupiny, ne každý podfond zvlášť.",
+  "cnb_inv_hlavicka": "| Skupina | Fondů | Reprezentativní fond | Sídlo | IČO fondů |",
+  "cnb_inv_zadani": "# Zadání pro posouzení investorské strany ze seznamu ČNB\n\nV `kandidati.md` jsou **skupiny nemovitostních fondů**, které ČNB vede ve své\nměsíční statistice a které v naší databázi nejsou.\n\n> **Proč po skupinách a ne po fondech.** WOOD & Company má sedm nemovitostních\n> fondů, RSJ dvanáct ve třech větvích. Oslovuje se správce skupiny, ne každý\n> podfond zvlášť. Kdyby se do fronty sypal každý fond, měla by sedm řádků pro\n> tutéž firmu — a schvalovatel by se ji naučil přeskakovat.\n\n> **Tohle je investorská strana, ne financování.** Nemovitostní fond nepůjčuje,\n> ale alokuje kapitál do nemovitostí. Patří do listu 6, ne do listu 3.\n\n## Co u každé skupiny zjistit\n\n1. **Kdo je protistrana k oslovení.** Sloupec „Reprezentativní fond\" je jen\n   vodítko — u podfondů je skutečnou protistranou **obhospodařovatel nebo\n   správce**, kterého v seznamu ČNB není. Ten se dohledá z webu fondu nebo\n   z obchodního rejstříku.\n2. **Do čeho konkrétně investuje** — rezidence, logistika, kanceláře, retail,\n   půda, hotely. To rozhoduje, jestli je pro naše projekty relevantní.\n3. **Objem** (NAV nebo AUM), pokud je zveřejněný.\n\n## Rozhodnutí\n\n| Verdikt | Kdy |\n|---|---|\n| `zaradit` | alokuje kapitál do nemovitostí a dá se doložit, do čeho |\n| `zamitnout` | kaptivní fond jedné skupiny bez zájmu o cizí projekty · fond v likvidaci |\n| `nevim` | fond existuje, ale nic dalšího se nedá doložit |\n\n**Kategorie od ČNB nestačí k zařazení**, stačí ale k tomu, aby se skupina\nneztratila. Když se nedá nic doložit, dej `nevim` — ne `zamitnout`.\n\n## Pravidlo, které se neporušuje\n\nKe každému verdiktu `zaradit` i `zamitnout` musíš dodat **doslovnou citaci**\na **URL**.\n\n## Výstup\n\nDávku zapiš do JSON ve tvaru pro `financovani-zapis-investoru.py` — tedy\ns poli `ico`, `nazev`, `web`, `typ`, `verdikt`, `segment`, `aum`,\n`gatekeeper`, `duvod`, `citace`, `zdroj`. U skupiny použij IČO té entity,\nkterou jsi vyhodnotil jako protistranu.\n\n```\npython financovani-zapis-investoru.py davka.json --zapis\n```\n",
+  "nadpis_cnb_investor": "NEMOVITOSTNÍ FONDY PO SKUPINÁCH (list 6)",
+  "oprava_ico": "[{datum} oprava] Odstraněno IČO {bylo} — patřilo fondu OFO Project ONE SICAV, a.s., ne této společnosti. Řádek se spároval jen přes sdílenou doménu onefamilyoffice.cz. Správné IČO doplnit ručně.",
+  "nerozhodnuto_nadpis": "Subjekty, u kterých posouzení skončilo na „nevím“. NEJSOU zamítnuté — jen se o nich nepodařilo doložit dost na rozhodnutí. Nejčastěji proto, že jim nefunguje web nebo o sobě nic nezveřejňují. Řádek zmizí sám, jakmile se subjekt zařadí nebo zamítne.",
+  "nerozhodnuto_kde_inv": "posuzování investorů (list 6)",
+  "nerozhodnuto_kde_obj": "hledání nových subjektů",
+  "nerozhodnuto_kde_cnb": "seznam fondů ČNB",
+  "ico_dohledano": "[{datum} doplněno] IČO {ico} dohledáno z webu subjektu a ověřeno v ARESu jako „{nazev}“. Zdroj: {web}",
+  "ico_citace": "IČO {ico} uvedené na webu subjektu; ARES pod ním vede „{nazev}“.",
+  "roletka_kolega_titulek": "Kdo s kontaktem komunikuje",
+  "roletka_kolega_zprava": "Vyber z rozbalovacího seznamu kolegu, který s tímhle kontaktem komunikuje. Prázdné = zatím nikdo.",
+  "roletka_kolega_chyba": "Sem patří jen jméno ze seznamu kolegů v konfiguraci.",
+  "roletka_resi_titulek": "Kdo má subjekt na starosti",
+  "roletka_resi_zprava": "Vyber z rozbalovacího seznamu kolegu, který má tuhle firmu na starosti. Prázdné = zatím nikdo. Konkrétní lidé se přiřazují v listu 2 Kontakty, sloupec „Kdo komunikuje“.",
+  "roletka_resi_chyba": "Sem patří jen jméno ze seznamu kolegů v konfiguraci."
+ },
+ "registry_podle_zeme": {
+  "_popis": "Ktery registr se pta pro kterou zemi. Zeme, ktera tu neni, se v registrech nekontroluje vubec a beh to nahlasi jako nepokryte - mlceni by cetlo jako 'zkontrolovano'.",
+  "_dach_popis": "DE, AT ani CH tu SCHVALNE nejsou. Overeno zivym dotazem 1. 9. 2026: CH Zefix REST vraci HTTP 401 (chce registraci), DE Handelsregister/Unternehmensregister/Bundesanzeiger/Insolvenzbekanntmachungen jsou formularove weby bez API, AT Firmenbuch je placeny pres Verrechnungsstellen. Jakmile nekdo poridi pristup, prida se sem klic zeme a beh je zacne kontrolovat sam.",
+  "CZ": "ares",
+  "SK": "rpo"
+ },
+ "otisk_ignoruj": {
+  "_popis": "Subjekty, u kterych se nesleduje otisk stranky - web pri kazdem nacteni vyrobi jiny obsah a beh by hlasil zmenu porad dokola. Vyjimka se pridava az kdyz se to u konkretniho webu projevi.",
+  "_dach_popis": "Zacina prazdne. Ceske vyjimky sem nepatri - odkazuji na ID subjektu z ceske databaze, ktera tady neexistuji."
+ },
+ "objevy": {
+  "_dach_popis": "Hledani novych subjektu jede pres ARES, tedy jen pro CZ. Pro DACH zatim neplati - obdobny volny zdroj nemame.",
+  "_popis": "Hledani NOVYCH subjektu, ktere vznikly od minule. Jina uloha nez mesicni kontrola: ta se pta znamych subjektu, tohle hleda ty, o kterych nevime.",
+  "_zjisteni_26_8": "NACE neodlisuje pouzitelne od vyrazenych. U 107 ceskych subjektu v databazi ma 64310 pomer 22:17 ve prospech pouzitelnych, 68200 dokonce 14:15. Registr tedy umi najit NOVE PRIRUSTKY, ale NEUMI je kvalifikovat - to musi model z webu, s citaci.",
+  "_objem": "Zmereno 27. 8. 2026: uzke uverove kody (6492x, 64999, 66190) daly za 12 mesicu 3 nove subjekty. Kod 64310 (trusty a fondy) dal 164. Kdyby se hlidaly jen uverove kody, beh by nehlasil nic a vypadalo by to, ze se nic nedeje.",
+  "nace": [
+   "64310",
+   "64920",
+   "64924",
+   "64929",
+   "64999",
+   "66190",
+   "64190",
+   "64220"
+  ],
+  "pravni_formy": [
+   "121",
+   "112",
+   "541"
+  ],
+  "dnu_zpet": 400,
+  "max_kandidatu": 40,
+  "napovedy_v_nazvu": [
+   "loan",
+   "uver",
+   "úvěr",
+   "debt",
+   "bridge",
+   "credit",
+   "kredit",
+   "financ",
+   "mezanin",
+   "mezzanin",
+   "lend"
+  ],
+  "_napovedy_poznamka": "Slova v nazvu, ktera kandidata oznaci jako pravdepodobneho. NEFILTRUJI - jen radi poradi. Filtrovat podle nazvu by vynechalo vericele s neutralnim jmenem."
+ },
+ "aplikace": {
+  "_popis": "Kam se zapíše schválený návrh z listu 5. Klíč je DRUH změny — stejný klíč, podle kterého se routuje pruh. 'podle_co' znamená, že název cílového sloupce nese sám návrh v poli Co (např. 'Ticket do', 'Mezzanine', 'E-mail'). Když něco přistává ve špatném sloupci, přehodí se to TADY, ne v kódu.",
+  "typ_financovani": {
+   "list": "financovani",
+   "sloupec": "podle_co"
+  },
+  "ticket": {
+   "list": "financovani",
+   "sloupec": "podle_co"
+  },
+  "ltv": {
+   "list": "financovani",
+   "sloupec": "LTV max"
+  },
+  "kontaktni_osoba": {
+   "list": "kontakty",
+   "sloupec": "podle_co"
+  },
+  "transakce": {
+   "list": "financovani",
+   "sloupec": "Poslední doložená aktivita"
+  },
+  "insolvence": {
+   "list": "subjekty",
+   "sloupec": "Stav"
+  },
+  "zanik": {
+   "list": "subjekty",
+   "sloupec": "Stav"
+  },
+  "likvidace": {
+   "list": "subjekty",
+   "sloupec": "Stav"
+  },
+  "zmena_nazvu": {
+   "list": "subjekty",
+   "sloupec": "Název"
+  },
+  "zmena_sidla": {
+   "list": "subjekty",
+   "sloupec": "jen_poznamka"
+  },
+  "novy_subjekt": {
+   "list": "subjekty",
+   "sloupec": "novy_radek"
+  },
+  "ico_nesedi": {
+   "list": "subjekty",
+   "sloupec": "jen_poznamka"
+  },
+  "web_nedostupny": {
+   "list": "subjekty",
+   "sloupec": "jen_poznamka"
+  },
+  "mail_domena_neexistuje": {
+   "list": "subjekty",
+   "sloupec": "jen_poznamka"
+  },
+  "segment": {
+   "list": "investor",
+   "sloupec": "podle_co"
+  },
+  "aum": {
+   "list": "investor",
+   "sloupec": "AUM"
+  },
+  "gatekeeper": {
+   "list": "investor",
+   "sloupec": "Gatekeeper / platforma"
+  },
+  "role_investor": {
+   "list": "subjekty",
+   "sloupec": "role_investor"
+  },
+  "novy_investor": {
+   "list": "subjekty",
+   "sloupec": "novy_investor"
+  }
+ },
+ "objevy_investor": {
+  "_dach_popis": "Viz objevy - seznam jmen je z ceskeho trhu.",
+  "_popis": "Hledání na investorské straně (list 6). NEJDE přes NACE — family office nemá vlastní kód a v rejstříku je k nerozeznání od běžné s.r.o. Postup je opačný: vyjde se ze jména, ARES dohledá celý firemní trs (často několik entit na jedné adrese) a teprve web s citací rozhodne, jestli to je investor.",
+  "_overeno_27_8": "Verdi dá v ARESu 12 zásahů, z toho Verdi SICAV, Verdi Advisory, Verdi Capital a Verdi Management Services sídlí na téže adrese Na Poříčí 1079/3a — to je typická struktura family office. Triangl dá 36 zásahů, z nichž většina jsou spolky a designové firmy. Pannonia v ČR nic použitelného.",
+  "jmena": [
+   "Verdi",
+   "Triangl",
+   "Pannonia"
+  ],
+  "prehodnotit": [
+   "73",
+   "115",
+   "137"
+  ],
+  "_prehodnotit_popis": "ID subjektů, které jsou v listu 1 vedené jako VYŘAZEN, protože nepůjčují z vlastní bilance — ale pro roli investora to je právě ten správný profil. Posoudí se stejnou cestou jako noví kandidáti.",
+  "max_kandidatu": 40,
+  "k_posouzeni": "k-posouzeni-investor"
+ },
+ "import_investoru": {
+  "_popis": "Staré podklady k investorské straně z dřívějšího způsobu práce (červen 2026). Přenáší se z nich JEN jméno a web — ta nezestárla a jméno je u family office jediná vstupenka do rejstříku. AUM, kontakty ani strategie se nepřebírají: musí vzniknout znovu z webu s doslovnou citací, jako u každého jiného subjektu.",
+  "zdroj": "O:/AAA POHLEDÁVKY, REALITY NEKOUPENÉ/MDU/Seznamy FKI a FO_WM/Wealth management_FO.xlsx",
+  "list": "List 3",
+  "k_posouzeni": "k-posouzeni-investor",
+  "sloupce": {
+   "firma": "Firma",
+   "typ": "Typ",
+   "zamereni": "Hlavní strategické zaměření",
+   "do_ceho": "Do čeho konkrétně investují ",
+   "aum": "Majetek pod správou (AUM)",
+   "web": "Webová stránka",
+   "telefon": "Telefonní číslo",
+   "email": "E-mailová adresa",
+   "sidlo": "Sídlo / Adresa kanceláře",
+   "zodpovedny": "Zodpovědný"
+  }
+ },
+ "cnb": {
+  "_dach_popis": "Seznam fondu CNB je cesky registr. Pro DACH obdoba neni napojena (DE BaFin a CH FINMA seznamy zverejnuji, ale ne jako strojove ctitelny soubor jako CNB).",
+  "_popis": "Měsíční Seznam investičních fondů od ČNB. Na rozdíl od ARESu, který má u všech fondů týž NACE 64310, vede ČNB u každého fondu KATEGORII podle skutečné investiční strategie — včetně kategorie „úvěrový“. To je údaj od regulátora, ne marketingový text z webu.",
+  "_zjisteni_27_8": "K 30. 6. 2026 vede ČNB v celé ČR 855 fondů, z toho pouze 10 v kategorii „úvěrový“. V databázi jsme z těch deseti měli dva. Čtyři z chybějících osmi přitom byly v dávce z ARESu odložené stranou, protože mají neutrální název (Mariposa, Partners Innovation, Ta Meri Automotive, SF Investments) — řazení podle slov v názvu je odsunulo.",
+  "_pozor": "Rejstřík JERRS na apl.cnb.cz je za CAPTCHOU a strojově se dotazovat nedá. Tenhle statistický seznam ano — je to obyčejný xlsx ke stažení.",
+  "url": "https://www.cnb.cz/export/sites/cnb/cs/statistika/.galleries/menova_bankovni_stat/seznamy_mbs/seznam_fki/fki_cz.xlsx",
+  "soubor": "cnb-fki.xlsx",
+  "max_stari_dnu": 25,
+  "k_posouzeni": "k-posouzeni-cnb",
+  "kategorie_zajmu": [
+   "úvěrový"
+  ],
+  "_kategorie_popis": "ČNB rozlišuje: ostatní, nemovitostní, úvěrový, akciový, infrastrukturní, dluhopisový, smíšený, hedge, komoditní. Ve výchozím stavu se sleduje jen „úvěrový“ — to je kategorie, na kterou se databáze ptá, a je jich málo (10 v celé ČR). „nemovitostní“ dá 190 fondů, ale ty většinou do nemovitostí INVESTUJÍ, nepůjčují na ně — do fronty financování nepatří. Jako zdroj pro list 6 (investoři) by dávaly smysl; pak se sem dopíšou vědomě.",
+  "sloupce": {
+   "ico": "ID",
+   "nazev": "NÁZEV",
+   "kategorie": "KATEGORIE",
+   "podfond": "PODFOND",
+   "mesto": "MĚSTO",
+   "ulice": "ULICE",
+   "hlavicka_prvni": "RIAD_CODE"
+  },
+  "investor": {
+   "_popis": "Investorská větev zdroje ČNB. Kategorie „nemovitostní“ nejsou věřitelé, ale alokátoři kapitálu do nemovitostí — tedy list 6. Je jich 190 a jeden správce jich často má několik, proto se chodí PO SKUPINÁCH: oslovuje se správce, ne každý podfond.",
+   "_zjisteni_27_8": "K 30. 6. 2026 vede ČNB 190 nemovitostních fondů, v databázi jsme měli 4. Zbylých 186 tvoří 165 skupin — WOOD & Company 7 fondů, RSJ dohromady 12 ve třech větvích (Development 5, Real 4, Logistics 3), KB Amundi 3.",
+   "kategorie": "nemovitostní",
+   "k_posouzeni": "k-posouzeni-cnb-investor",
+   "vyhodit_ze_jmena": [
+    "otevřený",
+    "uzavřený",
+    "podílový",
+    "fond",
+    "fondů",
+    "podfond",
+    "SICAV",
+    "a.s.",
+    "s.r.o.",
+    "investiční",
+    "společnost",
+    "realitní",
+    "nemovitostní",
+    "kvalifikovaných",
+    "investorů"
+   ],
+   "_vyhodit_popis": "Slova, která se z názvu vyhodí, než se určí skupina. Kdyby zůstala, spadly by do jedné skupiny všechny fondy, co začínají slovem „otevřený“. Když se něco slučuje špatně, upraví se to tady, ne v kódu.",
+   "slov_ve_skupine": 1,
+   "_slov_popis": "Kolik prvních významových slov názvu tvoří klíč skupiny. Jedno slovo sloučí RSJ Development, RSJ Real i RSJ Logistics do jediné skupiny RSJ (17 fondů), což je pro oslovení správně — je to jedna adresa. Dvě slova by z toho udělala tři skupiny. Ověřeno 27. 8. 2026: při jednom slově nevznikla žádná skupina, která by slučovala nesouvisející firmy. Když se něco slučuje špatně, přidej to slovo do vyhodit_ze_jmena nebo tady zvyš na 2."
+  }
+ },
+ "dohledani_ica": {
+  "_popis": "Vzory, kterými se na webu subjektu hledá IČO. Firmy ho uvádějí v patičce, na kontaktech nebo v obchodních podmínkách. Když se u některého webu IČO nenajde, přidej sem vzor nebo podstránku — ne do kódu.",
+  "vzor_ico": "(?:I[CČ]O?|Identifika[cč]n[ií]\\s+[cč][ií]slo|Company\\s+ID|Reg\\.?\\s*No\\.?)[^0-9]{0,20}(\\d{8})",
+  "vzor_dic": "\bCZ(\\d{8})\b",
+  "podstranky": [
+   "",
+   "/kontakt",
+   "/kontakty",
+   "/o-nas",
+   "/obchodni-podminky",
+   "/impressum",
+   "/kontakt.html",
+   "/cs/kontakt"
+  ],
+  "prah_shody": 0.6,
+  "_prah_popis": "Od jaké shody názvu (0–1) se nález považuje za jistý. Počítá se jako podíl společných slov ke kratšímu z obou názvů, po odstranění právní formy a diakritiky."
+ },
+ "dohledani_kontaktu": {
+  "_popis": "Vzory a podstranky, kterymi se na webu subjektu hleda kontakt. Kdyz se u nektereho webu nic nenajde, pridej sem podstranku nebo vzor - ne do kodu.",
+  "podstranky": [
+   "",
+   "/kontakt",
+   "/kontakty",
+   "/kontakt.html",
+   "/cs/kontakt",
+   "/contact",
+   "/contacts",
+   "/o-nas",
+   "/o-fondu",
+   "/tym",
+   "/pro-investory",
+   "/investori",
+   "/napiste-nam"
+  ],
+  "vzor_email": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+  "vzor_telefon_odkaz": "tel:([+0-9 ()._-]{9,})",
+  "vzor_telefon_text": "\\+42[01][ ]?\\d{3}[ ]?\\d{3}[ ]?\\d{3}",
+  "_obecne_popis": "Obecne schranky. Nejsou duvod kontakt zahodit - u fondu bez vlastniho tymu na webu je to jedina adresa, ktera existuje - ale osobni adresa ma prednost.",
+  "obecne_schranky": [
+   "info",
+   "office",
+   "kontakt",
+   "sekretariat",
+   "podatelna",
+   "mail",
+   "fondy",
+   "invest",
+   "recepce",
+   "sales",
+   "press",
+   "podpora",
+   "hello",
+   "dotazy",
+   "obchod",
+   "reception"
+  ],
+  "nezajimave_pripony": [
+   "@sentry.io",
+   "@example.com",
+   "@2x.png",
+   "@wordpress.org"
+  ]
+ }
+}

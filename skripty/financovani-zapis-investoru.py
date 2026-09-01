@@ -58,13 +58,13 @@ def vypis(text):
         print(text.encode("ascii", "replace").decode("ascii"))
 
 
-def kontext():
+def kontext(cesta_cfg=None):
     import importlib.util
     spec = importlib.util.spec_from_file_location(
         "financovani_beh", os.path.join(HERE, "financovani-beh.py"))
     modul = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(modul)
-    cfg = json.load(io.open(CONFIG, encoding="utf-8"))
+    cfg = json.load(io.open(cesta_cfg or CONFIG, encoding="utf-8"))
     T.update(cfg["texty"])
     modul.T.update(cfg["texty"])
     return cfg, modul
@@ -303,9 +303,13 @@ def main():
     ap.add_argument("soubor", help="JSON s posouzenou davkou")
     ap.add_argument("--zapis", action="store_true", help="opravdu zapsat")
     ap.add_argument("--master", help="jina cesta k sesitu (test)")
+    ap.add_argument("--config", help="jina konfigurace, tedy jina databaze (napr. financovani-beh-dach.config.json)")
     args = ap.parse_args()
 
-    cfg, m = kontext()
+    cfg, m = kontext(os.path.join(HERE, args.config) if args.config else None)
+    global STATE
+    if cfg.get("stav"):
+        STATE = os.path.join(HERE, cfg["stav"])
     if args.master:
         cfg["master"] = args.master
         vypis("POZOR: bezi proti jinemu sesitu - %s" % args.master)

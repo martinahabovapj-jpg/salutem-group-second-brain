@@ -60,6 +60,9 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG = os.path.join(HERE, "financovani-beh.config.json")
 STATE = os.path.join(HERE, "financovani-beh.stav.json")
+# Pamet mezi behy patri ke KONKRETNI databazi, ne ke skriptu. Kdyz se
+# prepne konfigurace, musi se prepnout i stav - jinak by si beh nad DACH
+# pamatoval, co videl nad CR, a naopak.
 
 DNES = dt.date.today().isoformat()
 
@@ -1561,15 +1564,20 @@ def main():
     ap.add_argument("--navrhy", help="soubor navrhy.json z faze 4")
     ap.add_argument("--vrat", help="vrati zapsane zmeny z behu daneho data (YYYY-MM-DD)")
     ap.add_argument("--master", help="jina cesta k sesitu (test, kdyz je disk O: pryc)")
+    ap.add_argument("--config", help="jina konfigurace, tedy jina databaze (napr. financovani-beh-dach.config.json)")
     ap.add_argument("--sloupce", action="store_true",
                     help="jen srovna sloupce a roletky v sesitu podle konfigurace")
     ap.add_argument("--aplikovat", action="store_true",
                     help="vyridi list 5: co je schvalene, zapise; co zamitnute, zapamatuje")
     args = ap.parse_args()
 
-    cfg = load_json(CONFIG, None)
+    cesta_cfg = os.path.join(HERE, args.config) if args.config else CONFIG
+    cfg = load_json(cesta_cfg, None)
     if cfg is None:
-        raise SystemExit("Chybi %s" % CONFIG)
+        raise SystemExit("Chybi %s" % cesta_cfg)
+    global STATE
+    if cfg.get("stav"):
+        STATE = os.path.join(HERE, cfg["stav"])
     T.update(cfg["texty"])
     stav = load_json(STATE, {"behy": [], "subjekty": {}, "log": []})
 

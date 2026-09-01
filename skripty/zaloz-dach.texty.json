@@ -1,0 +1,32 @@
+{
+ "nadpis": "Databáze poskytovatelů alternativního financování — DACH (DE, AT, CH)",
+ "podnadpis": "Master sešit. Strukturně shodný s databází ČR a SK. Založeno 1. 9. 2026, zatím prázdný.",
+ "hlavicka": ["Ukazatel", "Hodnota", "Poznámka"],
+ "radky": [
+  ["Subjektů celkem v databázi", 0, "Databáze se zakládá prázdná — plní se rešerší, ne kopií z ČR."],
+  ["Země v záběru", "DE, AT, CH", "Německo, Rakousko, Švýcarsko."],
+  ["Kontrola v rejstříku", "NENÍ", "Klíčový rozdíl proti ČR. Viz poznámka níž — není to opomenutí."],
+  ["Hlídání webů", "funguje", "Nedostupnost i změna stránky se hlídá stejně jako u ČR."],
+  ["Dohledávání kontaktů", "funguje", "Čte web subjektu, na registru nezávisí."],
+  ["Fronta ke schválení", "funguje", "List 5, roletka přijmout/zamítnout, stejná jako u ČR."]
+ ],
+ "proc_nadpis": "Proč tu není kontrola v rejstříku",
+ "proc": [
+  "Měsíční běh nad ČR a SK stojí na tom, že se ARESu a insolvenčního rejstříku dá zeptat strojově a zdarma. V DACH takový zdroj k 1. 9. 2026 volně není:",
+  "• CH Zefix — REST API existuje, ale vrací HTTP 401. Chce registraci a přihlašovací údaje. Z celé trojice je nejblíž použití.",
+  "• DE Handelsregister, Unternehmensregister, Bundesanzeiger i Insolvenzbekanntmachungen — odpovídají, ale jsou to formulářové weby bez API. Strojově jen scrapováním relace.",
+  "• AT Firmenbuch — plný přístup je placený přes Verrechnungsstellen. Veřejně je jen Ediktsdatei (insolvenční edikty).",
+  "Ověřeno živým dotazem 1. 9. 2026, ne z dokumentace.",
+  "Běh proto u subjektů z DE, AT a CH hlásí, že je v rejstříku NEKONTROLUJE. Mlčení by se četlo jako „zkontrolováno a je to v pořádku“ — a to by byla horší chyba než chybějící údaj.",
+  "Jak to zavřít: nejlevnější je registrace k Zefixu (CH). U DE a AT to není technická otázka, ale nákup přístupu."
+ ],
+ "pouziti_nadpis": "Jak se sešit používá",
+ "pouziti": [
+  "• Listy 1–2 jsou společný registr — používá je jak financování, tak investorská strana.",
+  "• List 3 nese roli poskytovatele financování, list 6 roli investora. Jeden subjekt může mít obě.",
+  "• List 4 je důkazní stopa. Žádný příznak ANO v listu 3 nesmí existovat bez řádku v listu 4.",
+  "• List 5 je schvalovací fronta měsíčního běhu. Robot navrhuje, člověk zaškrtává, skript aplikuje.",
+  "• Struktura sloupců se ručně nemění — přidávat lze, přejmenovávat a přesouvat ne.",
+  "• Sloupce s roletkou: „Kdo řeší“ v listu 1, „Kdo komunikuje“ v listu 2, „Schválit“ v listu 5."
+ ]
+}

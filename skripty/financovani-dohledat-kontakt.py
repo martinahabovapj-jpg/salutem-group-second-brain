@@ -205,13 +205,15 @@ def main():
     ap.add_argument("--master", help="jina cesta k sesitu (test)")
     ap.add_argument("--limit", type=int, help="jen prvnich N subjektu")
     ap.add_argument("--vynech", default="", help="ID subjektu, ktere nezapisovat")
+    ap.add_argument("--config", help="jina konfigurace, tedy jina databaze (napr. financovani-beh-dach.config.json)")
     args = ap.parse_args()
 
     spec = importlib.util.spec_from_file_location(
         "financovani_beh", os.path.join(HERE, "financovani-beh.py"))
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
-    cfg = json.load(io.open(CONFIG, encoding="utf-8"))
+    cfg = json.load(io.open(os.path.join(HERE, args.config) if args.config
+                            else CONFIG, encoding="utf-8"))
     T.update(json.load(io.open(TEXTY, encoding="utf-8")))
     m.T.update(cfg["texty"])
     nacti_vzory(cfg)
