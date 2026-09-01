@@ -302,6 +302,27 @@
       "nazev": "VALUES. Real Estate Holding GmbH",
       "duvod": "Kombinace, která se v databázi objevuje málokdy: vlastní development plus institucionální mandáty od velkých německých penzijních a pojišťovacích investorů, a k tomu vídeňská kancelář. Deset miliard pod správou znamená, že nákupní tempo musí být trvalé.",
       "zdroj": "https://www.valuesre.com/investment-management/"
+    },
+    "nazev:aukera real estate ag": {
+      "datum": "2026-09-01",
+      "verdikt": "zaradit",
+      "nazev": "Aukera Real Estate AG",
+      "duvod": "Z celé DACH rešerše jediný, kdo zveřejnil KOMPLETNÍ ÚVĚROVÉ PARAMETRY - velikost, LTV, marži i výnos. U ostatních se tohle dozvíš až na třetí schůzce. Velikost 10 až 20 mil. EUR sedí na středně velký projekt a bridge-to-exit je přesně to, co se hodí mezi dokončením a prodejem.",
+      "zdroj": "https://www.aukera.ag/en/aukera-launches-real-estate-debt-fund-with-target-volume-of-eur-500-million"
+    },
+    "nazev:s immo ag": {
+      "datum": "2026-09-01",
+      "verdikt": "zaradit",
+      "nazev": "S IMMO AG",
+      "duvod": "NAKUPUJE V ČESKU V MILIARDOVÝCH OBJEMECH a výslovně počítá i s vlastním developmentem do portfolia. Ze všech DACH subjektů má nejblíž k českému trhu. Zásadní kontext: patří pod CPI Property Group, stejně jako IMMOFINANZ - tři řádky databáze (#33, tenhle a CPI) jsou fakticky jedna skupina a je potřeba to vědět, než se osloví každý zvlášť.",
+      "zdroj": "https://simmoag.at/en/home"
+    },
+    "nazev:hih invest real estate gmbh": {
+      "datum": "2026-09-01",
+      "verdikt": "zaradit",
+      "nazev": "HIH Invest Real Estate GmbH",
+      "duvod": "Velký a dlouho výhradně konzervativní správce, který si loni otevřel value-add divizi - to je změna apetitu, ne jen nová brožura. Pro projekt, který není hotový core, je to nová adresa. Čísla o objemu ale na webu chybí (načítají se jako nuly), takže je mám z třetích zdrojů.",
+      "zdroj": "https://www.hih.de/en/"
     }
   }
 }
