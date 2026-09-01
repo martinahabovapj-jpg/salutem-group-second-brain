@@ -1,0 +1,60 @@
+[
+ {
+  "skupina": "GEP",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Société pour la gestion de placements collectifs GEP SA",
+  "web": "https://fir.ch",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "fond FIR (Fonds Immobilier Romand) investuje do STOJÍCÍCH BUDOV I DO STAVEBNÍCH PROJEKTŮ určených k bydlení, výhradně v západním Švýcarsku. Portfolio 165 nemovitostí a 4 652 bytů.",
+  "aum": "celkové jmění fondu 1 875,12 mil. CHF k 30. 6. 2025",
+  "gatekeeper": "GEP SA je fondová společnost skupiny BCV specializovaná na správu nemovitostních fondů, založena 1953, sídlo Rue du Maupas 2, Lausanne; povolení FINMA jako Fondsleitung. FIR vznikl 1. 7. 2002 fúzí tří fondů (FIR, FIR 1970 a Clair-Logis).",
+  "duvod": "Ve statutu má výslovně STAVEBNÍ PROJEKTY, ne jen hotové domy - to je mezi švýcarskými bytovými fondy vzácné a znamená to, že se s nimi dá bavit o projektu před dokončením. Zázemí BCV, 1,9 mld. CHF, těžiště západní Švýcarsko.",
+  "citace": "Le FIR investit dans des immeubles existants et des projets de construction destinés à l'habitation. Ceux-ci sont situés exclusivement en Suisse romande",
+  "zdroj": "https://fir.ch/"
+ },
+ {
+  "skupina": "PRETIUM",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "PRETIUM Invest AG",
+  "web": "https://pretium-invest.ch",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "PRETIUM Real Estate Fund investuje do pozemků a dalších přípustných aktiv, většinově do obytných nemovitostí po celém Švýcarsku, s těžištěm v německy mluvící části a v dobrých až velmi dobrých lokalitách. Může investovat i do smíšených a komerčních nemovitostí. Portfolio 15 nemovitostí v kantonech Curych a Thurgau.",
+  "aum": "podle veřejných zdrojů zahájil fond navýšení kapitálu zhruba o 48 mil. CHF; minimální investiční objem 10 mil. CHF. PRETIUM Invest se stává emitentem fondů na SIX.",
+  "gatekeeper": "nezávislá fondová společnost s povolením FINMA, založena 2024 ve Frauenfeldu (Bahnhofstrasse 92), v provozu od roku 2025. Vedení: CEO Salman Baday, CFO Michael Knoflach, CIO Jan Suwelack.",
+  "duvod": "Nejmladší subjekt databáze a právě proto zajímavý - fond je rok starý, má teprve 15 nemovitostí a probíhá navýšení kapitálu. Takový fond nakupuje, protože musí. Zaměření na Curych a Thurgau je úzké, ale statut připouští i smíšené a komerční nemovitosti.",
+  "citace": "Der Immobilienfonds investiert in Grundstücke und andere gemäss Fondsvertrag zulässige Anlagen, mehrheitlich in Wohnliegenschaften in der gesamten Schweiz.",
+  "zdroj": "https://pretium-invest.ch/de/fund/pretium-real-estate-fund"
+ },
+ {
+  "skupina": "GERIFONDS",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "GERIFONDS SA",
+  "web": "https://www.gerifonds.ch",
+  "typ": "Správce fondů",
+  "verdikt": "zamitnout",
+  "segment": "",
+  "aum": "",
+  "gatekeeper": "",
+  "duvod": "Velká fondová společnost (137 fondů, 24,9 mld. CHF, dcera BCV), ale spravuje fondy CENNÝCH PAPÍRŮ - tradiční i alternativní, UCITS a AIF. Nemovitostní fondy nedělá; nemovitostní větev skupiny BCV je GEP SA, která je v databázi zvlášť. Do listu 6 nepatří, protože nealokuje kapitál do nemovitostí.",
+  "citace": "securities investment funds",
+  "zdroj": "https://www.gerifonds.ch/en/page/company"
+ },
+ {
+  "skupina": "LUKB",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "LUKB Expert Fondsleitung AG",
+  "web": "https://www.expertfonds.ch",
+  "typ": "Správce fondů (banka)",
+  "verdikt": "nevim",
+  "segment": "spravuje čtyři vlastní fondy Luzerner Kantonalbank (LUKB Expert-Fonds); podle popisu jde o smíšené investiční fondy, kde jsou nemovitosti jednou ze složek diverzifikovaného portfolia, ne přímé nemovitostní investice. UID CHE-108.551.600, přes 30 let zkušeností.",
+  "duvod": "Není jasné, jestli fondy drží nemovitosti přímo, nebo jen realitní cenné papíry. To je rozdíl mezi kupujícím a portfoliovým investorem a rozhoduje o zařazení. Z veřejných stránek LUKB se to nedá odlišit - v brožuře jsou fondy popsané jako Expert-Ertrag a podobně, tedy výnosové, ne nemovitostní. Ověřit u fondové společnosti.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
