@@ -1,0 +1,47 @@
+[
+ {
+  "skupina": "DEKA",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "Deka Immobilien Investment GmbH",
+  "web": "https://www.deka-immobilien.de",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "ZVEŘEJNĚNÁ INVESTIČNÍ KRITÉRIA: kanceláře, logistika, hotely a retail v segmentu core až core plus. Jednotlivé nemovitosti od 30 mil. EUR, joint ventures od 250 mil. EUR. Stáří pokud možno do 15 let, případně poslední přestavba nebo rekonstrukce do 10 let. Obsazenost nejméně 75 %, u výjimečných nemovitostí i nižší; minimální WALT 5 let. Lokality: metropolitní a hustě osídlené oblasti, zavedené kancelářské lokality, dobré napojení na infrastrukturu. Investuje v Evropě, Americe a Asii a Pacifiku.",
+  "aum": "Deka-ImmobilienEuropa má nemovitostní majetek kolem 18,6 mld. EUR ve 138 nemovitostech v 16 zemích, z toho 55 v Německu",
+  "gatekeeper": "specialista na nemovitostní investice ve skupině Deka, jedna z největších globálně činných realitních investičních společností v Evropě. Pokrývá celý hodnotový řetězec komerčních nemovitostí od akvizice přes pronájem a redevelopment po prodej.",
+  "duvod": "ZAVÍRÁ SE Z LISTU 8. Minule chyběl primární zdroj; stránka s investičními kritérii existuje, jen na deka-immobilien.de, ne na deka.de. Teď je doložené všechno podstatné včetně minimálního objemu 30 mil. EUR, stáří a WALT. Pro hotový kancelářský nebo logistický objekt jasná adresa, pro rozestavěný projekt ne - kritéria mluví o obsazenosti a nájemních smlouvách.",
+  "citace": "Individual properties from EUR 30 million",
+  "zdroj": "https://www.deka-immobilien.de/en/what-we-do/acquisitions-and-sales/our-investment-criteria/"
+ },
+ {
+  "skupina": "UNIQARE",
+  "ico": "",
+  "zeme": "AT",
+  "nazev": "UNIQA Real Estate Management GmbH",
+  "web": "https://uniqa-rem.at",
+  "typ": "Realitní správa pojišťovací skupiny",
+  "verdikt": "zaradit",
+  "segment": "vyhledává a posuzuje přímé nemovitostní investice a výslovně bere JAKÝKOLI TYP PROJEKTU - stojící investici, POZEMEK i DEVELOPERSKÝ PROJEKT. Zveřejňuje dva nákupní profily: Real estate profile AT a Real estate profile CEE. Přímé portfolio skupiny UNIQA má zhruba 300 nemovitostí v Rakousku, Německu a CEE s cca 1 mil. m2 - kanceláře, byty, komerční prostory a hotely; přes další společnosti víc než 400 budov a kolem 900 000 m2. Asset management vede v Rakousku i CEE, construction management taktéž.",
+  "aum": "tržní hodnota portfolia UNIQA Real Estate Group kolem 250 mil. EUR; deklarovaným cílem je akvizice a development trvale výnosných nemovitostí na cílových trzích skupiny v CEE, přednostně kanceláře a hotely a bydlení v dobrých městských lokalitách",
+  "gatekeeper": "stoprocentní dcera pojišťovací skupiny UNIQA, sídlo Untere Donaustrasse, Vídeň.",
+  "duvod": "ZAVÍRÁ SE Z LISTU 8 A JE TO NEJLEPŠÍ RAKOUSKÁ ADRESA PRO ROZPRACOVANÝ PROJEKT. Jako jediný v celé databázi říká výslovně, že mu nezáleží na typu projektu - bere stojící investici, pozemek i development. K tomu má samostatný nákupní profil pro CEE, tedy pro region, kde stavíme. Pojišťovací kapitál znamená dlouhý horizont.",
+  "citace": "Regardless of the type of project (e.g. standing investment, land, or development projects) we seize opportunities and recognize trends to expand our portfolio in the core markets.",
+  "zdroj": "https://uniqa-rem.at/en/immobilieninvestment/"
+ },
+ {
+  "skupina": "MOBILIAR",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Schweizerische Mobiliar Asset Management AG",
+  "web": "https://www.mobiliar.ch",
+  "typ": "Správce fondů (pojišťovací skupina)",
+  "verdikt": "zaradit",
+  "segment": "diverzifikované nemovitostní investice v hospodářsky silných regionech Švýcarska. MobiFonds Swiss Property (od 2013) drží podle veřejných zdrojů 23 nemovitostí za zhruba 1,2 mld. CHF, převážně bytové v městských lokalitách. Jádrovou kompetencí je konstrukce portfolia a správa multi-asset i single-asset strategií.",
+  "aum": "spravuje kolem 30 mld. CHF složených z majetku skupiny Mobiliar, jejích penzijních kas a fondů",
+  "gatekeeper": "stoprocentní dcera Schweizerische Mobiliar Holding AG, samostatná fondová společnost od roku 2012, sídlo Bern; v seznamu FINMA jako Fondsleitung. Podle SIX se stává novým emitentem fondů.",
+  "duvod": "ZAVÍRÁ SE Z LISTU 8. Minule vracela stránka produktu jen navigaci; přehledová stránka asset managementu obsah má. Třicet miliard pojišťovacího a penzijního kapitálu s bytovým těžištěm ve švýcarských městech. Že se stává emitentem fondů na SIX, napovídá čerstvý kapitál.",
+  "citace": "Diversifizierte Immobilienanlagen in wirtschaftlich starken Regionen der Schweiz",
+  "zdroj": "https://www.mobiliar.ch/ueber-uns/die-mobiliar/unternehmen-der-gruppe/asset-management"
+ }
+]
