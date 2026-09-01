@@ -1,0 +1,60 @@
+[
+ {
+  "skupina": "AUKERA",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "Aukera Real Estate AG",
+  "web": "https://www.aukera.ag",
+  "typ": "Poskytovatel nemovitostního dluhu",
+  "verdikt": "zaradit",
+  "segment": "senior zajištěné úvěry, obvykle whole loany, na kancelářské, retailové, logistické a rezidenční nemovitosti v dobrých lokalitách. Fond je výslovně otevřený i vybranému bridge financování typu bridge-to-exit nebo bridge-to-green.",
+  "aum": "NEJKONKRÉTNĚJŠÍ PARAMETRY V CELÉ DATABÁZI: preferovaná velikost úvěru 10 až 20 mil. EUR na jedno financování, s růstem fondu i do 50 mil. EUR. LTV/LTC až 75 %. Cílová IRR 6 až 7,5 % p.a. podle rizika, tedy marže 350 až 500 bazických bodů nad úrokovým swapem. Cílový objem fondu 500 mil. EUR, kotevní investor HUK-Coburg. Za rok posoudili 90 relevantních transakcí za 2,7 mld. EUR.",
+  "gatekeeper": "vlastníky řízený investiční manažer se sídlem v Essenu. První financování z nového fondu bylo 15 mil. EUR.",
+  "duvod": "Z celé DACH rešerše jediný, kdo zveřejnil KOMPLETNÍ ÚVĚROVÉ PARAMETRY - velikost, LTV, marži i výnos. U ostatních se tohle dozvíš až na třetí schůzce. Velikost 10 až 20 mil. EUR sedí na středně velký projekt a bridge-to-exit je přesně to, co se hodí mezi dokončením a prodejem.",
+  "citace": "loan amounts of EUR 10 million to EUR 20 million per financing. As the fund's investment level increases, financing up to EUR 50 million is also conceivable.",
+  "zdroj": "https://www.aukera.ag/en/aukera-launches-real-estate-debt-fund-with-target-volume-of-eur-500-million"
+ },
+ {
+  "skupina": "SIMMO",
+  "ico": "",
+  "zeme": "AT",
+  "nazev": "S IMMO AG",
+  "web": "https://simmoag.at",
+  "typ": "Kotovaná realitní skupina",
+  "verdikt": "zaradit",
+  "segment": "kanceláře a retail; vlastní nemovitosti v Rakousku, Německu, Maďarsku, Rumunsku, ČESKU a na Slovensku - v Praze mimo jiné Zlatý Anděl. Strategie počítá s oportunistickými akvizicemi ve všech relevantních třídách aktiv a s možnými vlastními projektovými developmenty do vlastního portfolia.",
+  "aum": "od Czech Property Investments koupila portfolio osmi nemovitostí v Česku - čtyři kancelářské a čtyři komerční s pronajímatelnou plochou cca 136 000 m2, ročním nájmem kolem 28,3 mil. EUR a kupní cenou zhruba 176 mil. EUR. Podepsána i další deklarace o koupi dalšího českého portfolia.",
+  "gatekeeper": "vídeňská kotovaná společnost. POZOR: mateřskými společnostmi jsou CPI Europe AG a CPI Property Group S.A. a strategii si S IMMO sladila s nimi - je to tedy tatáž skupina jako #33 IMMOFINANZ / CPI Europe.",
+  "duvod": "NAKUPUJE V ČESKU V MILIARDOVÝCH OBJEMECH a výslovně počítá i s vlastním developmentem do portfolia. Ze všech DACH subjektů má nejblíž k českému trhu. Zásadní kontext: patří pod CPI Property Group, stejně jako IMMOFINANZ - tři řádky databáze (#33, tenhle a CPI) jsou fakticky jedna skupina a je potřeba to vědět, než se osloví každý zvlášť.",
+  "citace": "We invest mainly in the European Union and own properties in Austria, Germany, Hungary, Romania, the Czech Republic and Slovakia.",
+  "zdroj": "https://simmoag.at/en/home"
+ },
+ {
+  "skupina": "HIH",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "HIH Invest Real Estate GmbH",
+  "web": "https://www.hih.de",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "nemovitosti i infrastruktura: kanceláře, retail a zásobovací centra, zdravotnictví, jesle a školská zařízení, logistika a bydlení, k tomu solární a větrné parky. Těžiště Core a Core-Plus. Od září 2024 má NOVOU DIVIZI VALUE-ADD pro rizikovější strategie, mířenou na mezinárodní investiční manažery bez platformy v Německu a na family offices.",
+  "aum": "podle veřejných zdrojů přes 22 mld. EUR pod správou a kolem 280 institucionálních klientů; 0,8 mil. m2 pronajímané plochy",
+  "gatekeeper": "sídlo Hamburk, HRB 82406; strukturovaná řešení podle KAGB pro institucionální investory ve všech fázích hodnotového řetězce.",
+  "duvod": "Velký a dlouho výhradně konzervativní správce, který si loni otevřel value-add divizi - to je změna apetitu, ne jen nová brožura. Pro projekt, který není hotový core, je to nová adresa. Čísla o objemu ale na webu chybí (načítají se jako nuly), takže je mám z třetích zdrojů.",
+  "citace": "Wir bieten institutionellen Investoren Lösungen für alle Phasen des Wertschöpfungsprozesses",
+  "zdroj": "https://www.hih.de/en/"
+ },
+ {
+  "skupina": "UNIQARE",
+  "ico": "",
+  "zeme": "AT",
+  "nazev": "UNIQA Real Estate Management GmbH",
+  "web": "https://uniqa-rem.at",
+  "typ": "Realitní správa pojišťovací skupiny",
+  "verdikt": "nevim",
+  "segment": "podle veřejných zdrojů spravuje přímé portfolio skupiny UNIQA: zhruba 300 nemovitostí v Rakousku, Německu a ve STŘEDNÍ A VÝCHODNÍ EVROPĚ s pronajímatelnou plochou kolem 1 mil. m2 - kanceláře, byty, komerční prostory a hotely; přes další společnosti víc než 400 budov a kolem 900 000 m2. Deklarovaným cílem je akvizice a development trvale výnosných nemovitostí na cílových trzích skupiny v CEE, přednostně kanceláře a hotely a bydlení v prémiových městských lokalitách.",
+  "duvod": "Profilem by to byla jedna z nejzajímavějších rakouských adres - pojišťovací kapitál a deklarovaný akviziční záměr právě v CEE. Vlastní web uniqa-rem.at ale říká jen to, že spravují portfolio skupiny přes celý životní cyklus; konkrétní strategie ani země tam nejsou. Doložit se to dá jen z tiskových zpráv a profilů třetích stran. Zkusit podstránku Immobilienportfolio nebo rovnou dotaz.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
