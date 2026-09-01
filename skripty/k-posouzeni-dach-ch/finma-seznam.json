@@ -1,0 +1,3048 @@
+[
+ {
+  "nazev": "1741 Fund Solutions AG",
+  "misto": "St. Gallen",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "1875 Finance SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "2Xideas AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "3V Asset Management AG",
+  "misto": "Schindellegi",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Abaris Investment Management AG",
+  "misto": "Bäch SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Abegg & Co AG, Zürich",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ACE & COMPANY SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Acolin Fund Services AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Active Niche Funds SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ADAPT Investment Managers SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Admicasa Fondsleitung AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Aegeri Capital GmbH",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Aerzte-Treuhand Finanz AG",
+  "misto": "Zollikon",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ALATUS CAPITAL SARL",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alba Investment Partners SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Albin Kistler AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Alias Partners SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Allianz Global Investors (Schweiz) AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ALMAS Global Investors AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alphemy Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alpina Capital AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alpinum Investment Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alprime Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alpstone Capital (Suisse) SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Alquant AG",
+  "misto": "Crissier",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Altrafin AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Amadeus Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Amundi Alpha Associates AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ANREPA Asset Management AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Apex Asset Management AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "APJK FundServices SA",
+  "misto": "Crans VD",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Aquamarine Zürich AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Aquila Asset Management AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Aquis Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ARDIAN Investment Switzerland AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Aretas Capital Management AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Arete Ethik Invest AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Arfina Capital SA",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Arve Asset Management AG",
+  "misto": "Lutzenberg",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Arvernus Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ARVEST Funds AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "arvy AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "AS Investment Management SARL",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Asia Green Real Estate AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Assurinvest AG",
+  "misto": "Neuhaus SG",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Asteria Investment Managers SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ATG Healthcare Investments AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Atlanticomnium SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "AtonRâ Partners SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Auriga Partners SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Auris Wealth Management SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Avadis Vorsorge AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "AWEA Fonds AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "AXIOM ALTERNATIVE INVESTMENTS SWITZERLAND SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Axioma Wealth Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Ayaltis AG",
+  "misto": "Zug",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "AZIMUT SWITZERLAND SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "B&I Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Baloise Asset Management AG",
+  "misto": "Basel",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "BANCA DEL CERESIO SA",
+  "misto": "Lugano",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "BANCA DEL SEMPIONE SA",
+  "misto": "Lugano",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Banco Santander International SA",
+  "misto": "Genève 1",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Bank Julius Bär & Co. AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "BANQUE HERITAGE SA",
+  "misto": "Genève 6",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "BANTLEON AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Bantleon Convertible Experts AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BBGI GROUP SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Bellecapital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Bellecapital International AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Bellevue Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Belvédère Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Belvoir Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Berger, van Berchem & Cie SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BERNINVEST AG",
+  "misto": "Bern 22",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "BG Aequitum SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BlackRock Asset Management Schweiz AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "BLKB Fund Management AG",
+  "misto": "Binningen",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Blue Diamond Asset Management AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BlueDot SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BlueOrchard Finance AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BlueStar Investment Managers SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BNP PARIBAS ASSET MANAGEMENT Switzerland AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "BNP PARIBAS, Paris, succursale de Zurich",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Bordier & Cie SCmA",
+  "misto": "Genève",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Bovay & Partenaires S.A.",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Brainvest Wealth Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Brevan Howard Investment Products Limited, Saint-Hélier (Jersey), succursale",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Bruellan SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Bruno Walter Finance SA",
+  "misto": "Montreux",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BSR Black Swan Resilience SA",
+  "misto": "Chêne-Bourg",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BU Bregal Unternehmerkapital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "bvo capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "BWM AG",
+  "misto": "Wilen b. Wollerau",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "CA Indosuez Finanziaria SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "CACEIS (Switzerland) SA",
+  "misto": "Nyon",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "CACEIS Bank, Montrouge, succursale de Zurich / Suisse",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Calibrium AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Cambridge Associates AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Cape Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Capital International Sàrl",
+  "misto": "Genève",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "CAPLAND SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Capmont Invest AG",
+  "misto": "Freienbach",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Capula Investment Management Switzerland Sàrl",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Capvis AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Caravela Energy Partners Europe GmbH",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Carne Global Fund Managers (Schweiz) AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Carnot Capital AG",
+  "misto": "Bäch SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "CARTHESIO SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Cevian Capital Limited, St. Helier (Jersey), Zweigniederlassung Schweiz,",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Chameleon Asset Management AG",
+  "misto": "Basel",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "CHARTVALOR AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Citibank (Switzerland) AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Clearsight Investments AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Climber Capital SA",
+  "misto": "Nyon",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "COLOMBO WEALTH SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "COMMERZBANK Aktiengesellschaft, Frankfurt am Main, Zweigniederlassung",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Commodity Capital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "CONINCO Explorers in finance SA",
+  "misto": "Vevey",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Controlfida (Suisse) SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Copernicus Wealth Management SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Corecam AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Cornèr Banca SA",
+  "misto": "Lugano",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "COVASYS AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "C-Quadrat (Suisse) SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "CRESCENDO CAPITAL SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Cronberg AG",
+  "misto": "St. Gallen",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Cronos Finance SA",
+  "misto": "Pully",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Crossinvest SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "DCM Systematic SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "DCP Client Partner AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "de Pury Pictet Turrettini & Cie SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Decalia SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Diamond Capital Management (Switzerland) SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "DIVAS Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Dominicé Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Dr. Pirmin Hotz Vermögensverwaltungen AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Dreyfus Söhne & Cie. Aktiengesellschaft, Banquiers",
+  "misto": "Basel",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "DWS CH AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Earth Resource Investments AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "EBG Investment Solutions AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "EBL Infrastruktur Management AG",
+  "misto": "Liestal",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ecamos Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ECOFIN Portfolio Solutions AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "EDL Capital AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Edmond de Rothschild (Suisse) S.A.",
+  "misto": "Châtelaine",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Edmond de Rothschild REIM (Suisse) SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Elite Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Emcore Asset Management AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Emerald Technology Ventures AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Enabling Qapital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Energy Infrastructure Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Entrepreneur Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Eric Sturdza Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ESG-AM AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Euler ILS Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Fageb Verwaltungs AG",
+  "misto": "Jona",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Fairway Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "FERI (Schweiz) AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Finezia AG",
+  "misto": "Luzern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Finnovis AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "FIRST INDEPENDENT FUND SERVICES AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "FLEXSTONE PARTNERS SARL",
+  "misto": "Vernier",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Forma Futura Invest AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Format Vermögen & Anlagen AG",
+  "misto": "Widnau",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Fortune Financial Strategies SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Fourth Fund Management Sàrl",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Franklin Templeton Switzerland AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Freemont Management SA",
+  "misto": "Lutry",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Freigeist Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Fundana SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Fundim SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "FUNDO SA",
+  "misto": "Lausanne",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "FundPartner Solutions (Suisse) SA",
+  "misto": "Carouge GE",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "FundRock Switzerland SA",
+  "misto": "Gland",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "G7NESIS Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Galena Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GAM Investment Management (Switzerland) AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GAMA Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GAMMA FINANCIALS AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Garda Capital Partners Sàrl",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GATE Capital Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GEFISWISS SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Gemsstock AG",
+  "misto": "Luzern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Generali Investments Schweiz AG",
+  "misto": "Adliswil",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "GERIFONDS SA",
+  "misto": "Lausanne",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Gestion Indépendante de Patrimoines GIP SA",
+  "misto": "Villars-sur-Glâne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Global Funds SA",
+  "misto": "Lausanne",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Graian Capital Management SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Gresham House Europe AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Groupe Mutuel Asset Management GMAM SA",
+  "misto": "Martigny Groupe",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GSA Switzerland AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Gutzwiller Fonds Management AG",
+  "misto": "Basel",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Gyra S.A.",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "GZC Investment Management AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "HanseMerkur Trust Swiss AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "HBK Investments Advisory SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "HBM Partners AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Helvetica Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Hérens Quality Asset Management AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "hfs Financial Services AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Holinger Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Horizon Capital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Horizon21 AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "House of Wealth SA",
+  "misto": "Canobbio",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "HSBC Global Asset Management (Switzerland) AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "IAM Independent Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "IFS Independent Financial Services AG",
+  "misto": "Luzern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Immofonds Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Imovag Immobilien Verwaltungs AG, Luzern",
+  "misto": "Emmenbrücke 1",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Inoks Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "InPact Switzerland SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Intesa Sanpaolo Wealth Management SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Invesco Asset Management (Schweiz) AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "InvestInvent AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Investissements Fonciers SA",
+  "misto": "Lausanne",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Invethos AG",
+  "misto": "Bern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Invision AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "IPConcept (Schweiz) AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "ITERAM Capital SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "J O Hambro Capital Management Limited, London (UK), Zweigniederlassung",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "J. LAMARCK ASSET MANAGEMENT SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "J. Safra Sarasin Investmentfonds AG",
+  "misto": "Basel",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Jakober Partner AG",
+  "misto": "Glarus",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "JMA Jürg Maurer Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "JMS Invest AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "John Street Capital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "JPMorgan Asset Management (Schweiz) GmbH",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "JSS Real Estate Management SA",
+  "misto": "Genève",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Kepler Unigestion SA",
+  "misto": "Nyon",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "KISS Asset Management SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Komorebi Invest Suisse SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Konwave AG",
+  "misto": "Herisau",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Kraemer, Schwab & Co. AG Investment Management",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "L1D AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LAIQON Asset Management Switzerland AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Lake Geneva Investment Partners SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Lakefield Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LakeRock Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Legato Vermögensmanagement AG",
+  "misto": "Bern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LEMANIK INVEST SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LFG + Zest SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LGT Capital Partners AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LGT ILS Partners AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Liberty Money Center AG",
+  "misto": "Schwyz",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LIMMAT CAPITAL Alternative Investments AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LLB Swiss Investment AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Lloyd Capital GmbH",
+  "misto": "Kilchberg ZH",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LMR Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Lombard Odier Asset Management (Switzerland) SA",
+  "misto": "Bellevue",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Longbow Finance S.A.",
+  "misto": "Lutry",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Lorzen Capital Partners AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LPX AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "LUKB Expert Fondsleitung AG",
+  "misto": "Luzern",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Malabar Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Man Investments AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MapleCap Partners AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Matrixport Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MBS Capital Advice SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MCP (Switzerland) Sàrl",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Mercer Alternatives AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MFM Mirante Fund Management SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Mirabaud Asset Management (Suisse) SA",
+  "misto": "Genève",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "MIV Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MOMentum Alternative Investments SA",
+  "misto": "Paradiso",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Montana Capital Partners AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MONTEBIANCO ASSET & WEALTH MANAGEMENT SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Mont-Fort Funds AG",
+  "misto": "Verbier",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "MRB Fund Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "MV Invest AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Napier Park Global Capital GmbH",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Nextech Invest AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Nivalion AG",
+  "misto": "Steinhausen",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Noble Capital Management (NCM) SA",
+  "misto": "Vésenaz",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Nova Property Fund Management AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Novak, Thurnheer + Partner AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "NS Partners SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Octa Wealth AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "OLZ AG",
+  "misto": "Bern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "One Investments Sagl",
+  "misto": "Paradiso",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "OpenCapital SA",
+  "misto": "Paradiso",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "OpenFunds Investment Services AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "PaLü Partner AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Parsumo Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Partners Advisers SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Partners Group AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Pascal Investment Advisers SA",
+  "misto": "Nyon",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Patrimoine Capital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Patrimonium Asset Management AG",
+  "misto": "Baar",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Pax Asset Management AG",
+  "misto": "Basel",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Peakside Capital Advisors AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Pegaso Capital Partners SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PEKAM AG",
+  "misto": "Mägenwil",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PENSADOR Partner AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Pensimo Fondsleitung AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Pensofinance SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Petiole Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PG3 AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PG3 Insurance Core AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Pharus Asset Management SA",
+  "misto": "Mendrisio",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Picard Angst AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Pictet Alternative Advisors SA",
+  "misto": "Carouge GE",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Pictet Asset Management SA",
+  "misto": "Carouge GE",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Piguet Galland & Cie SA",
+  "misto": "Yverdon-les-Bains",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "PK Assets AG",
+  "misto": "Wilen b. Wollerau",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Plenum Investments AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PMG Investment Solutions AG",
+  "misto": "Zug",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "PMW Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Point Capital Group AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Polar Capital (Switzerland) AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PRETIUM Invest AG",
+  "misto": "Frauenfeld",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Prio Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Prisminvest SA",
+  "misto": "Morges 2",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Probus Pleion Suisse SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PROCIMMO SA",
+  "misto": "Renens VD",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Progestfonds SA",
+  "misto": "Genève",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Progressive Capital Partners Ltd",
+  "misto": "Baar",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Property One Investors AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PSquared Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "PURE Funds AG",
+  "misto": "Zug",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "PvB Pernet von Ballmoos AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "QCAM Currency Asset Management AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "QCORE Fund Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "QUAERO CAPITAL SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Quanta Finance SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Quantex AG",
+  "misto": "Muri b. Bern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Quantica Capital AG",
+  "misto": "Schaffhausen",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Qube Research and Technologies Switzerland AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "QUINTET CAPITAL SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "RAM Active Investments SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Real Fund Management AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Realstone SA",
+  "misto": "Lausanne",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Reichmuth & Co Investment Management AG",
+  "misto": "Luzern",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Renaissance Management SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "RESCAD SA",
+  "misto": "Carouge GE",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "responsAbility Investments AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Richfox Capital Investment Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Riedweg & Hrovat AG Vermögensverwaltung und Finanzberatung",
+  "misto": "Basel",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Rieter Fischer Partners AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Robeco Schweiz AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Rock2 Capital AG",
+  "misto": "Wollerau",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Rossberg Asset Management AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Rothschild & Co Bank AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "SAF & Co Financial Services SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Santro Invest AG",
+  "misto": "Schindellegi",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Savex Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Schroder Investment Management (Switzerland) AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Schroders Capital Management (Switzerland) AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Schweizerische Mobiliar Asset Management AG",
+  "misto": "Bern",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "SEO Management AG",
+  "misto": "Jona",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Seraina Invest AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "SG Value Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Sherpa Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "SIA Asset Management AG",
+  "misto": "Lachen SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Siliance Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Sizer Commodities Investments AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Société d'Administration et de Gestion Atlantas Saga SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Société Générale, Paris, Zweigniederlassung Zürich",
+  "misto": "Zürich 1",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Société pour la gestion de placements collectifs GEP SA",
+  "misto": "Lausanne",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Solidum Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Solutions & Funds SA",
+  "misto": "Morges",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "SPRING INVESTMENTS SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "State Street Bank International GmbH, München, Zweigniederlassung Zürich",
+  "misto": "Zürich",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "StepStone Group Private Debt AG",
+  "misto": "Zürich",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Sterwen SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Stoa Capital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "StoneEdge Asset Management SA",
+  "misto": "Lausanne",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Sumus Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Sustainable Real Estate AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Swan Asset Management SA",
+  "misto": "Paradiso",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Swiss Credit Partners AG",
+  "misto": "Baar",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Swiss Finance & Property Funds AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Swiss KMU Partners AG",
+  "misto": "Jona",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Swiss Life Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Swiss Prime Site Solutions AG",
+  "misto": "Zug",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Swiss Rep Link SA",
+  "misto": "Genève",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Swiss Rock Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Swisscanto Fondsleitung AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "SWM SwissWealth Management SA",
+  "misto": "Paradiso",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Symbiotics Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Synchrony Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Systematica Investments GP Limited, St-Hélier (Jersey), succursale de",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "SYZ Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "SYZ Capital AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "TARENO AG",
+  "misto": "Basel",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Taula Capital Management (Switzerland) Sàrl",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Tavis Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Teleios Capital Partners GmbH",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "The Forum Finance Group SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "The Singularity Group AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Thematica SA",
+  "misto": "Grand-Lancy",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Titanium Finance SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Tramondo Investment Partners AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Trianon SA",
+  "misto": "Nyon",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Trillium SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "True Wealth AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Twelve Capital AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "UBS Asset Management Switzerland AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "UBS Fund Management (Switzerland) AG",
+  "misto": "Basel",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Ufenau Capital Partners AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Unigestion SA",
+  "misto": "Genève 12",
+  "role": [
+   "vertreter",
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "UNION BANCAIRE PRIVEE, UBP SA",
+  "misto": "Genève 1",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "v.FISCHER INVESTAS Vermögensverwaltung AG",
+  "misto": "Bern",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Valère Consulting AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "VALEUR SA",
+  "misto": "Lugano",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Valex Capital AG",
+  "misto": "Pfäffikon SZ",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Valori Asset Management SA",
+  "misto": "Chiasso",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "ValueFocus Equity Management AG",
+  "misto": "Wil SG",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Valvest Partners AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "VERIT Investment Management AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Verium AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "VIAC Invest AG",
+  "misto": "Basel",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "Victory Asset Management AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Vigama Capital SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Vontobel Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Vontobel Fonds Services AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung",
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "VV Vermögensverwaltung AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Waystone Fund Services (Switzerland) SA",
+  "misto": "Lausanne",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Wealth Management Zürich AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Weisshorn Asset Management SA",
+  "misto": "Genève",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "WINVEST ASSET MANAGEMENT AG",
+  "misto": "Cham",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Woodman Asset Management AG",
+  "misto": "Zürich",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Wydler Asset Management AG",
+  "misto": "Wilen b. Wollerau",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Wyss & Partner Vermögensverwaltung und Anlageberatung AG",
+  "misto": "Wangs",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "XO Investments SA",
+  "misto": "Neuchâtel",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Z22 Technologies AG",
+  "misto": "Cham",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "zCapital AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Zeidler Regulatory Services (Switzerland) AG",
+  "misto": "Winterthur",
+  "role": [
+   "vertreter"
+  ]
+ },
+ {
+  "nazev": "Zugerberg Finanz AG",
+  "misto": "Zug",
+  "role": [
+   "verwalter"
+  ]
+ },
+ {
+  "nazev": "Zurich Invest AG",
+  "misto": "Zürich",
+  "role": [
+   "fondsleitung"
+  ]
+ },
+ {
+  "nazev": "ZZ Vermögensberatung (Schweiz) AG",
+  "misto": "Vitznau",
+  "role": [
+   "verwalter"
+  ]
+ }
+]

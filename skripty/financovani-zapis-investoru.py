@@ -174,8 +174,13 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
             i_stav = sesit.sl("subjekty", "stav")
             bylo_stav = m.norm(ws1.cell(row=radek, column=i_stav).value) if (i_stav and not novy) else ""
             ozivene = bylo_stav and bylo_stav != cfg["stavy"]["aktivni"]
+            # Zeme se bere ze zaznamu. U ceske davky chybela a radky pak beh
+            # preskakoval, protoze nevedel, ktereho registru se zeptat.
+            # U DACH je to jedina cesta, jak ji vyplnit - dohledavac zeme
+            # umi jen CZ podle ICO.
             hodnoty = {"ico": ico,
                        "web": web, "typ": m.norm(z.get("typ")),
+                       "zeme": m.norm(z.get("zeme")),
                        "stav": cfg["stavy"]["aktivni"], "overeno": m.DNES,
                        "role_investor": T["ano"]}
             if ozivene:
