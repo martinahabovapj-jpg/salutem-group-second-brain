@@ -90,7 +90,7 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         for kus in re.findall(r"\d{8}", str(d.get("ico") or "")):
             podle_ica.setdefault(kus, (r, sid))
         dm = domena(d.get("web"))
-        if dm:
+        if dm and not domena_spravce(d.get("web"), cfg):
             podle_dom.setdefault(dm, (r, sid))
         podle_nazvu.setdefault(m.norm(d.get("nazev")).lower(), (r, sid))
 
@@ -137,7 +137,8 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         radek, sid = None, None
         if ico and ico in podle_ica:
             radek, sid = podle_ica[ico]
-        elif domena(web) and domena(web) in podle_dom:
+        elif (domena(web) and not domena_spravce(web, cfg)
+              and domena(web) in podle_dom):
             radek, sid = podle_dom[domena(web)]
         elif nazev.lower() in podle_nazvu:
             radek, sid = podle_nazvu[nazev.lower()]
@@ -276,6 +277,25 @@ def domena(url):
     u = u.split()[0] if u else ""
     u = re.sub(r"^www\.", "", u)
     return u.split("/")[0].strip().strip(".")
+
+
+def domena_spravce(url, cfg):
+    """Je to domena spravce fondu, a ne fondu samotneho?
+
+    Na avantfunds.cz nebo amista.cz sedi desitky ruznych fondu. Shoda takove
+    domeny neznamena tentyz subjekt - kdyz se na ni paruje, prilepi se novy
+    fond na cizi radek a nikdo si toho nevsimne. Seznam je v konfiguraci,
+    sekce "spravci".
+    """
+    dm = domena(url)
+    if not dm:
+        return False
+    for d in (cfg.get("spravci") or {}).get("domeny") or []:
+        d = str(d).lower().strip()
+        if d and (dm == d or dm.endswith("." + d)):
+            return True
+    return False
+
 
 
 def main():

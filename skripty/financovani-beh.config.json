@@ -106,6 +106,34 @@
    "Nečas"
   ]
  },
+ "spravci": {
+  "_popis": "Domeny spravcu, administratoru a agregatoru fondu. Na tehle domene sedi desitky ruznych fondu, takze shoda domeny NEZNAMENA, ze jde o tentyz subjekt - zapis investoru je proto pri parovani ignoruje a rovnou zaklada novy radek. Zaroven to neni web fondu, ktery by mel smysl hlidat v mesicnim behu. Kdyz na takovou domenu narazis, patri do pole Gatekeeper, ne do Webu.",
+  "domeny": [
+   "avantfunds.cz",
+   "codyainvest.cz",
+   "amista.cz",
+   "deltais.cz",
+   "conseq.cz",
+   "winstor.cz",
+   "jtis.cz",
+   "jtbank.cz",
+   "tillerfunds.cz",
+   "versuteis.cz",
+   "partnersis.cz",
+   "fki-fondy.cz",
+   "fondykvalifikovane.cz",
+   "nemovitostni-fondy.cz",
+   "kurzy.cz",
+   "penize.cz",
+   "finmag.cz",
+   "podnikatel.cz",
+   "detail.cz",
+   "zivefirmy.cz",
+   "hlidacstatu.cz",
+   "rejstrik-firem.kurzy.cz",
+   "mesec.cz"
+  ]
+ },
  "stavy": {
   "aktivni": "aktivní",
   "vyrazen": "VYŘAZEN",
