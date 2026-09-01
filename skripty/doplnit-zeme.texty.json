@@ -1,0 +1,6 @@
+{
+ "pole_zeme": "Země",
+ "zeme_doplneno": "[{datum} doplněno] Země CZ doplněna podle IČO {ico}, které ARES vede jako „{nazev}“. Bez země běh subjekt v rejstříku nekontroluje. Zdroj: {zdroj}",
+ "zeme_citace": "IČO {ico} je osmimístné české identifikační číslo a ARES pod ním vede „{nazev}“ — subjekt je tedy český.",
+ "ares_url": "https://ares.gov.cz/ekonomicke-subjekty/res/{ico}"
+}

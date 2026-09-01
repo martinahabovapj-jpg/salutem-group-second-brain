@@ -153,6 +153,32 @@ s Claudem. K tobě dorazí až výsledek, do listu „5 Návrhy změn".
 
 Spustit je můžeš, nic tím nepokazíš. Jen z toho sám nic nevyčteš.
 
+### A dva nástroje, které naopak zapisují
+
+Tyhle dva **do sešitu zapisují**, a proto je nepouštěj — pouští je Martina
+a vždycky nejdřív nanečisto. Jsou tady popsané proto, abys věděl, odkud se
+v listu 1 berou IČO a země, které tam jeden den nebyly a druhý ano.
+
+| Nástroj | Co dělá |
+|---|---|
+| `financovani-dohledat-ico.py` | **dohledá chybějící IČO podle webu firmy.** Nehledá podle jména — na „PKF APOGEO" vrací ARES třicet firem a přiřadit špatnou by znamenalo, že se běh ptá rejstříku na cizí subjekt. Čte IČO z patičky, kontaktů a obchodních podmínek, ověří ho proti ARESu a zapíše, **jen když sedí i název** |
+| `doplnit-zeme.py` | **doplní zemi CZ** tam, kde subjekt zemi nemá, ale má osmimístné IČO, které ARES opravdu zná |
+
+**Pořadí je dané:** nejdřív IČO, pak země. Země se totiž odvozuje od IČO,
+takže obráceně by ji nedostaly zrovna ty řádky, kterým IČO právě přibylo.
+
+Oba se drží stejného pravidla jako zbytek nástroje: **raději prázdné pole než
+cizí firma.** Kde se nedá doložit, nechají prázdno a napíšou to. Ke každé
+zapsané hodnotě jde do listu 4 citace a odkaz a do Poznámky v listu 1 datum.
+
+> **Proč to nedělá měsíční běh sám.** Protože to není kontrola, ale doplňování
+> chybějících dat, a to se dělá jednorázově po velkém přírůstku — ne každý
+> měsíc dokola nad týmiž řádky.
+
+**Ve složce `beh\` je nenajdeš** a je to schválně — nejsou to tvoje dvojkliky,
+pouští je Martina ze svého počítače. Poznat, že proběhly, jde v listu 1:
+v Poznámce u řádku přibude datum a odkaz, odkud IČO nebo země je.
+
 ---
 
 ## Když se něco pokazí
@@ -208,7 +234,8 @@ s datem a odkazem, a citace je v listu 4.
   proto, že v srpnu a v září přibylo přes čtyřicet nových investorů ze seznamu ČNB
   a zapisovací skript zemi ani IČO nevyplňuje — dohledávají se zvlášť. Běh je
   vypíše jako „ZEMĚ NENÍ VYPLNĚNA" a jakmile někdo IČO a zemi doplní, začnou se
-  hlídat samy. Je to jediná díra, kterou jde zavřít bez programování.
+  hlídat samy. Je to jediná díra, kterou jde zavřít bez programování — a dělá
+  se to těmi dvěma nástroji výš, ne ručním doplňováním do Excelu.
 - **Nesmaže vyřazené firmy.** Zůstávají v listu 1 se stavem VYŘAZEN i s důvodem,
   aby je za půl roku nikdo neprověřoval znovu.
 - **Nenajde všechno.** Dvě kombinace v obchodním rejstříku jsou tak široké, že je
