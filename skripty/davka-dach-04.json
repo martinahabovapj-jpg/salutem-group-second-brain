@@ -1,0 +1,60 @@
+[
+ {
+  "skupina": "SCHRODERS",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Schroders Capital Management (Switzerland) AG",
+  "web": "https://www.schroderscapital.com",
+  "typ": "Správce kolektivního majetku",
+  "verdikt": "zaradit",
+  "segment": "REAL ESTATE DEBT napříč celým životním cyklem nemovitosti - akvizice, development a výstavba, bridge (transitional lending) až po stabilizované úvěry. Investuje do komerčních hypotečních cenných papírů i do soukromých úvěrů na komerční nemovitosti, napříč kapitálovou strukturou. Regiony USA, Velká Británie a Evropa. Vedle toho realitní equity: přes 28 mld. USD a víc než 1 100 nemovitostí globálně.",
+  "aum": "platforma real estate debt 5 mld. USD; realitní tým skupiny spravuje přes 28 mld. USD",
+  "gatekeeper": "švýcarská entita Schroders Capital Management (Switzerland) AG sídlí v Curychu a je v seznamu FINMA jako Verwalter von Kollektivvermögen; platforma real estate debt je skupinová. Roger Hennig vedl realitní tým pro Švýcarsko a Německo.",
+  "duvod": "NEJLEPŠÍ NÁLEZ CELÉ DACH REŠERŠE. Jediný subjekt, který o sobě sám píše, že spolupracuje s developery a financuje akvizici, development a výstavbu i bridge. To je přesně ta fáze, ve které se projekt nabízí, a přesně ten typ protistrany, kterou jsme u ČR hledali měsíc. Regiony sedí (Evropa), objem 5 mld. USD taky.",
+  "citace": "works in partnership with developers, real estate operators and borrowers to find high-quality financing opportunities",
+  "zdroj": "https://www.schroderscapital.com/en/global/professional/capabilities/private-debt-and-credit-alternatives/real-estate-debt/"
+ },
+ {
+  "skupina": "PARTNERSGROUP",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Partners Group AG",
+  "web": "https://www.partnersgroup.com",
+  "typ": "Správce private markets",
+  "verdikt": "zaradit",
+  "segment": "private markets v pěti třídách: private equity, private credit, infrastruktura, real estate a royalties. Real estate 16 mld. USD, private credit 31 mld. USD, private equity 78 mld. USD, infrastruktura 27 mld. USD.",
+  "aum": "152 mld. USD celkem k 31. 12. 2024 (novější zdroje uvádějí 185 mld. USD v roce 2025)",
+  "gatekeeper": "sídlo Baar-Zug, regionální centrály Baar-Zug, Denver a Singapur; založena 1996. V seznamu FINMA jako Verwalter von Kollektivvermögen. Klienti jsou institucionální investoři, penzijní fondy a státní fondy.",
+  "duvod": "Největší subjekt celé databáze podle objemu a jeden z mála, kdo dělá real estate i private credit zároveň. Odpovídající velikost projektu je ale řádově jinde než u švýcarských realitních fondů - tohle není protistrana pro jeden bytový dům.",
+  "citace": "bringing the firm's total assets under management (AuM) to USD 152 billion as of 31 December 2024",
+  "zdroj": "https://www.partnersgroup.com/en/news-and-views/press-releases/corporate-news/detail?news_id=e9680b64-5fbf-4cbc-86f9-4b625f61d2e0"
+ },
+ {
+  "skupina": "UBS",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "UBS Fund Management (Switzerland) AG",
+  "web": "https://www.ubs.com/ch/de/assetmanagement/capabilities/real-estate.html",
+  "typ": "Správce fondů (banka)",
+  "verdikt": "zaradit",
+  "segment": "UBS Sima investuje zhruba z 50 % do bytových a z 50 % do komerčních staveb (kanceláře a provozní budovy), převážně v německy mluvícím Švýcarsku - je to největší nemovitostní fond ve Švýcarsku. UBS Anfos dává přes 75 % do bytových nemovitostí v hospodářsky atraktivních lokalitách německého Švýcarska.",
+  "aum": "UBS Sima měl k 31. 12. 2025 tržní hodnotu 12 718,1 mil. CHF a 361 nemovitostí",
+  "gatekeeper": "sídlo Basilej, v seznamu FINMA jako Fondsleitung i Vertreter. Vedle Fondsleitung je na seznamu i UBS Asset Management Switzerland AG jako Verwalter von Kollektivvermögen.",
+  "duvod": "Největší nemovitostní fond v zemi, 361 nemovitostí za 12,7 mld. CHF. Kupuje hotové bytové i kancelářské budovy v německém Švýcarsku. Pro velký hotový objekt první adresa, pro rozpracovaný projekt ne.",
+  "citace": "UBS (CH) Property Fund – Swiss Mixed «Sima» ist zu rund 50% in Wohnbauten und zu rund 50% in kommerzielle Bauten (Bürohäuser und Gewerbebauten) überwiegend in der deutschen Schweiz investiert.",
+  "zdroj": "https://www.ubs.com/ch/de/assetmanagement/capabilities/real-estate/sima.html"
+ },
+ {
+  "skupina": "MOBILIAR",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Schweizerische Mobiliar Asset Management AG",
+  "web": "",
+  "typ": "Správce fondů (pojišťovací skupina)",
+  "verdikt": "nevim",
+  "segment": "podle veřejných zdrojů stoprocentní dcera Schweizerische Mobiliar Holding, samostatná fondová společnost od roku 2012, spravuje kolem 30 mld. CHF. MobiFonds Swiss Property (od 2013) drží 23 nemovitostí za zhruba 1,2 mld. CHF, převážně bytové v městských lokalitách hospodářsky silných regionů.",
+  "duvod": "Profil sedí a čísla vypadají věrohodně, ale stránka produktu na mobiliar.ch vrací jen navigaci bez obsahu a jiný primární zdroj se nepodařilo otevřít. Zajímavé je, že podle SIX se Mobiliar stává novým emitentem fondů - to by znamenalo čerstvý kapitál. Posoudit znovu.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
