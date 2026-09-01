@@ -87,12 +87,12 @@ Před zápisem si sám udělá záložní kopii sešitu do složky `beh\zalohy\`
 
 ## Co znamenají jednotlivé listy
 
-Sešit má úvodní přehled a osm očíslovaných listů. Pracovní jsou pro tebe dva —
-list 5, kde rozhoduješ, a list 2, kde vybíráš z roletky. Zbytek jsou data.
+Sešit má úvodní přehled a osm očíslovaných listů. Pracovní jsou pro tebe tři —
+list 5, kde rozhoduješ, a listy 1 a 2, kde vybíráš z roletky. Zbytek jsou data.
 
 | List | Co v něm je | Sáháš na něj? |
 |---|---|---|
-| **1 Subjekty** | hlavní seznam firem — kdo, IČO, web, stav, jaké má role | čteš |
+| **1 Subjekty** | hlavní seznam firem — kdo, IČO, web, stav, jaké má role, a **kdo z nás firmu řeší** | **vybíráš z roletky** |
 | **2 Kontakty** | jména, telefony, maily — a **kdo z nás s kým komunikuje** | **vybíráš z roletky** |
 | 3 Role Financování | kdo co půjčuje — typy financování, ticket, LTV | čteš |
 | 4 Zdroje | **doslovné citace a odkazy ke každému údaji** | čteš, když něčemu nevěříš |
@@ -101,18 +101,27 @@ list 5, kde rozhoduješ, a list 2, kde vybíráš z roletky. Zbytek jsou data.
 | **7 Zamítnuto při hledání** | firmy, které se posuzovaly a nezařadily, i s důvodem | čteš |
 | **8 K ověření** | firmy, u kterých se **nepodařilo rozhodnout** | čteš, když máš čas |
 
-### Sloupec „Kdo komunikuje“ v listu 2
+### Dvě roletky se jmény kolegů — v listu 1 a v listu 2
 
-Poslední sloupec listu **„2 Kontakty“** je roletka se jmény kolegů — dnes
-**Dudjak** a **Nečas**. Vybírá se v ní, kdo z nás je s tím konkrétním člověkem
-v komunikaci, aby ho neoslovili dva lidé nezávisle na sobě.
+Oba listy mají jako poslední sloupec roletku se jmény kolegů, dnes **Dudjak**
+a **Nečas**. Odpovídají ale na dvě různé otázky:
 
-**Prázdné znamená „zatím nikdo“**, ne chybu. Nástroj do toho sloupce sám nikdy
-nic nezapíše ani nic nepřepíše — je celý tvůj.
+| Kde | Sloupec | Na co odpovídá |
+|---|---|---|
+| list 1 Subjekty | **Kdo řeší** | kdo má na starosti **celou firmu** |
+| list 2 Kontakty | **Kdo komunikuje** | kdo mluví s **konkrétním člověkem** |
+
+Firmu může řešit jeden kolega a přitom si u ní se třemi lidmi psát někdo jiný.
+Proto jsou to dva sloupce a ne jeden. Smysl je u obou stejný: aby stejnou firmu
+nebo stejného člověka neoslovili dva lidé nezávisle na sobě.
+
+**Prázdné znamená „zatím nikdo“**, ne chybu. Nástroj do těch sloupců sám nikdy
+nic nezapíše ani nic nepřepíše — jsou celé tvoje.
 
 Přibyde další kolega? Neopravuje se to v Excelu, ale v konfiguraci
 (`beh\financovani-beh.config.json`, sekce `komunikace`) — jinak by se jméno
-při dalším zápisu z roletky ztratilo. Řekni Martině.
+při dalším zápisu z roletky ztratilo. Řekni Martině. Jméno se přidává **na
+jednom místě a naskočí do obou roletek naráz.**
 
 ### Proč jsou listy 7 a 8 dva, a ne jeden
 
