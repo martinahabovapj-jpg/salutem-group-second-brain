@@ -1,0 +1,62 @@
+[
+ {
+  "skupina": "PURE",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "PURE Funds AG",
+  "web": "https://pure.swiss",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "dva fondy: PURE Swiss Opportunity REF (PSO, od prosince 2020) a PURE Real Estate Debt L-QIF (PRED, od prosince 2024) na selektivní poskytování PODŘÍZENÝCH HYPOTÉK. Vedle toho portfolio, majetkový a transakční management a realitní poradenství; podle veřejných zdrojů i aranžování složitých finančních řešení pro stavební a realitní projekty.",
+  "aum": "objemy fondů web neuvádí",
+  "gatekeeper": "nezávislá soukromá fondová společnost, povolení FINMA jako Fondsleitung od 20. 5. 2020, založena 2019, sídlo Zug. Součást PURE Group.",
+  "duvod": "TŘETÍ HRÁČ V REAL ESTATE DEBT po Schroders a Patrimoniu, a jediný, kdo na to má samostatný švýcarský fond. Podřízená hypotéka je přesně to, co u projektu chybí mezi bankovním seniorem a vlastním kapitálem. Fond je čerstvý (prosinec 2024), takže nejspíš ještě nabírá.",
+  "citace": "selektive Vergabe von nachrangigen Hypotheken",
+  "zdroj": "https://pure.swiss/about/?lang=de"
+ },
+ {
+  "skupina": "ADMICASA",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Admicasa Fondsleitung AG",
+  "web": "https://admicasa.ch",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "Admicasa Real Estate Fund (ISIN CH1228214537) kupuje nemovitosti v dobrých lokalitách aglomerací s cílem atraktivní vstupní ceny, potenciálu zhodnocení a vysokého cash flow. Skupina k tomu sama developuje a staví: segment Entwicklung od vyhledání lokality po stavební povolení, segment Totalunternehmung novostavby a přestavby.",
+  "aum": "první tři nemovitosti fond koupil den po spuštění za zhruba 25 mil. CHF v centru Yverdonu (VD) - téměř 3 000 m2 užitné plochy, deset bytů a komerční prostory",
+  "gatekeeper": "skupina založena 2016 ve Frauenfeldu, přeformována 2023; fondová větev vznikla v říjnu 2023 a povolení FINMA má pro nemovitostní fondy. Sídlo Giesshübelstrasse 40, Curych. Spojuje stavební, kapitálové a penzijní kompetence.",
+  "duvod": "Malý a mladý, ale profil je pro nás neobvykle blízký: skupina umí development i výstavbu a fond kupuje v aglomeracích, ne v prémiových centrech. Umí tedy ocenit rozpracovaný projekt, ne jen hotový výnos. Objem je zatím řádově menší než u ostatních.",
+  "citace": "Die Admicasa Fondsleitung AG legt eigene Immobilienfonds wie den Admicasa Real Estate Fund auf und bietet Fondsdienstleistungen für interne und externe Kunden an.",
+  "zdroj": "https://admicasa.ch/unternehmen"
+ },
+ {
+  "skupina": "FONCIERE",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Investissements Fonciers SA (La Foncière)",
+  "web": "https://www.lafonciere.ch",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "fond La Foncière drží 140 budov, převážně nájemní bytové domy s dostupným nájemným, těžiště v městských centrech regionu Ženevského jezera, hlavně Ženeva a Lausanne. Silné ukotvení v západním Švýcarsku a rezidenční převaha.",
+  "aum": "v červnu 2024 dokončeno navýšení kapitálu s přítokem zhruba 113 mil. CHF, nové podíly kotované na SIX od 18. 6. 2024",
+  "gatekeeper": "Investissements Fonciers SA založena 17. 11. 1954, fond La Foncière vznikl v Lausanne v roce 1954 a je jedním z nejstarších švýcarských realitních fondů; povolení FINMA jako Fondsleitung. Sídlo Chemin de la Joliette 2, Lausanne.",
+  "duvod": "Sedmdesát let na trhu, 140 domů a prokazatelný přítok kapitálu (113 mil. CHF v roce 2024). Kupuje nájemní bytové domy v západním Švýcarsku - úzce vymezené, zato jednoznačné.",
+  "citace": "Le fonds emblématique privilégie la stabilité du rendement et la décarbonation progressive de son parc, avec un ancrage fort en Suisse romande et une dominante résidentielle.",
+  "zdroj": "https://www.lafonciere.ch/"
+ },
+ {
+  "skupina": "VERIT",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "VERIT Investment Management AG",
+  "web": "https://verit-invest.ch",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "portfolio a asset management švýcarských nemovitostí; optimalizace hodnoty nemovitostí, tvorba portfoliových strategií a business plánů k nemovitostem. Od března 2014 spravuje Raiffeisen Futura Immo Fonds. Spravuje nemovitostní portfolia pro soukromé i institucionální investory.",
+  "aum": "objem web neuvádí",
+  "gatekeeper": "na realitním trhu od roku 1960, firma založena 1963, UID CHE-102.499.361; povolení FINMA jako Fondsleitung od začátku roku 2017. Sídlo Curych.",
+  "duvod": "Šedesát let na trhu a správa Raiffeisen Futura Immo Fonds, tedy kapitálu retailové bankovní skupiny. Web ale o objemu ani o akvizičním apetitu neříká nic - profil je doložený, chuť nakupovat ne. Před oslovením zjistit, jestli fond roste.",
+  "citace": "VERIT Investment Management AG is a FINMA-accredited fund management company and specialised in the portfolio and asset management of real estate in Switzerland.",
+  "zdroj": "https://verit-invest.ch/en/company"
+ }
+]
