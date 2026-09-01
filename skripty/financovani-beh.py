@@ -872,6 +872,7 @@ def zapis_navrhy(sesit, navrhy, cfg):
         h = sesit.hlavicka("navrhy")
     roletka(sesit, cfg)
     roletka_kolega(sesit, cfg)
+    roletka_kolega(sesit, cfg, "subjekty", "resi")
 
     # ukazkove radky ze sablony pryc - sesit sam v listu 5 rika, ze se maji smazat
     i_subj = h.get(mapa["subjekt"])
@@ -998,8 +999,13 @@ def roletka(sesit, cfg):
     return True
 
 
-def roletka_kolega(sesit, cfg):
-    """Sloupec "Kdo komunikuje" v listu Kontakty jako rozbalovaci seznam kolegu.
+def roletka_kolega(sesit, cfg, klic="kontakty", pole="komunikuje"):
+    """Sloupec se jmeny kolegu jako rozbalovaci seznam.
+
+    Obsluhuje dva sloupce: "Kdo komunikuje" v listu 2 Kontakty (kdo mluvi
+    s konkretnim clovekem) a "Kdo resi" v listu 1 Subjekty (kdo ma na starosti
+    celou firmu). Je to jeden kod schvalne - kdyby byl dvakrat, opravila by se
+    priste jen jedna kopie.
 
     Jmena kolegu jsou v konfiguraci (sekce "komunikace"), ne v kodu - pridat
     kolegu znamena dopsat jmeno tam a pustit zapis znovu. Sloupec se do listu
@@ -1014,11 +1020,11 @@ def roletka_kolega(sesit, cfg):
                 if k and "," not in k]   # carka by rozbila inline seznam v Excelu
     if not kolegove:
         return False
-    zajisti_sloupce(sesit, "kontakty")
-    i = sesit.sl("kontakty", "komunikuje")
+    zajisti_sloupce(sesit, klic)
+    i = sesit.sl(klic, pole)
     if not i:
         return False
-    ws = sesit.ws("kontakty")
+    ws = sesit.ws(klic)
     pismeno = get_column_letter(i)
     rozsah = "%s2:%s1000" % (pismeno, pismeno)
     # stara validace na tomtez sloupci pryc, at jich tam nesedi pet pres sebe.
@@ -1031,10 +1037,14 @@ def roletka_kolega(sesit, cfg):
                         formula1='"%s"' % ",".join(kolegove),
                         allow_blank=True,
                         showDropDown=False)   # OOXML naopak: False = sipka se ZOBRAZI
-    dv.promptTitle = T["roletka_kolega_titulek"]
-    dv.prompt = T["roletka_kolega_zprava"]
-    dv.errorTitle = T["roletka_kolega_titulek"]
-    dv.error = T["roletka_kolega_chyba"]
+    # Kazdy sloupec ma vlastni bublinu; kdyz pro nej text neni, vezme se obecny.
+    titulek = T.get("roletka_%s_titulek" % pole, T["roletka_kolega_titulek"])
+    zprava = T.get("roletka_%s_zprava" % pole, T["roletka_kolega_zprava"])
+    chyba = T.get("roletka_%s_chyba" % pole, T["roletka_kolega_chyba"])
+    dv.promptTitle = titulek
+    dv.prompt = zprava
+    dv.errorTitle = titulek
+    dv.error = chyba
     dv.showInputMessage = True
     dv.showErrorMessage = True
     ws.add_data_validation(dv)
@@ -1570,10 +1580,11 @@ def main():
 
     if args.sloupce:
         pribylo = []
-        for klic in ("kontakty", "navrhy"):
+        for klic in ("subjekty", "kontakty", "navrhy"):
             pribylo += zajisti_sloupce(sesit, klic)
         roletka(sesit, cfg)
         roletka_kolega(sesit, cfg)
+        roletka_kolega(sesit, cfg, "subjekty", "resi")
         vypis("Pribylo sloupcu: %d%s" % (
             len(pribylo), (" (" + ", ".join(pribylo) + ")") if pribylo else ""))
         vypis("Roletky srovnany podle konfigurace.")
@@ -1595,6 +1606,7 @@ def main():
         zajisti_list(sesit, "zamitnuto")
         roletka(sesit, cfg)
         roletka_kolega(sesit, cfg)
+        roletka_kolega(sesit, cfg, "subjekty", "resi")
         vysledek = aplikuj(sesit, cfg, stav, args.zapis)
         vypis(prehled_aplikace(vysledek, sesit))
         if args.zapis:
