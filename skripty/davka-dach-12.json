@@ -1,0 +1,60 @@
+[
+ {
+  "skupina": "QUANTUM",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "Quantum Immobilien AG",
+  "web": "https://www.quantum.ag",
+  "typ": "Správce nemovitostních fondů a developer",
+  "verdikt": "zaradit",
+  "segment": "ZVEŘEJNĚNÝ INVESTIČNÍ PROFIL ve třech formátech. Commingled fondy: objem 150 mil. až 1,4 mld. EUR, Core a Core Plus, bydlení, zdravotnictví, parkování a lehký průmysl, země Německo, Nizozemsko a RAKOUSKO. Separate accounts: Core, Core Plus i VALUE-ADD, k tomu kanceláře a retail, navíc Dánsko. Club dealy: 50 až 500 mil. EUR, Německo. Skupina zároveň sama developuje.",
+  "aum": "club dealy od 50 mil. EUR jsou nejnižší vstupní hranice v celé německé části databáze; v Hamburku, Berlíně a Tübingenu koupili bytové nemovitosti za přes 185 mil. EUR",
+  "gatekeeper": "nezávislá realitní skupina založená 1999, sídlo Dornbusch 4, Hamburk; vlastní KVG (Quantum Immobilien Kapitalverwaltungsgesellschaft mbH). Zveřejňuje samostatné Ankaufsprofily pro kanceláře a pro bydlení ke stažení.",
+  "duvod": "Z německých hráčů druhý po Real I.S. co do použitelnosti profilu - a v jednom ohledu lepší: u separate accounts bere i VALUE-ADD, tedy nemovitost s problémem nebo potenciálem, ne jen hotový výnos. Rakousko má v záběru u dvou ze tří formátů. Club deal od 50 mil. EUR je pro střední projekt dosažitelná hranice.",
+  "citace": "Investment locations: Germany, Netherlands, Austria",
+  "zdroj": "https://www.quantum.ag/en/investment"
+ },
+ {
+  "skupina": "ARTINVEST",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "Art-Invest Real Estate Management GmbH & Co. KG",
+  "web": "https://www.art-invest.de",
+  "typ": "Správce nemovitostních investic a developer",
+  "verdikt": "zaradit",
+  "segment": "strategie MANAGE TO CORE - kupují nemovitost ve velmi dobré lokalitě a její kvalitu teprve zvednou. Kanceláře, komerce, hotely, retail, bydlení a datová centra. Zveřejněné investiční profily pokrývají Německo a RAKOUSKO (bydlení, hotely), Německo, Rakousko a Velkou Británii (kanceláře, retail) a celou Evropu (hotely, datová centra). U kanceláří podle profilu minimální objem od 20 mil. EUR a výslovně i (re)development, repozicování, snižování neobsazenosti a krátké zbytkové nájmy.",
+  "aum": "spravuje nemovitostní majetek za víc než 7 mld. EUR",
+  "gatekeeper": "sídlo Kolín nad Rýnem, kanceláře mimo jiné v Hamburku, Düsseldorfu, Londýně, Liverpoolu, Manchesteru a Birminghamu. Investuje s institucionálními investory, vybranými joint venture partnery a vlastním kapitálem.",
+  "duvod": "Jediný v databázi, kdo si za cíl klade koupit nemovitost S PROBLÉMEM a udělat z ní core - výslovně jmenuje repozicování, snižování neobsazenosti a krátké zbytkové nájmy. To je přesně profil, kterému se dá nabídnout něco, co jiný fond odmítne. Rakousko má v záběru, minimální objem 20 mil. EUR je ale z profilového PDF, ne z webu - ověřit.",
+  "citace": "Our goal is to create core real estate. We call this strategy 'Manage to Core'. We invest exclusively in very good locations and improve the quality of the property there.",
+  "zdroj": "https://www.art-invest.de/en/investors/"
+ },
+ {
+  "skupina": "VALUES",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "VALUES. Real Estate Holding GmbH",
+  "web": "https://www.valuesre.com",
+  "typ": "Správce nemovitostních investic a developer",
+  "verdikt": "zaradit",
+  "segment": "kanceláře, zdravotnictví, hotely, logistika, velkoobchod a bydlení; zaměření na prime lokality napříč všemi rizikovými třídami, s krátkodobým až dlouhodobým potenciálem zhodnocení. Zachovává si i vlastní projektový development. Kanceláře mimo jiné ve Vídni.",
+  "aum": "přes 10 mld. EUR assets under management a přes 300 nemovitostí ve správě. Podle odborného tisku má jen na institucionální nákupy k dispozici zhruba 1,1 mld. EUR a v jednom roce proinvestovala přes 500 mil. EUR.",
+  "gatekeeper": "založena 2010 (dříve DC Values), sídlo Hamburk, kanceláře Berlín, Frankfurt, Düsseldorf, Mnichov a VÍDEŇ; vlastní kapitálová správcovská společnost, řešení podle KAGB. Exkluzivní mandáty mimo jiné pro Bayerische Versorgungskammer, Versicherungskammer, pojišťovny, penzijní fondy a investory ze spořitelního sdružení.",
+  "duvod": "Kombinace, která se v databázi objevuje málokdy: vlastní development plus institucionální mandáty od velkých německých penzijních a pojišťovacích investorů, a k tomu vídeňská kancelář. Deset miliard pod správou znamená, že nákupní tempo musí být trvalé.",
+  "citace": ">10 Mrd. Assets under Management in €",
+  "zdroj": "https://www.valuesre.com/investment-management/"
+ },
+ {
+  "skupina": "WEALTHCAP",
+  "ico": "",
+  "zeme": "DE",
+  "nazev": "Wealthcap Kapitalverwaltungsgesellschaft mbH (UniCredit Invest Alternatives)",
+  "web": "https://www.wealthcap.com",
+  "typ": "Správce nemovitostních fondů (banka)",
+  "verdikt": "nevim",
+  "segment": "podle veřejných zdrojů přes 40 let zpřístupňuje soukromým investorům německé kancelářské a komerční nemovitosti a patří mezi lídry uzavřených realitních fondů. Fond Wealthcap Immobilien Deutschland 41 míří na Mnichov, Hamburk a Norimberk - moderní multifunkční kancelářské budovy v prémiových lokalitách se širokým oborovým mixem nájemců.",
+  "duvod": "Stoprocentní dcera UniCredit Bank s přes 240 lidmi, tedy relevantní velikost. Stránka Immobilien An- und Verkäufe existuje, ale konkrétní nákupní kritéria se z ní vyčíst nepodařilo a firma se navíc přejmenovává na UniCredit Invest Alternatives - není jasné, kdo je dnes protistrana. Ověřit, kdo akvizice vede po přejmenování.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
