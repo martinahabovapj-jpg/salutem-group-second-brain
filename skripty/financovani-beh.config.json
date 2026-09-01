@@ -503,5 +503,51 @@
   ],
   "prah_shody": 0.6,
   "_prah_popis": "Od jaké shody názvu (0–1) se nález považuje za jistý. Počítá se jako podíl společných slov ke kratšímu z obou názvů, po odstranění právní formy a diakritiky."
+ },
+ "dohledani_kontaktu": {
+  "_popis": "Vzory a podstranky, kterymi se na webu subjektu hleda kontakt. Kdyz se u nektereho webu nic nenajde, pridej sem podstranku nebo vzor - ne do kodu.",
+  "podstranky": [
+   "",
+   "/kontakt",
+   "/kontakty",
+   "/kontakt.html",
+   "/cs/kontakt",
+   "/contact",
+   "/contacts",
+   "/o-nas",
+   "/o-fondu",
+   "/tym",
+   "/pro-investory",
+   "/investori",
+   "/napiste-nam"
+  ],
+  "vzor_email": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+  "vzor_telefon_odkaz": "tel:([+0-9 ()._-]{9,})",
+  "vzor_telefon_text": "\\+42[01][ ]?\\d{3}[ ]?\\d{3}[ ]?\\d{3}",
+  "_obecne_popis": "Obecne schranky. Nejsou duvod kontakt zahodit - u fondu bez vlastniho tymu na webu je to jedina adresa, ktera existuje - ale osobni adresa ma prednost.",
+  "obecne_schranky": [
+   "info",
+   "office",
+   "kontakt",
+   "sekretariat",
+   "podatelna",
+   "mail",
+   "fondy",
+   "invest",
+   "recepce",
+   "sales",
+   "press",
+   "podpora",
+   "hello",
+   "dotazy",
+   "obchod",
+   "reception"
+  ],
+  "nezajimave_pripony": [
+   "@sentry.io",
+   "@example.com",
+   "@2x.png",
+   "@wordpress.org"
+  ]
  }
 }

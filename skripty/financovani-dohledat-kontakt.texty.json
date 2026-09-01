@@ -1,0 +1,6 @@
+{
+ "_popis": "České texty pro financovani-dohledat-kontakt.py. Skript samotný zůstává čistě ASCII — viz konvence projektu.",
+ "pole_kontakt": "Kontakt",
+ "kontakt_poznamka": "[{datum} doplněno] Kontakt převzat z webu subjektu. Jméno a pozici skript nedoplňuje — čte jen adresu a telefon, kdo za ní sedí, doplní člověk. Zdroj: {zdroj}",
+ "kontakt_citace": "Adresa {mail} je uvedená na webu subjektu a je na jeho vlastní doméně {dom}."
+}

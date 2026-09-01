@@ -153,19 +153,26 @@ s Claudem. K tobě dorazí až výsledek, do listu „5 Návrhy změn".
 
 Spustit je můžeš, nic tím nepokazíš. Jen z toho sám nic nevyčteš.
 
-### A dva nástroje, které naopak zapisují
+### A tři nástroje, které naopak zapisují
 
-Tyhle dva **do sešitu zapisují**, a proto je nepouštěj — pouští je Martina
+Tyhle tři **do sešitu zapisují**, a proto je nepouštěj — pouští je Martina
 a vždycky nejdřív nanečisto. Jsou tady popsané proto, abys věděl, odkud se
-v listu 1 berou IČO a země, které tam jeden den nebyly a druhý ano.
+v listech 1 a 2 berou údaje, které tam jeden den nebyly a druhý ano.
 
 | Nástroj | Co dělá |
 |---|---|
 | `financovani-dohledat-ico.py` | **dohledá chybějící IČO podle webu firmy.** Nehledá podle jména — na „PKF APOGEO" vrací ARES třicet firem a přiřadit špatnou by znamenalo, že se běh ptá rejstříku na cizí subjekt. Čte IČO z patičky, kontaktů a obchodních podmínek, ověří ho proti ARESu a zapíše, **jen když sedí i název** |
 | `doplnit-zeme.py` | **doplní zemi CZ** tam, kde subjekt zemi nemá, ale má osmimístné IČO, které ARES opravdu zná |
+| `financovani-dohledat-kontakt.py` | **dohledá e-mail a telefon** z webu subjektu do listu 2. Zapíše jen adresu, která je **na vlastní doméně subjektu** — adresa na doméně správce fondu je kontakt na někoho jiného, i když stojí na jeho stránce |
 
 **Pořadí je dané:** nejdřív IČO, pak země. Země se totiž odvozuje od IČO,
 takže obráceně by ji nedostaly zrovna ty řádky, kterým IČO právě přibylo.
+Kontakty na pořadí nezávisí.
+
+> **U kontaktů zůstává sloupec „Jméno a pozice" prázdný, a je to schválně.**
+> Skript čte jen e-mail a telefon — tedy to, co je na stránce černé na bílém.
+> Kdo za tou adresou sedí, doplní člověk. Tvářit se, že víme, s kým mluvíme,
+> by bylo horší než prázdno.
 
 Oba se drží stejného pravidla jako zbytek nástroje: **raději prázdné pole než
 cizí firma.** Kde se nedá doložit, nechají prázdno a napíšou to. Ke každé
