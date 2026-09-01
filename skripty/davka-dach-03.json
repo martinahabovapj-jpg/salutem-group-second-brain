@@ -1,0 +1,60 @@
+[
+ {
+  "skupina": "BALOISE",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Baloise Asset Management AG",
+  "web": "https://www.baloise-asset-management.com",
+  "typ": "Správce fondů (pojišťovací skupina)",
+  "verdikt": "zaradit",
+  "segment": "přímé investice do Core a Core plus nemovitostí ve Švýcarsku; těžiště bytové domy, komerčně užívané nemovitosti portfolio doplňují. Cílová skladba: nejméně 50 % bydlení, nejvýše 50 % komerce. Produkty: Baloise Swiss Property Fund (kotovaný na SIX, od 2018) a Baloise Anlagestiftung Real Estate Switzerland (BAPRECH, od března 2024).",
+  "aum": "Baloise Asset Management spravuje kolem 9 mld. CHF a patří mezi deset největších správců nemovitostních investic ve Švýcarsku. Tržní hodnota portfolia BSPF 295,3 mil. CHF.",
+  "gatekeeper": "v seznamu FINMA jako Fondsleitung, sídlo Basilej. Součást skupiny Helvetia Baloise. BAPRECH vznikl na poptávku penzijních kas po stabilních dlouhodobých nemovitostních investicích.",
+  "duvod": "NEJKONKRÉTNĚJŠÍ KUPUJÍCÍ Z CELÉ DÁVKY. Na rok 2026 má vypsanou emisi až za 159 018 440 CHF s deklarovaným záměrem koupit až třináct nemovitostí. To není obecné 'investujeme do nemovitostí', to je rozpočet a počet.",
+  "citace": "Erwirtschaftung eines stabilen laufenden Ertrages durch direkte Investitionen in Core-/Core plus- Immobilien in der Schweiz",
+  "zdroj": "https://www.baloise-asset-management.com/de/institutionelle-anleger/anlageloesungen/immobilienfonds.html"
+ },
+ {
+  "skupina": "ZURICHINVEST",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Zurich Invest AG",
+  "web": "https://www.zurichinvest.ch",
+  "typ": "Správce fondů (pojišťovací skupina)",
+  "verdikt": "zaradit",
+  "segment": "stojící nemovitosti s dlouhodobými a robustními výnosy v top lokalitách; fond ZIF Immobilien Direkt Schweiz drží 60 nemovitostí ve 13 kantonech, tři čtvrtiny v regionech Curych, Lausanne a Ženeva, 86 % bytové. Vedle toho Zürich Anlagestiftung se skupinami Immobilien Wohnen Schweiz a Immobilien Geschäft Schweiz a skupina Immobilien Global.",
+  "aum": "ZIF Immobilien Direkt Schweiz měl k 30. 6. 2025 celkové jmění 1,5 mld. CHF; za rok 2024/2025 výnos 7,73 %. Zurich Invest AG spravuje celkem kolem 45 mld. CHF.",
+  "gatekeeper": "stoprocentní dcera Zürich Versicherungs-Gesellschaft AG, založena 1998; v seznamu FINMA jako Fondsleitung. ZIFIDS je od 7. 11. 2023 kotovaný na SIX. Zürich Anlagestiftung vznikla 1999.",
+  "duvod": "Velký institucionální kupující s opakovanými navýšeními kapitálu. Kupuje ale výslovně STOJÍCÍ nemovitosti v top lokalitách - rozpracovaný projekt mu nabízet nemá smysl, hotovou budovu v Curychu nebo u Ženevského jezera ano.",
+  "citace": "Unsere erfahrenen Immobilienspezialisten investieren in bestehende Liegenschaften mit langfristigen und robusten Erträgen an Top-Lagen.",
+  "zdroj": "https://www.zurichinvest.ch/de/anlageloesungen/fuer-pensionskassen/investment-fonds-immobilien"
+ },
+ {
+  "skupina": "SWISSCANTO",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Swisscanto Fondsleitung AG",
+  "web": "https://www.swisscanto.com",
+  "typ": "Správce fondů (banka)",
+  "verdikt": "zaradit",
+  "segment": "obytné a komerční nemovitosti ve Švýcarsku. Swisscanto (CH) Real Estate Fund Responsible IFCA investuje od roku 1961 především do bydlení a drží nemovitosti nepřímo přes nemovitostní společnosti; Responsible Swiss Commercial míří na komerčně užívané nemovitosti.",
+  "aum": "tým 35 nemovitostních specialistů spravuje nemovitosti za dvanáct miliard franků, přes 450 nemovitostí ve Švýcarsku; nájemné IFCA vzrostlo v 1. pololetí 2026 na 43,4 mil. CHF a výpadek nájmů klesl na 1,3 %",
+  "gatekeeper": "součást Zürcher Kantonalbank, v seznamu FINMA jako Fondsleitung i Vertreter. První realitní fond spustili před více než šedesáti lety, v roce 1961.",
+  "duvod": "Jeden z největších správců nemovitostí v CH s pravidelnými kapitálovými navýšeními. Bankovní zázemí ZKB znamená stabilní přítok. Pro velký hotový objekt, bytový i komerční.",
+  "citace": "Die unter dem Dach unserer beiden Immobilienfonds und der Anlagegruppe bewirtschafteten Immobilien machen uns heute zu einer der grössten Immobilienverwalterinnen der Schweiz.",
+  "zdroj": "https://www.swisscanto.com/ch/de/institutionelle/swisscanto-fonds/immobilienanlagen/direkte-immobilienanlagen.html"
+ },
+ {
+  "skupina": "SWISSLIFE",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Swiss Life Asset Management AG",
+  "web": "",
+  "typ": "Správce fondů (pojišťovací skupina)",
+  "verdikt": "nevim",
+  "segment": "podle veřejných zdrojů přední institucionální nemovitostní investor s pobočkami po Evropě. Anlagestiftung Swiss Life má investiční skupiny Immobilien Schweiz ESG (cílový objem až 450 mil. CHF, emise vícenásobně přeupsaná), Geschäftsimmobilien Schweiz ESG (cíl 150 mil. CHF, přeupsáno) a Immobilien Schweiz Alter und Gesundheit ESG (až 200 mil. CHF).",
+  "duvod": "Profil sedí a emise jsou prokazatelně přeupisované, ale oba jejich weby (swisslife-am.com i ch.swisslife-am.com) vracejí HTTP 403 a doložit se to dá jen z odkazů na PDF a z třetích zdrojů. Bez primárního zdroje nezapisuji. Posoudit znovu - z celého seznamu FINMA je to jeden z největších potenciálních kupujících.",
+  "citace": "",
+  "zdroj": ""
+ }
+]
