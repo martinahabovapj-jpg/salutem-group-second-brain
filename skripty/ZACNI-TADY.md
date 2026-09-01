@@ -229,13 +229,17 @@ s datem a odkazem, a citace je v listu 4.
   Maklerski (PL). Nemají české ani slovenské IČO a jejich země nemá napojený
   registr. Běh to pokaždé napíše.
 - **Nekontroluje v rejstříku firmy bez IČO ani bez vyplněné země.** Web jim hlídá,
-  rejstřík ne — není se čeho ani koho zeptat. **K 1. 9. 2026 je aktivních firem
-  bez IČO 41 a řádků, které běh přeskočí kvůli chybějící zemi, 48.** Vyskočilo to
-  proto, že v srpnu a v září přibylo přes čtyřicet nových investorů ze seznamu ČNB
-  a zapisovací skript zemi ani IČO nevyplňuje — dohledávají se zvlášť. Běh je
-  vypíše jako „ZEMĚ NENÍ VYPLNĚNA" a jakmile někdo IČO a zemi doplní, začnou se
-  hlídat samy. Je to jediná díra, kterou jde zavřít bez programování — a dělá
-  se to těmi dvěma nástroji výš, ne ručním doplňováním do Excelu.
+  rejstřík ne — není se čeho ani koho zeptat. **Po dohledání 1. 9. 2026 je
+  aktivních firem bez IČO 33 a řádků, které běh přeskočí kvůli chybějící zemi, 25**
+  (před ním 41 a 48). Naskočilo to tím, jak v srpnu a v září přibylo přes čtyřicet
+  nových investorů ze seznamu ČNB — zapisovací skript zemi ani IČO nevyplňuje,
+  dohledávají se zvlášť těmi dvěma nástroji výš. Běh zbytek vypíše jako
+  „ZEMĚ NENÍ VYPLNĚNA" a jakmile IČO a země přibudou, začnou se hlídat samy.
+
+  Těch zbylých 25 už dohledávač nezavře: jsou to většinou **podfondy, jejichž web
+  IČO neuvádí**, a nabídnout jim IČO mateřského SICAVu by znamenalo ptát se
+  rejstříku na jiný subjekt, než který na řádku stojí. Tohle je práce pro člověka,
+  ne pro nástroj.
 - **Nesmaže vyřazené firmy.** Zůstávají v listu 1 se stavem VYŘAZEN i s důvodem,
   aby je za půl roku nikdo neprověřoval znovu.
 - **Nenajde všechno.** Dvě kombinace v obchodním rejstříku jsou tak široké, že je
