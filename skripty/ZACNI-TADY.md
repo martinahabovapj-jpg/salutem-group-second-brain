@@ -87,7 +87,8 @@ Před zápisem si sám udělá záložní kopii sešitu do složky `beh\zalohy\`
 
 ## Co znamenají jednotlivé listy
 
-Sešit má úvodní přehled a osm očíslovaných listů. Tři z nich jsou pro tebe, ostatní jsou data.
+Sešit má úvodní přehled a osm očíslovaných listů. Pracovní jsou pro tebe dva —
+list 5, kde rozhoduješ, a list 2, kde vybíráš z roletky. Zbytek jsou data.
 
 | List | Co v něm je | Sáháš na něj? |
 |---|---|---|
@@ -121,9 +122,11 @@ Když se posuzuje nová firma, jsou tři možné konce:
 - **zamítnout** → jde do listu **7**. Rozhodnuto natrvalo, znovu se nenabídne
 - **nevím** → jde do listu **8**. **Není to zamítnutí** — jen se nepodařilo nic doložit
 
-Ten třetí se snadno přehlédne, a je důležitý. Většina firem v listu 8 tam je
-proto, že jim **nefunguje web** nebo o sobě nic nezveřejňují. Mezi nimi jsou
-firmy, které do databáze nejspíš patří.
+Ten třetí se snadno přehlédne, a je důležitý. **K 1. 9. 2026 je v listu 8
+šestaosmdesát řádků** a naprostá většina jich pochází z posuzování investorů.
+Jsou to jednotlivé podfondy bez vlastní stránky — spravuje je za ně AVANT,
+AMISTA nebo DELTA a o sobě nezveřejňují nic než to, že existují. Mezi nimi
+jsou firmy, které do databáze nejspíš patří.
 
 U každé je vidět **proč se nerozhodlo**. Když si s některou poradíš, řekni
 Martině — a **řádek z listu 8 pak zmizí sám**, jakmile se firma zařadí nebo
@@ -179,6 +182,11 @@ Máš ho otevřený v Excelu. Zavři ho a spusť znovu. Nic se nezapsalo.
 Otevři Průzkumník, klikni na O: a zkus znovu. Nástroj to pozná a řekne ti to —
 **nesnaž se opravovat cesty v konfiguraci**, ty jsou v pořádku.
 
+> Stává se to opakovaně — v srpnu a v září 2026 se disk sám odpojil čtyřikrát
+> a pokaždé se po chvíli vrátil sám. Když se O: neobjeví ani po chvíli, není
+> to nic, co bys spravil ty: server prostě neběží. Zkus to za hodinu a když
+> to trvá, řekni Martině.
+
 **Něco vypadá divně.**
 Nástroj nikdy nemaže řádky. Cokoli udělal, je v listu 1 ve sloupci Poznámka
 s datem a odkazem, a citace je v listu 4.
@@ -190,14 +198,17 @@ s datem a odkazem, a citace je v listu 4.
 - **Nerozhoduje za tebe.** Typy financování, tickety, LTV a kontakty zapíše jen
   tehdy, když je v listu 5 označíš jako „přijmout".
 - **Nehlídá slovenskou insolvenci.** Českou ano, slovenskou ne — vede ji jiný
-  registr, který zatím není napojený. Týká se to 15 firem.
+  registr, který zatím není napojený. Týká se to 10 aktivních firem (1. 9. 2026).
 - **Nekontroluje dvě firmy vůbec** — Evropskou investiční banku (LU) a CVI Dom
   Maklerski (PL). Nemají české ani slovenské IČO a jejich země nemá napojený
   registr. Běh to pokaždé napíše.
-- **Nekontroluje v rejstříku firmy bez IČO.** Web jim hlídá, rejstřík ne — není
-  se čeho zeptat. Dnes je takových **26** a je to zároveň jediná díra, kterou
-  jde snadno zavřít: běh je vypíše zvlášť jako „ZEMĚ NENÍ VYPLNĚNA", a jakmile
-  někdo IČO doplní, začnou se hlídat samy.
+- **Nekontroluje v rejstříku firmy bez IČO ani bez vyplněné země.** Web jim hlídá,
+  rejstřík ne — není se čeho ani koho zeptat. **K 1. 9. 2026 je aktivních firem
+  bez IČO 41 a řádků, které běh přeskočí kvůli chybějící zemi, 48.** Vyskočilo to
+  proto, že v srpnu a v září přibylo přes čtyřicet nových investorů ze seznamu ČNB
+  a zapisovací skript zemi ani IČO nevyplňuje — dohledávají se zvlášť. Běh je
+  vypíše jako „ZEMĚ NENÍ VYPLNĚNA" a jakmile někdo IČO a zemi doplní, začnou se
+  hlídat samy. Je to jediná díra, kterou jde zavřít bez programování.
 - **Nesmaže vyřazené firmy.** Zůstávají v listu 1 se stavem VYŘAZEN i s důvodem,
   aby je za půl roku nikdo neprověřoval znovu.
 - **Nenajde všechno.** Dvě kombinace v obchodním rejstříku jsou tak široké, že je
