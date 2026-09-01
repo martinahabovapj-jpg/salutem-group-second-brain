@@ -1,0 +1,62 @@
+[
+ {
+  "skupina": "PATRIMONIUM",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Patrimonium Asset Management AG",
+  "web": "https://www.patrimonium.ch",
+  "typ": "Správce private markets",
+  "verdikt": "zaradit",
+  "segment": "REAL ESTATE DEBT: stretched senior, whole loans a mezzanine zajištěné nemovitostmi, pro zavedené dlužníky a zkušené sponzory. Geografické těžiště Německo, Benelux a Francie, důraz na stojící nemovitosti se stabilním nájemním cash flow. Vedle toho private credit pro střední firmy v Německu, Rakousku a Švýcarsku, private equity, infrastruktura a přímé realitní investice.",
+  "aum": "přes 5 mld. CHF, tým 70 lidí. Real estate debt: cílový výnos 8,5-9,0 % hrubé IRR, marže úvěru 3,0-5,0 %, LTV 55-75 %. V lednu 2026 spustili s Bayview platformu komerčního nemovitostního úvěrování za 500 mil. EUR. Od 2006 financovali přes 200 firem dluhovými nástroji za víc než 2 mld. EUR.",
+  "gatekeeper": "založena 2006, sídlo Echandens, kanceláře Curych a Baar (Zugerstrasse 74); v seznamu FINMA jako Fondsleitung. K 1. 7. 2026 přebírá Sustainable Real Estate AG (#3 v téhle databázi).",
+  "duvod": "Druhý nález stejné váhy jako Schroders. Poskytuje mezanin a whole loans na nemovitosti a sám říká, že vyplňuje mezeru po bankách po Basel II a III. Zveřejněné parametry (LTV 55-75 %, marže 3-5 %) jsou to, co se u ostatních musí vytáhnout hovorem. POZOR na překryv: přebírá Sustainable Real Estate, takže jde v databázi o dva propojené řádky.",
+  "citace": "stretched senior, whole loans and mezzanine debt backed by real estate assets",
+  "zdroj": "https://www.patrimonium.ch/investment-solutions/real-estate-debt"
+ },
+ {
+  "skupina": "SPS",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Swiss Prime Site Solutions AG",
+  "web": "https://spssolutions.swiss",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "fondové řízení, správa majetku a realitní služby; spravuje portfolia Swiss Prime Anlagestiftung a Fundamenta Group Investment Foundation. 630 spravovaných nemovitostí.",
+  "aum": "přes 14 mld. CHF Assets under Management (14,3 mld. na konci 2025) a vývojové projekty za 1,3 mld. CHF; provozní výnos 83,6 mil. CHF (2025)",
+  "gatekeeper": "skupinová firma kotované Swiss Prime Site AG se sídlem v Zugu; povolení Fondsleitung od FINMA. Portfolio Swiss Prime Anlagestiftung spravuje od roku 2017 včetně akvizic a prodejů.",
+  "duvod": "Vývojová pipeline za 1,3 mld. CHF je tu podstatnější než samotný objem - znamená, že firma projekty nejen drží, ale i staví a kupuje rozpracované. Podle vlastního popisu má na starosti i akvizice.",
+  "citace": "Wir sind der führende unabhängige Asset Manager für Immobilienlösungen in der Schweiz.",
+  "zdroj": "https://spssolutions.swiss/"
+ },
+ {
+  "skupina": "REALSTONE",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Realstone SA",
+  "web": "https://realstone.ch",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "švýcarské nemovitosti; vede dva kotované fondy (Realstone Swiss Property / RSF a Solvalor 61) a několik nekotovaných pro kvalifikované investory, mimo jiné Realstone Industrial Fund a Realstone Development Fund. Vedle toho Realstone Fondation de placement.",
+  "aum": "spravuje a zhodnocuje 5,2 mld. CHF nemovitostních aktiv ve Švýcarsku",
+  "gatekeeper": "činná od roku 1961, vznikla fúzí dvou lausannských fondových direkcí; povolení FINMA jako Fondsleitung. Kanceláře Lausanne, Curych a Ženeva; skupina pokrývá nemovitosti, finance i zprostředkování.",
+  "duvod": "Pět miliard ve švýcarských nemovitostech a mezi produkty má výslovně DEVELOPMENT FUND a INDUSTRIAL FUND. To je kombinace, která u ostatních chybí - většina drží hotové bytové portfolio. Těžiště v západním Švýcarsku.",
+  "citace": "Realstone gère et met en valeur CHF 5.2 milliards d'actifs immobiliers en Suisse",
+  "zdroj": "https://realstone.ch/entreprise/"
+ },
+ {
+  "skupina": "HELVETICA",
+  "ico": "",
+  "zeme": "CH",
+  "nazev": "Helvetica Asset Management AG",
+  "web": "https://www.helvetica.com",
+  "typ": "Správce nemovitostních fondů",
+  "verdikt": "zaradit",
+  "segment": "výhradně nemovitosti ve Švýcarsku, tři produkty: Helvetica Swiss Commercial Fund (komerční - kanceláře, obchod a maloobchod, těžiště v příměstských dobře dostupných lokalitách s růstem), Helvetica Swiss Living Fund (bydlení v příměstských růstových lokalitách) a Helvetica Life Investment Foundation pro penzijní kasy.",
+  "aum": "Helvetica Swiss Commercial Fund měl k 30. 6. 2024 v portfoliu 31 komerčních nemovitostí, 83 % v německém Švýcarsku, 34 % nájemného z kanceláří",
+  "gatekeeper": "nezávislý správce nemovitostí regulovaný FINMA, zapsán 22. 10. 2007, sídlo Curych, vedení 10 osob; v seznamu FINMA jako Fondsleitung. HSC je kotovaný na SIX.",
+  "duvod": "Zaměření na PŘÍMĚSTSKÉ růstové lokality je odlišuje od většiny seznamu, která cílí na Curych a Ženevské jezero. Pro projekt mimo prémiová centra je to relevantnější protistrana než UBS nebo Zurich Invest.",
+  "citace": "Our focus is exclusively on real estate.",
+  "zdroj": "https://www.helvetica.com/en/"
+ }
+]
