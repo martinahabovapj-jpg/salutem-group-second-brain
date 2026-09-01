@@ -323,6 +323,27 @@
       "nazev": "HIH Invest Real Estate GmbH",
       "duvod": "Velký a dlouho výhradně konzervativní správce, který si loni otevřel value-add divizi - to je změna apetitu, ne jen nová brožura. Pro projekt, který není hotový core, je to nová adresa. Čísla o objemu ale na webu chybí (načítají se jako nuly), takže je mám z třetích zdrojů.",
       "zdroj": "https://www.hih.de/en/"
+    },
+    "nazev:deka immobilien investment gmbh": {
+      "datum": "2026-09-01",
+      "verdikt": "zaradit",
+      "nazev": "Deka Immobilien Investment GmbH",
+      "duvod": "ZAVÍRÁ SE Z LISTU 8. Minule chyběl primární zdroj; stránka s investičními kritérii existuje, jen na deka-immobilien.de, ne na deka.de. Teď je doložené všechno podstatné včetně minimálního objemu 30 mil. EUR, stáří a WALT. Pro hotový kancelářský nebo logistický objekt jasná adresa, pro rozestavěný projekt ne - kritéria mluví o obsazenosti a nájemních smlouvách.",
+      "zdroj": "https://www.deka-immobilien.de/en/what-we-do/acquisitions-and-sales/our-investment-criteria/"
+    },
+    "nazev:uniqa real estate management gmbh": {
+      "datum": "2026-09-01",
+      "verdikt": "zaradit",
+      "nazev": "UNIQA Real Estate Management GmbH",
+      "duvod": "ZAVÍRÁ SE Z LISTU 8 A JE TO NEJLEPŠÍ RAKOUSKÁ ADRESA PRO ROZPRACOVANÝ PROJEKT. Jako jediný v celé databázi říká výslovně, že mu nezáleží na typu projektu - bere stojící investici, pozemek i development. K tomu má samostatný nákupní profil pro CEE, tedy pro region, kde stavíme. Pojišťovací kapitál znamená dlouhý horizont.",
+      "zdroj": "https://uniqa-rem.at/en/immobilieninvestment/"
+    },
+    "nazev:schweizerische mobiliar asset management ag": {
+      "datum": "2026-09-01",
+      "verdikt": "zaradit",
+      "nazev": "Schweizerische Mobiliar Asset Management AG",
+      "duvod": "ZAVÍRÁ SE Z LISTU 8. Minule vracela stránka produktu jen navigaci; přehledová stránka asset managementu obsah má. Třicet miliard pojišťovacího a penzijního kapitálu s bytovým těžištěm ve švýcarských městech. Že se stává emitentem fondů na SIX, napovídá čerstvý kapitál.",
+      "zdroj": "https://www.mobiliar.ch/ueber-uns/die-mobiliar/unternehmen-der-gruppe/asset-management"
     }
   }
 }
