@@ -87,11 +87,11 @@
       "zdroj": "https://stay.baloise.ch/de/baloise/immobilien.html"
     },
     "nazev:zurich invest ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "Zurich Invest AG",
-      "duvod": "Velký institucionální kupující s opakovanými navýšeními kapitálu. Kupuje ale výslovně STOJÍCÍ nemovitosti v top lokalitách - rozpracovaný projekt mu nabízet nemá smysl, hotovou budovu v Curychu nebo u Ženevského jezera ano.",
-      "zdroj": "https://www.zurichinvest.ch/de/anlageloesungen/fuer-pensionskassen/investment-fonds-immobilien"
+      "duvod": "DOPLNĚN KONTAKT PO LIDSKÉM ROZHODNUTÍ (Martina Habová, 2. 9. 2026). Automat nezapsal, protože institutionalclient@zurich.ch nesedí na zurichinvest.ch. Je to ale adresa pro INSTITUCIONÁLNÍ klienty, tedy přesně ta kategorie, do které z pohledu Zurich Invest patříme. Obecnější info-adresa by byla horší volba, i kdyby doménou sedla.",
+      "zdroj": "https://www.zurichinvest.ch"
     },
     "nazev:swisscanto fondsleitung ag": {
       "datum": "2026-09-01",
@@ -178,11 +178,11 @@
       "zdroj": "https://verit-invest.ch/en/company"
     },
     "nazev:société pour la gestion de placements collectifs gep sa": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "Société pour la gestion de placements collectifs GEP SA",
-      "duvod": "Ve statutu má výslovně STAVEBNÍ PROJEKTY, ne jen hotové domy - to je mezi švýcarskými bytovými fondy vzácné a znamená to, že se s nimi dá bavit o projektu před dokončením. Zázemí BCV, 1,9 mld. CHF, těžiště západní Švýcarsko.",
-      "zdroj": "https://fir.ch/"
+      "duvod": "DOPLNĚN KONTAKT PO LIDSKÉM ROZHODNUTÍ (Martina Habová, 2. 9. 2026). Automat nezapsal, protože mail@gep.ch nesedí na doménu fir.ch uvedenou v sešitu. Nesedí správně: fir.ch je doména FONDU, gep.ch je doména SPRÁVCE - a oslovuje se správce. Je to táž past jako u českých správců fondů, jen obráceně: tam se na doménu správce chybně párovalo, tady je doména správce ta hledaná.",
+      "zdroj": "https://fir.ch"
     },
     "nazev:pretium invest ag": {
       "datum": "2026-09-01",
@@ -220,11 +220,11 @@
       "zdroj": "https://empira-invest.com/en/what-we-do/our-investment-solutions"
     },
     "nazev:patrizia se": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "PATRIZIA SE",
-      "duvod": "Velikostí je to evropská liga a dluhové produkty má, ale z vlastního webu se dá doložit jen Infrastructure Debt - realitní mezanin uvádějí jen třetí zdroje. Zařazuji kvůli objemu a evropskému záběru, ale před oslovením si vyžádat, jestli realitní dluh dělají i pro střední projekty, nebo jen pro velké portfolio transakce.",
-      "zdroj": "https://www.patrizia.ag/en/our-company"
+      "duvod": "DOPLNĚN KONTAKT PO LIDSKÉM ROZHODNUTÍ (Martina Habová, 2. 9. 2026). Automat nezapsal kvůli rozdílu patrizia.ag versus patrizia.com. Rozdíl je historický, ne věcný - firma se přejmenovala z AG na SE a doménu posunula. Zapisuje se ústřední adresa i telefon; je to obecná info-adresa, tedy první krok, ne cílová osoba.",
+      "zdroj": "https://www.patrizia.ag"
     },
     "nazev:real i.s. ag gesellschaft für immobilien assetmanagement": {
       "datum": "2026-09-01",
@@ -332,11 +332,11 @@
       "zdroj": "https://www.deka-immobilien.de/en/what-we-do/acquisitions-and-sales/our-investment-criteria/"
     },
     "nazev:uniqa real estate management gmbh": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "UNIQA Real Estate Management GmbH",
-      "duvod": "ZAVÍRÁ SE Z LISTU 8 A JE TO NEJLEPŠÍ RAKOUSKÁ ADRESA PRO ROZPRACOVANÝ PROJEKT. Jako jediný v celé databázi říká výslovně, že mu nezáleží na typu projektu - bere stojící investici, pozemek i development. K tomu má samostatný nákupní profil pro CEE, tedy pro region, kde stavíme. Pojišťovací kapitál znamená dlouhý horizont.",
-      "zdroj": "https://uniqa-rem.at/en/immobilieninvestment/"
+      "duvod": "DOPLNĚN KONTAKT PO LIDSKÉM ROZHODNUTÍ (Martina Habová, 2. 9. 2026). Automat adresu našel, ale schválně nezapsal, protože real-estate@uniqa.at nesedí na doménu entity uniqa-rem.at. Je to ale mailbox nemovitostní divize skupiny UNIQA, tedy věcně správné dveře - u dcery pojišťovací skupiny je skupinová doména normální stav, ne chyba. Připomínka k profilu: tenhle subjekt jako jediný v databázi říká výslovně, že mu nezáleží na typu projektu, a má samostatný nákupní profil pro CEE.",
+      "zdroj": "https://uniqa-rem.at/kontakt"
     },
     "nazev:schweizerische mobiliar asset management ag": {
       "datum": "2026-09-01",
