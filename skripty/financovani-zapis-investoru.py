@@ -28,6 +28,7 @@ JSON pole zaznamu:
    "segment": "vlastni a rodinny kapital - nemovitosti",
    "aum": "",
    "gatekeeper": "",
+   "osoba": "",              # jmeno a pozice, kdyz je znama
    "telefon": "", "email": "",
    "duvod": "...",
    "citace": "doslovna veta ze stranky",
@@ -213,12 +214,13 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
                 ws6.cell(row=r6, column=i).value = m.norm(z.get("duvod"))
 
             # list 2 kontakty
-            if m.norm(z.get("telefon")) or m.norm(z.get("email")):
+            if (m.norm(z.get("telefon")) or m.norm(z.get("email"))
+                    or m.norm(z.get("osoba"))):
                 r2 = m.najdi_radek(sesit, "kontakty", sid)
                 if not r2:
                     r2 = m.zaloz_radek(sesit, "kontakty", sid, nazev)
                 ws2 = sesit.ws("kontakty")
-                for pole in ("telefon", "email"):
+                for pole in ("osoba", "telefon", "email"):
                     val = m.norm(z.get(pole))
                     i = sesit.sl("kontakty", pole)
                     if i and val:

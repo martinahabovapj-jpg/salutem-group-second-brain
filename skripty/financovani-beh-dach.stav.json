@@ -80,11 +80,11 @@
       "zdroj": "https://swisscreditpartners.com/about-us/"
     },
     "nazev:baloise asset management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "Baloise Asset Management AG",
-      "duvod": "NEJKONKRÉTNĚJŠÍ KUPUJÍCÍ Z CELÉ DÁVKY. Na rok 2026 má vypsanou emisi až za 159 018 440 CHF s deklarovaným záměrem koupit až třináct nemovitostí. To není obecné 'investujeme do nemovitostí', to je rozpočet a počet.",
-      "zdroj": "https://www.baloise-asset-management.com/de/institutionelle-anleger/anlageloesungen/immobilienfonds.html"
+      "duvod": "DOPLNĚN KONTAKT A OPRAVEN OBJEM. Automat na doméně baloise-asset-management.com nenašel nic, protože nemovitostní kontakty jsou na stay.baloise.ch. Zapisuje se zürišská kancelář jako největší. Zásadní je ale ta fúze: subjekt, který jsme včera vedli jako jednoho z mnoha švýcarských správců, je po 1. 7. 2026 jeden z největších pojišťovacích asset managerů v zemi (100+ mld. CHF). To mění jeho váhu v databázi.",
+      "zdroj": "https://stay.baloise.ch/de/baloise/immobilien.html"
     },
     "nazev:zurich invest ag": {
       "datum": "2026-09-01",
@@ -136,11 +136,11 @@
       "zdroj": "https://spssolutions.swiss/"
     },
     "nazev:realstone sa": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "Realstone SA",
-      "duvod": "Pět miliard ve švýcarských nemovitostech a mezi produkty má výslovně DEVELOPMENT FUND a INDUSTRIAL FUND. To je kombinace, která u ostatních chybí - většina drží hotové bytové portfolio. Těžiště v západním Švýcarsku.",
-      "zdroj": "https://realstone.ch/entreprise/"
+      "duvod": "DOPLNĚN KONTAKT. Ze všech osmnácti subjektů bez kontaktu má Realstone nejlepší strukturu: nejen že je koho volat, ale je vidět i KOHO PŘESNĚ - akviziční sourcing je oddělená role od transakcí. Automat to nenašel, protože firma e-maily nezveřejňuje vůbec a stránka nabízí u každého člověka formulář.",
+      "zdroj": "https://www.realstone.ch/en/contact"
     },
     "nazev:helvetica asset management ag": {
       "datum": "2026-09-01",
@@ -213,11 +213,11 @@
       "zdroj": "https://www.ersteimmobilien.at/de/immobilienankauf"
     },
     "nazev:empira group": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "Empira Group",
-      "duvod": "Popis jejich dluhového fondu je doslova naše zadání z druhé strany: mezanin pro developera, který kupuje pozemek nebo nemovitost a chce na ní stavět, v Německu, Rakousku i Švýcarsku. Z celé DACH rešerše nejpřesnější shoda profilu.",
-      "zdroj": "https://empira-invest.com/en"
+      "duvod": "DOPLNĚN KONTAKT A NALEZENA ROLE FINANCOVÁNÍ. Zapisuje se vídeňská kancelář, ne ústředí v Zugu - je blíž a mluví německy. Věcně důležitější je ale tohle: Empira jako JEDINÁ v celé DACH databázi nabízí preferred equity a mezanin výslovně developerům, a mezanin výslovně i na akvizici POZEMKU. To není investor, to je poskytovatel financování, a list 3 je zatím prázdný - roli financování ale tenhle skript neumí zapsat, viz zpráva. Druhá věc: #26 a #12 Partners Group jsou po akvizici jedna skupina, oslovovat obě zvlášť by nemělo smysl.",
+      "zdroj": "https://empira-invest.com/en/what-we-do/our-investment-solutions"
     },
     "nazev:patrizia se": {
       "datum": "2026-09-01",
@@ -269,11 +269,11 @@
       "zdroj": "https://commerzreal.com/de/real-estate/"
     },
     "nazev:immofinanz ag / cpi europe": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "IMMOFINANZ AG / CPI Europe",
-      "duvod": "NAKUPUJE PŘÍMO V ČESKU a řekne nahlas, co chce: plně pronajatý retail park s hrubým výnosem kolem 7,5 %. Cíl 140 lokalit ze současných 98 znamená zásobu poptávky na roky. Pozor na kontext: je součástí CPI Property Group, tedy skupiny s českým vlastníkem - před oslovením zvážit, jestli to není protistrana, se kterou se potkáváme i jinde.",
-      "zdroj": "https://cpi-europe.com/en/news/immofinanz-expands-crisis-resilient-stop-shop-portfolio-by-eight-locations-to-98-properties"
+      "duvod": "DOPLNĚN KONTAKT. Automat nenašel nic, protože /en/contact přesměrovává (301) na /en/imprint - kontakt je v tiráži, ne na kontaktní stránce. Vedlejším produktem je tvrdý doklad k včerejšímu podezření, že IMMOFINANZ, S IMMO a CPI jsou fakticky jeden subjekt: sedí to na adrese, na telefonu i na osobě.",
+      "zdroj": "http://cpi-europe.com/en/imprint"
     },
     "nazev:ubm development ag": {
       "datum": "2026-09-01",
@@ -311,18 +311,18 @@
       "zdroj": "https://www.aukera.ag/en/aukera-launches-real-estate-debt-fund-with-target-volume-of-eur-500-million"
     },
     "nazev:s immo ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "S IMMO AG",
-      "duvod": "NAKUPUJE V ČESKU V MILIARDOVÝCH OBJEMECH a výslovně počítá i s vlastním developmentem do portfolia. Ze všech DACH subjektů má nejblíž k českému trhu. Zásadní kontext: patří pod CPI Property Group, stejně jako IMMOFINANZ - tři řádky databáze (#33, tenhle a CPI) jsou fakticky jedna skupina a je potřeba to vědět, než se osloví každý zvlášť.",
-      "zdroj": "https://simmoag.at/en/home"
+      "duvod": "DOPLNĚN KONTAKT. Automat skončil na tom, že simmoag.at/en/contact.html je 404 - správná adresa je /en/contact-and-directions. Zapisuje se office@simmoag.at jako hlavní; investor@simmoag.at je v segmentu, protože pro nabídku projektu je investor relations spíš druhá volba než první.",
+      "zdroj": "https://simmoag.at/en/contact-and-directions"
     },
     "nazev:hih invest real estate gmbh": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-02",
       "verdikt": "zaradit",
       "nazev": "HIH Invest Real Estate GmbH",
-      "duvod": "Velký a dlouho výhradně konzervativní správce, který si loni otevřel value-add divizi - to je změna apetitu, ne jen nová brožura. Pro projekt, který není hotový core, je to nová adresa. Čísla o objemu ale na webu chybí (načítají se jako nuly), takže je mám z třetích zdrojů.",
-      "zdroj": "https://www.hih.de/en/"
+      "duvod": "DOPLNĚN KONTAKT A NALEZENA ŠPATNÁ DOMÉNA. Přesně včerejší vzorec: automat hlásil na webu žádný kontakt, protože v sešitu je hih.de - kontakty jsou na hih-invest.de. Doména v listu 1 je tedy špatná a skript ji nepřepíše, protože pole není prázdné; opravit ji musí člověk. Nález je přitom nejbohatší z celého dnešního běhu: šest jmenných adres a přímých linek u firmy, která má 22 mld. EUR a od září 2024 value-add divizi.",
+      "zdroj": "https://www.hih-invest.de/en/contact/"
     },
     "nazev:deka immobilien investment gmbh": {
       "datum": "2026-09-01",
@@ -344,6 +344,69 @@
       "nazev": "Schweizerische Mobiliar Asset Management AG",
       "duvod": "ZAVÍRÁ SE Z LISTU 8. Minule vracela stránka produktu jen navigaci; přehledová stránka asset managementu obsah má. Třicet miliard pojišťovacího a penzijního kapitálu s bytovým těžištěm ve švýcarských městech. Že se stává emitentem fondů na SIX, napovídá čerstvý kapitál.",
       "zdroj": "https://www.mobiliar.ch/ueber-uns/die-mobiliar/unternehmen-der-gruppe/asset-management"
+    },
+    "nazev:ardian investment switzerland ag": {
+      "datum": "2026-09-02",
+      "verdikt": "zaradit",
+      "nazev": "ARDIAN Investment Switzerland AG",
+      "duvod": "ZAŘAZUJE SE, ALE S VÝHRADOU K ZEMI. Ze zbývajících prioritních kandidátů FINMA je to jediný, kdo dělá nemovitostní SENIOR DLUH v evropském měřítku - to je profil pro list 3, ne pro list 6, a list 3 je v DACH databázi zatím prázdný. Výhrada: doložené cílové trhy jsou FR, DE, IT a ES. Není doloženo, že by financoval v Česku, a nedá se to z primárního zdroje ani vyvrátit. Stojí za oslovení právě proto, že půjčuje vedle bank, ne místo nich.",
+      "zdroj": "https://www.ardian.com/press-releases/ardian-launches-real-estate-debt-strategy"
+    },
+    "nazev:gsa switzerland ag": {
+      "datum": "2026-09-02",
+      "verdikt": "zaradit",
+      "nazev": "GSA Switzerland AG",
+      "duvod": "ZAŘAZUJE SE JAKO JEDINÝ SEGMENTOVÝ SPECIALISTA. Studentské bydlení je typ projektu, na který se v Česku staví a pro který jsme dosud v databázi neměli adresu. Osm miliard dolarů a 11 zemí je relevantní velikost. Co doloženo NENÍ: že působí v CEE nebo v Česku - zveřejněné odkazy míří na Řím, tedy jižní Evropu. Zapisuje se proto s webem skupiny, ne švýcarské entity, protože ta je administrativní schránka.",
+      "zdroj": "https://www.gsagroup.com/"
+    },
+    "nazev:asia green real estate ag": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "Asia Green Real Estate AG",
+      "duvod": "NEMOVITOSTNÍ, ALE V JINÉ ČÁSTI SVĚTA. Regulovaný správce od roku 2009, specializovaný na udržitelné nemovitostní investice V ASII - jmenovitě Singapur, Jakarta, Šanghaj, Bangkok a Sydney. Sídlo v Zurichu a licence FINMA jsou jediné, co ho k nám váže; kapitál alokuje do asijských metropolí. Pro projekt v Česku nebo DACH to není protistrana. Kdyby otevřel evropskou strategii, posoudit znovu - profil správce je jinak v pořádku.",
+      "zdroj": "https://www.asiagreen.com/"
+    },
+    "nazev:citibank (switzerland) ag": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "Citibank (Switzerland) AG",
+      "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER, tedy švýcarský právní zástupce zahraničních kolektivních investic. Zástupce kapitál nealokuje ani nekupuje - je to regulatorní funkce, nikoli investor. Do listu 6 tedy nepatří z podstaty, ne kvůli chybějícím informacím. Do prioritní fronty ho dostal jen předfiltr podle slov v názvu. Zamítá se strukturálně, na základě samotného seznamu regulátora.",
+      "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
+    },
+    "nazev:franklin templeton switzerland ag": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "Franklin Templeton Switzerland AG",
+      "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER - švýcarský právní zástupce zahraničních kolektivních investic, ne správce ani investor. Kapitál nealokuje. Zamítá se strukturálně podle seznamu regulátora, ne kvůli nedostatku informací. Pozor na záměnu: samotná skupina Franklin Templeton je velký správce, ale TAHLE švýcarská entita má licenci jen na zastupování.",
+      "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
+    },
+    "nazev:fundrock switzerland sa": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "FundRock Switzerland SA",
+      "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER - švýcarský právní zástupce zahraničních kolektivních investic. Poskytovatel fondových služeb, ne alokátor kapitálu. Do listu 6 nepatří z podstaty. Zamítá se strukturálně podle seznamu regulátora.",
+      "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
+    },
+    "nazev:waystone fund services (switzerland) sa": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "Waystone Fund Services (Switzerland) SA",
+      "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER - švýcarský právní zástupce zahraničních kolektivních investic. Poskytovatel fondových služeb, ne alokátor kapitálu. Zamítá se strukturálně podle seznamu regulátora.",
+      "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
+    },
+    "nazev:zeidler regulatory services (switzerland) ag": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "Zeidler Regulatory Services (Switzerland) AG",
+      "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER a už z názvu jde o regulatorní služby. Kapitál nealokuje, nemovitosti nekupuje. Zamítá se strukturálně podle seznamu regulátora.",
+      "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
+    },
+    "nazev:piguet galland & cie sa": {
+      "datum": "2026-09-02",
+      "verdikt": "zamitnout",
+      "nazev": "Piguet Galland & Cie SA",
+      "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER - švýcarský právní zástupce zahraničních kolektivních investic. Jde o privátní banku, ale její licence na tomhle seznamu je jen zastupovací; jako nemovitostní investor doložená není. Zamítá se strukturálně podle seznamu regulátora. Kdyby se ukázalo, že banka alokuje vlastní kapitál do nemovitostí, posoudit znovu jinou cestou než tímhle seznamem.",
+      "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
     }
   }
 }
