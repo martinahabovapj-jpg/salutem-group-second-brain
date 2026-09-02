@@ -9,10 +9,19 @@ preskakovat. Stopa presto zustava: kazda zapsana hodnota ma v listu 4
 doslovnou citaci a URL, a v poznamce subjektu je datum a zdroj.
 
 CO ZAPISUJE
-  list 1  radek subjektu: nazev, web, typ, stav, Role: investor = ANO
+  list 1  radek subjektu: nazev, web, typ, stav a ROLE podle pole "role"
   list 2  kontakt, kdyz je znamy
+  list 3  ticket a LTV, kdyz jde o roli financovani
   list 4  doslovna citace + URL ke kazdemu zaznamu
-  list 6  segment (ciho kapitalu se tyka), AUM, gatekeeper
+  list 6  segment (ciho kapitalu se tyka), AUM, gatekeeper - jen u investora
+
+DVE ROLE, NE JEDNA
+Skript vznikl pro investorskou stranu a dlouho umel jen ji: nastavoval vzdy
+"Role: investor = ANO". Tim se ale do listu 6 dostali i vericele - firmy,
+ktere na nemovitosti PUJCUJI a nekupuji je. U DACH to byl skoro kazdy treti
+zaznam a list 3 zustaval prazdny, i kdyz kandidati byli dolozeni.
+Pole "role" to rozdeluje. Vychozi zustava "investor", aby se starsi davky
+chovaly stejne jako dosud.
 
 CO NEZAPISUJE
 Verdikt 'nevim'. Ten se schvalne nikam neuklada - neni to zamitnuti a ma
@@ -25,6 +34,8 @@ JSON pole zaznamu:
    "web": "https://verdicapital.cz/",
    "typ": "Family office",
    "verdikt": "zaradit",       # zaradit | zamitnout | nevim
+   "role": "investor",         # investor (vychozi) | financovani | oboji
+   "ticket_od": "", "ticket_do": "", "ltv": "",   # jen pro roli financovani
    "segment": "vlastni a rodinny kapital - nemovitosti",
    "aum": "",
    "gatekeeper": "",
@@ -71,7 +82,7 @@ def kontext(cesta_cfg=None):
     return cfg, modul
 
 
-def zapis_davku(zaznamy, cfg, m, opravdu):
+def zapis_davku(zaznamy, cfg, m, opravdu, prepsat_role=False):
     sesit = m.Sesit(cfg)
     m.zajisti_list(sesit, "zamitnuto")
     stav = m.load_json(STATE, {"behy": [], "subjekty": {}, "log": []})
@@ -98,6 +109,8 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
     zapsano, doplneno, zamitnuto, preskoceno = [], [], [], []
     zmena_stavu = []
     slaba_shoda = []
+    do_financovani = []
+    snizeno, k_snizeni = [], []
     do7 = []
     do8 = []
 
@@ -108,6 +121,17 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
         web = m.norm(z.get("web"))
         citace = m.norm(z.get("citace"))
         zdroj = m.norm(z.get("zdroj"))
+
+        # Ktera role se zapisuje. Vychozi je "investor", aby se dosavadni
+        # davky chovaly presne jako dosud - tenhle skript vznikl pro
+        # investorskou stranu a osmnact davek s nim uz proslo.
+        role = (m.norm(z.get("role")) or "investor").lower()
+        if role not in ("investor", "financovani", "oboji"):
+            preskoceno.append((nazev, "neznama role '%s' - smi byt investor, "
+                                      "financovani nebo oboji" % role))
+            continue
+        chce_inv = role in ("investor", "oboji")
+        chce_fin = role in ("financovani", "oboji")
 
         if verdikt == "nevim":
             # nevim se NEZAHAZUJE - jde do listu 8, aby to clovek videl
@@ -161,6 +185,16 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
             radek, sid = None, None
 
         novy = radek is None
+        # Detekce snizeni role MUSI byt mimo "if opravdu" - jinak by nanecisto
+        # neukazalo prave to, co ma clovek posoudit, a prepinac --prepsat-role
+        # by se odklikaval naslepo.
+        if (not chce_inv) and not novy:
+            i_inv0 = sesit.sl("subjekty", "role_investor")
+            if i_inv0:
+                bylo_inv0 = m.norm(ws1.cell(row=radek, column=i_inv0).value)
+                if bylo_inv0 and bylo_inv0 != T["ne"]:
+                    (snizeno if prepsat_role else k_snizeni).append(
+                        (sid, nazev, bylo_inv0))
         if novy:
             nejvyssi += 1
             sid = int(nejvyssi)
@@ -182,36 +216,92 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
             hodnoty = {"ico": ico,
                        "web": web, "typ": m.norm(z.get("typ")),
                        "zeme": m.norm(z.get("zeme")),
-                       "stav": cfg["stavy"]["aktivni"], "overeno": m.DNES,
-                       "role_investor": T["ano"]}
+                       "stav": cfg["stavy"]["aktivni"], "overeno": m.DNES}
+            if chce_inv:
+                hodnoty["role_investor"] = T["ano"]
+            if chce_fin:
+                hodnoty["role_financovani"] = T["ano"]
             if ozivene:
                 zmena_stavu.append((sid, nazev, bylo_stav))
+            role_pole = ("role_investor", "role_financovani")
             for pole, val in hodnoty.items():
                 if not val:
                     continue
                 i = sesit.sl("subjekty", pole)
-                if i and (novy or pole in ("role_investor", "overeno")
+                if i and (novy or pole in role_pole or pole == "overeno"
                           or (pole == "stav" and ozivene)
                           or m.prazdne(ws1.cell(row=radek, column=i).value)):
                     ws1.cell(row=radek, column=i).value = val
+            # Snizeni role investora na NE je JEDINA zmena v tomhle skriptu,
+            # ktera odebira. Aukera, FAP ani LINUS kapital do nemovitosti
+            # nealokuji - jen na nemovitosti pujcuji, takze "investor = ANO"
+            # u nich rikalo neco jineho, nez je pravda. Prepsat to ale nejde
+            # mimochodem: bez --prepsat-role se rozdil jen vypise.
+            i_inv = sesit.sl("subjekty", "role_investor")
+            if (not chce_inv) and i_inv and not novy:
+                bylo_inv = m.norm(ws1.cell(row=radek, column=i_inv).value)
+                if bylo_inv and bylo_inv != T["ne"]:
+                    if prepsat_role:
+                        ws1.cell(row=radek, column=i_inv).value = T["ne"]
+                        m.pripis_poznamku(sesit, radek, T["role_investor_snizena"].format(
+                            datum=m.DNES, detail=m.norm(z.get("duvod"))))
+                        # Radek v listu 6 uz existuje z dob, kdy skript umel
+                        # jedinou roli. Smazat ho nemuzeme (nikdy_nemaze) a
+                        # nechat ho mlcet taky ne - investorsky list by dal
+                        # nabizel vericele. Orazitkuje se tedy poznamkou.
+                        r6s = m.najdi_radek(sesit, "investor", sid)
+                        i6 = sesit.sl("investor", "poznamka")
+                        if r6s and i6:
+                            ws6s = sesit.ws("investor")
+                            stara = m.norm(ws6s.cell(row=r6s, column=i6).value)
+                            znacka = T["role_investor_snizena"].format(
+                                datum=m.DNES, detail="")
+                            if znacka.strip() not in stara:
+                                ws6s.cell(row=r6s, column=i6).value = (
+                                    (znacka + " " + stara).strip())
+                        pass   # evidence uz probehla vyse, mimo "if opravdu"
+            co_role = T["role_financovani_co"] if chce_fin else T["role_investor_co"]
             m.pripis_poznamku(sesit, radek, T["aplikovano_pozn"].format(
-                datum=m.DNES, co=T["role_investor_co"], detail=citace, zdroj=zdroj))
+                datum=m.DNES, co=co_role, detail=citace, zdroj=zdroj))
 
-            # list 6
-            r6 = m.najdi_radek(sesit, "investor", sid)
-            if not r6:
-                r6 = m.zaloz_radek(sesit, "investor", sid, nazev)
-            ws6 = sesit.ws("investor")
-            for pole in ("segment", "aum", "gatekeeper"):
-                val = m.norm(z.get(pole))
-                if not val:
-                    continue
-                i = sesit.sl("investor", pole)
-                if i:
-                    ws6.cell(row=r6, column=i).value = val
-            i = sesit.sl("investor", "poznamka")
-            if i and m.norm(z.get("duvod")):
-                ws6.cell(row=r6, column=i).value = m.norm(z.get("duvod"))
+            # list 3 - role financovani. Ticket a LTV se zapisuji jen kdyz je
+            # subjekt zverejnil; prazdny sloupec je poctivejsi nez dohad, a
+            # tady zvlast: podle ticketu se rozhoduje, komu se projekt posle.
+            if chce_fin:
+                r3 = m.najdi_radek(sesit, "financovani", sid)
+                if not r3:
+                    r3 = m.zaloz_radek(sesit, "financovani", sid, nazev)
+                ws3 = sesit.ws("financovani")
+                for pole in ("senior", "whole_loan", "junior", "mezzanine",
+                             "bridge", "pref_equity", "development", "akvizicni",
+                             "refinancovani", "nav_lending", "financuje_spv",
+                             "financuje_fondy", "typy_aktiv", "posledni_aktivita",
+                             "ticket_od", "ticket_do", "ltv"):
+                    val = m.norm(z.get(pole))
+                    if not val:
+                        continue
+                    i = sesit.sl("financovani", pole)
+                    if i:
+                        ws3.cell(row=r3, column=i).value = val
+                m.zapis_zdroj(sesit, sid, nazev, T["role_financovani_co"], citace, zdroj)
+
+            # list 6 - jen kdyz je subjekt investor. U vericele by radek
+            # v listu 6 tvrdil, ze mu jde nabidnout podil na projektu.
+            if chce_inv:
+                r6 = m.najdi_radek(sesit, "investor", sid)
+                if not r6:
+                    r6 = m.zaloz_radek(sesit, "investor", sid, nazev)
+                ws6 = sesit.ws("investor")
+                for pole in ("segment", "aum", "gatekeeper"):
+                    val = m.norm(z.get(pole))
+                    if not val:
+                        continue
+                    i = sesit.sl("investor", pole)
+                    if i:
+                        ws6.cell(row=r6, column=i).value = val
+                i = sesit.sl("investor", "poznamka")
+                if i and m.norm(z.get("duvod")):
+                    ws6.cell(row=r6, column=i).value = m.norm(z.get("duvod"))
 
             # list 2 kontakty
             if (m.norm(z.get("telefon")) or m.norm(z.get("email"))
@@ -229,8 +319,12 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
                 if i:
                     ws2.cell(row=r2, column=i).value = m.DNES
 
-            m.zapis_zdroj(sesit, sid, nazev, T["role_investor_co"], citace, zdroj)
+            if chce_inv:
+                m.zapis_zdroj(sesit, sid, nazev, T["role_investor_co"], citace, zdroj)
 
+        if chce_fin:
+            do_financovani.append((sid, nazev, m.norm(z.get("ticket_od")),
+                                   m.norm(z.get("ticket_do")), m.norm(z.get("ltv"))))
         (zapsano if novy else doplneno).append((sid, nazev))
 
     pocet8 = 0
@@ -244,9 +338,36 @@ def zapis_davku(zaznamy, cfg, m, opravdu):
     vypis("  Novych subjektu v listu 1:      %d" % len(zapsano))
     for sid, nazev in zapsano:
         vypis("     #%s %s" % (sid, nazev[:50]))
-    vypis("  Role investor doplnena stavajicim: %d" % len(doplneno))
+    vypis("  Doplneno u stavajicich radku:    %d" % len(doplneno))
     for sid, nazev in doplneno:
         vypis("     #%s %s" % (sid, nazev[:50]))
+    if do_financovani:
+        vypis("  Role FINANCOVANI (list %s): %d"
+              % (sesit.listy["financovani"], len(do_financovani)))
+        for sid, nazev, tod, tdo, ltv in do_financovani:
+            param = ", ".join(x for x in ("ticket od %s" % tod if tod else "",
+                                          "ticket do %s" % tdo if tdo else "",
+                                          "LTV %s" % ltv if ltv else "") if x)
+            vypis("     #%-4s %-40s %s" % (sid, nazev[:40], param or "bez parametru"))
+        if not any(t or d or l for _, _, t, d, l in do_financovani):
+            vypis("     Ticket ani LTV nikdo z nich nezverejnil - sloupce zustavaji")
+            vypis("     prazdne. Dohadovat je nelze, podle ticketu se rozhoduje,")
+            vypis("     komu se projekt vubec posle.")
+    if k_snizeni:
+        vypis("")
+        vypis("  ROLE INVESTOR BY SE SNIZILA NA NE u %d subjektu - NEZAPSANO."
+              % len(k_snizeni))
+        vypis("  Pujcuji, ale kapital do nemovitosti nealokuji. Odebrat uz"
+              " zapsanou roli")
+        vypis("  ale nechci mimochodem - kdyz to tak ma byt, pridej"
+              " --prepsat-role:")
+        for sid, nazev, bylo in k_snizeni:
+            vypis("     #%-4s %-40s ma dnes investor='%s'" % (sid, nazev[:40], bylo))
+    if snizeno:
+        vypis("  Role investor snizena na NE u %d subjektu (na pokyn"
+              " --prepsat-role):" % len(snizeno))
+        for sid, nazev, bylo in snizeno:
+            vypis("     #%-4s %-40s bylo '%s'" % (sid, nazev[:40], bylo))
     if zmena_stavu:
         vypis("  Stav vracen na aktivni u %d subjektu (byly vyrazene pro roli"
               " financovani, pro roli investora se hledaji):" % len(zmena_stavu))
@@ -311,6 +432,9 @@ def main():
     ap.add_argument("--zapis", action="store_true", help="opravdu zapsat")
     ap.add_argument("--master", help="jina cesta k sesitu (test)")
     ap.add_argument("--config", help="jina konfigurace, tedy jina databaze (napr. financovani-beh-dach.config.json)")
+    ap.add_argument("--prepsat-role", action="store_true", dest="prepsat_role",
+                    help="smi snizit uz zapsanou roli investor na NE u subjektu, "
+                         "ktery jen pujcuje. Bez tohohle se rozdil jen vypise.")
     args = ap.parse_args()
 
     cfg, m = kontext(os.path.join(HERE, args.config) if args.config else None)
@@ -322,7 +446,7 @@ def main():
         vypis("POZOR: bezi proti jinemu sesitu - %s" % args.master)
     zaznamy = json.load(io.open(args.soubor, encoding="utf-8"))
     vypis("Davka: %d zaznamu" % len(zaznamy))
-    zapis_davku(zaznamy, cfg, m, args.zapis)
+    zapis_davku(zaznamy, cfg, m, args.zapis, args.prepsat_role)
 
 
 if __name__ == "__main__":
