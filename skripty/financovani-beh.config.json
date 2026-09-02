@@ -164,7 +164,8 @@
     "aum": "B",
     "gatekeeper": "B",
     "role_investor": "B",
-    "novy_investor": "B"
+    "novy_investor": "B",
+    "sk_zruseni": "B"
   },
   "prahy": {
     "_popis": "Pod prahem jde zmena do pruhu C (jen log). Drzi frontu pruhu B na 10-20 polozkach mesicne.",
@@ -200,6 +201,8 @@
     "isir": "https://isir.justice.cz:8443/isir_cuzk_ws/IsirWsCuzkService",
     "isir_dokumentace": "https://isir.justice.cz/isir/help/Popis_WS_2_v1_13.pdf",
     "rpo_sk_hledani": "https://api.statistics.sk/rpo/v1/search?identifier={ico}",
+    "rpo_sk_detail": "https://api.statistics.sk/rpo/v1/entity/{id}",
+    "_rpo_detail_poznamka": "Detail subjektu v RPO podle interniho id z vyhledani. Overeno 2. 9. 2026. Vyhledani (search) vraci jen jmena, adresy a datum vzniku — ZADNE pole o stavu, likvidaci ani konkurzu. Detail navic nese legalForms, statutoryBodies, stakeholders a hlavne otherLegalFacts, kam slovensky obchodni registr zapisuje konanie o zruseni spolecnosti, konkurz, restrukturalizaci i likvidaci — doslovnym textem vcetne spisove znacky a soudu. Tohle je nahrada za ru.justice.sk, ktery API nema: je to JSF/PrimeFaces aplikace, parametr ?query= v URL ignoruje a vysledky vydava jen na POST s ViewState.",
     "_rpo_poznamka": "Slovensky Register pravnickych osob. ARES je cesky - na SK ICO vraci 404, coz NENI doklad o zaniku. Slovenska insolvence (Register upadcov, ru.justice.sk) zatim neni pokryta."
   },
   "texty": {
@@ -277,7 +280,9 @@
     "roletka_kolega_chyba": "Sem patří jen jméno ze seznamu kolegů v konfiguraci.",
     "roletka_resi_titulek": "Kdo má subjekt na starosti",
     "roletka_resi_zprava": "Vyber z rozbalovacího seznamu kolegu, který má tuhle firmu na starosti. Prázdné = zatím nikdo. Konkrétní lidé se přiřazují v listu 2 Kontakty, sloupec „Kdo komunikuje“.",
-    "roletka_resi_chyba": "Sem patří jen jméno ze seznamu kolegů v konfiguraci."
+    "roletka_resi_chyba": "Sem patří jen jméno ze seznamu kolegů v konfiguraci.",
+    "pole_sk_konani": "Slovenský registr – právní skutečnost",
+    "sk_zruseni_navrh": "RPO u tohoto IČO vede právní skutečnost, která může znamenat zrušení, likvidaci nebo konkurz. Jediný zdroj, proto ke schválení člověkem."
   },
   "registry_podle_zeme": {
     "_popis": "Ktery registr se pta pro kterou zemi. Zeme, ktera tu neni, se v registrech nekontroluje vubec a beh to nahlasi jako nepokryte - mlceni by cetlo jako 'zkontrolovano'.",
@@ -411,6 +416,10 @@
     "novy_investor": {
       "list": "subjekty",
       "sloupec": "novy_investor"
+    },
+    "sk_zruseni": {
+      "list": "subjekty",
+      "sloupec": "Stav"
     }
   },
   "objevy_investor": {
@@ -558,5 +567,32 @@
       "@2x.png",
       "@wordpress.org"
     ]
+  },
+  "sk_konania": {
+    "_popis": "Screening pole otherLegalFacts z detailu RPO. Klicova slova jsou TADY, ne v kodu — kdyz bude registr formulovat jinak, prida se slovo sem a beh je zacne hlasit.",
+    "_pruh_popis": "Nalez jde do pruhu B, tedy ke schvaleni clovekem, ne do A. Duvod neni v obsahu nalezu, ale v tom ODKUD prisel: u ceske insolvence plati pojistka insolvence_vyzaduje_ares_i_isir, tedy dva nezavisle registry. Pro Slovensko druhy zdroj nemame — RPO zrcadli obchodni registr a nic dalsiho. Jeden zdroj nesmi sam prepnout Stav.",
+    "_mezera": "RPO zrcadli OBCHODNI registr, ktery za skutecnosti zaostava. Cerstve vyhlaseny konkurz byva driv v Obchodnom vestniku (obchodnyvestnik.justice.gov.sk) a v REPLIK. Tohle napojeni tedy NENI uplne — zachyti zapsany stav, ne dnesni udalost.",
+    "klice": [
+      "konanie o zrušení",
+      "zrušení spoločnosti",
+      "zrušenie spoločnosti",
+      "konkurz",
+      "reštrukturalizác",
+      "restrukturalizác",
+      "do likvidácie",
+      "v likvidácii",
+      "likvidátor",
+      "nútená správa",
+      "dozorná správa",
+      "vyhlásenie konkurzu"
+    ],
+    "vylouceni": [
+      "zánik funkcie",
+      "zlúčeni",
+      "zlúčenie",
+      "zrušenie funkcie",
+      "odvolanie z funkcie"
+    ],
+    "_vylouceni_popis": "Vety, ktere klicove slovo obsahuji, ale o firmu nejde. Overeno 2. 9. 2026: u IAD Investments je v otherLegalFacts dvacet let stare ZLUCENI PODILOVYCH FONDU a u GENERAL FACTORING 'zanik funkcie clena dozornej rady'. Bez tohohle by beh hlasil oba kazdy mesic."
   }
 }

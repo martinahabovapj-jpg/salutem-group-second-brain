@@ -231,9 +231,43 @@ class Sit(object):
         return r.getcode(), r.read()
 
     # ---- faze 1c: RPO (Slovensko)
-    def rpo(self, ico):
+    def sk_fakty(self, rpo_id, cfg):
+        """Prohleda otherLegalFacts v detailu RPO. Vraci (doslovny_text, odkaz).
+
+        Vyhledani v RPO o stavu firmy nerika NIC - zadne pole o likvidaci,
+        konkurzu ani zruseni tam neni. Detail subjektu ale nese
+        otherLegalFacts, kam slovensky obchodni registr zapisuje "konanie
+        o zruseni spolocnosti", konkurz i likvidaci, a to doslovne vcetne
+        spisove znacky a soudu. To je lepsi doklad nez priznak - proto se
+        vraci cela veta a ta jde do citace.
+        """
+        sk = cfg.get("sk_konania") or {}
+        klice = [k.lower() for k in sk.get("klice", [])]
+        vylouceni = [v.lower() for v in sk.get("vylouceni", [])]
+        if not klice or not rpo_id or not self.ep.get("rpo_sk_detail"):
+            return None, None
+        url = self.ep["rpo_sk_detail"].format(id=rpo_id)
+        time.sleep(self.pauza)
+        try:
+            kod, telo = self._get(url)
+            d = json.loads(telo.decode("utf-8"))
+        except Exception:
+            return None, None
+        for f in (d.get("otherLegalFacts") or []):
+            veta = norm(f.get("value"))
+            n = veta.lower()
+            if not any(k in n for k in klice):
+                continue
+            if any(v in n for v in vylouceni):
+                continue
+            return veta, url
+        return None, None
+
+    def rpo(self, ico, cfg=None):
         """Slovensky protejsek ARESu. Vraci stejny tvar, aby se s tim dalo
-        pracovat stejne - jen bez priznaku insolvence, ten SK registr nenese."""
+        pracovat stejne. Insolvencni priznak SK registr nenese, ale od
+        2. 9. 2026 se misto nej screenuje otherLegalFacts z detailu - viz
+        sk_fakty a sekce sk_konania v konfiguraci."""
         time.sleep(self.pauza)
         url = self.ep["rpo_sk_hledani"].format(ico=ico)
         try:
@@ -251,6 +285,9 @@ class Sit(object):
         adresy = r.get("addresses") or [{}]
         a = adresy[0]
         obec = (a.get("municipality") or {}).get("value", "")
+        sk_fakt, sk_odkaz = (None, None)
+        if cfg is not None:
+            sk_fakt, sk_odkaz = self.sk_fakty(r.get("id"), cfg)
         return {
             "ok": True,
             "nazev": norm(jmena[0].get("value")),
@@ -259,7 +296,12 @@ class Sit(object):
                                                     obec] if x)),
             "zanik": r.get("termination"),
             "vr": None,
-            "ir": None,   # slovenska insolvence je jiny registr, zatim nepokryta
+            # ir zustava None schvalne: ceska vetev na nem stavi pojistku
+            # "musi sedet v ARESu i v ISIRu" a slovensky nalez druhy zdroj
+            # nema. Chodi proto vlastni cestou, do pruhu B.
+            "ir": None,
+            "sk_fakt": sk_fakt,
+            "sk_odkaz": sk_odkaz,
         }
 
     # ---- faze 1a: ARES
@@ -494,7 +536,7 @@ def projdi(sesit, sit, stav, cfg, limit=None, jen_registry=False):
             continue
 
         if registr == "rpo":
-            a = sit.rpo(ico)
+            a = sit.rpo(ico, cfg)
             odkaz = cfg["endpointy"]["rpo_sk_hledani"].format(ico=ico)
             chybi_text = T["rpo_nesedi"]
         else:
@@ -524,6 +566,13 @@ def projdi(sesit, sit, stav, cfg, limit=None, jen_registry=False):
                                     norm(d.get("stav")), stavy["likvidace"],
                                     odkaz,
                                     citace=a["nazev"]))
+
+        # slovenska pravni skutecnost: zruseni, likvidace nebo konkurz
+        if a.get("sk_fakt"):
+            navrhy.append(navrh(sid, nazev, "sk_zruseni", "Stav",
+                                norm(d.get("stav")), stavy["likvidace"],
+                                a.get("sk_odkaz") or odkaz,
+                                citace=a["sk_fakt"]))
 
         # zmena nazvu a sidla se hlasi jen proti minulemu behu, ne proti nasemu
         # oznaceni v sesitu - nase nazvy nesou dodatky ("Podfond Loan") a
