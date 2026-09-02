@@ -21,9 +21,22 @@ TRI VYSLEDKY
 Nikdy se nehada. Radeji prazdne ICO nez cizi firma - tahle chyba v projektu
 uz dvakrat nastala (radek #143 dostal ICO fondu, radek #26 roli cizi firmy).
 
+A CO S NEJISTYMI
+Dlouho nic - nastroj je jen vypsal a zapsat je nebylo cim, takze se vrsily
+(k 1. 9. 2026 dvacet pet radku). Od 2. 9. 2026 je na to --prirad ID=ICO:
+vedome rozhodnuti cloveka, ktere prepise i neprazdne ICO. Pojistka zustava,
+jen se presouva - ICO musi ARES znat a do listu 4 se zapise nazev, ktery
+pod tim cislem vede, aby bylo videt CO se priradilo.
+
+POZOR NA PODFONDY. Radek pojmenovany "podfond" ma dostat ICO PODFONDU, ne
+matecneho SICAVu. ARES podfondy vede pod pravni formou 541 a zna je - to, ze
+je CNB oznacuje jako "nezapsany v OR", plati pro obchodni rejstrik, ne pro
+ARES. Dat radku ICO matky znamena ptat se rejstriku na jiny subjekt.
+
 POUZITI
-    python financovani-dohledat-ico.py            # jen vypise, co nasel
-    python financovani-dohledat-ico.py --zapis    # zapise jen JISTE nalezy
+    python financovani-dohledat-ico.py                      # jen vypise
+    python financovani-dohledat-ico.py --zapis               # zapise JISTE
+    python financovani-dohledat-ico.py --prirad 155=26139871 # rozhodl clovek
 """
 
 import argparse
@@ -143,6 +156,82 @@ def ares_detail(ico, ua, ctx):
         return None
 
 
+def prirad(sesit, m, cfg, zadani, prevzit, ua, ctx, opravdu):
+    """Vedome prirazeni ICO clovekem.
+
+    Dohledavac umi rozhodnout jen tam, kde nazev z ARESu sedi na nazev v
+    databazi. Kdyz nesedi, oznaci nalez za NEJISTY, vypise ho - a tim to
+    skonci. Zapsat ho nebylo cim, takze nejiste nalezy se jen vrsily
+    (k 1. 9. 2026 dvacet pet radku). Tohle je ta chybejici cesta.
+
+    Proti hadani chrani dve veci: ICO musi ARES opravdu znat, a k zapisu
+    se vzdy pripoji nazev, ktery ARES pod tim cislem vede - takze v listu 4
+    je cerne na belem, CO se to priradilo, ne jen ze se neco priradilo.
+    """
+    ws = sesit.ws("subjekty")
+    i_ico = sesit.sl("subjekty", "ico")
+    podle_id = {}
+    for r, d in sesit.radky("subjekty"):
+        podle_id[norm(d.get("id"))] = (r, d)
+
+    ukoly = []
+    for kus in zadani:
+        if "=" not in kus:
+            raise SystemExit("--prirad se pise jako ID=ICO, dostal jsem: %s" % kus)
+        sid, ico = (x.strip() for x in kus.split("=", 1))
+        if sid not in podle_id:
+            raise SystemExit("Subjekt #%s v listu 1 neni." % sid)
+        if not re.fullmatch(r"\d{6,10}", ico):
+            raise SystemExit("'%s' nevypada jako ICO." % ico)
+        radek, d = podle_id[sid]
+        det = ares_detail(ico, ua, ctx)
+        if not det:
+            # Radeji nic nez cizi firma. Kdyz ARES cislo nezna, neni z ceho
+            # doplnit nazev do citace - a citace bez nazvu je jen cislo.
+            raise SystemExit(
+                "ARES nezna ICO %s (subjekt #%s). Nic nezapsano.\n"
+                "U slovenskych subjektu je to normalni - ARES je cesky rejstrik." % (ico, sid))
+        ares_nazev = norm(det.get("obchodniJmeno"))
+        ukoly.append((radek, sid, norm(d.get("nazev")), norm(d.get("ico")), ico, ares_nazev,
+                      podobnost(norm(d.get("nazev")), ares_nazev)))
+
+    vypis("")
+    for radek, sid, nazev, bylo, ico, ares_nazev, sh in ukoly:
+        vypis("  #%-5s %s" % (sid, nazev))
+        vypis("        bylo: %s" % (bylo or "(prazdne)"))
+        vypis("        bude: %s   ARES: %s  (shoda nazvu %.0f%%)"
+              % (ico, ares_nazev, sh * 100))
+        if sh < cfg["dohledani_ica"]["prah_shody"]:
+            vypis("        POZOR: nazev nesedi. Prirazuje se na vedome rozhodnuti cloveka.")
+        if sid in prevzit:
+            vypis("        NAZEV se prepise na: %s" % ares_nazev)
+    vypis("")
+    if not opravdu:
+        vypis("NANECISTO - nic nezapsano. Ostry zapis: --zapis")
+        return
+    i_nazev = sesit.sl("subjekty", "nazev")
+    for radek, sid, nazev, bylo, ico, ares_nazev, sh in ukoly:
+        ws.cell(row=radek, column=i_ico).value = ico
+        if sid in prevzit and i_nazev and ares_nazev:
+            # Novy nazev se bere z rejstriku, ne z toho, co kdo napsal do
+            # prikazu. Radek, ktery nesl znacku nebo jmeno skupiny, tim
+            # dostane jmeno pravnicke osoby - a nazev pak sedi na ICO,
+            # takze mesicni beh nehlasi "ico_nesedi" na vlastni zapis.
+            ws.cell(row=radek, column=i_nazev).value = ares_nazev
+            m.pripis_poznamku(sesit, radek, T["nazev_prevzat"].format(
+                datum=m.DNES, bylo=nazev, bude=ares_nazev, ico=ico))
+        m.pripis_poznamku(sesit, radek, T["ico_prirazeno"].format(
+            datum=m.DNES, ico=ico, nazev=ares_nazev, bylo=bylo or "prazdne"))
+        # Vlastni text citace: ico_citace rika "uvedene na webu subjektu",
+        # coz tady neplati - zdrojem je ARES, ne web. Falesna provenience
+        # v listu 4 je horsi nez zadna.
+        m.zapis_zdroj(sesit, sid, nazev, T["pole_ico"],
+                      T["ico_citace_prirazeno"].format(ico=ico, nazev=ares_nazev),
+                      cfg["endpointy"]["ares"].format(ico=ico))
+    sesit.uloz(os.path.join(HERE, cfg["zalohy"]))
+    vypis("Prirazeno ICO u %d subjektu." % len(ukoly))
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -153,6 +242,14 @@ def main():
                     help="ID subjektu, ktere se nemaji zapsat, oddelena carkou")
     ap.add_argument("--prah", type=float,
                     help="od jake shody nazvu se nalez povazuje za jisty (0-1)")
+    ap.add_argument("--prirad", action="append", default=[], metavar="ID=ICO",
+                    help="vedome prirazeni ICO clovekem, napr. --prirad 155=26139871. "
+                         "Prepise i neprazdne ICO. Bezi samostatne, bez prochazeni webu.")
+    ap.add_argument("--prevzit-nazev", action="append", default=[], metavar="ID",
+                    dest="prevzit_nazev",
+                    help="k --prirad: prepsat i Nazev na ten, ktery ARES pod prirazenym "
+                         "ICO vede. Pouzij, kdyz radek dosud nesl znacku nebo jmeno skupiny "
+                         "misto pravnicke osoby.")
     args = ap.parse_args()
 
     import importlib.util
@@ -176,6 +273,10 @@ def main():
         ctx = ssl.create_default_context()
     ua = cfg["sit"]["user_agent"]
     socket.setdefaulttimeout(cfg["sit"]["timeout_s"])
+
+    if args.prirad:
+        prirad(sesit, m, cfg, args.prirad, set(args.prevzit_nazev), ua, ctx, args.zapis)
+        return
 
     vyrazen = cfg["stavy"]["vyrazen"]
     chybi = [(r, d) for r, d in sesit.radky("subjekty")
