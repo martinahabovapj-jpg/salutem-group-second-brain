@@ -68,6 +68,25 @@ Sloupec je **schválně prázdný** — dokud v něm nic nevybereš, nic se nest
 > **Bez odkazu a citace se návrh vůbec neobjeví.** Když nástroj neumí doložit,
 > odkud to má, návrh nevytvoří. Takže u každého řádku si můžeš ověřit, odkud to je.
 
+#### Jeden druh návrhu je slovensky a je to tak správně
+
+Od 2. 9. 2026 se ti ve sloupci **Druh** může objevit `sk_zruseni` a v citaci
+slovenská věta, třeba:
+
+> *„Dňa 19.12.2025 sa začalo konanie o zrušení spoločnosti pred Mestským súdom
+> Bratislava III, č. k. 25CbR/551/2025."*
+
+Je to **doslovný zápis ze slovenského obchodního registru** — konání o zrušení,
+konkurz, restrukturalizace nebo likvidace. Necháváme ho v původním jazyce
+schválně: je to citace, ne popis, a přeložená citace už není doklad. Součástí
+je spisová značka a soud, takže se to dá ověřit.
+
+**Proč tenhle druh čeká na tebe, i když česká insolvence ne.** U českých firem
+se insolvence potvrzuje ve dvou nezávislých registrech (ARES i ISIR) — proto
+si ji nástroj zapíše sám. Pro Slovensko druhý registr nemáme. Jeden zdroj
+nesmí sám přepnout Stav, takže to rozhodneš ty. Klikni na odkaz, přečti větu
+a vyber.
+
 ### Krok 3 — zapiš
 
 Dvojklik na **`beh\ZAPSAT.cmd`**. Zeptá se, jestli to myslíš vážně, a pak:
@@ -162,9 +181,9 @@ s Claudem. K tobě dorazí až výsledek, do listu „5 Návrhy změn".
 
 Spustit je můžeš, nic tím nepokazíš. Jen z toho sám nic nevyčteš.
 
-### A tři nástroje, které naopak zapisují
+### A čtyři nástroje, které naopak zapisují
 
-Tyhle tři **do sešitu zapisují**, a proto je nepouštěj — pouští je Martina
+Tyhle čtyři **do sešitu zapisují**, a proto je nepouštěj — pouští je Martina
 a vždycky nejdřív nanečisto. Jsou tady popsané proto, abys věděl, odkud se
 v listech 1 a 2 berou údaje, které tam jeden den nebyly a druhý ano.
 
@@ -173,10 +192,21 @@ v listech 1 a 2 berou údaje, které tam jeden den nebyly a druhý ano.
 | `financovani-dohledat-ico.py` | **dohledá chybějící IČO podle webu firmy.** Nehledá podle jména — na „PKF APOGEO" vrací ARES třicet firem a přiřadit špatnou by znamenalo, že se běh ptá rejstříku na cizí subjekt. Čte IČO z patičky, kontaktů a obchodních podmínek, ověří ho proti ARESu a zapíše, **jen když sedí i název** |
 | `doplnit-zeme.py` | **doplní zemi CZ** tam, kde subjekt zemi nemá, ale má osmimístné IČO, které ARES opravdu zná |
 | `financovani-dohledat-kontakt.py` | **dohledá e-mail a telefon** z webu subjektu do listu 2. Zapíše jen adresu, která je **na vlastní doméně subjektu** — adresa na doméně správce fondu je kontakt na někoho jiného, i když stojí na jeho stránce |
+| `financovani-slouc.py` | **sloučí dva řádky, které jsou tatáž firma.** Spouští se na jméno, na dvě konkrétní ID — nikdy ne hromadně |
 
 **Pořadí je dané:** nejdřív IČO, pak země. Země se totiž odvozuje od IČO,
 takže obráceně by ji nedostaly zrovna ty řádky, kterým IČO právě přibylo.
 Kontakty na pořadí nezávisí.
+
+> **Proč vůbec existuje slučování, když nástroj nikdy nemaže.** Ta pojistka
+> platí a platí dobře: automat, který smí mazat řádky, je automat, po kterém
+> se jednou ráno něco nenajde. Když ale do databáze spadne tatáž firma dvakrát
+> — a stalo se to, když #80 a #192 Trigea měly stejné číslice v IČO posunuté
+> o jednu pozici — ochrana proti slabé shodě to jen **nahlásí a nechá ležet**.
+> Sloučení je proto vědomá jednorázová operace, ne úklid, který proběhne
+> mimochodem. U sloupců, kde se hodnoty na obou řádcích liší, skript
+> **nezapíše nic** a rozdíl vypíše: rozhodnout, které IČO nebo jaký typ je
+> správný, musí člověk.
 
 > **U kontaktů zůstává sloupec „Jméno a pozice" prázdný, a je to schválně.**
 > Skript čte jen e-mail a telefon — tedy to, co je na stránce černé na bílém.
