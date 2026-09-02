@@ -1,0 +1,518 @@
+[
+ [
+  "Stone & Belter",
+  "https://stoneandbelter.cz",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Haberl Wealth Management",
+  "https://haberl.sk",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Adamovy finance",
+  "https://adamovyfinance.cz",
+  "URLError",
+  ""
+ ],
+ [
+  "ADC Systems",
+  "https://adcsystems.cz",
+  "URLError",
+  ""
+ ],
+ [
+  "ByrFin Group",
+  "https://finance.byrfin.cz/",
+  "URLError",
+  ""
+ ],
+ [
+  "Carduus Asset Management",
+  "https://carduus.cz",
+  "URLError",
+  ""
+ ],
+ [
+  "Deloitte",
+  "https://deloitte.cz",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Deluvis",
+  "https://deluvis.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Dentons",
+  "https://dentons.com",
+  "HTTP 403",
+  ""
+ ],
+ [
+  "Emineo Partners",
+  "https://emineopartners.sk",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "First Wealth Management",
+  "https://fwm.cz",
+  "URLError",
+  ""
+ ],
+ [
+  "Honoris Group",
+  "https://honoris.cz",
+  "HTTP 200",
+  "24937 B"
+ ],
+ [
+  "Jan Liška & Partners",
+  "https://janliska.cz",
+  "HTTP 200",
+  "5100 B"
+ ],
+ [
+  "Libenský FO",
+  "https://libenskyfo.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Kunz a partneři",
+  "https://kunz-partneri.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "JPL Servis",
+  "https://jplservis.cz",
+  "URLError",
+  ""
+ ],
+ [
+  "Investhy",
+  "https://investhy.cz",
+  "HTTP 200",
+  "1592 B"
+ ],
+ [
+  "Gutmann Bank",
+  "https://www.gutmann.at",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Oberbank AG",
+  "https://www.oberbank.cz",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "PPF banka",
+  "https://www.ppfbanka.cz",
+  "HTTP 200",
+  "29043 B"
+ ],
+ [
+  "Pannonia Group",
+  "https://pannoniagroup.com",
+  "HTTP 200",
+  "45433 B"
+ ],
+ [
+  "PineTree Private",
+  "https://pinetree.cz",
+  "HTTP 200",
+  "1419 B"
+ ],
+ [
+  "PP Wealth Management",
+  "https://ppwealth.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "P&J Capital",
+  "https://pj-capital.cz",
+  "HTTP 200",
+  "47613 B"
+ ],
+ [
+  "R2G",
+  "https://r2g.cz",
+  "HTTP 200",
+  "7423 B"
+ ],
+ [
+  "RSBC Wealth",
+  "https://rsbc.cz",
+  "HTTP 200",
+  "211 B"
+ ],
+ [
+  "Prague Wealth",
+  "https://praguewealth.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Star Capital Finance",
+  "https://starcapital.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Save and Capital",
+  "https://saveandcapital.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Reventia",
+  "https://reventia.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Žitný & partneři",
+  "https://zitny.cz",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Triangle FO",
+  "https://trianglefo.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "Wealth Effect Management",
+  "https://wem.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "VASSET",
+  "https://vasset.cz",
+  "URLError",
+  ""
+ ],
+ [
+  "Swiss Life Select",
+  "https://www.swisslifeselect.cz",
+  "HTTP 403",
+  ""
+ ],
+ [
+  "UniCredit Bank",
+  "https://www.unicreditbank.cz",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Tomáš Geissler",
+  "https://geissler.cz",
+  "DNS NEEXISTUJE",
+  ""
+ ],
+ [
+  "365.bank",
+  "https://365.bank",
+  "HTTP 200",
+  "4198 B"
+ ],
+ [
+  "Velvet SICAV a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "ČNFE SICAV a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "SCF Investment Partners SICAV, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "UNIQA Realitní fond",
+  "https://www.uniqa.cz",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "MINT (MINT I. rezidenční podfond SICAV)",
+  "https://www.mint-investments.com",
+  "HTTP 200",
+  "114 B"
+ ],
+ [
+  "UDI Group",
+  "https://www.urban-developers.com/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Fio realitní fond",
+  "https://fiofondy.cz",
+  "HTTP 200",
+  "13343 B"
+ ],
+ [
+  "PREMIOT",
+  "https://www.premiot.com",
+  "URLError",
+  ""
+ ],
+ [
+  "LOAN MANAGEMENT investiční fond, a.s.",
+  "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "ČNFE LOAN podfond",
+  "https://www.avantfunds.cz/informace-o-fondech/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Mariposa podfond I.",
+  "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "Podfond Ta Meri Automotive",
+  "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "SF Investments Podfond III",
+  "https://www.cnb.cz/cs/statistika/menova_bankovni_stat/seznamy-instituci-pro-potreby-menove-a-financni-statistiky/seznam-investicnich-fondu/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "1RIF otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "ALFA otevřený podílový fond AMISTA investiční společnost, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Alpha, podfond MIF SICAV",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Altair podfond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Budějovická investiční fond s proměnným základním kapitálem, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Beta otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "BYD otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "CEERE Opportunity SICAV a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "City Logistic Property Fund SICAV a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "COLBER INVEST FOND SICAV a.s.",
+  "https://www.colberinvest.cz",
+  "HTTP 200",
+  "53199 B"
+ ],
+ [
+  "COMES invest, investiční fond s proměnným základním kapitálem, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Commercial property The Square podfond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Direct PRO Ventures, podfond (Direct PRO SICAV investiční fond, a.s.)",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Generalist Capital Management SICAV, a.s.",
+  "https://www.generalistcapital.com",
+  "URLError",
+  ""
+ ],
+ [
+  "FOCUS INVEST, investiční fond s proměnným základním kapitálem, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "HZ Trust SICAV nemovitostní podfond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "HUB otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "IMPERA sprint otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Importo SICAV a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "MAVERICK Fund SICAV nemovitostní podfond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "MATTEROS otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "MIG Nemovitostní otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "NISEKO Real Estate otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "JASMINUM podfond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "MOF INVEST uzavřený investiční fond, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Numero real estate podfond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "J&T OSTRAVICE ACTIVE LIFE otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "PROPERITY FUND SICAV, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "PORTUM TUTUM otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Safety Real, fond SICAV, a.s.",
+  "https://www.bdcg.cz/en/safety-real/",
+  "HTTP 200",
+  "60000 B"
+ ],
+ [
+  "SNĚŽNÍK ACTIVITY otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Privátní portfolio AR REALITY - otevřený podílový fond",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "ZSZ investiční fond s proměnným základním kapitálem a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "Zephyr Investments SICAV, a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ],
+ [
+  "ČEZ OZ uzavřený investiční fond a.s.",
+  "-",
+  "BEZ WEBU",
+  ""
+ ]
+]
