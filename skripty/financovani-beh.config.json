@@ -584,7 +584,8 @@
       "@example.com",
       "@2x.png",
       "@wordpress.org"
-    ]
+    ],
+    "jazyk": "cs,sk,en;q=0.8"
   },
   "sk_konania": {
     "_popis": "Screening pole otherLegalFacts z detailu RPO. Klicova slova jsou TADY, ne v kodu — kdyz bude registr formulovat jinak, prida se slovo sem a beh je zacne hlasit.",

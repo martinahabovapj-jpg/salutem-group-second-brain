@@ -206,18 +206,18 @@
       "zdroj": "https://www.bf-direkt.de/en/"
     },
     "nazev:erste immobilien kapitalanlagegesellschaft m.b.h.": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "ERSTE Immobilien Kapitalanlagegesellschaft m.b.H.",
-      "duvod": "PRVNÍ RAKOUSKÝ SUBJEKT A NEJLEPŠÍ MOŽNÝ ZAČÁTEK. Největší rakouský otevřený realitní fond, který sám říká, že bere i projekty ve výstavbě, a jehož záběr je Rakousko A NĚMECKO. K tomu má na webu stránku pro nabídky nemovitostí s profilem požadavků - tedy dveře, na které se dá zaklepat bez známosti.",
-      "zdroj": "https://www.ersteimmobilien.at/de/immobilienankauf"
+      "duvod": "Doplnění jmen vedení z tiráže. Automatický dohledávač jméno našel, ale tiráž ho píše ve tvaru příjmení–jméno („Karl Peter, Mag.“), takže by kolega oslovil „pana Petera“. Proto ručně a v běžném pořadí. Nic jiného se u subjektu nemění.",
+      "zdroj": "https://www.ersteimmobilien.at/de/impressum"
     },
     "nazev:empira group": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Empira Group",
-      "duvod": "PŘIDÁNA ROLE FINANCOVÁNÍ, investorská zůstává. Šest dluhových produktů: senior loan, whole loan, mezzanine finance (výslovně bridging na akvizici nemovitosti I POZEMKU), joint-venture finance s participací na projektu, preferred equity a junior debt. Dluhových aktiv 3 mld. USD z celkových 10. Vedle toho ale skutečně investuje do rezidenčních nemovitostí, takže investorská role platí dál — proto obojí. Nejbližší adresa je vídeňská kancelář.",
-      "zdroj": "https://empira-invest.com/en/what-we-do/our-investment-solutions"
+      "duvod": "Doplnění jmen vedení z tiráže. Automatický průchod za jmény Empiru našel (Christian Hanke), ale zapsat ji nestihl: mezi prvním a druhým během se jí opravila země z DE na CH a průchod byl omezen na DE a AT. Tiráž na empira-invest.com jmenuje zástupce německých dcer; skupinová Empira AG v Zugu jméno v tiráži neuvádí. Nic jiného se u subjektu nemění.",
+      "zdroj": "https://empira-invest.com/en/imprint"
     },
     "nazev:patrizia se": {
       "datum": "2026-09-02",
@@ -407,6 +407,146 @@
       "nazev": "Piguet Galland & Cie SA",
       "duvod": "ROLE PODLE FINMA JE POUZE VERTRETER - švýcarský právní zástupce zahraničních kolektivních investic. Jde o privátní banku, ale její licence na tomhle seznamu je jen zastupovací; jako nemovitostní investor doložená není. Zamítá se strukturálně podle seznamu regulátora. Kdyby se ukázalo, že banka alokuje vlastní kapitál do nemovitostí, posoudit znovu jinou cestou než tímhle seznamem.",
       "zdroj": "https://www.finma.ch/de/~/media/finma/dokumente/bewilligungstraeger/pdf/flvervt.pdf"
+    },
+    "nazev:axiom alternative investments switzerland sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "AXIOM ALTERNATIVE INVESTMENTS SWITZERLAND SA",
+      "duvod": "Axiom je nezávislý správce specializovaný na evropský bankovní sektor a kreditní/dluhopisové strategie (dluh finančních institucí, emerging market debt, další segmenty kreditu). Na vlastním webu není žádná nemovitostní strategie ani real estate debt – jde o kredit vůči bankám a pojišťovnám, nikoli o financování nemovitostí. Do databáze investorů ani věřitelů nepatří.",
+      "zdroj": "https://www.axiom-ai.com/en/"
+    },
+    "nazev:azimut switzerland sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "AZIMUT SWITZERLAND SA",
+      "duvod": "Azimut je skupina zaměřená na asset management, wealth management a investiční bankovnictví pro retail a instituce; vlastní web skupiny zdůrazňuje emerging/frontier markets a Private Market fondy, nemovitosti ani nemovitostní dluh nikde neuvádí. Švýcarská entita je na webu skupiny (azimutinvestments.com) uvedena jen adresou v Luganu, bez samostatné strategie. Jde o správce fondů a mandátů bohatých klientů bez doložené nemovitostní alokace – do databáze nepatří.",
+      "zdroj": "https://www.azimut-group.com/en/about-us"
+    },
+    "nazev:bnp paribas asset management switzerland ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "BNP PARIBAS ASSET MANAGEMENT Switzerland AG",
+      "duvod": "REAL ESTATE DEBT: skupina BNP Paribas Asset Management nabízí na své švýcarské stránce strategii Commercial Real Estate Debt v sekci Private Assets / Real assets – tedy poskytuje nemovitostní dluh, což je pro nás nejcennější typ protistrany. Švýcarská entita (Fondsleitung v Zürichu) je vstupní bod skupiny pro švýcarský trh; samotný RE debt tým sídlí v Paříži. Skupina BNP Paribas v databázi zatím není, takže nejde o duplicitu. Zařadit na list 3 (financování) s poznámkou, že nabídka je celoevropská platforma, nikoli lokální švýcarská.",
+      "zdroj": "https://www.bnpparibas-am.com/en-ch/capabilities/asset-classes/alternatives/private-assets/commercial-real-estate-debt-strategy/"
+    },
+    "nazev:caceis (switzerland) sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "CACEIS (Switzerland) SA",
+      "duvod": "CACEIS je asset-servicingová banka skupiny Crédit Agricole – custody, depozitář, fondová administrace, management-company služby a zastupování (Vertreter) cizích fondů. Vlastní kapitál do nemovitostí nealokuje ani neposkytuje nemovitostní dluh; nemovitostní fondy pouze obsluhuje (business linie PERES). Jde o typický fund services / custodian, který do databáze nepatří.",
+      "zdroj": "https://www.caceis.com/who-we-are/about-us/"
+    },
+    "nazev:capula investment management switzerland sàrl": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Capula Investment Management Switzerland Sàrl",
+      "duvod": "Capula je globální hedge fond zaměřený na fixed income relative value, makro trading a crisis alpha strategie s nízkou korelací k trhům. Na vlastním webu není žádná nemovitostní strategie ani real estate debt. Klasický hedge fond / kvantitativní obchodník – do databáze nepatří.",
+      "zdroj": "https://www.capulaglobal.com/"
+    },
+    "nazev:diamond capital management (switzerland) sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Diamond Capital Management (Switzerland) SA",
+      "duvod": "Firma je primárně správce majetku bohatých rodin, ale na vlastním webu výslovně uvádí, že spravuje fondy překlenovacích úvěrů zajištěných nemovitostmi (RE backed bridge loan Funds) – to je REAL ESTATE DEBT, přesně to, co hledáme pro list 3. Web neuvádí objem ani geografii úvěrů, takže je nutné doptat se, zda půjčují i v DACH/ČR. Kontakt e-mailem web nenabízí, jen formulář a telefon.",
+      "zdroj": "https://www.diamondcapital.ch/index.php?dir=site&page=content&cs=3001"
+    },
+    "nazev:ebl infrastruktur management ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "EBL Infrastruktur Management AG",
+      "duvod": "Správce kolektivního majetku, který spravuje fond EBL X Invest SCSp, SICAV-RAIF zaměřený výhradně na obnovitelné zdroje a energetickou infrastrukturu (fotovoltaika, onshore vítr, energetické úložiště) v západní Evropě a Švýcarsku. Web neuvádí žádnou nemovitostní strategii ani nemovitostní dluh. Do databáze investorů/věřitelů do nemovitostí nepatří.",
+      "zdroj": "https://www.ebl-invest.ch/en/"
+    },
+    "nazev:energy infrastructure partners ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Energy Infrastructure Partners AG",
+      "duvod": "Specializovaný správce, který investuje výhradně do energetické infrastruktury (obnovitelné zdroje, přenosové a distribuční sítě, akumulace a flexibilita) ve 20 zemích, cca 7 mld. EUR equity. Nemovitosti ani nemovitostní dluh na webu nefigurují; financování portfoliových firem si zajišťují, ale sami neposkytují realitní úvěry. Nepatří do databáze.",
+      "zdroj": "https://www.energy-infrastructure-partners.com/"
+    },
+    "nazev:gam investment management (switzerland) ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "GAM Investment Management (Switzerland) AG",
+      "duvod": "Správce cenných papírů: web uvádí strategie Fixed Income, Equity, Multi-Asset a Alternatives (katastrofické dluhopisy, private markets, švýcarské akcie), nikde nemovitosti, nemovitostní fondy ani nemovitostní dluh. Bez nemovitostní strategie → do databáze nepatří. Kontakt pro Zürich se na dostupných stránkách nepodařilo získat (stránka kontaktů vrací 404).",
+      "zdroj": "https://www.gam.com/en/our-capabilities/investment-management"
+    },
+    "nazev:hsbc global asset management (switzerland) ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "HSBC Global Asset Management (Switzerland) AG",
+      "duvod": "Švýcarská entita je podle vlastního webu držitelem povolení jako správce kolektivních investic a zástupce (Vertreter) zahraničních kolektivních investic – tedy distribuční/zastupitelská pobočka skupiny HSBC, která švýcarským profesionálním investorům prodává fondy skupiny. Sama kapitál do nemovitostí nealokuje; nemovitostní a infrastrukturní strategie (na webu „Immobilien- und Infrastrukturstrategien“, „Immobilien und Infrastrukturfinanzierungen“) spravuje skupina HSBC Alternatives mimo Švýcarsko. Podle pravidel zadání (Vertreter / fund distribution) zamítnout; případné oslovení skupiny HSBC AM by šlo přes její real assets tým, ne přes Zürich.",
+      "zdroj": "https://www.assetmanagement.hsbc.ch/de-ch/terms-and-conditions"
+    },
+    "nazev:inpact switzerland sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "InPact Switzerland SA",
+      "duvod": "InPact je poradenská a syndikační platforma: vybírá externí správce fondů a syndikuje závazky penzijních fondů a pojišťoven do cizích fondů a co-investic (fund-of-funds / mandáty). Vlastní web neuvádí žádnou nemovitostní strategii – v insightech figuruje jen infrastruktura a private credit (portfolio finance). Zmínka „private equity, infrastructure, real estate and private credit“ na webu se týká partnera La Caisse, ne InPactu. Jde tedy o správce cizího portfolia bez doložené nemovitostní strategie – nepatří do databáze. Nemovitostní dluh nedělá.",
+      "zdroj": "https://inpactpartners.com/"
+    },
+    "nazev:laiqon asset management switzerland ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "LAIQON Asset Management Switzerland AG",
+      "duvod": "Švýcarská entita je bývalá MainFirst Affiliated Fund Managers (Switzerland) AG, kterou LAIQON AG koupila v roce 2025 (dle tisku); na webu skupiny nemá vlastní stránku ani kontakt. Skupina LAIQON nabízí cca 50 „Wealth-Produkte“ řízených portfoliomanagementem a umělou inteligencí (akciové, dluhopisové, multi-asset fondy, digitální správa) – žádná nemovitostní strategie ani nemovitostní dluh se na webu nevyskytuje. Správce likvidních fondů bez nemovitostní strategie – nepatří do databáze.",
+      "zdroj": "https://laiqon.com/unternehmen/"
+    },
+    "nazev:lombard odier asset management (switzerland) sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Lombard Odier Asset Management (Switzerland) SA",
+      "duvod": "Lombard Odier AM (Switzerland) SA je Fondsleitung skupinových fondů LOIM. Nabídka strategií na vlastním webu: equities, fixed income, convertibles, multi-asset (All Roads) a alternativy (Asset Backed Loan = diverzifikovaný private credit, Secondaries, Global Carbon, Plastic Circularity, Transition Materials). Žádná nemovitostní strategie (fond, přímé nemovitosti ani real estate debt) na webu není. Správce likvidních a alternativních fondů bez nemovitostní strategie – nepatří do databáze.",
+      "zdroj": "https://am.lombardodier.com/professional/about-us/who-we-are.html"
+    },
+    "nazev:mcp (switzerland) sàrl": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "MCP (Switzerland) Sàrl",
+      "duvod": "MCP (Switzerland) Sàrl je ženevská entita hedge fondu Millennium Management (partner Millennium Capital Management Ltd dle rejstříku; web Millennium uvádí kancelář v Ženevě). Millennium je globální multi-strategy alternativní fond s 350+ obchodními týmy – likvidní strategie, žádná nemovitostní ani real estate debt strategie na webu. Hedge fond / kvantitativní obchodník – nepatří do databáze.",
+      "zdroj": "https://www.mlp.com/"
+    },
+    "nazev:mirabaud asset management (suisse) sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Mirabaud Asset Management (Suisse) SA",
+      "duvod": "Mirabaud AM má na vlastním webu sekci Private assets se třemi nemovitostními equity strategiemi (Grand Paris, Sustainable Cities, Real Estate – Club Deals) a strategií Private Credit II, jejíž součástí je výslovně „commercial real estate bridge financing“ – tedy REAL ESTATE DEBT (byť s převážně severoamerickým zaměřením). Alokuje kapitál do nemovitostí jak equity, tak dluhem, doloženo z primárního zdroje. Pozor: telefon je centrála skupiny Mirabaud & Cie SA v Ženevě (web AM uvádí jen formulář), e-mail na doméně firmy web nezveřejňuje.",
+      "zdroj": "https://www.mirabaud-am.com/en/capabilities/private-assets/mirabaud-private-credit-ii"
+    },
+    "nazev:polar capital (switzerland) ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Polar Capital (Switzerland) AG",
+      "duvod": "Polar Capital je specializovaný aktivní správce akciových fondů (regionální, tematické a sektorové fondy – technologie, zdravotnictví, biotech, Smart Energy, Smart Mobility, absolute return, konvertibilní dluhopisy). Na vlastním webu není žádná nemovitostní strategie ani real estate debt. Švýcarská AG je jen správcovská pobočka pro tematický akciový tým. Do databáze investorů ani věřitelů do nemovitostí nepatří.",
+      "zdroj": "https://www.polarcapital.co.uk/gb/professional/"
+    },
+    "nazev:qube research and technologies switzerland ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Qube Research and Technologies Switzerland AG",
+      "duvod": "QRT je globální kvantitativní multi-strategy hedge fond (systematické obchodování, týmy inženýrů, fyziků, matematiků a datových vědců). Web nezmiňuje žádnou nemovitostní strategii ani real estate debt. Švýcarská AG je regulovaná FINMA jako správce kolektivního majetku pro obchodní strategie skupiny. Nepatří do databáze.",
+      "zdroj": "https://www.qube-rt.com/"
+    },
+    "nazev:schroder investment management (switzerland) ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Schroder Investment Management (Switzerland) AG",
+      "duvod": "Duplicita skupiny – skupinu Schroders vede řádek #11 (Schroders Capital Management (Switzerland) AG). Stránka „About Schroders Switzerland“ uvádí obě entity vedle sebe jako součást Schroders Švýcarsko: SIMSAG je fondová správcovská společnost a Vertreter (švýcarské a zahraniční fondy, mandáty), nemovitosti a private assets jsou v rámci skupiny pod Schroders Capital. Jedna skupina se neoslovuje dvakrát. Samostatný real estate debt u SIMSAG web nedokládá.",
+      "zdroj": "https://www.schroders.com/en-ch/ch/professional/about-us/schroders-switzerland/"
+    },
+    "nazev:taula capital management (switzerland) sàrl": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Taula Capital Management (Switzerland) Sàrl",
+      "duvod": "Taula Capital je global macro hedge fond založený 2023 (směrové makro, relative value, inflační strategie) se sedmi kancelářemi včetně Ženevy. Web nezmiňuje nemovitosti ani real estate debt. Ženevská Sàrl je správce kolektivního majetku pro makro strategie skupiny. Nepatří do databáze.",
+      "zdroj": "https://www.taulacapital.com/"
+    },
+    "nazev:ubs asset management switzerland ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "UBS Asset Management Switzerland AG",
+      "duvod": "Duplicita skupiny – skupinu UBS vede řádek #13 (UBS Fund Management (Switzerland) AG). Vlastní web UBS dokládá, že UBS Asset Management Switzerland AG je stoprocentní dcera UBS Group AG; od 30. 8. 2024 do ní byla sloučena i Credit Suisse Asset Management (Schweiz) AG. UBS AM sice spravuje švýcarské nemovitostní fondy (Real Estate & Private Markets), ale jedna skupina se neoslovuje dvakrát – oslovení jde přes existující řádek #13.",
+      "zdroj": "https://www.ubs.com/ch/en/assetmanagement/regulatory-information/global-regulatory-information.html"
     }
   }
 }
