@@ -130,7 +130,8 @@ K tomu vždycky doplň:
 - **Předpoklady** — co musí být hotové dřív, jmenovitě. Když žádné nejsou, napiš proč (dá se to řešit samostatně).
 - **Kdo o tom rozhodne** — konkrétní role nebo jméno. „Management" není odpověď; když to nevíš, je to otázka.
 - **Obtok, nebo oprava** — viz níže.
-- **Úroveň v pyramidě L0 až L3** — diagnózy, kde je slabé místo v datech, dohodách nebo zápisu, jsou typicky L0. Zbytek podle toho, koho to zasahuje: jeden člověk L3, oddělení L2, byznysová změna L1.
+- **Úroveň v pyramidě L0 až L3** — **nepočítej ji, opiš ji z evidence pain pointů** (sloupec `kategorie`, například „L2 - TÝMOVÁ AI"). Bolest má svoje L přiřazené už z mapování; druhá, vlastní logikou spočítaná hodnota by rozbila srovnatelnost i sčítání. Když bolest L nemá, napiš `CHYBÍ` a jednu úroveň navrhni — ale výslovně ji označ jako návrh.
+  **Nesoulad je nález, ne chyba.** Diagnózy A1, A2, A3, A5 a A10 **jsou** ta L0 vrstva. Když ti jedna z nich vyjde u bolesti vedené jako L2 nebo L3, napiš to: buď je špatně kategorie v evidenci, nebo se do jedné bolesti slepily dvě a je potřeba ji rozdělit.
 
 ### Krok 5b — Obtok, nebo oprava?
 
@@ -138,9 +139,11 @@ Někdy je správné příčinu neopravovat. Když je náprava pomalá a drahá, 
 
 Napiš tedy `oprava` (zásah míří na slabé místo) nebo `obtok` (bolest zmizí, příčina zůstává) a u obtoku jednu větu, **co zůstává nespravené**.
 
-### Krok 6 — Sepiš, co zbývá vyjasnit
+### Krok 6 — Sepiš otázky k příčině
 
 Každé `TOHLE NEVÍM` z kroků 2 až 5 má právě jednu otázku, napsanou lidsky a připravenou k odeslání konkrétnímu člověku. Na konci si to zkontroluj oběma směry: žádné `TOHLE NEVÍM` bez otázky a žádná otázka, která by v rozboru neměla oporu.
+
+**Nepiš je do Freela a nepojmenovávej je „Zbývá vyjasnit".** Ten název je obsazený: v triage je to sekce, která se zadavateli posílá jako komentář u úkolu, a její odeslání je kritérium štítku *backlog* — když se objeví dvakrát, nikdo nepozná, která z nich štítkem hýbe. Tyhle otázky jsou **otázky k příčině** a jdou do rozboru, tedy do second brainu.
 
 ---
 
@@ -166,7 +169,7 @@ Předpoklady: [co musí být dřív / žádné, protože …]
 Zůstává nespravené: [jen u obtoku]
 Rozhodne: [role/jméno] · Pyramida: [L0–L3]
 
-Zbývá vyjasnit:
+Otázky k příčině:
 1. [otázka] → [komu ji poslat] (→ k čemu odpověď poslouží)
 ```
 
@@ -204,7 +207,7 @@ Předpoklady: 1) rozhodnutí, který systém je autoritativní; 2) sepsat její 
 bez toho propojení tiše ztratí to jediné, co dnes chyby zachytává.
 Rozhodne: hlavní účetní nebo CFO + IT + vlastník procesu · Pyramida: L0, dopad L2
 
-Zbývá vyjasnit:
+Otázky k příčině:
 1. Který systém má být zdrojem pravdy pro výplatu klientovi? → CFO a IT
 2. Podle jakých pravidel poznáš, že v podkladu od účtárny někdo chybí? → Šiška
    (→ tato pravidla se musí zapsat, jinak je propojení zahodí)
@@ -250,7 +253,8 @@ U dávky **nepiš plný rozbor ke každé bolesti**, pokud si ho uživatel nevy�
 - Prošly všechny tři otázky o AI, a je u „až po" jmenovaný předpoklad?
 - Je typ zásahu z těch šesti (žádné vlastní kategorie)?
 - Je označeno `oprava` nebo `obtok`, a u obtoku napsané, co zůstává nespravené?
-- Má každé `TOHLE NEVÍM` svou otázku, adresovanou konkrétnímu člověku?
+- Má každé `TOHLE NEVÍM` svou otázku k příčině, adresovanou konkrétnímu člověku — a nejmenuje se ta sekce „Zbývá vyjasnit" (to je triage)?
+- Je pyramida **opsaná** z evidence pain pointů, ne spočítaná? A je případný nesoulad s diagnózou napsaný jako nález?
 - Je „co se děje" napsané tak, že tomu rozumí i někdo, kdo o datech nic neví?
 - U dávky: seskupeno podle diagnózy (ne oddělení), sečtený čas na skupinu, vypsaná odblokovávající rozhodnutí?
 - Nepočítám tady návratnost ani dráhu (to je `freelo-triage-poptavky`)?

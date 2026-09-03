@@ -1,1 +1,1 @@
-ID bolesti,Symptom (1 věta),Čas týdně,Dopad (1-5),Slabé místo,Diagnóza (A1-A12),Co se děje,Typ zásahu,AI (ano/ne/až po),Oprava nebo obtok,Předpoklad,Rozhodne (kdo),Pyramida (L0-L3),Důsledky,Zbývá vyjasnit
+ID bolesti,Symptom (1 věta),Čas týdně,Dopad (1-5),Slabé místo,Diagnóza (A1-A12),Co se děje,Typ zásahu,AI (ano/ne/až po),Oprava nebo obtok,Předpoklad,Rozhodne (kdo),Pyramida (L0-L3 - opsat z evidence),Důsledky,Otázky k příčině

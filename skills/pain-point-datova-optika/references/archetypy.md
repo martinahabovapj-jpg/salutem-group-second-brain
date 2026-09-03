@@ -31,6 +31,8 @@ Rychlá orientace:
 
 **Proč to bolí:** Nedá se to vyřešit technicky, jen rozhodnutím. Dokud nepadne, každé další propojení i každá AI jen rychleji rozšíří nejistotu. **Tohle je nejčastější skrytá příčina — bolest se projeví jako ruční přepisování (A7), ale opravovat se musí tady.**
 
+**Pozor na výjimku — někdy je konflikt legitimní.** U menšiny věcí drží dva systémy jinou verzi oprávněně, protože mají jinou latenci nebo jde o dvě různé věci se stejným názvem (typicky predikce cash flow proti skutečnosti, nebo rezervace proti podepsané smlouvě). Tam „urči vítěze" nedává smysl a správný zásah je **konflikt a jeho stáří zviditelnit**, ne jednu stranu prohlásit za nepravdu. Rozhodni to jednou otázkou: *je to tatáž informace na dvou místech, nebo dvě informace, které nikdo nerozlišil?* Když druhá varianta, slabé místo je **zápis pravidel** (chybí definice, A5 nebo A10), ne domov informace.
+
 **Příklad:** Dva systémy pro správu nemovitostí, kde u téže nemovitosti není řečeno, který je hlavní. Obchodní případ vedený zároveň v CRM, v podnikové aplikaci, ve sdílené tabulce a na SharePointu.
 
 ---
