@@ -631,6 +631,195 @@
       "nazev": "Wealthcap Kapitalverwaltungsgesellschaft mbH (UniCredit Invest Alternatives)",
       "duvod": "wealthcap.com dnes přesměrovává (308) na ucinvestalternatives.eu – nový web po přejmenování, plně čitelný. Stránka „Immobilien An- und Verkäufe“ doslova říká, co kupují (Core/Core+ Bestand a projekty na klíč v Německu), uvádí track record (nákupy Freiburg, Nürnberg, Berlín, Mnichov 2021–22; prodeje Memmingen a Darmstadt 2025) a jmenovité kontakty; Ankaufsprofil PDF z 03/2026 dává limity 30 mil. EUR/objekt a 100 mil. EUR/portfolio. Equity investor, forward share deal = forward purchase, ne financování; žádný real estate debt (private credit skupiny se nemovitostí netýká). Omezení: jen Německo. Skupinová vazba: UniCredit je i vlastníkem Bank Austria Real Invest (záznam 1 této dávky) – jde o dvě samostatné správcovské firmy s vlastními týmy a trhy (DE vs. AT), doporučuji vést obě.",
       "zdroj": "https://www.ucinvestalternatives.eu/immobilien-management/immobilien-an-und-verkaeufe/ (Ankaufsprofil: https://www.ucinvestalternatives.eu/wp-content/uploads/2023/04/Immobilienmanagement-Aktuelles-Ankaufsprofil.pdf)"
+    },
+    "nazev:1741 fund solutions ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "1741 Fund Solutions AG",
+      "duvod": "1741 Fund Solutions AG je fondsleitung (ManCo) skupiny 1741 Group, která na vlastním webu popisuje svou činnost jako strukturování, launch a administraci investičních fondů a SPV pro klienty/iniciátory fondů — jde o fund services/white-label platformu, ne o vlastní alokaci kapitálu do nemovitostí. Web neobsahuje žádnou zmínku o nemovitostech ani nemovitostním dluhu.",
+      "zdroj": "https://www.1741group.com/en/"
+    },
+    "nazev:berninvest ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "BERNINVEST AG",
+      "duvod": "BERNINVEST AG je fondsleitung spravující dva vlastní kotované švýcarské nemovitostní fondy (Immo Helvetic, Good Buildings Swiss Real Estate Fund), které přímo investují do obytných a komerčních nemovitostí. Jde o přímou alokaci kapitálu do nemovitostí, ne jen o white-label administraci cizích fondů. Nejde o nemovitostní dluh, pouze equity.",
+      "zdroj": "https://www.berninvest.ch/"
+    },
+    "nazev:carne global fund managers (schweiz) ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Carne Global Fund Managers (Schweiz) AG",
+      "duvod": "Carne Global Fund Managers (Schweiz) AG je švýcarská pobočka Carne Group, poskytovatele third-party fund management (ManCo) služeb — v roce 2024 převzala švýcarský a lucemburský fund management byznys od GAM. Jde o správce cizích fondů/fund governance, nikoli o vlastní nemovitostní strategii; primární zdroj nezmiňuje žádnou vlastní alokaci kapitálu do nemovitostí.",
+      "zdroj": "https://www.carnegroup.com/latest-thinking/gam"
+    },
+    "nazev:generali investments schweiz ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Generali Investments Schweiz AG",
+      "duvod": "Vlastní web firmy uvádí, že spravuje 'Finanzanlagen sowie Immobilien und Hypotheken' pro švýcarské penzijní fondy a pojišťovny — tedy jak přímé nemovitostní investice, tak hypoteční úvěry (nemovitostní dluh) na mandátní bázi. To je kombinace investora i poskytovatele nemovitostního financování doložená z primárního zdroje. Real estate debt zde stojí za zdůraznění: jde o hypotéky poskytované jménem penzijních fondů/pojišťoven, ne o retailový produkt. Retailové fondy uvedené na webu (Our funds) jsou čistě akciové/dluhopisové — real estate/hypoteční byznys běží přes institucionální mandáty mimo tento seznam.",
+      "zdroj": "https://www.generali-investments.ch/ch/de/private/about-us"
+    },
+    "nazev:ipconcept (schweiz) ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "IPConcept (Schweiz) AG",
+      "duvod": "IPConcept (Schweiz) AG se na vlastním webu prezentuje jako ManCo poskytující kompletní servis pro launch private-label fondů třetích stran (fund initiators). Nejde o vlastní alokaci kapitálu, ale o administrativní/regulatorní servis; primární zdroj neobsahuje žádnou zmínku o nemovitostech.",
+      "zdroj": "https://www.ipconcept.com/en"
+    },
+    "nazev:pictet asset management sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Pictet Asset Management SA",
+      "duvod": "Pictet Asset Management SA je dle vlastního webu zaměřena na 'Aktien, Anleihen, alternative Anlagen und Multi-Asset-Produkte' — klasické fondy, ne nemovitosti. Nemovitostní byznys skupiny (Real Estate Capital / Elevation) provozuje samostatná regulovaná entita Pictet Alternative Advisors SA (stejná adresa Carouge GE, ale jiné IČO/UID CHE-326.799.228) — duplicita skupiny, skupinovou nemovitostní aktivitu vede jiná, na tomto seznamu neposuzovaná entita. Tato konkrétní fondsleitung do databáze nepatří.",
+      "zdroj": "https://www.pictet.com/ch/de/asset-management"
+    },
+    "nazev:pvb pernet von ballmoos ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "PvB Pernet von Ballmoos AG",
+      "duvod": "PvB na vlastním webu popisuje svou činnost jako implementaci fondových projektů TŘETÍCH STRAN napříč asset třídami (private markets, real estate, likvidní aktiva) — jde o fund governance/administraci pro cizí iniciátory fondů, nikoli o vlastní kapitálovou alokaci. I když je mezi obsluhovanými třídami aktiv i 'real estate', jde o klientské fondy, ne o vlastní investiční strategii PvB.",
+      "zdroj": "https://www.pvbswiss.com/en/"
+    },
+    "nazev:swiss rock asset management ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Swiss Rock Asset Management AG",
+      "duvod": "Swiss Rock Asset Management AG nabízí dle vlastního webu vědecky podložené strategie v oblasti akcií, dluhopisů a smíšených portfolií (plus fond zlata) pro penzijní fondy a pojišťovny. Primární zdroj neobsahuje žádnou zmínku o nemovitostech ani nemovitostním financování.",
+      "zdroj": "https://www.swiss-rock.ch/en"
+    },
+    "nazev:avadis vorsorge ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Avadis Vorsorge AG",
+      "duvod": "Avadis přímo na vlastním webu deklaruje přes CHF 5 mld. ve švýcarských nemovitostech přes tři investiční skupiny (Anlagegruppen) pro penzijní fondy — jde o přímou alokaci (klientského) kapitálu do rezidenčních a komerčních nemovitostí ve Švýcarsku, ne o nemovitostní dluh. Sesterská entita AFIAA (mezinárodní nemovitosti) není na tomto seznamu, případně posoudit zvlášť.",
+      "zdroj": "https://avadis.ch/en/solutions/institutional-investors/swiss-real-estate-investments"
+    },
+    "nazev:albin kistler ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Albin Kistler AG",
+      "duvod": "Albin Kistler je švýcarský Fondsleitung, který od roku 2023 provozuje vlastní nemovitostní fond AKISV zaměřený na rezidenční nemovitosti v Deutschschweiz pro institucionální klienty. Jde o vlastní alokaci kapitálu do nemovitostí (equity), ne o nemovitostní dluh. Splňuje kritérium pro zařazení do databáze investorů.",
+      "zdroj": "https://www.albinkistler.ch/was/institutionelle-kunden/immobilien"
+    },
+    "nazev:blackrock asset management schweiz ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "BlackRock Asset Management Schweiz AG",
+      "duvod": "Švýcarská entita BlackRocku funguje jako Fondsleitung pro švýcarsky domicilované iShares ETF a BlackRock Investment Funds Switzerland a zároveň jako Vertreter (zástupce) zahraničních schválených fondů dle čl. 120/123 KAG – jde o fund services/administrátorskou funkci pro globální produktovou paletu (ETF, akcie, dluhopisy), ne o vlastní švýcarskou nemovitostní strategii. Žádný nemovitostní fond pod touto Fondsleitung nebyl doložen.",
+      "zdroj": "https://www.blackrock.com/ch/professionelle-anleger/de/uber-uns/blackrock-in-schweiz/geschaeftsleitung"
+    },
+    "nazev:cronos finance sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Cronos Finance SA",
+      "duvod": "Cronos Finance je od roku 2019 licencovaný Fondsleitung a od 2016 provozuje vlastní nemovitostní fond Cronos Immo Fund investující do rezidenčních nemovitostí ve frankofonním Švýcarsku. Jde o vlastní alokaci kapitálu (equity), fond neposkytuje nemovitostní dluh. Vhodné zařadit jako investora.",
+      "zdroj": "https://www.cronosfinance.ch/"
+    },
+    "nazev:global funds sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Global Funds SA",
+      "duvod": "Global Funds SA je nezávislá švýcarská Fondsleitung, která nabízí administrátorské a strukturační služby pro nemovitostní fondy/SICAV třetích stran, sama však nealokuje vlastní kapitál do nemovitostí. Jde o typickou fund services/white-label platformu, tedy o subjekt, který do databáze nepatří.",
+      "zdroj": "https://globalfunds.ch/a-propos/"
+    },
+    "nazev:j. safra sarasin investmentfonds ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "J. Safra Sarasin Investmentfonds AG",
+      "duvod": "duplicita skupiny – vede řádek #50. J. Safra Sarasin Investmentfonds AG je Fondsleitung skupiny Bank J. Safra Sarasin pro tradiční fondy (např. \"NCM Traditional Assets\"), sídlí na stejné adrese jako banka a jedná společně s Bank J. Safra Sarasin AG jako depotbankou. Nemovitostní agendu celé skupiny vede samostatná dceřiná společnost JSS Real Estate Management SA (Ženeva) – oslovení této entity by bylo duplicitní vůči řádku #50.",
+      "zdroj": "https://www.swissfunddata.ch/sfdpub/docs/a13-200231-20240626-de.pdf ; https://jsafrasarasin.com/de/jssrem.html"
+    },
+    "nazev:pmg investment solutions ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "PMG Investment Solutions AG",
+      "duvod": "PMG je bankovně nezávislá \"general contractor\" platforma, která strukturuje, spravuje a distribuuje fondy pro institucionální klienty výhradně v kategoriích Equities, Fixed Income a Multi Asset. Nemovitostní fond ani nemovitostní dluh nejsou na webu zmíněny – jde o fund services platformu pro cizí strategie, ne o vlastního nemovitostního investora.",
+      "zdroj": "https://www.pmg.swiss/funds/"
+    },
+    "nazev:reichmuth & co investment management ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Reichmuth & Co Investment Management AG",
+      "duvod": "Reichmuth & Co Investment Management AG se specializuje výhradně na infrastrukturní investice (energetika, doprava, odpadové hospodářství) přes platformu Reichmuth Infrastrukturanlagen – žádná nemovitostní strategie doložena. Stránka \"Immobilien\" na webu skupiny je private-client služba (zprostředkování koupě, financování/hypotéky, poradenství), nikoli vlastní institucionální nemovitostní fond této Fondsleitung. Nesplňuje kritérium vlastní nemovitostní alokace ani nemovitostního dluhu.",
+      "zdroj": "https://infrastructure.reichmuthco.ch/ueber-uns/ ; https://www.reichmuthco.ch/privatkunden/anlegen/immobilien/"
+    },
+    "nazev:viac invest ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "VIAC Invest AG",
+      "duvod": "VIAC Invest AG je digitální investiční platforma pro švýcarský pilíř 3a a vested benefits, provozovaná ve prospěch Terzo Vorsorgestiftung (WIR Bank). Strategie jsou pasivní indexové mixy akcií a dluhopisů; nemovitosti figurují pouze jako dílčí indexová kategorie (\"Real Estate Switzerland/World\") uvnitř diverzifikovaného portfolia, nejde o vlastní nemovitostní fond ani o nemovitostní dluh. Jde o kaptivní strukturu bankovní skupiny pro důchodové spoření, ne o nemovitostního investora ve smyslu zadání.",
+      "zdroj": "https://viac.ch/en/products/pillar-3a/strategies/"
+    },
+    "nazev:arvest funds ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "ARVEST Funds AG",
+      "duvod": "ARVEST Funds AG spravuje šest vlastních švýcarských fondů cenných papírů (ARVEST Stars Funds, ARVEST Solid Funds) — čistě akcie a dluhopisy. Na vlastním webu není zmínka o žádném nemovitostním fondu ani nemovitostním dluhu. Jde o klasického správce cenných papírů pro soukromé a institucionální klienty, nikoli investora do nemovitostí.",
+      "zdroj": "https://www.arvest.ch/en/company/"
+    },
+    "nazev:blkb fund management ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "BLKB Fund Management AG",
+      "duvod": "BLKB Fund Management AG spustila v červenci 2025 vlastní nemovitostní fond BLKB (CH) Sustainable Property Fund, který přímo investuje do nemovitostí v severozápadním Švýcarsku. Jde o vlastní kapitálovou (equity) nemovitostní strategii, nikoli o nemovitostní dluh. Doloženo přímo tiskovou zprávou na vlastní doméně blkb.ch. Není sesterskou firmou žádné skupiny už vedené v databázi.",
+      "zdroj": "https://www.blkb.ch/news-article/BLKB-Fund-Management-AG-lanciert-Immobilienfonds"
+    },
+    "nazev:fundpartner solutions (suisse) sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "FundPartner Solutions (Suisse) SA",
+      "duvod": "FundPartner Solutions (Suisse) SA je servisní fondsleitung/zástupce zahraničních kolektivních investic v rámci skupiny Pictet — administruje private-label a fondy třetích stran, nemá vlastní investiční ani nemovitostní strategii. Obchodní rejstřík potvrzuje účel: administrace SICAV, zastoupení zahraničních fondů, distribuce. Sesterská entita FundPartner Solutions (Europe) má na webu skupiny Pictet identickou popsanou roli. Jde o typický fund services/Vertreter subjekt, který se do databáze investorů nezařazuje.",
+      "zdroj": "https://www.pictet.com/ch/en/asset-services"
+    },
+    "nazev:gutzwiller fonds management ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Gutzwiller Fonds Management AG",
+      "duvod": "Gutzwiller Fonds Management AG spravuje šest otevřených fondů — výhradně akciové (Gutzwiller ONE/TWO, EG Swiss/European/Global Equities) a jeden dluhopisový (EG CHF Bond Fund). Na vlastním webu není žádná zmínka o nemovitostním fondu ani nemovitostním dluhu. Jde o institucionální fondovou ruku privátní banky zaměřenou čistě na cenné papíry.",
+      "zdroj": "https://gutzwiller-funds.com/home_ep/"
+    },
+    "nazev:llb swiss investment ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "LLB Swiss Investment AG",
+      "duvod": "LLB Swiss Investment AG je kompetenční centrum pro private-label fondová řešení — zakládá a administruje fondy jménem externích asset manažerů a promotérů, sama nemá vlastní investiční strategii. Nabízené kategorie fondů na webu (Short Term & Bonds, Aktien, Strategiefonds, Alternative Fonds, Bonds, Andere) neobsahují nemovitosti. Jde o fund services subjekt patřící do bankovní skupiny LLB.",
+      "zdroj": "https://www.lbswiss.ch/"
+    },
+    "nazev:solutions & funds sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Solutions & Funds SA",
+      "duvod": "Solutions & Funds SA (dříve Solufonds) je nezávislá fondsleitung/ManCo, která na zakázku administruje fondy jiných promotérů — od ledna 2023 do ledna 2025 spravovala Procimmo Real Estate SICAV (CHF 1,2 mld.) a od ledna 2025 je ManCo pro Edmond de Rothschild Real Estate SICAV (ERRES, cca CHF 1,97 mld.). Nejde o vlastní nemovitostní investiční strategii firmy, ale o servisní/administrativní mandát pro cizí fondy — skuteční investoři/promotéři (Procimmo, Edmond de Rothschild REIM #49) jsou v databázi už vedeni. Proto zamitnout jako fund services / duplicita skupiny — oslovovat se má přímo promotér, ne ManCo.",
+      "zdroj": "https://www.solutionsandfunds.ch/en/news-media/sandf-new-manco-for-dws-funds"
+    },
+    "nazev:vontobel fonds services ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Vontobel Fonds Services AG",
+      "duvod": "Vontobel Fonds Services AG je technická fondsleitung skupiny Vontobel — administruje švýcarské fondy skupiny (např. akciové/dividendové fondy Vontobel) a vystupuje jako kontaktní místo pro fondovou dokumentaci, nikoli jako investor s vlastní strategií. Na webu skupiny nebyl dohledán žádný nemovitostní fond ani nemovitostní dluh spravovaný touto entitou. Jde o servisní entitu bankovní skupiny, ne o samostatný cíl akvizice.",
+      "zdroj": "https://www.vontobel.com/en-us/about-vontobel/media/communications/vontobel-bringt-schweizer-dividendenfonds-auf-den-markt-3445/"
+    },
+    "nazev:investissements fonciers sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Investissements Fonciers SA",
+      "duvod": "Duplicita skupiny – vede řádek #20 Investissements Fonciers SA (La Foncière). Jde o licencovanou Fondsleitung téže skupiny (jiná právní entita, stejní lidé a stejné fondy). Jedna skupina se neoslovuje dvakrát; řádek v listu 7 brání tomu, aby ji hledání nabízelo znovu.",
+      "zdroj": "https://www.finma.ch"
+    },
+    "nazev:pensimo fondsleitung ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Pensimo Fondsleitung AG",
+      "duvod": "Duplicita skupiny – vede řádek #2 Pensimo Management AG. Jde o licencovanou Fondsleitung téže skupiny (jiná právní entita, stejní lidé a stejné fondy). Jedna skupina se neoslovuje dvakrát; řádek v listu 7 brání tomu, aby ji hledání nabízelo znovu.",
+      "zdroj": "https://www.finma.ch"
+    },
+    "nazev:swiss finance & property funds ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Swiss Finance & Property Funds AG",
+      "duvod": "Duplicita skupiny – vede řádek #1 Swiss Finance & Property Group AG. Jde o licencovanou Fondsleitung téže skupiny (jiná právní entita, stejní lidé a stejné fondy). Jedna skupina se neoslovuje dvakrát; řádek v listu 7 brání tomu, aby ji hledání nabízelo znovu.",
+      "zdroj": "https://www.finma.ch"
     }
   }
 }
