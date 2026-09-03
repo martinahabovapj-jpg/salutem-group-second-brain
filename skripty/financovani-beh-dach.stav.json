@@ -24,53 +24,53 @@
   "posledni_beh": "2026-09-01",
   "objevy_investor": {
     "nazev:swiss finance & property group ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Swiss Finance & Property Group AG",
-      "duvod": "Největší z první dávky podle objemu a jediný, kdo v seznamu FINMA figuruje jako Fondsleitung s výslovným zaměřením na nemovitosti. Anlagestiftung nakupuje přímo švýcarské nemovitosti pro penzijní kasy, tedy kupující s pravidelným přítokem kapitálu.",
-      "zdroj": "https://www.sfp.ch/"
+      "duvod": "Stránka Geschäftsleitung skupiny SFP uvádí strukturu vedení jednotlivých dceřiných společností; Thomas Lavater (Head Direct Funds / Portfolio Manager Real Estate Direct) je nejblíže roli nákupu a správy nemovitostních fondů, doplněn CEO fondové společnosti Swiss Finance & Property Funds AG jako druhá relevantní osoba.",
+      "zdroj": "https://www.sfp.ch/sfp-group/geschaeftsleitung"
     },
     "nazev:pensimo management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Pensimo Management AG",
-      "duvod": "Institucionální kupující s penzijním kapitálem za zády a jasně vymezeným apetitem: bydlení a komerce ve velkých švýcarských aglomeracích. Pro rezidenční projekt v CH přímá protistrana.",
-      "zdroj": "https://www.pensimo.ch/de/ueberuns"
+      "duvod": "Na stránce Team webu Pensimo (spravuje mj. anlagestiftung Pensimo, Turidomus, Adimora, Testina) jsou uvedeny desítky lidí; vybráni byli ti nejblíže nákupu a portfoliu nemovitostí - vedoucí portfolia/investic a transaction/acquisition specialisté, ne pouze Verwaltungsrat.",
+      "zdroj": "https://www.pensimo.ch/de/ueberuns/team"
     },
     "nazev:sustainable real estate ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Sustainable Real Estate AG",
-      "duvod": "Aktivní kupující rezidenčních nemovitostí napříč švýcarskými kantony, tedy i mimo drahá centra. Před oslovením ověřit, kdo je po převzetí Patrimoniem protistrana - to je čerstvá změna a může posunout rozhodování jinam.",
-      "zdroj": "https://sustainable-real-estate.ch/de/sustainable-real-estate-switzerland"
+      "duvod": "Domovská stránka (sekce Team) uvádí Cornelia Antonietti jako Transaction und Asset Manager, což odpovídá zaměření na akvizice nemovitostí. Automatem nalezení Michael Trübestein a Jan Vorster jsou jen Verwaltungsrat (dozorčí orgán bez exekutivy) a Geschäftsführer Klaus Kämpf / Marco Scheurer se na webu objevují pouze v metadatech stránky (klíčová slova), ne v ověřitelné textové citaci, proto exekutiva do pole `osoba` nešla.",
+      "zdroj": "https://sustainable-real-estate.ch/de/home"
     },
     "nazev:property one investors ag": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Property One Investors AG",
-      "duvod": "PŘIDÁNA ROLE FINANCOVÁNÍ, investorská zůstává. Provozuje ONE Real Estate Debt Fund a pokrývá dluhovou i majetkovou stránku nemovitostních a hypotečních investic ve Švýcarsku. Omezení, které je potřeba vědět dopředu: těžiště je ŠVÝCARSKO, takže na český projekt to podle zveřejněného mandátu není adresa. Kanceláře Curych, Zug a Ascona.",
-      "zdroj": "https://propertyone.ch/en/"
+      "duvod": "Marcel Egger (CIO) odpovídá za investiční stranu, Danilo Godenzi (CFO) za financování a Kevin Hinder (CEO, spoluzakladatel) je nejvyšší exekutiva — všichni tři jsou uvedeni jako Mitglied der Geschäftsleitung přímo na stránce Über uns vlastního webu.",
+      "zdroj": "https://propertyone.ch/uber-uns/"
     },
     "nazev:procimmo sa": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Procimmo SA",
-      "duvod": "Z celé švýcarské větve nejlepší profil pro průmyslový a logistický projekt. Není to držitel bytového portfolia jako většina seznamu FINMA - specializace na Gewerbe, Industrie a Logistik je tam od začátku. A prokazatelně nakupuje, růst výnosů je výslovně přičítán akvizicím.",
-      "zdroj": "https://procimmo.ch/de/wir-gestalten-investitionsmoeglichkeiten/wer-wir-sind"
+      "duvod": "Stránka 'Wer wir sind' na procimmo.ch má sekci Geschäftsleitung/Verwaltungsrat (obrázkový slider); staticky vykreslené (bez nutnosti JS) je jen jméno aktuálně zobrazeného CEO, dalších 4 členů týmu (jen soubory fotek TKA, PKE, Besnik, Dahdah-Richard) se jména dotahují přes JS a nejsou v HTML dostupná, proto pouze CEO.",
+      "zdroj": "https://procimmo.ch/de/wir-gestalten-investitionsmoeglichkeiten/wer-wir-sind/"
     },
     "nazev:nova property fund management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Nova Property Fund Management AG",
-      "duvod": "Jediná z dávky, která v popisu vlastní strategie zmiňuje projektový development vedle hotových nemovitostí. To je fáze, ve které se projekt nabízí. Servisuje penzijní kasy i privátní investory, takže kapitál přitéká průběžně.",
-      "zdroj": "https://www.novaproperty.ch/en/"
+      "duvod": "Na stránce Organisation/Team webu Nova Property Fund Management jsou explicitně uvedené role Head Transactions pro obě jazykové regiony a Head Portfolio Management (člen rozšířeného vedení) - přesně role pro nákup nemovitostí.",
+      "zdroj": "https://www.novaproperty.ch/de/ueber-uns/organisation/team/"
     },
     "nazev:immofonds asset management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Immofonds Asset Management AG",
-      "duvod": "Vývojová pipeline za 700 mil. CHF je to podstatné - fond nejen drží, ale i staví a kupuje rozpracované. Bytové zaměření a bankovní vlastník znamenají stabilní přítok kapitálu.",
-      "zdroj": "https://www.immofonds.ch/unternehmen/kompetenzen"
+      "duvod": "Stránka Unternehmen/Team má karty jednotlivých zaměstnanců s pozicí a osobním e-mailem v čistém textu. Vybráni Transaction Manager (akvizice/transakce), Leiterin Portfoliomanagement (portfolio) a Geschäftsführerin (CEO) dle priority ze zadání.",
+      "zdroj": "https://www.immofonds.ch/unternehmen/team"
     },
     "nazev:swiss credit partners ag": {
       "datum": "2026-09-01",
@@ -101,39 +101,39 @@
       "zdroj": "https://www.swisscanto.com/ch/de/institutionelle/swisscanto-fonds/immobilienanlagen/direkte-immobilienanlagen.html"
     },
     "nazev:schroders capital management (switzerland) ag": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Schroders Capital Management (Switzerland) AG",
-      "duvod": "PŘIDÁNA ROLE FINANCOVÁNÍ, investorská zůstává. Real estate debt napříč celým životním cyklem nemovitosti — akvizice, development a výstavba, bridge (transitional lending) až po stabilizované úvěry, a to napříč kapitálovou strukturou. To je z celé DACH databáze nejšířeji zabraný dluhový mandát: výslovně jmenuje i fázi VÝSTAVBY. Vedle toho realitní equity přes 28 mld. USD, tedy obojí. Kontakt zůstává nedohledaný — na webu je jen formulář a nalezené číslo bylo francouzské.",
-      "zdroj": "https://www.schroderscapital.com/en/global/professional/capabilities/private-debt-and-credit-alternatives/real-estate-debt/"
+      "duvod": "Stránka Capabilities/Real Estate uvádí Roger Hennig (Head of Continental Europe Real Estate, telefon se švýcarskou předvolbou) jako regionálního šéfa nemovitostí pro kontinentální Evropu vč. Švýcarska. Stránka Leadership team by asset class (JS aplikace, data v atributech) uvádí Jeffrey Williams jako Head of Global Real Estate Debt Investments s job_title v embedded JSON a e-mailem na schroders.com. Samostatná stránka pro Real Estate Debt Europe s jiným jménem nebyla na vlastním webu dohledatelná.",
+      "zdroj": "https://www.schroderscapital.com/en/global/professional/capabilities/real-estate/ ; https://www.schroderscapital.com/en/global/professional/team/leadership-team-by-asset-class/"
     },
     "nazev:partners group ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Partners Group AG",
-      "duvod": "Největší subjekt celé databáze podle objemu a jeden z mála, kdo dělá real estate i private credit zároveň. Odpovídající velikost projektu je ale řádově jinde než u švýcarských realitních fondů - tohle není protistrana pro jeden bytový dům.",
-      "zdroj": "https://www.partnersgroup.com/en/news-and-views/press-releases/corporate-news/detail?news_id=e9680b64-5fbf-4cbc-86f9-4b625f61d2e0"
+      "duvod": "Stefan Lempen vede švýcarský (Zug) tým Private Real Estate Partnership Investments, Mike Bryant je globální Co-Head Private Real Estate a člen Global Executive Board — obě pozice jsou uvedeny na stránce Our Team vlastního webu.",
+      "zdroj": "https://www.partnersgroup.com/en/about-us/our-team"
     },
     "nazev:ubs fund management (switzerland) ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "UBS Fund Management (Switzerland) AG",
-      "duvod": "Největší nemovitostní fond v zemi, 361 nemovitostí za 12,7 mld. CHF. Kupuje hotové bytové i kancelářské budovy v německém Švýcarsku. Pro velký hotový objekt první adresa, pro rozpracovaný projekt ne.",
-      "zdroj": "https://www.ubs.com/ch/de/assetmanagement/capabilities/real-estate/sima.html"
+      "duvod": "Stránka UBS Asset Management Real Estate uvádí týmovou strukturu Real Estate DACH/CH; role 'Head Acquisition & Disposition CH' přesně odpovídá požadované roli nákupu nemovitostí.",
+      "zdroj": "https://www.ubs.com/ch/de/assetmanagement/capabilities/real-estate.html"
     },
     "nazev:patrimonium asset management ag": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Patrimonium Asset Management AG",
-      "duvod": "PŘIDÁNA ROLE FINANCOVÁNÍ, investorská zůstává. Real estate debt: stretched senior, whole loany a mezanin zajištěné nemovitostmi, pro zavedené dlužníky a zkušené sponzory. Geografické těžiště Německo, Benelux a Francie. Vedle dluhu má i přímé realitní investice, takže obojí. Pozor na profil dlužníka: cílí na STOJÍCÍ nemovitosti se stabilním nájemním cash flow, takže na rozestavěný projekt to není první adresa.",
-      "zdroj": "https://www.patrimonium.ch/investment-solutions/real-estate-debt"
+      "duvod": "Patrimonium má oboje - real estate equity i real estate debt; vybráni CIO Real Estate, vedoucí Real Estate Debt (financování) a Transaction Manager pro akvizice/prodeje/pronájmy nemovitostí, přesně dle priority zadání.",
+      "zdroj": "https://www.patrimonium.ch/our-company/our-team"
     },
     "nazev:swiss prime site solutions ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Swiss Prime Site Solutions AG",
-      "duvod": "Vývojová pipeline za 1,3 mld. CHF je tu podstatnější než samotný objem - znamená, že firma projekty nejen drží, ale i staví a kupuje rozpracované. Podle vlastního popisu má na starosti i akvizice.",
-      "zdroj": "https://spssolutions.swiss/"
+      "duvod": "Obecná stránka /team/ žádného Head of Acquisitions neuvádí (jen COO Investment Management a další resorty). Na stránce fondu Fundamenta Real Estate AG je ale samostatný tým Acquisitions & Sales v čele s Ramon Brändli, Head Acquisitions & Sales (Fundamenta), s osobním telefonem a e-mailem (uveden jako ramon.braendli(at)sps.swiss).",
+      "zdroj": "https://spssolutions.swiss/dienstleistungen/aktiengesellschaften/fundamenta-real-estate-ag/"
     },
     "nazev:realstone sa": {
       "datum": "2026-09-02",
@@ -143,53 +143,53 @@
       "zdroj": "https://www.realstone.ch/en/contact"
     },
     "nazev:helvetica asset management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Helvetica Asset Management AG",
-      "duvod": "Zaměření na PŘÍMĚSTSKÉ růstové lokality je odlišuje od většiny seznamu, která cílí na Curych a Ženevské jezero. Pro projekt mimo prémiová centra je to relevantnější protistrana než UBS nebo Zurich Invest.",
-      "zdroj": "https://www.helvetica.com/en/"
+      "duvod": "Gilles Wilten je přímo Head Transaction Management (akvizice/transakce), Dirk Adriaenssen jako CIO doplňuje investiční stranu — obě jména, pozice, telefony a e-maily jsou uvedeny na stránce Team vlastního webu.",
+      "zdroj": "https://www.helvetica.com/en/our-firm/team"
     },
     "nazev:pure funds ag": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "PURE Funds AG",
-      "duvod": "PŘIDÁNA ROLE FINANCOVÁNÍ, investorská zůstává. Fond PURE Real Estate Debt L-QIF (od prosince 2024) je postavený na selektivním poskytování PODŘÍZENÝCH HYPOTÉK — tedy juniorní dluh, ne senior. Druhý fond PURE Swiss Opportunity REF je nemovitostní, proto obojí. Stejné omezení jako u Property One: švýcarské těžiště.",
-      "zdroj": "https://pure.swiss/about/?lang=de"
+      "duvod": "Tým na pure.swiss/about/team/ má samostatnou pozici 'Acquisition' (Alessandra Staub), Head Investment Management (Michael Kirschner) a CEO/CIO (Flavio Lauener); pokrývá roli oboji (fin=ANO i inv=ANO), Acquisition je nejrelevantnější pro nákup nemovitostí.",
+      "zdroj": "https://pure.swiss/about/team/"
     },
     "nazev:admicasa fondsleitung ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Admicasa Fondsleitung AG",
-      "duvod": "Malý a mladý, ale profil je pro nás neobvykle blízký: skupina umí development i výstavbu a fond kupuje v aglomeracích, ne v prémiových centrech. Umí tedy ocenit rozpracovaný projekt, ne jen hotový výnos. Objem je zatím řádově menší než u ostatních.",
-      "zdroj": "https://admicasa.ch/unternehmen"
+      "duvod": "Ověřeno v surovém HTML stránky /team - automat dřív chybně přečetl 'Aisha Kindler' jako Verwaltungsrat, ve skutečnosti je Aisha Kindler Bau-/Projektleiterin a s Verwaltungsrat nesouvisí. Skutečná relevantní jména pro nákup nemovitostí jsou Transaction Manager a Portfoliomanager, jako fallback CEO & Mitglied der GL Fondsleitung AG.",
+      "zdroj": "https://admicasa.ch/team"
     },
     "nazev:investissements fonciers sa (la foncière)": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Investissements Fonciers SA (La Foncière)",
-      "duvod": "Sedmdesát let na trhu, 140 domů a prokazatelný přítok kapitálu (113 mil. CHF v roce 2024). Kupuje nájemní bytové domy v západním Švýcarsku - úzce vymezené, zato jednoznačné.",
-      "zdroj": "https://www.lafonciere.ch/"
+      "duvod": "Stránka /index.php/propos (přesměruje na /fund-management) má strukturované karty Conseil d'administration / Direction / Équipe. Vybráni Vincent Blanchard (Transaction Manager – akvizice/transakce), Ambroise Cordonier (Responsable Portfolio) a CEO Marc Pointet. Automatem nalezené „Équipe La Foncière (Direction)“ nahrazeno konkrétními jmény z karet.",
+      "zdroj": "https://www.lafonciere.ch/fund-management"
     },
     "nazev:verit investment management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "VERIT Investment Management AG",
-      "duvod": "Šedesát let na trhu a správa Raiffeisen Futura Immo Fonds, tedy kapitálu retailové bankovní skupiny. Web ale o objemu ani o akvizičním apetitu neříká nic - profil je doložený, chuť nakupovat ne. Před oslovením zjistit, jestli fond roste.",
-      "zdroj": "https://verit-invest.ch/en/company"
+      "duvod": "Renato Häusler jako CIO odpovídá za investiční stranu, doplněn o CEO a CFO z Geschäftsleitung; automatem nalezený Verwaltungsrat (Michèle Landtwing Leupi, Ralph Kretschmer) je nevýkonný orgán bez exekutivní role, proto byla dle pravidla zadání upřednostněna exekutiva (Geschäftsleitung) uvedená na stránce Unternehmen vlastního webu.",
+      "zdroj": "https://verit-invest.ch/unternehmen"
     },
     "nazev:société pour la gestion de placements collectifs gep sa": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Société pour la gestion de placements collectifs GEP SA",
-      "duvod": "DOPLNĚN KONTAKT PO LIDSKÉM ROZHODNUTÍ (Martina Habová, 2. 9. 2026). Automat nezapsal, protože mail@gep.ch nesedí na doménu fir.ch uvedenou v sešitu. Nesedí správně: fir.ch je doména FONDU, gep.ch je doména SPRÁVCE - a oslovuje se správce. Je to táž past jako u českých správců fondů, jen obráceně: tam se na doménu správce chybně párovalo, tady je doména správce ta hledaná.",
-      "zdroj": "https://fir.ch"
+      "duvod": "gep.ch přesměrovává na fir.ch (web fondu FIR); web fir.ch nemá stránku týmu, jména vedení správce fondu GEP SA jsou v aktuálním prospektu fondu (§2.3 Gestion et administration) na vlastní doméně. Head of Acquisitions/Transactions na webu uveden není, proto Direction (CEO úrovně) dle pravidla.",
+      "zdroj": "https://fir.ch/app/uploads/2026/01/Prospectus-avec-contrat-de-fonds-decembre-2025-31-decembre-2025.pdf"
     },
     "nazev:pretium invest ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "PRETIUM Invest AG",
-      "duvod": "Nejmladší subjekt databáze a právě proto zajímavý - fond je rok starý, má teprve 15 nemovitostí a probíhá navýšení kapitálu. Takový fond nakupuje, protože musí. Zaměření na Curych a Thurgau je úzké, ale statut připouští i smíšené a komerční nemovitosti.",
-      "zdroj": "https://pretium-invest.ch/de/fund/pretium-real-estate-fund"
+      "duvod": "Stránka Organisation neobsahuje samostatnou roli Head of Acquisitions/Transactions, jen Verwaltungsrat a Geschäftsleitung; dle pravidla zadání proto použita Geschäftsleitung, přednostně CIO (investiční rozhodnutí).",
+      "zdroj": "https://pretium-invest.ch/de/unternehmen/organisation"
     },
     "nazev:gerifonds sa": {
       "datum": "2026-09-01",
@@ -339,11 +339,11 @@
       "zdroj": "https://uniqa-rem.at/kontakt"
     },
     "nazev:schweizerische mobiliar asset management ag": {
-      "datum": "2026-09-01",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Schweizerische Mobiliar Asset Management AG",
-      "duvod": "ZAVÍRÁ SE Z LISTU 8. Minule vracela stránka produktu jen navigaci; přehledová stránka asset managementu obsah má. Třicet miliard pojišťovacího a penzijního kapitálu s bytovým těžištěm ve švýcarských městech. Že se stává emitentem fondů na SIX, napovídá čerstvý kapitál.",
-      "zdroj": "https://www.mobiliar.ch/ueber-uns/die-mobiliar/unternehmen-der-gruppe/asset-management"
+      "duvod": "Samostatná profilová stránka na mobiliar.ch uvádí Markus Wyss jako Leiter Immobilien (od r. 2014) a Mitglied der Geschäftsleitung Schweizerische Mobiliar Asset Management AG, zodpovědného portfolio manažera fondu MobiFonds Swiss Property. Osobní e-mail ani telefon web u něj neuvádí (jen obecný kontakt).",
+      "zdroj": "https://www.mobiliar.ch/die-mobiliar/ueber-uns/unternehmen-der-gruppe-mobiliar/schweizerische-mobiliar-asset-management-ag/organisation-schweizerische-mobiliar-asset-management-ag/markus-wyss"
     },
     "nazev:ardian investment switzerland ag": {
       "datum": "2026-09-02",
@@ -353,11 +353,11 @@
       "zdroj": "https://www.ardian.com/press-releases/ardian-launches-real-estate-debt-strategy"
     },
     "nazev:gsa switzerland ag": {
-      "datum": "2026-09-02",
+      "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "GSA Switzerland AG",
-      "duvod": "ZAŘAZUJE SE JAKO JEDINÝ SEGMENTOVÝ SPECIALISTA. Studentské bydlení je typ projektu, na který se v Česku staví a pro který jsme dosud v databázi neměli adresu. Osm miliard dolarů a 11 zemí je relevantní velikost. Co doloženo NENÍ: že působí v CEE nebo v Česku - zveřejněné odkazy míří na Řím, tedy jižní Evropu. Zapisuje se proto s webem skupiny, ne švýcarské entity, protože ta je administrativní schránka.",
-      "zdroj": "https://www.gsagroup.com/"
+      "duvod": "James Hunt vede globální akvizice a rozšiřování nemovitostního portfolia GSA (vč. developmentu a investičních nemovitostí), Ben Harvie odpovídá za výkonnost investičních portfolií — obě pozice jsou uvedeny na stránce Our Team mateřské skupiny GSA Group (GSA Switzerland AG je lokální entita skupiny, samostatný švýcarský tým na webu není).",
+      "zdroj": "https://www.gsagroup.com/our-people/our-team/"
     },
     "nazev:asia green real estate ag": {
       "datum": "2026-09-02",
@@ -426,8 +426,8 @@
       "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "BNP PARIBAS ASSET MANAGEMENT Switzerland AG",
-      "duvod": "REAL ESTATE DEBT: skupina BNP Paribas Asset Management nabízí na své švýcarské stránce strategii Commercial Real Estate Debt v sekci Private Assets / Real assets – tedy poskytuje nemovitostní dluh, což je pro nás nejcennější typ protistrany. Švýcarská entita (Fondsleitung v Zürichu) je vstupní bod skupiny pro švýcarský trh; samotný RE debt tým sídlí v Paříži. Skupina BNP Paribas v databázi zatím není, takže nejde o duplicitu. Zařadit na list 3 (financování) s poznámkou, že nabídka je celoevropská platforma, nikoli lokální švýcarská.",
-      "zdroj": "https://www.bnpparibas-am.com/en-ch/capabilities/asset-classes/alternatives/private-assets/commercial-real-estate-debt-strategy/"
+      "duvod": "Profilová stránka na vlastním webu skupiny BNP Paribas Asset Management (bnpparibas-am.com) potvrzuje pozici Head of Real Estate Debt; přesně odpovídá roli poskytování financování (fin=ANO).",
+      "zdroj": "https://www.bnpparibas-am.com/en/people/christophe-montcerisier/"
     },
     "nazev:caceis (switzerland) sa": {
       "datum": "2026-09-03",
@@ -510,8 +510,8 @@
       "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Mirabaud Asset Management (Suisse) SA",
-      "duvod": "Mirabaud AM má na vlastním webu sekci Private assets se třemi nemovitostními equity strategiemi (Grand Paris, Sustainable Cities, Real Estate – Club Deals) a strategií Private Credit II, jejíž součástí je výslovně „commercial real estate bridge financing“ – tedy REAL ESTATE DEBT (byť s převážně severoamerickým zaměřením). Alokuje kapitál do nemovitostí jak equity, tak dluhem, doloženo z primárního zdroje. Pozor: telefon je centrála skupiny Mirabaud & Cie SA v Ženevě (web AM uvádí jen formulář), e-mail na doméně firmy web nezveřejňuje.",
-      "zdroj": "https://www.mirabaud-am.com/en/capabilities/private-assets/mirabaud-private-credit-ii"
+      "duvod": "Přímo na stránce fondu Mirabaud Real Estate – Club Deals (Private Assets) jsou karty týmu: Vaqar Zuberi jako Head of Alternative Investments (Ženeva, CH) a Umberto Boccato jako CEO of Asset Management. Samostatný „Head of Real Estate“ titul web neuvádí; zmiňovaný Daniel Ziaei má na vlastní bio stránce skupiny (mirabaud.com) titul jen „Senior Analyst – Hedge Funds“ bez zmínky o nemovitostech, proto nebyl použit.",
+      "zdroj": "https://www.mirabaud-am.com/en/capabilities/private-assets/mirabaud-real-estate-club-deals"
     },
     "nazev:polar capital (switzerland) ag": {
       "datum": "2026-09-03",
@@ -552,22 +552,22 @@
       "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Edmond de Rothschild REIM (Suisse) SA",
-      "duvod": "REAL ESTATE DEBT – nejcennější nález dávky: skupinový web EdR REIM výslovně říká, že spravuje nemovitostní equity I DLUHOVÉ investice, a vlastní tisková zpráva EdR dokládá fond poskytující whole loans a mezzanine úvěry proti nemovitostnímu kolaterálu v západní Evropě. Švýcarská FINMA entita REIM (Suisse) SA je regulovaný správce skupiny s AuM ~CHF 4 mld. a kontaktem na vlastní doméně (info@reim-edr.ch dle stránky Counterparties na edr-realestatesicav.ch). Skupina Edmond de Rothschild v databázi zatím není. Poznámka: dluhový fond je domicilován v Luxembursku (AIFM Alter Domus), oslovit skupinu přes REIM a jejího Head of Real Estate Debt. Web edmond-de-rothschild.com vrací 403 jen pro WebFetch; přes curl s prohlížečovým User-Agentem šel otevřít.",
-      "zdroj": "https://am.edmond-de-rothschild.com/other/en/other/our-investment-strategies/real-estate ; https://www.edmond-de-rothschild.com/en/news/show/1565-5106-edmond-de-rothschild-reim-raises-further-capital-for-its-european-high-yield-i-real-estate-debt-fund"
+      "duvod": "Jméno vedoucího nemovitostního dluhu doloženo z živé tiskové zprávy na vlastním webu skupiny (ověřeno 3. 9. 2026). Týmová stránka reim-edr.com je JavaScriptová bez textu; archivní kopie z web.archive.org uváděla ještě Klause Schmitze (CIO Europe), ale archiv není živý primární zdroj, proto se nezapisuje.",
+      "zdroj": "https://www.edmond-de-rothschild.com/en/news/show/1565-5106-edmond-de-rothschild-reim-raises-further-capital-for-its-european-high-yield-i-real-estate-debt-fund"
     },
     "nazev:jss real estate management sa": {
       "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "JSS Real Estate Management SA",
-      "duvod": "Regulovaný (FINMA) správce nemovitostního fondu, který přímo nakupuje švýcarské nemovitosti – equity investor, o nemovitostním dluhu nic. Napodruhé se podařilo otevřít tiskovou zprávu a factsheet fondu jako PDF na vlastní doméně jsafrasarasin.com (stránka /en/jssrem.html je renderovaná JavaScriptem a bez textu, jssrem.ch na ni přesměruje) – PDF na vlastní doméně je primární zdroj. Skupina J. Safra Sarasin v databázi zatím není. Aktivní akvizitor v Romandii, proto zařadit jako investora – list 6.",
-      "zdroj": "https://www.jsafrasarasin.com/content/dam/jsafrasarasin/jssrem/documents/media-release/Media%20Release%2029082025%20EN.pdf.coredownload.inline.pdf"
+      "duvod": "jssrem.ch/jsafrasarasin.com/en/jssrem.html je JS stránka bez statického obsahu jmen. Nejnovější dohledaná mediální zpráva na vlastní doméně jsafrasarasin.com (16.12.2025, Suisse Romande Property Fund) cituje Olivera Cartade jako Verwaltungspräsident JSSREM. Odborný tisk (IMMOBILIEN Business, 4.8.2026) uvádí, že novým CEO se stal Samuel Egger po Virginii Bordry, ale primární tiskovou zprávu o této změně (na jsafrasarasin.com) se nepodařilo dohledat, proto se drží jméno doložené primárním zdrojem a Egger/Bordry se neuvádí bez dokladu.",
+      "zdroj": "https://www.jsafrasarasin.com/content/dam/jsafrasarasin/jssrem/documents/media-release/Media%20Release%2016122025%20DE.pdf.coredownload.inline.pdf"
     },
     "nazev:imovag immobilien verwaltungs ag, luzern": {
       "datum": "2026-09-03",
       "verdikt": "zaradit",
       "nazev": "Imovag Immobilien Verwaltungs AG, Luzern",
-      "duvod": "Napodruhé se web otevřel včetně podstránek (Organisation, Kennzahlen, Portfolio, Publikationen, Kontakt) a PDF na vlastní doméně: Verkaufsprospekt s Fondsvertrag (1/2026), Vereinfachter Prospekt (3/2025) a Jahresbericht 2025 – ty dokládají investiční politiku. Regulovaný správce jednoho regionálního nemovitostního fondu, který nakupuje a drží bytové a komerční nemovitosti – equity investor, o nemovitostním dluhu nic. Malý a regionálně úzce zaměřený (Centrální Švýcarsko), pro zahraniční projekty spíše okrajový; zařadit jako investora – list 6.",
-      "zdroj": "https://www.imovag.ch/pages/dokumente/Centralfonds-Verkaufsprospekt-Fondsvertrag-2026-01-29.pdf"
+      "duvod": "Stránka Organisation neobsahuje samostatnou roli pro akvizice/transakce, jen Verwaltungsrat, Geschäftsleitung a Schätzungsexperten; dle pravidla zadání proto použita Geschäftsleitung (výkonné vedení, ne jen Verwaltungsrat).",
+      "zdroj": "https://www.imovag.ch/pages/organisation.html"
     },
     "nazev:swiss life asset management ag": {
       "datum": "2026-09-03",
