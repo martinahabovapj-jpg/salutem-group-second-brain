@@ -1,0 +1,1169 @@
+[
+ {
+  "id": "38",
+  "nazev": "Aukera Real Estate AG",
+  "zeme": "DE",
+  "web": "https://www.aukera.ag",
+  "ticket_od": "10 mil. EUR",
+  "ticket_do": "20 mil. EUR (s růstem fondu do 50 mil. EUR)",
+  "ltv": "75 % (LTV/LTC)",
+  "senior": "ANO",
+  "whole_loan": "ANO",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "kanceláře, retail, logistika, rezidenční",
+  "typy_aktiv_text": "Financují komerční nemovitosti v segmentech kanceláře, retail, logistika a bydlení (rezidenční) v kontinentální Evropě. Konkrétní doložený příklad: refinancování nizozemského value-add portfolia z 22 obytných a obchodních domů (leden 2026).",
+  "geografie": "DE, AT, CH, BENELUX",
+  "posledni_aktivita": "Refinancování nizozemského value-add portfolia z 22 obytných a obchodních domů (leden 2026); dříve též první financování z nového fondu ve výši 15 mil. EUR.",
+  "aktivita_url": "https://www.aukera.ag",
+  "citace": "Unser Fokus liegt auf erstrangig besicherten Immobilienkrediten sowie Projektfinanzierungen in Kontinentaleuropa mit geografischem Schwerpunkt auf den Regionen DACH und BeNeLux.",
+  "zdroj": "https://www.aukera.ag",
+  "dalsi_doklady": [
+   {
+    "co": "poslední aktivita a typ nemovitosti",
+    "citace": "Aukera refinanziert niederländisches Value-add-Portfolio aus 22 Wohn- und Geschäftshäusern",
+    "url": "https://www.aukera.ag"
+   }
+  ],
+  "duvod": "Doplněna geografie (DACH + BeNeLux, doslovná citace z homepage) a kódy typů aktiv (kanceláře, retail, logistika, rezidenční – převzato z již doložených údajů a namapováno na slovník). Nalezen i konkrétnější poslední transakce s datem (refinancování NL portfolia, leden 2026). Ticket, LTV a produkty byly již doložené, znovu neřešeno. Hledáno na aukera.ag (homepage) a přes web search; specifická podstránka /de/leistungsportfolio neexistuje (404)."
+ },
+ {
+  "id": "26",
+  "nazev": "Empira Group",
+  "zeme": "CH",
+  "web": "https://empira-invest.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "ANO",
+  "junior": "ANO",
+  "mezzanine": "ANO",
+  "bridge": "",
+  "pref_equity": "ANO",
+  "development": "",
+  "akvizicni": "ANO",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, pozemky",
+  "typy_aktiv_text": "Těžiště na rezidenčních nemovitostech; mezanin/junior financování využíváno výslovně i pro akvizici pozemků ('Mezzanine Finance – Temporary bridging loans for real estate and land acquisition'). Kanceláře společnosti/skupiny v Německu, Lucembursku, USA, Velké Británii, Švédsku a Rakousku, ale konkrétní seznam zemí, kde reálně poskytují financování, web neuvádí.",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Whether you need a senior or junior loan, are looking for whole-loan or mezzanine financing, or would like to explore preferred equity solutions or joint venture opportunities.",
+  "zdroj": "https://empira-invest.com/en/what-we-do/financial-services",
+  "dalsi_doklady": [
+   {
+    "co": "mezanin i na akvizici pozemku",
+    "citace": "Mezzanine Finance - Temporary bridging loans for real estate and land acquisition.",
+    "url": "https://empira-invest.com/en/what-we-do/our-investment-solutions"
+   }
+  ],
+  "duvod": "Web empira-invest.com potvrzuje již doložené produkty (Senior, Whole Loan, Junior, Mezzanine, Preferred Equity, akviziční/land) a upřesňuje, že mezanin cílí i na akvizici pozemků. Ticket, LTV ani taxativní geografie (jen sídla kanceláří, ne země půjčování) na vlastním webu zveřejněny nejsou. Hledáno na empira-invest.com/en/what-we-do/financial-services, /our-investment-solutions a /what-we-do; stránka /de/finanzierungsloesungen z nápovědy vrací 404."
+ },
+ {
+  "id": "18",
+  "nazev": "PURE Funds AG",
+  "zeme": "CH",
+  "web": "https://pure.swiss",
+  "ticket_od": "1 mil. CHF",
+  "ticket_do": "",
+  "ltv": "90 % (na úrovni jednotlivého projektu) / 80 % (na úrovni portfolia)",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "ANO",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "pozemky, mixed-use",
+  "typy_aktiv_text": "Fond PURE Real Estate Debt L-QIF (PRED) financuje nachrangige (podřízené) hypotéky na švýcarské nemovitosti: stavební pozemky (Bauland), developerské projekty (Projektentwicklungen) a výnosové nemovitosti (Renditeliegenschaften) s diverzifikací dle lokality a využití. Geografické těžiště na německy mluvícím Švýcarsku (Deutschschweiz). Měna CHF, splatnost max. 48 měsíců, minimální objem financování 1 mil. CHF, cílová výnosnost 6,0–8,0 % p.a.",
+  "geografie": "CH",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Der PRED investiert in nachrangige Hypotheken auf Schweizer Immobilien mit einer Belehnungshöhe von maximal 90% auf Einzelprojektebene und maximal 80% auf Portfolioebene.",
+  "zdroj": "https://pure.swiss/wp-content/uploads/2025/10/Factsheet-PURE-Hypothekenfonds-PRED.pdf",
+  "dalsi_doklady": [
+   {
+    "co": "minimální velikost financování",
+    "citace": "Finanzierungsbetrag min. CHF 1.0 Mio. CHF",
+    "url": "https://pure.swiss/wp-content/uploads/2025/10/Factsheet-PURE-Hypothekenfonds-PRED.pdf"
+   },
+   {
+    "co": "splatnost",
+    "citace": "Laufzeit max. 48 Monate",
+    "url": "https://pure.swiss/wp-content/uploads/2025/10/Factsheet-PURE-Hypothekenfonds-PRED.pdf"
+   },
+   {
+    "co": "typy financovaných nemovitostí",
+    "citace": "Finanzierung von Bauland, Projektentwicklungen und Renditeliegenschaften.",
+    "url": "https://pure.swiss/wp-content/uploads/2025/10/Factsheet-PURE-Hypothekenfonds-PRED.pdf"
+   },
+   {
+    "co": "geografické zaměření",
+    "citace": "Deutschschweiz im Zentrum der Aktivitäten",
+    "url": "https://pure.swiss/en/pure-real-estate-debt/"
+   }
+  ],
+  "duvod": "Vlastní factsheet fondu (PDF na pure.swiss) doložil LTV (max. 90 % na projekt / 80 % na portfolio), minimální ticket 1 mil. CHF, splatnost max. 48 měsíců, typ financování (nachrangig/junior, development) a geografii (Švýcarsko, těžiště Deutschschweiz). Maximální velikost úvěru a konkrétní poslední profinancovaná transakce na webu ani ve factsheetu uvedeny nejsou."
+ },
+ {
+  "id": "48",
+  "nazev": "Mirabaud Asset Management (Suisse) SA",
+  "zeme": "CH",
+  "web": "https://www.mirabaud-am.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "kanceláře, logistika",
+  "typy_aktiv_text": "Mirabaud Private Credit II nabízí mj. 'commercial real estate bridge financing' s nízkým LTV a 'defined repayment paths', s převážně severoamerickým zaměřením. Samostatný produkt Mirabaud Real Estate – Club Deals investuje do 'industrial and office real estate located in the US' (distribuční centra a kancelářské kampusy s bonitními nájemci); dle již doložených údajů též equity development ve Francii.",
+  "geografie": "US, FR",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Broad diversification across borrowers, sectors and maturities, with a predominantly North American focus.",
+  "zdroj": "https://www.mirabaud-am.com/en/capabilities/private-assets/mirabaud-private-credit-ii",
+  "dalsi_doklady": [
+   {
+    "co": "produkt bridge financing",
+    "citace": "commercial real estate bridge financing... low loan-to-value ratios and defined repayment paths",
+    "url": "https://www.mirabaud-am.com/en/capabilities/private-assets/mirabaud-private-credit-ii"
+   },
+   {
+    "co": "typy aktiv Real Estate Club Deals",
+    "citace": "Industrial and office real estate located in the US",
+    "url": "https://www.mirabaud-am.com/en/capabilities/private-assets/mirabaud-real-estate-club-deals"
+   }
+  ],
+  "duvod": "Doplněna geografie (převážně Severní Amerika u bridge financing, konkrétně USA u Club Deals) a typy aktiv (kanceláře, logistika/průmyslové nemovitosti z Club Deals). Konkrétní % LTV, velikost úvěru (ticket) a poslední profinancovaná transakce na webu zveřejněny nejsou. Hledáno na mirabaud-am.com (homepage, private-credit-ii, real-estate-club-deals); přímá URL /en/strategies/private-debt z odhadu neexistuje (404)."
+ },
+ {
+  "id": "67",
+  "nazev": "Ares Management Corporation (Ares Real Estate)",
+  "zeme": "DE",
+  "web": "https://www.ares.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "ANO",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "ANO",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "Real Estate Debt tým je popsán jako 'long-term, value-oriented investor focused on direct origination and provision of financing solutions to owners and operators of global commercial real estate'; strategie kombinují senior mortgage loans, subordinated (junior) debt a preferred/common equity. Web cílí obecně na 'New Economy sectors' bez konkrétního výčtu typů nemovitostí ani zemí.",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Our strategies span equity and debt, including senior mortgage loans, subordinated debt, preferred and common equity real estate positions.",
+  "zdroj": "https://www.ares.com/us/businesses-and-products/our-businesses/real-estate",
+  "dalsi_doklady": [
+   {
+    "co": "popis Real Estate Debt strategie",
+    "citace": "Real Estate Debt Long-term, value-oriented investor focused on direct origination and provision of financing solutions to owners and operators of global commercial real estate.",
+    "url": "https://www.ares.com/us/businesses-and-products/our-businesses/real-estate"
+   }
+  ],
+  "duvod": "Stránka ares.com/us/.../real-estate doložila produkty senior mortgage loans, subordinated (junior) debt a preferred equity, ale bez čísel (ticket, LTV) a bez explicitního výčtu zemí či typů nemovitostí. Sekce tiskových zpráv (news-and-insights/press-releases) načítá obsah dynamicky přes JS a přes curl s prohlížečovými hlavičkami se nepodařilo získat konkrétní tiskové zprávy o evropských úvěrech. Přímé URL z nápovědy (/real-estate/real-estate-debt) vracely 403/404; funkční je jen /us/businesses-and-products/our-businesses/real-estate."
+ },
+ {
+  "id": "76",
+  "nazev": "Generali Real Estate S.p.A.",
+  "zeme": "DE",
+  "web": "https://www.generalirealestate.com/",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "60 %",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "ANO",
+  "typy_aktiv_kod": "kanceláře, logistika, hotely, retail",
+  "typy_aktiv_text": "GREDIF a GREDIF II financují 'first mortgages senior loans' s 'core; core+ and value add risk return profile' a splatností '5 to 7 year maturities'; LTV do 60 %. GREDIF II je navíc klasifikován dle SFDR jako fond článku 8 (ESG). Šířeji equity strategie Generali Real Estate cílí na core/core+/core-plus komerční nemovitosti (kanceláře, logistika, hotely, obchodní centra/retail). Geografii jednotlivých úvěrů web taxativně neuvádí.",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "first mortgages senior loans",
+  "zdroj": "https://www.generalirealestate.com/our-funds",
+  "dalsi_doklady": [
+   {
+    "co": "LTV GREDIF",
+    "citace": "LTV ~60%",
+    "url": "https://www.generalirealestate.com/our-funds"
+   },
+   {
+    "co": "LTV GREDIF II",
+    "citace": "LTV up to 60%",
+    "url": "https://www.generalirealestate.com/our-funds"
+   },
+   {
+    "co": "splatnost úvěrů",
+    "citace": "5 to 7 year maturities",
+    "url": "https://www.generalirealestate.com/our-funds"
+   },
+   {
+    "co": "tisková zpráva o spuštění GREDIF II (fond, ne konkrétní úvěr)",
+    "citace": "Generali Real Estate doubles down on commercial real estate debt investments with GREDIF II fund launch",
+    "url": "https://www.generalirealestate.com/press-releases"
+   }
+  ],
+  "duvod": "Stránka /our-funds potvrdila již doložené LTV (~60 % GREDIF, do 60 % GREDIF II) a doplnila typ produktu 'first mortgages senior loans' se splatností 5-7 let. Velikost úvěru (ticket), taxativní geografie a poslední konkrétní profinancovaná transakce (nalezena jen tisková zpráva o launchi fondu GREDIF II z 31.1.2023, ne konkrétní úvěr; PDF zprávy je nedostupné, 404) na vlastním webu nejsou zveřejněny."
+ },
+ {
+  "id": "85",
+  "nazev": "PIMCO Prime Real Estate GmbH",
+  "zeme": "DE",
+  "web": "https://pimcoprimerealestate.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "PIMCO Prime Real Estate se popisuje jako 'award-winning provider of real estate financing' originující 'senior commercial mortgages on behalf of a global client base'. Cílí na 'properties in primary markets that offer steady, unlevered returns with a low to moderate risk profile', bez konkrétního výčtu typů nemovitostí. Debt kniha dosahovala 'EUR 23B Debt' (k 31. 3. 2026), vedle 'EUR 12.1B Indirect Investment' equity.",
+  "geografie": "EU, US",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Our current focus is in Europe and the U.S.",
+  "zdroj": "https://pimcoprimerealestate.com/en/investment-strategy",
+  "dalsi_doklady": [
+   {
+    "co": "popis debt platformy",
+    "citace": "originating senior commercial mortgages on behalf of a global client base",
+    "url": "https://pimcoprimerealestate.com"
+   },
+   {
+    "co": "velikost debt knihy",
+    "citace": "EUR 23B Debt",
+    "url": "https://pimcoprimerealestate.com/en/investment-strategy"
+   }
+  ],
+  "duvod": "Stránka /en/investment-strategy potvrdila geografické zaměření (Evropa + USA) a celkovou velikost dluhové knihy (23 mld. EUR); homepage potvrzuje produkt senior commercial mortgages. Konkrétní ticket/LTV pro jednotlivé úvěry, taxativní typy aktiv a poslední konkrétní profinancovaná transakce (dostupné tiskové zprávy se týkají jen equity/asset-management projektů, ne úvěrů) na vlastním webu nejsou zveřejněny."
+ },
+ {
+  "id": "30",
+  "nazev": "FAP Group GmbH",
+  "zeme": "DE",
+  "web": "https://fap-group.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "ANO",
+  "junior": "ANO",
+  "mezzanine": "ANO",
+  "bridge": "ANO",
+  "pref_equity": "ANO",
+  "development": "ANO",
+  "akvizicni": "ANO",
+  "refinancovani": "ANO",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, kanceláře, mixed-use",
+  "typy_aktiv_text": "FAP Finance strukturuje financování (senior, whole loan, junior/mezzanine, bridge, preferred equity) pro nákup, refinancování, developerské projekty a landbanking, se zaměřením na Německo (sídlo Berlín); poslední doložený mandát (Q4 2025, 400 mil. EUR) se týkal refinancování rezidenčních, kancelářských a mixed-use projektů pro mezinárodní i německé investory.",
+  "geografie": "DE",
+  "posledni_aktivita": "FAP v Q4 2025 získala nová poradenská mandáty na financování v objemu přes 400 mil. EUR, zaměřená na refinancování rezidenčních, kancelářských a mixed-use projektů (zveřejněno 9. 12. 2025).",
+  "aktivita_url": "https://fap-group.com/de/news/fap-sichert-sich-finanzierungsberatungsmandate-in-hoehe-von-ueber-400-mio-euro/",
+  "citace": "Senior Loan, Whole Loan, Junior und Mezzanine Loan, Bridge Loan, Preferred Equity",
+  "zdroj": "https://fap-group.com/fap-finance",
+  "dalsi_doklady": [
+   {
+    "co": "Typy příležitostí financování (akvizice, refinancování, development, landbanking)",
+    "citace": "Ankauf, Refinanzierung, Entwicklung, Landbanking",
+    "url": "https://fap-group.com/fap-finance"
+   },
+   {
+    "co": "Poslední transakce s částkou a asset třídami (Q4 2025)",
+    "citace": "FAP hat im vierten Quartal 2025 neue Finanzierungsberatungsmandate von über 400 Millionen Euro gewonnen und stärkt damit ihre führende Rolle in der Kapitalbeschaffung für Immobilienprojekte. Im Fokus stehen umfangreiche Refinanzierungen in den Bereichen Wohnen, Büro und Mixed Use für internationale und deutsche Investoren.",
+    "url": "https://fap-group.com/de/news/fap-sichert-sich-finanzierungsberatungsmandate-in-hoehe-von-ueber-400-mio-euro/"
+   },
+   {
+    "co": "Whole-Loan-Programm v objemu 1 mld. EUR pro americkeho investora, FAP jako poradce pro Německo",
+    "citace": "FAP legt im Auftrag eines US-amerikanischen Investors ein Whole-Loan-Programm mit einem Gesamtvolumen von 1 Mrd. Euro auf. ... FAP ist der Berater für Deutschland und übernimmt die Kreditvergabe und deren Prüfung sowie das laufende Kreditmanagement.",
+    "url": "https://fap-group.com/de/news/FAP-startet-milliardenschweres-whole-loan-programm/"
+   },
+   {
+    "co": "Celkový track record skupiny",
+    "citace": "Mit einem Track Record von über 18 Mrd. Euro Debt zählen wir zu den führenden Experten",
+    "url": "https://fap-group.com/fap-invest"
+   }
+  ],
+  "duvod": "Na fap-group.com (stránky FAP Finance a FAP Invest) i v tiskových zprávách jsou výslovně zmíněné typy financování (Senior, Whole Loan, Junior/Mezzanine, Bridge, Preferred Equity) a účely (Ankauf/akvizice, Refinanzierung, Entwicklung, Landbanking); FAP Group nezveřejňuje konkrétní ticket size ani LTV parametry na žádné z prohlédnutých stránek (fap-finance, fap-invest, news), proto pole ticket_od/ticket_do/ltv zůstávají prázdná. Hledáno na fap-group.com, /fap-finance, /fap-invest, /news a dvou konkrétních tiskových zprávách (400 mil. EUR mandát z 12/2025, 1 mld. EUR whole-loan program z 10/2024)."
+ },
+ {
+  "id": "14",
+  "nazev": "Patrimonium Asset Management AG",
+  "zeme": "CH",
+  "web": "https://www.patrimonium.ch",
+  "ticket_od": "20 mil. EUR",
+  "ticket_do": "100 mil. EUR (a více)",
+  "ltv": "55-75 % (cílový vážený průměr ~70 %); pro novou platformu s Bayview až 75-80 %",
+  "senior": "ANO",
+  "whole_loan": "ANO",
+  "junior": "",
+  "mezzanine": "ANO",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "ANO",
+  "refinancovani": "ANO",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, retail, logistika, hotely, kanceláře",
+  "typy_aktiv_text": "Obecná stránka Real Estate Debt hovoří o sektorově neutrálním přístupu k „existing properties with stable rental cash flows” bez jmenování konkrétních sektorů. Tisková zpráva o platformě s Bayview (12.1.2026) sektory jmenuje výslovně: „sector-agnostic across multi-family residential, retail, logistics, hotels and high-end office properties”.",
+  "geografie": "DE, BENELUX, FR",
+  "posledni_aktivita": "V prosinci 2025 Patrimonium a Bayview uzavřeli první transakci nové platformy pro komerční nemovitostní dluh: senior úvěr ve výši 38,5 mil. EUR zajištěný plně pronajatým outlet centrem v Rostocku (Německo), oznámeno v tiskové zprávě z 12. ledna 2026.",
+  "aktivita_url": "https://www.patrimonium.ch/press-release/patrimonium-and-bayview-launch-eur-500-million-commercial-real-estate-lending-platform",
+  "citace": "The strategy targets loan opportunities ranging from EUR 20 million to EUR 100 million+, supporting established borrowers in refinancing existing assets or funding acquisitions of new properties and portfolios. Loan types will include core+, transitional / value-add and development projects.",
+  "zdroj": "https://www.patrimonium.ch/press-release/patrimonium-and-bayview-launch-eur-500-million-commercial-real-estate-lending-platform",
+  "dalsi_doklady": [
+   {
+    "co": "LTV a typy úvěrů obecné strategie Real Estate Debt",
+    "citace": "By offering stretched senior, whole loans and mezzanine debt backed by real estate assets, Patrimonium fills the gap left by banks... LTV range: 55–75% (target weighted average ~70%)",
+    "url": "https://www.patrimonium.ch/investment-solutions/real-estate-debt"
+   },
+   {
+    "co": "Zajištění a subordinace obecné strategie",
+    "citace": "Loans secured by first-ranking mortgages, providing a significant equity buffer (subordinated debt / mezzanine loans also available, in limited capacity)",
+    "url": "https://www.patrimonium.ch/investment-solutions/real-estate-debt"
+   },
+   {
+    "co": "Geografie obecné strategie",
+    "citace": "Focus on existing properties with stable rental cash flows in Germany, Benelux and France",
+    "url": "https://www.patrimonium.ch/investment-solutions/real-estate-debt"
+   },
+   {
+    "co": "LTV a struktura úvěrů nové platformy s Bayview (EUR 500 mil.)",
+    "citace": "The strategy is sector-agnostic across multi-family residential, retail, logistics, hotels and high-end office properties. Our partnership will help rebalance the funding gap by offering flexible financing solutions with first and second ranking loans up to 75-80% LTV",
+    "url": "https://www.patrimonium.ch/press-release/patrimonium-and-bayview-launch-eur-500-million-commercial-real-estate-lending-platform"
+   },
+   {
+    "co": "Splatnost úvěrů a geografie platformy s Bayview",
+    "citace": "The platform launches with an initial commitment of EUR 500 million and plans to issue 2-to-5-year senior, whole-loans, and subordinated debt financings to the German commercial real estate market as well as to select neighbouring countries (Netherlands, France and Luxembourg).",
+    "url": "https://www.patrimonium.ch/press-release/patrimonium-and-bayview-launch-eur-500-million-commercial-real-estate-lending-platform"
+   },
+   {
+    "co": "Inaugurální transakce (Rostock)",
+    "citace": "Inaugural transaction of EUR 38.5 million in Rostock, Germany... a senior facility secured by a fully let outlet center in Rostock.",
+    "url": "https://www.patrimonium.ch/press-release/patrimonium-and-bayview-launch-eur-500-million-commercial-real-estate-lending-platform"
+   }
+  ],
+  "duvod": "Hledáno na patrimonium.ch (homepage, /investment-solutions/real-estate-debt) a v tiskové zprávě o platformě s Bayview z 12.1.2026. Web zveřejňuje LTV rozsah 55-75 % pro obecnou strategii Real Estate Debt a 75-80 % pro novou platformu s Bayview, ticket size (20-100+ mil. EUR) je uveden jen u platformy s Bayview. Termín „junior”, bridge, preferred equity, NAV lending ani financování SPV/fondů web výslovně nezmiňuje, proto ponecháno prázdné."
+ },
+ {
+  "id": "44",
+  "nazev": "ARDIAN Investment Switzerland AG",
+  "zeme": "CH",
+  "web": "https://www.ardian.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "ANO",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "kanceláře, rezidenční, retail, hotely, logistika",
+  "typy_aktiv_text": "Kancelářské, rezidenční a specializovaná aktiva v retailu, hotelnictví a logistice procházející repozicováním a aktivním managementem, v rámci pan-evropské strategie zaměřené na velká francouzská, německá, italská a španělská města.",
+  "geografie": "FR, DE, IT, ES",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Ardian Real Assets Debt provides junior, senior and subordinated loans for projects that involve repositioning and active management of assets in major French, German, Italian and Spanish cities.",
+  "zdroj": "https://www.ardian.com/expertise/real-assets/real-assets-debt",
+  "dalsi_doklady": [
+   {
+    "co": "Typy financovaných aktiv (Real Assets Debt)",
+    "citace": "spanning office, residential and specialist assets in retail, hospitality and logistics",
+    "url": "https://www.ardian.com/expertise/real-assets/real-assets-debt"
+   },
+   {
+    "co": "Velikost Real Estate platformy",
+    "citace": "over $2 billion of assets",
+    "url": "https://www.ardian.com/expertise/real-assets/real-assets-debt"
+   },
+   {
+    "co": "Velikost fondu Ardian Real Estate European Fund II",
+    "citace": "€1.2BN",
+    "url": "https://www.ardian.com/expertise/real-assets/real-estate"
+   }
+  ],
+  "duvod": "Na ardian.com (sekce Expertise > Real Assets > Real Assets Debt a Real Estate) firma výslovně zmiňuje junior, senior a podřízené (subordinated) úvěry pro repozicování nemovitostí ve Francii, Německu, Itálii a Španělsku, typy aktiv a fond €1.2BN. Ticket, LTV, mezzanine/bridge/development/akvizice/refinancování/NAV lending (ten je u Ardian veden jako samostatný produkt v divizi Credit, ne u Real Estate Debt) web u této strategie nezveřejňuje a konkrétní transakce s částkou a datem nebyla ve fetchnutých stránkách nalezena; hledáno na /expertise/real-assets/real-assets-debt, /expertise/real-assets/real-estate a homepage /expertise v rámci limitu fetchů."
+ },
+ {
+  "id": "49",
+  "nazev": "Edmond de Rothschild REIM (Suisse) SA",
+  "zeme": "CH",
+  "web": "https://am.edmond-de-rothschild.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "ANO",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "ANO",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, kanceláře, logistika",
+  "typy_aktiv_text": "Web zmiňuje kanceláře (urban/green office), průmyslové a logistické nemovitosti, moderní rezidenční budovy a navíc life science nemovitosti (mimo standardní kategorie, ponecháno jen v textu).",
+  "geografie": "EU, FR, DE, NL",
+  "posledni_aktivita": "V lednu 2022 poskytl Edmond de Rothschild prostřednictvím své real estate debt platformy sponzorovi mezzanine úvěr ve výši 50 mil. EUR na financování akvizice nemovitostí v Německu.",
+  "aktivita_url": "https://am.edmond-de-rothschild.com/uk/en/institutional-enterprises/our-investment-strategies/real-estate/our-strategies",
+  "citace": "In January 2022, Edmond de Rothschild through its real estate debt platform provided the Sponsor a €50m Mezzanine Loan Facility to finance the acquisition of the properties.",
+  "zdroj": "https://am.edmond-de-rothschild.com/uk/en/institutional-enterprises/our-investment-strategies/real-estate/our-strategies",
+  "dalsi_doklady": [
+   {
+    "co": "Popis strategie real estate debt",
+    "citace": "Real estate debt Originating credit investments secured by top quality properties.",
+    "url": "https://am.edmond-de-rothschild.com/uk/en/institutional-enterprises/our-investment-strategies/real-estate/our-strategies"
+   },
+   {
+    "co": "Geografické a sektorové zaměření equity/debt investic",
+    "citace": "Our priority is Western Europe, and we focus on equity and debt investments that are exposed to long-term trends: urban (green) offices, industrial and logistics real estate, modern residential buildings, life science, and more.",
+    "url": "https://am.edmond-de-rothschild.com/uk/en/institutional-enterprises/our-investment-strategies/real-estate"
+   }
+  ],
+  "duvod": "Hledáno na am.edmond-de-rothschild.com (sekce Institutional & Enterprises > Real Estate a Real Estate > Our Strategies), přímý přístup na hlavní URL vracel 404, proto použit curl s browser hlavičkami a dohledána podstránka. Web zveřejňuje popis strategie 'Real estate debt' a jednu konkrétní transakci (50m EUR mezzanine na akvizici v Německu, leden 2022), ale nezveřejňuje obecné ticket rozmezí ani LTV kritéria (jen obecnou tržní poznámku 'Higher cost of debt at lower LTVs' bez čísla) - proto ticket a LTV ponechány prázdné."
+ },
+ {
+  "id": "68",
+  "nazev": "Barings LLC (Barings Real Estate)",
+  "zeme": "DE",
+  "web": "https://www.barings.com",
+  "ticket_od": "15 mil. USD",
+  "ticket_do": "750 mil. USD",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "kanceláře, rezidenční, retail, logistika, hotely, korporátní, mixed-use",
+  "typy_aktiv_text": "Web uvádí pokrytí všech hlavních typů nemovitostí: Office, Multifamily, Retail, Industrial, Life Science, Hotel a další niche sektory. Case studies navíc ukazují transakce typu Mixed-Use. Life Science mapováno na kód „korporátní”, protože přesněji do slovníku nesedí.",
+  "geografie": "DE, NL, SE, UK, EMEA (šíře) - doloženo konkrétními transakcemi v Německu, Nizozemsku, Švédsku a UK plus obecné tvrzení o přítomnosti v EMEA",
+  "posledni_aktivita": "Nejnovější doložená evropská transakce je úvěr na rezidenční projekt (Value-Add) v Cuxhavenu v Německu, uzavřený v únoru 2025; konkrétní výše úvěru ani LTV nejsou na webu zveřejněny.",
+  "aktivita_url": "https://www.barings.com/guest/financing-solutions/origination/real-estate",
+  "citace": "Fixed and floating-rate lending solutions for loans from $15 million to $750 million",
+  "zdroj": "https://www.barings.com/guest/financing-solutions/origination/real-estate",
+  "dalsi_doklady": [
+   {
+    "co": "Loan types (mapováno na senior/bridge/development)",
+    "citace": "permanent first mortgages, bridge, structured and construction financing",
+    "url": "https://www.barings.com/guest/financing-solutions/origination/real-estate"
+   },
+   {
+    "co": "Asset types",
+    "citace": "all major property types including Office, Multifamily, Retail, Industrial, Life Science, Hotel and other niche sectors",
+    "url": "https://www.barings.com/guest/financing-solutions/origination/real-estate"
+   },
+   {
+    "co": "Geografický záběr",
+    "citace": "Presence across North America, EMEA and Australia... geographic footprint spanning 16 offices in nine countries",
+    "url": "https://www.barings.com/guest/financing-solutions/origination/real-estate"
+   },
+   {
+    "co": "Poslední evropská transakce (case study listing)",
+    "citace": "Cuxhaven, Germany - Residential, Value-Add, February 2025",
+    "url": "https://www.barings.com/guest/financing-solutions/origination/real-estate"
+   }
+  ],
+  "duvod": "Ticket $15-750M potvrzen doslovnou citací na www.barings.com/guest/financing-solutions/origination/real-estate; loan types 'permanent first mortgages, bridge, structured and construction financing' namapovány na senior/bridge/development (mezzanine, whole loan, junior výslovně nezmíněny, proto prázdné). LTV není na webu nikde uvedeno, pole ponecháno prázdné. Nejnovější evropská transakce je Cuxhaven, DE - rezidenční, Value-Add, únor 2025 (novější než dříve zmiňovaná), ale bez zveřejněné částky a LTV. Hledáno na hlavní stránce barings.com a přes odkazy /guest/strategies/real-estate/real-estate-debt a /guest/financing-solutions/origination/real-estate."
+ },
+ {
+  "id": "80",
+  "nazev": "KINGSTONE Investment Management GmbH",
+  "zeme": "DE",
+  "web": "https://www.kingstone-re.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "75 % (LTV, u Whole Loan max. na stávající nemovitost, ne pozemky; alternativně LTC max. 90 %)",
+  "senior": "",
+  "whole_loan": "ANO",
+  "junior": "",
+  "mezzanine": "ANO",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "ANO",
+  "typy_aktiv_kod": "kanceláře, rezidenční, logistika, retail",
+  "typy_aktiv_text": "Sesterská firma KINGSTONE Debt Advisory financuje nemovitosti v segmentech Büro (kanceláře), Wohnen (rezidenční), Logistik (logistika), Nahversorgung (retail/neighborhood retail) a HealthCare (péče, zapsáno jako rezidenční dle metodiky); hotely jsou výslovně vyloučeny.",
+  "geografie": "DE, AT",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Whole Loan Darlehen sind für uns erstrangige besicherte Darlehen mit einem Loan-to-Cost (\"LTC\") Verhältnis bis zu max. 90 %. Alternativ darf ein Loan-to-Value (\"LTV\") von bis zu max. 75 % auf den Wert einer bestehenden Immobilie, jedoch nicht auf Grundstücke, nicht überschritten werden.",
+  "zdroj": "https://www.kingstone-da.com/real-estate-debt/",
+  "dalsi_doklady": [
+   {
+    "co": "Nabízené produkty a Bridge financování",
+    "citace": "Wir stellen Ihnen für Ihre Projekte Finanzierungslösungen in Form von Mezzanine-Finanzierungen, Whole Loans, gerne auch als Bridgefinanzierungen mit Laufzeiten unter 18 Monaten zur Verfügung.",
+    "url": "https://www.kingstone-da.com/real-estate-debt/"
+   },
+   {
+    "co": "Typy aktiv a vyloučení hotelů",
+    "citace": "Wir bieten Finanzierungslösungen über die gesamten Wertschöpfungsphase von Immobilien in den Nutzungsarten Büro, Wohnen, Logistik, Nahversorgung und HealthCare. Gerne sind wir Ihr verlässlicher Finanzierungspartner für sämtliche gewerblichen oder wohnwirtschaftlichen Immobilienfragen, mit Ausnahme von Hotels.",
+    "url": "https://www.kingstone-da.com/real-estate-debt/"
+   },
+   {
+    "co": "Skupina spravuje Real Estate Debt fondy (financuje fondy/investory institucionálně) v regionu DACH a Deutschland/Österreich/Osteuropa",
+    "citace": "Real Estate Debt-Investments in der DACH-Region als risikoadjustierte und langfristig orientierte Produktlösungen",
+    "url": "https://www.kingstone-da.com/real-estate-debt/"
+   },
+   {
+    "co": "Financování nezastavěných pozemků s tvorbou stavebního práva (blízké development/akvizici pozemků)",
+    "citace": "Gerne unterstützen wir Sie bei der Finanzierung von Grundstücken, welche noch nicht mit einem Baurecht versehen sind, aber die Baurechtschaffung",
+    "url": "https://www.kingstone-da.com/real-estate-debt/"
+   }
+  ],
+  "duvod": "Kritéria (Whole Loan LTC max. 90 %, alternativně LTV max. 75 %; Mezzanine; Bridge do 18 měsíců; typy aktiv Büro/Wohnen/Logistik/Nahversorgung/HealthCare s výslovným vyloučením hotelů) jsem ověřila na sesterské doméně kingstone-da.com/real-estate-debt/ (stažena raw HTML přes curl kvůli přesné citaci), protože kingstone-re.com samo kritéria nezveřejňuje. Firma nikde na vlastním webu nezveřejňuje konkrétní ticket size v EUR ani konkrétní datovanou transakci/deal s částkou (žádná /kriterien, /mezzanine ani PDF stránka s čísly nalezena, kingstone-re.com/referenzen vrací 404), proto ticket_od/do a posledni_aktivita zůstávají prázdné. Senior/refinancování/akvizice/NAV/SPV nejsou výslovně zmíněny samostatným pojmem, financuje_fondy=ANO vychází z popisu regulovaných Real Estate Debt fondů skupiny."
+ },
+ {
+  "id": "87",
+  "nazev": "Principal Real Estate GmbH",
+  "zeme": "DE",
+  "web": "https://www.principalam.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "Kritéria (ticket, LTV, produkty) zveřejňuje jen americká divize Principal Real Estate; pro evropskou/německou entitu web nic konkrétního neuvádí – proto v listu 3 prázdno.",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "",
+  "zdroj": "",
+  "dalsi_doklady": [],
+  "duvod": "Na principalam.com jsem našla stránky 'Real estate/Private debt' a 'Financing Solutions' (US sekce) plus PDF 'Core portfolio lending' s konkrétním ticketem (10 mil. USD a více, typicky do >100 mil. USD) a LTV do 65 %; produktové typy (senior mortgage, mezzanine, bridge, preferred equity, construction/development lending) jsou výslovně uvedeny. Firma prezentuje real estate debt platformu jako US-focused (geografie = US), samostatnou stránku ani PDF specificky pro německou entitu 'Principal Real Estate GmbH' ani její evropská/DACH kritéria jsem nenašla, proto akvizicni/refinancovani/whole_loan/nav_lending/financuje_fondy a konkrétní poslední transakci nechávám prázdné - web je explicitně nezmiňuje. Hledáno na principalam.com (US sekce investment-strategies/real-estate-private-markets, investment-teams/principal-real-estate) a v přidružených PDF na brandassets.principal.com; WebSearch nebyl v této relaci dostupný (vyčerpaný limit)."
+ },
+ {
+  "id": "29",
+  "nazev": "LINUS Digital Finance AG",
+  "zeme": "DE",
+  "web": "https://www.linus-finance.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "max. 80 % (LTV) / max. 90 % (LTC)",
+  "senior": "ANO",
+  "whole_loan": "ANO",
+  "junior": "ANO",
+  "mezzanine": "ANO",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, kanceláře, logistika, retail, hotely",
+  "typy_aktiv_text": "Financuje rezidenční, kancelářské, hotelové, logistické a retailové nemovitosti a dále tzv. Betreiberimmobilien (provozní/účelové nemovitosti, např. pečovatelské domy) v DE metropolích. Financuje projektové fáze: nákup pozemku (Grundstücksankauf), hrubou stavbu (Hochbauphase) i stávající portfolio/value-add (Bestand). Doba financování 6–60 měsíců.",
+  "geografie": "DE (výslovně: „innerstädtische Lagen in deutschen Metropolregionen“ – jiné země na webu nedoloženy)",
+  "posledni_aktivita": "Dne 20. 1. 2026 LINUS oznámil, že v roce 2025 strukturoval celkem dvanáct úvěrů v celkovém objemu 530 mil. EUR, z toho osm Whole-Loan a Senior transakcí a čtyři Junior úvěry, přičemž vlastní kapitál společnosti v těchto úvěrech dosáhl 120 mil. EUR.",
+  "aktivita_url": "https://www.linus-finance.com/investor-relations",
+  "citace": "„LTV: max. 80% / LTC: max. 90%“ a „6-60 Monate“ – Finanzierungskriterien, https://www.linus-finance.com/finanzierung-anfragen",
+  "zdroj": "https://www.linus-finance.com/finanzierung-anfragen",
+  "dalsi_doklady": [
+   {
+    "co": "Nabízené typy financování (Whole-Loan, Junior, Mezzanine, flexibilní kapitálové struktury)",
+    "citace": "„Finanzieren Sie Ihre Projektentwicklungen und Immobilienbestände mit unseren Whole-Loan- und Mezzanine-Darlehen, sowie weiteren flexiblen Kapitalstrukturen.“",
+    "url": "https://www.linus-finance.com/finanzierung-anfragen"
+   },
+   {
+    "co": "Financované asset třídy (residential, office, hotel, logistics, retail, Betreiberimmobilien) a geografie (DE metropole)",
+    "citace": "residential, office, hotel, logistics, retail, Betreiberimmobilien; „innerstädtische Lagen in deutschen Metropolregionen“",
+    "url": "https://www.linus-finance.com/finanzierung-anfragen"
+   },
+   {
+    "co": "Poslední zveřejněná aktivita (12 úvěrů, 530 mil. EUR za rok 2025, z toho Senior/Whole-Loan a Junior)",
+    "citace": "„Im vergangenen Jahr strukturierte LINUS insgesamt zwölf Darlehen mit einem Gesamtvolumen von 530 Mio. EUR.“ (osm Whole-Loan-und-Senior transakcí, čtyři Junior úvěry; vlastní kapitál 120 mil. EUR), publikováno 20.1.2026",
+    "url": "https://www.linus-finance.com/investor-relations"
+   },
+   {
+    "co": "Rebranding společnosti",
+    "citace": "Společnost oznámila 2. 9. 2026 přejmenování z „Linus Digital Finance AG“ na „Linus Finance AG“ po schválení valnou hromadou 28. 7. 2026 (na webu i v navigaci se aktuálně objevuje jako „LINUS Finance AG“).",
+    "url": "https://www.linus-finance.com/investor-relations"
+   }
+  ],
+  "duvod": "Na vlastní stránce /finanzierung-anfragen LINUS explicitně uvádí LTV max. 80 %, LTC max. 90 %, dobu financování 6–60 měsíců, produkty Whole-Loan/Junior/Mezzanine a financované asset třídy i projektové fáze (pozemek, hrubá stavba, bestand); geograficky se omezuje na německé metropole. Minimální/maximální velikost tiketu (EUR) na webu explicitně uvedena NENÍ, stejně jako bridge, pref. equity, NAV lending, akviziční/refinanční financování ani financování fondů/SPV – tyto položky proto zůstávají prázdné. Poslední doložená aktivita (12 úvěrů, 530 mil. EUR, 2025) je z investor-relations sekce webu (zpráva z 20. 1. 2026); tamtéž je zmíněn i rebranding společnosti na „LINUS Finance AG“ (9/2026). Zkoumány stránky: homepage, /finanzierung-anfragen, /investor-relations; anglická verze /en/financing vrací 404."
+ },
+ {
+  "id": "11",
+  "nazev": "Schroders Capital Management (Switzerland) AG",
+  "zeme": "CH",
+  "web": "https://www.schroderscapital.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "ANO",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, mixed-use",
+  "typy_aktiv_text": "Strategie kryje celý životní cyklus komerční nemovitosti (akvizice, development a výstavba, bridge/tranzitní financování, stabilizované úvěry) v USA, UK a Evropě; investují napříč CMBS i soukromými CRE úvěry 'throughout the capital structure' s profilem od investment grade po opportunistic. Konkrétní zdokumentované obchody: rezidenční financování v Dánsku (2026), konstrukční úvěr na mixed-use projekt ve Švédsku (2025), senior úvěr ve Velké Británii cca 33 mil. GBP (2022). Typy aktiv nad rámec těchto tří příkladů web obecně nekonkretizuje (jen 'commercial property').",
+  "geografie": "USA, UK, Evropa (obecně); konkrétně doloženo Dánsko a Švédsko z tiskových zpráv. DACH (DE/AT/CH) není na webu výslovně zmíněn jako cílový trh.",
+  "posledni_aktivita": "Nejnovější zdokumentovaná aktivita (dle sitemapy, poslední úprava 22. 7. 2026) je rozšíření evropské platformy real estate debt o nová rezidenční financování v Dánsku; přesnou výši úvěru se nepodařilo ověřit, protože tělo tiskové zprávy je vykreslováno JavaScriptem a je chráněno bot-ochranou (Cloudflare), takže je nedostupné i přes curl/wayback.",
+  "aktivita_url": "https://www.schroderscapital.com/en/global/professional/media-centre/schroders-capital-continues-expansion-of-european-real-estate-debt-platform-with-new-danish-residential-financings/",
+  "citace": "\"We have a $5bn platform and invest across the lifecycle of a commercial property, spanning acquisition, development and construction, and bridge (transitional lending) to stabilised loans, across the US, UK and Europe.\"",
+  "zdroj": "https://www.schroderscapital.com/en/global/professional/capabilities/private-debt-and-credit-alternatives/real-estate-debt/",
+  "dalsi_doklady": [
+   {
+    "co": "Investiční profil napříč kapitálovou strukturou",
+    "citace": "\"Our specialists invest across commercial mortgage-backed securities and private commercial real estate loans throughout the capital structure, offering a range of investment profiles from longer duration investment grade to opportunistic.\"",
+    "url": "https://www.schroderscapital.com/en/global/professional/capabilities/private-debt-and-credit-alternatives/real-estate-debt/"
+   },
+   {
+    "co": "Rezidenční financování v Dánsku (nejnovější tisková zpráva, titulek strany)",
+    "citace": "Schroders Capital continues expansion of European real estate debt platform with new Danish residential financings",
+    "url": "https://www.schroderscapital.com/en/global/professional/media-centre/schroders-capital-continues-expansion-of-european-real-estate-debt-platform-with-new-danish-residential-financings/"
+   },
+   {
+    "co": "Konstrukční (development) úvěr na mixed-use projekt ve Švédsku",
+    "citace": "Schroders Capital grows real estate debt footprint in Europe with latest construction loan for major mixed-use project in Sweden",
+    "url": "https://www.schroderscapital.com/en/global/professional/media-centre/schroders-capital-grows-real-estate-debt-footprint-in-europe-with-latest-construction-loan-for-major-mixed-use-project-in-sweden/"
+   },
+   {
+    "co": "Senior úvěr ve Velké Británii cca 33 mil. GBP",
+    "citace": "Schroders Capital's real estate debt team makes £33m UK senior loan",
+    "url": "https://www.schroderscapital.com/en/global/professional/media-centre/schroders-capitals-real-estate-debt-team-makes-33m-uk-senior-loan/"
+   }
+  ],
+  "duvod": "Na oficiální stránce strategie Real Estate Debt (schroderscapital.com) je doloženo pokrytí celého životního cyklu komerční nemovitosti (akvizice, development/výstavba, bridge, stabilizované úvěry) v USA, UK a Evropě, investice napříč kapitálovou strukturou a $5bn platforma; ticket size ani LTV web nezveřejňuje. Tiskové zprávy o konkrétních obchodech (Dánsko - rezidenční, Švédsko - mixed-use development, UK - senior úvěr ~33 mil. GBP) byly dohledány přes sitemapu webu, ale jejich plný text je vykreslován JavaScriptem a chráněn Cloudflare bot-ochranou (nešlo načíst ani přes WebFetch, curl s browser headers, ani přes Wayback Machine/r.jina.ai), takže jsou citovány pouze jejich publikované titulky. DACH trh (Německo/Rakousko/Švýcarsko) není na webu jako cílová geografie výslovně zmíněn."
+ },
+ {
+  "id": "46",
+  "nazev": "BNP PARIBAS ASSET MANAGEMENT Switzerland AG",
+  "zeme": "CH",
+  "web": "https://www.bnpparibas-am.com/en-ch/",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "ANO",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "ANO",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "kanceláře, logistika, retail, mixed-use",
+  "typy_aktiv_text": "CH stránka popisuje \"Commercial Real Estate Debt Strategy\" jako investování napříč \"all sectors of the real estate market\" (bez upřesnění tříd) a s důrazem na nové výstavby (\"new builds\") splňující environmentální standardy. Samostatný článek skupiny (UK web, portfolio-perspectives) konkrétně jmenuje financované typy nemovitostí: \"retail premises, office space, and logistical buildings\". Tým sídlí v Paříži, veden Christophe Montcerisierem; strategie je součástí Private Assets skupiny BNP Paribas a využívá zdroje BNP Paribas Real Estate. Konkrétní tiket, LTV ani geografické omezení nejsou na webu explicitně zveřejněny - zmíněná čísla LTV (cca 55-65 %) jsou obecná tržní data (zdroj CBRE) v článku o atraktivitě juniorního CRE dluhu, nikoli deklarované vlastní podmínky BNP Paribas AM.",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "\"the team has extensive experience originating, advising, structuring, and managing commercial real estate deals across all sectors of the real estate market\"",
+  "zdroj": "https://www.bnpparibas-am.com/en-ch/capabilities/asset-classes/alternatives/private-assets/commercial-real-estate-debt-strategy/",
+  "dalsi_doklady": [
+   {
+    "co": "Zaměření na juniorní/mezaninový CRE dluh a financované typy nemovitostí",
+    "citace": "\"junior commercial real estate debt... can provide returns in excess of 7-8%\"; \"loans to finance commercial real estate – such as retail premises, office space, and logistical buildings\"",
+    "url": "https://www.bnpparibas-am.com/en-gb/portfolio-perspectives/the-case-for-commercial-real-estate-debt/"
+   },
+   {
+    "co": "Zmínka o financování developmentu (nové výstavby splňující environmentální standardy)",
+    "citace": "\"new builds – in particular commercial real estate (CRE) – may offer opportunities for investors seeking to finance sustainable development\"",
+    "url": "https://www.bnpparibas-am.com/en-ch/capabilities/asset-classes/alternatives/private-assets/commercial-real-estate-debt-strategy/"
+   },
+   {
+    "co": "Refinancování jako součást tržní příležitosti pro private-market věřitele (kam BNP Paribas AM patří)",
+    "citace": "\"more borrowers are also coming to market to either refinance their debt or look for lenders that offer more flexible terms, which private market players can provide\"",
+    "url": "https://www.bnpparibas-am.com/en-gb/portfolio-perspectives/the-case-for-commercial-real-estate-debt/"
+   }
+  ],
+  "duvod": "Na CH/offshore stránce \"Commercial Real Estate Debt Strategy\" (Private Assets) BNP Paribas AM popisuje strategii jen kvalitativně - filozofii investování, tým v Paříži, ESG integraci, multi-channel sourcing s 200+ GP partnery - bez čísel k tiketu, LTV nebo konkrétním typům financování (senior/whole loan/mezzanine/bridge). Doplňkový článek na skupinovém webu (UK, portfolio-perspectives, autor Chris Iggo) popisuje zaměření na juniorní CRE dluh a jmenuje financované typy nemovitostí (retail, office, logistika) a refinancování, ale uvedené LTV rozpětí (55-65 %) je obecná tržní statistika (CBRE), ne vlastní úvěrové kritérium firmy. Žádná konkrétní transakce/aktivita s datem a částkou nebyla na webu dohledána. Hledáno na: bnpparibas-am.com/en-ch (homepage a CRE Debt Strategy stránka), en-offshore a en-us varianty stejné stránky, en-gb portfolio-perspectives článek."
+ },
+ {
+  "id": "54",
+  "nazev": "Union Investment Real Estate Austria AG",
+  "zeme": "AT",
+  "web": "https://realestate.union-investment.at",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "kanceláře, retail, hotely, logistika, rezidenční, mixed-use",
+  "typy_aktiv_text": "Union Investment Real Estate Austria AG je rakouská kapitálová investiční společnost skupiny Union Investment (Hamburk), spravující otevřené nemovitostní (speciální) fondy. Vlastní web realestate.union-investment.at je jen investorský/marketingový portál (fond, ocenění, prospekty) bez publikovaných finančních kritérií. Skupinový web realestate.union-investment.com popisuje, že Union Investment přímo NAKUPUJE nemovitosti (kanceláře, retail, hotely, logistika, rezidence) do portfolia fondů a Rakousko je explicitně jednou z lokalit, pro které mají 'Immobilienprofile'. Nejde o klasického dluhového věřitele s LTV/ticketem, ale o přímého kupujícího/investora a příležitostně vlastního vývojáře (transformace nemovitostí v portfoliu, vlastní oddělení projektového managementu) - proto nebyly publikovány žádné dluhové parametry (LTV, senior/mezzanine apod.).",
+  "geografie": "AT",
+  "posledni_aktivita": "Union Investment koupil Gewerbepark Stadlau ve Vídni (22. obvod, Donaustadt) od belgické Nextensa za kupní cenu cca 36 milionů EUR pro svůj otevřený nemovitostní speciální fond; transakce oznámena 15. ledna 2026.",
+  "aktivita_url": "https://realestate.union-investment.com/media-center/pressemitteilungen/ankauf-gewerbepark-stadlau-wien",
+  "citace": "Der Ankauf erfolgt für einen offenen Immobilien-Spezialfonds von Union Investment. Der Kaufpreis beträgt rund 36 Millionen Euro.",
+  "zdroj": "https://realestate.union-investment.com/media-center/pressemitteilungen/ankauf-gewerbepark-stadlau-wien",
+  "dalsi_doklady": [
+   {
+    "co": "Obecná akviziční kritéria podle typu nemovitosti (kvalitativní, bez čísel)",
+    "citace": "Für den Ankauf von Büro-, Einzelhandels-, Hotel-, Logistik- und Wohnimmobilien haben wir detaillierte Kriterien.",
+    "url": "https://realestate.union-investment.com/unsere-leistungen/ankauf-und-verkauf-von-immobilien/uebersicht-an-und-verkauf"
+   },
+   {
+    "co": "Kvalitativní kritéria pro akvizici kancelářských nemovitostí",
+    "citace": "Beim Ankauf von Büroimmobilien achten wir in erster Linie auf eine gute bis sehr gute Lage, eine hohe bauliche Qualität und die Fähigkeit, langfristig stabile Mieterträge zu generieren.",
+    "url": "https://realestate.union-investment.com/unsere-leistungen/ankauf-und-verkauf-von-immobilien/ankaufsprofil-buero"
+   },
+   {
+    "co": "Rakousko jako jedna z geografických lokalit skupiny (vlastní 'Immobilienprofile')",
+    "citace": "Erfahren Sie mehr über unsere Immobilienprofile an den Standorten Amerika, Frankreich, Großbritannien und Österreich",
+    "url": "https://realestate.union-investment.com/unsere-leistungen/ankauf-und-verkauf-von-immobilien/ankaufsprofil-buero"
+   }
+  ],
+  "duvod": "Vlastní stránka realestate.union-investment.at je JS-řízený investorský portál pro otevřené fondy (ocenění, prospekty, stížnosti), bez jakýchkoli akvizičních/finančních kritérií - sitemap obsahuje jen 4 URL (tým, o nás). Skupinový web realestate.union-investment.com (Union Investment Real Estate GmbH, Hamburk) má detailní 'Ankaufsprofil' stránky podle typu nemovitosti a potvrzuje Rakousko jako samostatnou lokalitu, ale uvádí jen kvalitativní kritéria (lokalita, kvalita budovy, stabilní nájem) bez čísel k ticketu, LTV nebo typu financování (senior/mezz/bridge) - firma nakupuje nemovitosti přímo do fondů, nefunguje jako dluhový poskytovatel. Nenašel jsem žádnou explicitní zmínku 'Forward Funding'/'Forward Purchase' na aktuálně dostupných stránkách v rámci rozpočtu; jedinou doloženou rakouskou transakcí je akvizice Gewerbepark Stadlau ve Vídni (leden 2026)."
+ },
+ {
+  "id": "69",
+  "nazev": "Blackstone Europe Fund Management S.à.r.l. - Germany",
+  "zeme": "DE",
+  "web": "https://www.blackstone.com/",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, kanceláře, logistika, retail, hotely",
+  "typy_aktiv_text": "Blackstone Real Estate Debt Strategies (BREDS) podle vlastních tiskových zpráv originuje a nakupuje seniorní hypoteční úvěry zajištěné rezidenčními (multifamily), kancelářskými, hotelovými, logistickými a retailovými nemovitostmi, globálně („lend around the globe\"). Jediná dohledaná transakce s přímou vazbou na Německo je odkup portfolia 11 seniorních hypotečních úvěrů (1,0 mld. USD) od německé banky Deutsche Pfandbriefbank (PBB) v květnu 2024 – podkladová zajištěná aktiva ale ležela ve Velké Británii a USA, nikoli v Německu. Konkrétní parametry pro DE/AT/CH (ticket, splatnost, měna) nejsou na blackstone.com zveřejněny.",
+  "geografie": "",
+  "posledni_aktivita": "Blackstone Real Estate Debt Strategies (BREDS) v květnu 2024 uzavřel akvizici portfolia výkonných seniorních hypotečních úvěrů v hodnotě 1,0 mld. USD od německé banky Deutsche Pfandbriefbank (PBB); portfolio tvořilo 11 úvěrů zajištěných multifamily, kancelářskými a hotelovými aktivy ve Velké Británii a USA.",
+  "aktivita_url": "https://www.blackstone.com/news/press/breds-acquires-performing-mortgage-loan-portfolio-from-pbb/",
+  "citace": "Our real estate debt business provides creative and comprehensive financing solutions across the capital structure and risk spectrum. We originate loans and invest in debt securities underpinned by high-quality real estate. We manage Blackstone Mortgage Trust (NYSE: BXMT), a leading real estate finance company that originates senior loans collateralized by commercial real estate.",
+  "zdroj": "https://www.blackstone.com/our-businesses/real-estate/",
+  "dalsi_doklady": [
+   {
+    "co": "Popis transakce BREDS/PBB – typ úvěrů, zajištění, geografie podkladových aktiv",
+    "citace": "Blackstone Real Estate Debt Strategies (\"BREDS\") today announced the closing of the acquisition of a $1.0 billion performing senior mortgage loan portfolio from leading German lender, Deutsche Pfandbriefbank (PBB)... The portfolio comprises 11 loans secured against performing multifamily, office and hospitality assets across the U.K. and U.S.",
+    "url": "https://www.blackstone.com/news/press/breds-acquires-performing-mortgage-loan-portfolio-from-pbb/"
+   },
+   {
+    "co": "Globální strategie a rozsah aktiv fondu BREDS IV (8 mld. USD, uzavřen 2020)",
+    "citace": "BREDS IV will have flexible capital to lend around the globe, and will deploy a variety of investment strategies, including lending, liquid securities, structured solutions to financial institutions, and corporate credit.",
+    "url": "https://www.blackstone.com/news/press/blackstone-announces-8-0-billion-final-close-for-latest-real-estate-debt-strategies-fund/"
+   }
+  ],
+  "duvod": "Na blackstone.com neexistuje samostatná stránka BREDS Europe ani ceník/kritéria financování pro Německo (ticket, LTV) – prohledány stránky /our-businesses/real-estate/, /news/press/ a WP REST API vyhledávání (klíčová slova BREDS, Germany, Berlin, Munich, Frankfurt, whole loan, senior loan). Jediný doklad s vazbou na DE je akvizice úvěrového portfolia od PBB (2024), kde ale podkladové nemovitosti jsou v UK/US, ne v Německu; obecný popis real estate debt byznysu potvrzuje jen typ 'senior loans' a šíři aktiv (multifamily/office/hospitality/logistics/retail). Ticket size, LTV, mezzanine/bridge/development flagy a konkrétní geografická expozice v DE/AT/CH nejsou na vlastním webu zveřejněny."
+ },
+ {
+  "id": "82",
+  "nazev": "MetLife Investment Management Europe Limited",
+  "zeme": "DE",
+  "web": "https://www.metlife.com/investments/en-de/",
+  "ticket_od": "10 mil. USD",
+  "ticket_do": "200+ mil. USD",
+  "ltv": "65 % (typicky, u vybraných struktur i více)",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "ANO",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "ANO",
+  "refinancovani": "ANO",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, kanceláře, logistika, retail, hotely",
+  "typy_aktiv_text": "Stránka \"Commercial Mortgage Loans\" (Real Estate Financing) na webu MIM pro Německo uvádí financované typy nemovitostí: \"Multifamily, industrial, retail, office (selective), hotel, student housing, manufactured housing, build-to-rent\" (kanceláře jen selektivně). Typy úvěrů: \"Fixed, floating, bridge, mezzanine, construction\", struktury zahrnují \"Co-lending including pari-passu and senior/sub\" (senior i podřízené/sub pozice, ne výslovně slovo \"junior\"). Splatnost: 3-30 let, kratší u tranzitních a výstavbových úvěrů. Trhy popsány jen obecně jako \"Primary and selective secondary and tertiary; domestic and international\" - bez výčtu konkrétních evropských zemí. Měna úvěrů na stránce není explicitně uvedena (velikost tiketu v USD).",
+  "geografie": "DE",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Preferred Size: \"Typically $10M to $200M+ per property\"",
+  "zdroj": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans/",
+  "dalsi_doklady": [
+   {
+    "co": "LTV / pákový poměr",
+    "citace": "Leverage: \"Typically around 65% LTV; higher for select structures\"",
+    "url": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans/"
+   },
+   {
+    "co": "Typy úvěrů (bridge, mezzanine, development/construction)",
+    "citace": "Loan Types: \"Fixed, floating, bridge, mezzanine, construction\"",
+    "url": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans/"
+   },
+   {
+    "co": "Akvizice a refinancování",
+    "citace": "\"Mortgage financing for acquisitions, refinancing, development and repositioning across property types and markets\"",
+    "url": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans/"
+   },
+   {
+    "co": "Senior/podřízené (co-lending) struktury",
+    "citace": "\"Co-lending including pari-passu and senior/sub\"",
+    "url": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans/"
+   },
+   {
+    "co": "Typy financovaných nemovitostí",
+    "citace": "Property Types: \"Multifamily, industrial, retail, office (selective), hotel, student housing, manufactured housing, build-to-rent\"",
+    "url": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans/"
+   }
+  ],
+  "duvod": "Stránka metlife.com/investments/en-de je chráněna disclaimer/audience-selector branou (cookies culture/investorType/disclaimer); po jejím obejití se podařilo dohledat skutečnou produktovou stránku \"Commercial Mortgage Loans\" pod Financing Solutions > Real Estate Financing, která potvrzuje tiket 10-200+ mil. USD a LTV cca 65 % přesně tak, jak bylo zadáno. Stránka je zjevně globální/obecná šablona (stejný obsah ve všech třech responzivních variantách tabulky) bez samostatné evropské geografické specifikace - trhy popisuje jen jako \"domestic and international\", bez výčtu konkrétních zemí (proto geografie uvedena jen jako DE, kde je produkt inzerován). Na webu MetLife/MetLifeIM se v rámci rozpočtu nepodařilo najít žádnou konkrétní, datovanou evropskou transakci/úvěr s částkou - firma na svých stránkách takové case studies/tiskové zprávy k evropským úvěrům nezveřejňuje (hledáno na hlavní stránce, v navigaci financing-solutions/real-estate-financing i přes Wayback Machine)."
+ },
+ {
+  "id": "88",
+  "nazev": "Salux Real Estate GmbH",
+  "zeme": "DE",
+  "web": "https://www.salux-re.de/",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "ANO",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční",
+  "typy_aktiv_text": "Financuje rezidenční nemovitosti (Wohnsegment) a jejich projektový development v Německu. Fond se jmenuje 'Salux Senior Debt Bridge Fund', z čehož plyne senior a bridge charakter financování. Žádná měna, splatnost, ticket ani LTV/LTC nejsou na webu uvedeny.",
+  "geografie": "DE",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Der Salux Senior Debt Bridge Fund finanziert Immobilien und Projektentwicklungen im Wohnsegment in Deutschland – schnell, flexibel und zuverlässig.",
+  "zdroj": "https://www.salux-re.de/",
+  "dalsi_doklady": [],
+  "duvod": "Web salux-re.de je jednostránkový WordPress web (Avada šablona) bez podstránek typu Finanzierung/Leistungen/Produkte/Track Record/Referenzen (ověřeno: /en, /leistungen, /finanzierung, /produkte, /track-record, /referenzen, /about, /ueber-uns vrací 404; existují jen /legal-notice a /privacy-policy). Jediný obsahový text uvádí, že 'Salux Senior Debt Bridge Fund' financuje rezidenční nemovitosti a projektový development v Německu, s důrazem na rychlost a flexibilitu oproti bankám. Web nezveřejňuje ticket size, LTV/LTC, konkrétní produktovou paletu (mezzanine, junior, whole loan, pref equity, NAV lending), akvizice vs. refinancování, ani žádnou historii transakcí či posledních aktivit."
+ },
+ {
+  "id": "24",
+  "nazev": "BF.direkt AG",
+  "zeme": "DE",
+  "web": "https://www.bf-direkt.de",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "Skupina BF (holding BF.direkt AG s dceřinými společnostmi BF.advisory, BF.capital, BF.infrafinance) financuje nemovitosti, infrastrukturu a korporátní dluh formou 'asset- and cashflow-based financing arrangements for real assets' a 'private credit investments for institutional investors in the real estate, infrastructure and corporate debt segments'. Konkrétní produktové názvy (Whole Loan/Mezzanine/Bridge/Development) se na hlavních stránkách skupiny v této relaci nepodařilo dohledat s citací.",
+  "geografie": "",
+  "posledni_aktivita": "BF.real estate finance poradila Globe Trade Center při bankovním financování rezidenčního portfolia Peach Property Group (10.1.2025, částka neuvedena).",
+  "aktivita_url": "https://www.bf-direkt.de/pressemitteilungen/",
+  "citace": "Im Lauf der Jahre hat das Haus mehr als 1.600 Transaktionen mit einem Volumen von rd. 20 Mrd. € beratend begleitet.",
+  "zdroj": "https://www.bf-direkt.de/leistungen/",
+  "dalsi_doklady": [
+   {
+    "co": "tržní (ne vlastní) LTV/LTC z kvartálního barometru BF",
+    "citace": "Die LTVs (Bestand) lagen über alle Nutzungsarten hinweg im Schnitt bei 64,2 Prozent und die LTCs (Projektentwicklung) bei 66,3 Prozent",
+    "url": "https://www.bf-direkt.de/bf-quartalsbarometer/"
+   },
+   {
+    "co": "AuM Private Debt",
+    "citace": "über 1,5 Milliarden Euro in der Asset-Klasse Private Debt",
+    "url": "https://www.bf-direkt.de"
+   }
+  ],
+  "duvod": "BF.direkt je holding s více dceřinými společnostmi; vlastní web nezveřejňuje ticket ani LTV pro konkrétní financování, jen skupinové AUM/objemy a market-wide LTV z vlastního čtvrtletního barometru (to je průzkum trhu, ne vlastní kritérium, proto nevyplněno). Explicitní produktové názvy (Whole Loan/Mezzanine/Bridge/Development) uvedené v zadání se v této relaci na webu nenašly s citací. Hledáno: bf-direkt.de (homepage, /leistungen/, /pressemitteilungen/, /bf-quartalsbarometer/, /en/services/, sitemap)."
+ },
+ {
+  "id": "4",
+  "nazev": "Property One Investors AG",
+  "zeme": "CH",
+  "web": "https://propertyone.ch",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "80 %",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "ANO",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, mixed-use",
+  "typy_aktiv_text": "ONE Real Estate Debt Fund (OREDF) poskytuje vesměs nachrangige (podřízené) hypotéky profesionálním aktérům na švýcarském trhu nemovitostí (vlastní bydlení vyloučeno); švýcarské franky. Skladba portfolia (Q2 2026): 48 % Wohnbauten (obytné budovy), 40 % Kommerzielle Liegenschaften (komerční nemovitosti), 12 % Gemischte Bauten (smíšené, podíl bydlení 30-70 %). Účelová segmentace: 78 % Renditeimmobilien, 15 % Promotionen/Baukredite, 7 % Projektentwicklung/Baukredite. Fondový objem CHF 293,61 mil., objem úvěrů CHF 252,19 mil., průměrná zbytková splatnost 7 měsíců (s opcemi 11 měsíců), vážený úrokový výnos 7,00 % (stav 30.6.2026). Ticket firma jako pravidlo nezveřejňuje; zveřejněné jednotlivé úvěry ve factsheetu Q2 2026 jsou 14–27 mil. CHF (odvozené, nezapsáno).",
+  "geografie": "CH",
+  "posledni_aktivita": "Ve 2. čtvrtletí 2026 fond OREDF vyplatil nová hypoteční financování v souhrnném objemu CHF 34,45 mil. (jednotlivé transakce nerozepsány).",
+  "aktivita_url": "https://propertyone.ch/wp-content/uploads/2026/07/2026_Q2_Factsheet_ALL_DE.pdf",
+  "citace": "nachrangige Finanzierungen für Schweizer Immobilien mit einer Belehnung von bis zu 80 Prozent",
+  "zdroj": "https://propertyone.ch/dienstleistungen/finanzierung/",
+  "dalsi_doklady": [
+   {
+    "co": "Top 5 hypoték portfolia s LTV a splatností (základ pro ticket_od/do)",
+    "citace": "ZH 2 Mt. 25 Mio. 72% Rendite / SZ 17 Mt. 20 Mio. 71% Promotion / AG/GR 1 Mt. 19 Mio. 72% Rendite / ZH 1 Mt. 15 Mio. 67% Rendite / BE 24 Mt. 14 Mio. 80% Entwicklung",
+    "url": "https://propertyone.ch/wp-content/uploads/2026/07/2026_Q2_Factsheet_ALL_DE.pdf"
+   },
+   {
+    "co": "skladba portfolia dle typu nemovitosti",
+    "citace": "Wohnbauten 48% / Kommerzielle Liegenschaften 40% / Gemischte Bauten 12%",
+    "url": "https://propertyone.ch/wp-content/uploads/2026/07/2026_Q2_Factsheet_ALL_DE.pdf"
+   },
+   {
+    "co": "příklad bridge financování",
+    "citace": "Bridge-Finanzierung (6300 Zug)",
+    "url": "https://propertyone.ch/dienstleistungen/finanzierung/"
+   }
+  ],
+  "duvod": "Nalezeno z vlastního webu a Q2 2026 factsheetu (PDF): max. Belehnung 80 %, převážně nachrangige (junior) hypotéky, doložený příklad bridge financování, Projektentwicklung/Promotion jako samostatné segmenty, objektová skladba i geografie (výhradně CH). Ticket_od/do je odvozen z 5 největších jednotlivě zveřejněných úvěrů ve factsheetu (14-27 mil. CHF) - nejde o oficiálně deklarované min/max pravidlo fondu, proto uvedeno jen jako doložený rozsah, ne závazné kritérium. Konkrétní datovaná jednotlivá transakce s částkou nebyla nalezena, jen souhrnný kvartální údaj."
+ },
+ {
+  "id": "47",
+  "nazev": "Diamond Capital Management (Switzerland) SA",
+  "zeme": "CH",
+  "web": "https://www.diamondcapital.ch/",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "ANO",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "Diamond Capital spravuje mimo jiné fondy typu 'real estate-backed bridge loan Funds' (nemovitostmi zajištěné překlenovací úvěrové fondy), bez upřesnění typu nemovitosti, geografie či velikosti úvěru na veřejném webu.",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "citace": "non-UCITS (Funds of Hedge Funds, RE backed bridge loan Funds)",
+  "zdroj": "https://www.diamondcapital.ch/",
+  "dalsi_doklady": [
+   {
+    "co": "zmínka kategorie Real Estate Debt mezi spravovanými fondy",
+    "citace": "REAL ESTATE DEBT",
+    "url": "https://www.diamondcapital.net"
+   }
+  ],
+  "duvod": "Web diamondcapital.ch a diamondcapital.net potvrzuje jen existenci 'real estate-backed bridge loan' fondů obecně (bridge = ANO); ticket, LTV, splatnost, konkrétní objekty ani geografie zveřejněny nejsou - diamondcapital.net výslovně uvádí, že podrobnosti fondů jsou dostupné jen kvalifikovaným investorům. Hledáno na hlavní stránce, podstránkách Services/Investment Philosophy a diamondcapital.net; podstránka /real-estate-debt na diamondcapital.net vrátila 404."
+ },
+ {
+  "id": "58",
+  "nazev": "Generali Investments Schweiz AG",
+  "zeme": "CH",
+  "web": "https://www.generali-investments.ch",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "Generali Investments Schweiz spravuje mimo jiné 'Immobilien und Hypotheken' (nemovitosti a hypotéky) se zeměpisným těžištěm ve Švýcarsku pro švýcarské fondy třetích stran, penzijní fondy a pojišťovací mandáty; žádné konkrétní produktové kritérium (ticket, LTV, typ aktiv) není na webu zveřejněno.",
+  "geografie": "CH",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "Wir verwalten Finanzanlagen sowie Immobilien und Hypotheken mit geografischem Schwerpunkt in der Schweiz.",
+  "zdroj": "https://www.generali-investments.ch",
+  "dalsi_doklady": [],
+  "duvod": "Generali Investments Schweiz zmiňuje správu švýcarských hypoték, ale web je firemní přehled bez konkrétních fondů, ticketů, LTV ani objektových kritérií - jde patrně o interní mandáty (penzijní fondy/pojišťovny) bez veřejného profilu. Hledáno na hlavní stránce a /ch/de/private/; odkaz 'Unsere Fonds' se nepodařilo načíst (404), samostatná stránka pro hypoteční/debt fond nenalezena."
+ },
+ {
+  "id": "71",
+  "nazev": "Collineo Asset Management GmbH",
+  "zeme": "DE",
+  "web": "https://collineo-group.com/en/",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "ANO",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "ANO",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "rezidenční, kanceláře, hotely, retail, logistika",
+  "typy_aktiv_text": "Collineo poskytuje mezzanine a equity kapitál pro 'residential, office, hotel, retail, and logistics real estate or neighborhood development' (rezidenční, kancelářské, hotelové, retailové a logistické nemovitosti nebo rozvoj čtvrtí), a to už v rané fázi projektu ('early in the project development process') - od akvizice pozemku přes plánování a získání stavebních práv až po realizaci a umístění (placement). Sídlo Dortmund, DE. Skupinové AuM: financování cca 750 mil. EUR, infrastrukturní investice cca 600 mil. EUR (celoskupinově, ne jako ticket na jednotlivý projekt).",
+  "geografie": "DE",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "capital for residential, office, hotel, retail, and logistics real estate or neighborhood development",
+  "zdroj": "https://collineo-group.com/en/finance/",
+  "dalsi_doklady": [
+   {
+    "co": "skupinové financované volume",
+    "citace": "Financing volume: approximately EUR 750 million",
+    "url": "https://collineo-group.com/en/"
+   },
+   {
+    "co": "raná fáze zapojení do developmentu",
+    "citace": "accompany developments from land acquisition through planning, building rights acquisition and implementation to placement",
+    "url": "https://collineo-group.com/en/finance/"
+   }
+  ],
+  "duvod": "Web potvrzuje mezzanine financování a typy aktiv/development, ale nezveřejňuje konkrétní ticket, LTV/LTC ani splatnost - stránky Finance/Projektentwickler odkazují na individuální jednání s kontaktními osobami (Heike Leicher, Dirk Bergander), sekce Investoren neobsahuje fondový prospekt ani PDF s kritérii. Hledáno: collineo-group.com/en/, /en/finance/, /projektentwickler/ (DE verze), /investoren/, /projekte/ (přesměrováno na nefunkční dev subdoménu)."
+ },
+ {
+  "id": "84",
+  "nazev": "PGIM Real Estate Germany AG",
+  "zeme": "DE",
+  "web": "https://www.pgim.com",
+  "ticket_od": "",
+  "ticket_do": "",
+  "ltv": "",
+  "senior": "",
+  "whole_loan": "",
+  "junior": "",
+  "mezzanine": "",
+  "bridge": "",
+  "pref_equity": "",
+  "development": "",
+  "akvizicni": "",
+  "refinancovani": "",
+  "nav_lending": "",
+  "financuje_spv": "",
+  "financuje_fondy": "",
+  "typy_aktiv_kod": "",
+  "typy_aktiv_text": "",
+  "geografie": "",
+  "posledni_aktivita": "",
+  "aktivita_url": "",
+  "citace": "",
+  "zdroj": "",
+  "dalsi_doklady": [],
+  "duvod": "pgim.com je JavaScript SPA aplikace - WebFetch i curl vrací pouze prázdný shell (title 'Router') bez skutečného obsahu či odkazů. Vyzkoušené URL /real-estate/press-releases, /real-estate/strategies/debt, /real-estate/newsroom, /press-room, /news vrátily 404 nebo prázdný obsah. V rámci limitu 8 načtení se nepodařilo dohledat tiskové zprávy o německých úvěrech (zmiňovaných v nápovědě jako 300/325 mil. EUR) ani kritéria LTV - potřeba by bylo jiné cesty (např. přímé PDF tiskové zprávy nebo Google cache), na které v této relaci nezbyl prostor (web search rozpočet byl vyčerpán)."
+ }
+]
