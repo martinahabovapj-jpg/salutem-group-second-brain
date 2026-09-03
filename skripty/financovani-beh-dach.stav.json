@@ -820,6 +820,342 @@
       "nazev": "Swiss Finance & Property Funds AG",
       "duvod": "Duplicita skupiny – vede řádek #1 Swiss Finance & Property Group AG. Jde o licencovanou Fondsleitung téže skupiny (jiná právní entita, stejní lidé a stejné fondy). Jedna skupina se neoslovuje dvakrát; řádek v listu 7 brání tomu, aby ji hledání nabízelo znovu.",
       "zdroj": "https://www.finma.ch"
+    },
+    "nazev:aachener grundvermögen kapitalverwaltungsgesellschaft mbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Aachener Grundvermögen Kapitalverwaltungsgesellschaft mbH",
+      "duvod": "Vlastní web firmy dokládá, že jde o KVG, která pro institucionální investory (církve, nadace) přímo vlastní a spravuje nemovitostní portfolio v Německu ve třech segmentech: retail, bydlení, zdravotně-sociální nemovitosti. Jde o equity investora, ne o poskytovatele dluhu. Real estate debt na webu doložen není.",
+      "zdroj": "https://www.aachener-grund.de/immobilien/"
+    },
+    "nazev:abrdn investments deutschland ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "abrdn Investments Deutschland AG",
+      "duvod": "Vlastní web skupiny dokládá konkrétní rezidenční nemovitostní strategii v Německu s geografickým zaměřením a typem aktiv. Real estate debt zmíněn není, jde čistě o equity investora do bydlení (a doplňkově retailu).",
+      "zdroj": "https://www.aberdeeninvestments.com/de-de/institutional/investment-solutions/real-estate/real-estate-strategies/german-urbanisation"
+    },
+    "nazev:aedifica asset management gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Aedifica Asset Management GmbH",
+      "duvod": "Vlastní web skupiny (aedifica.eu/germany) dokládá konkrétní a velký přímo vlastněný portfolio zdravotnických nemovitostí v Německu s přesnými čísly (fair value, počet nemovitostí, plocha). Jde o equity investora (REIT), real estate debt nezmíněn.",
+      "zdroj": "https://aedifica.eu/germany/"
+    },
+    "nazev:aegon asset management (frankfurt branch, pod aegon asset management pan europe b.v.)": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Aegon Asset Management (Frankfurt Branch, pod Aegon Asset Management Pan Europe B.V.)",
+      "duvod": "Aegon má dle vlastního webu pobočku ve Frankfurtu, ale ta funguje jako obecná/distribuční pobočka evropské platformy (fixed income, multi-asset), ne jako nemovitostní tým. Jediná konkrétní nemovitostní dluhová strategie doložená na vlastním webu (Commercial Mortgage Loans, součást Real Assets platformy) je explicitně a výhradně americká - viz citace. Žádná evropská ani DACH nemovitostní/dluhová strategie na vlastním webu doložena nebyla, proto zamítnuto pro geografii mimo region.",
+      "zdroj": "https://www.aegonam.com/en/strategies--funds/property/commercial-mortgage-loans/"
+    },
+    "nazev:aik immobilien-investmentgesellschaft mbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "aik Immobilien-Investmentgesellschaft mbH",
+      "duvod": "Vlastní web dokládá dlouholetou činnost jako investment/asset manager v segmentech office/retail/residential s konkrétním objemem spravovaného portfolia přes 4,7 mld. EUR. Real estate debt nezmíněn, jde o equity investora.",
+      "zdroj": "https://aik-invest.de/index.php/en/"
+    },
+    "nazev:altamarcam partners (cam alternatives gmbh, köln)": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "AltamarCAM Partners (CAM Alternatives GmbH, Köln)",
+      "duvod": "Vlastní web popisuje firmu jako 'solutions provider', který poskytuje klientům přístup k fondům třetích stran (Funds, Managed Accounts, Platforms) napříč třídami aktiv včetně nemovitostí, nikoli jako přímého investora do nemovitostí nebo poskytovatele nemovitostního dluhu. Jde o správce/alokátora do cizích portfolií bez vlastní nemovitostní strategie - přesně kategorie, kterou zadání vylučuje.",
+      "zdroj": "https://www.altamarcam.com/"
+    },
+    "nazev:apera asset management gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Apera Asset Management GmbH",
+      "duvod": "Vlastní web popisuje čistě korporátní private debt pro středně velké západoevropské firmy (financování sponsorů a společností pro růst), nemovitosti nejsou na webu zmíněny vůbec. Odpovídá pravidlu ze zadání, že čistě korporátní private debt bez nemovitostí (typicky Kartesia, Pemberton, Apera) se zamítá.",
+      "zdroj": "https://apera-am.com/"
+    },
+    "nazev:aquila capital": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Aquila Capital",
+      "duvod": "Aquila Capital sice investuje do nemovitostí (rezidence, logistika), ale explicitně mimo region DE/AT/CH - rezidenční strategie cílí výhradně na Španělsko a green-logistics strategie na Španělsko, Portugalsko a Itálii. Na žádné z prohlédnutých stránek vlastního webu není zmíněna nemovitostní aktivita v Německu, Rakousku ani Švýcarsku. Podle zadání jde o fond mimo cílový region -> zamítnout kvůli geografii.",
+      "zdroj": "https://www.aquila-capital.de/en/real-assets/green-logistics"
+    },
+    "nazev:ares management corporation (ares real estate)": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Ares Management Corporation (Ares Real Estate)",
+      "duvod": "Vlastní web dokládá jak nemovitostní equity, tak samostatný Real Estate Debt tým s globálním záběrem (\"global commercial real estate\"), tedy nejen jeden region mimo DACH - kvalifikuje se tedy podle pravidla geografie. Ares má v Evropě etablovanou přítomnost od roku 2007 včetně kanceláře ve Frankfurtu. Real estate debt beru za nejcennější zjištění.",
+      "zdroj": "https://www.ares.com/us/businesses-and-products/our-businesses/real-estate"
+    },
+    "nazev:barings llc (barings real estate)": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Barings LLC (Barings Real Estate)",
+      "duvod": "Vlastní web přímo uvádí transakci v Německu (Cuxhaven) v rámci Real Estate Debt platformy a popisuje škálu financování od senior/first mortgage přes bridge až po construction (development) financing. Toto je nejcennější nález - jde o skutečného poskytovatele nemovitostního dluhu s doloženou aktivitou v cílovém regionu.",
+      "zdroj": "https://www.barings.com/en-us/financial-advisor/capital-solutions/origination/real-estate/real-estate-debt"
+    },
+    "nazev:benefit street partners (bsp, součást franklin templeton)": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Benefit Street Partners (BSP, součást Franklin Templeton)",
+      "duvod": "BSP má vlajkovou strategii nemovitostního dluhu explicitně označenou jako americkou (\"Flagship U.S. Real Estate Debt Strategy\") a stránka s transakcemi tohoto real-estate-debt segmentu uvádí výhradně nemovitosti v USA (Severní Karolína, Florida, Texas, New Jersey, Virginie, Georgia, Michigan, Alabama). Na vlastním webu se nenašla žádná evropská/německá nemovitostní dluhová aktivita - evropská expanze firmy (přes akvizici Alcentra) se týká obecného private credit, ne nemovitostí. Podle pravidla pro fondy investující jen v jednom regionu mimo DACH -> zamítnout kvůli geografii.",
+      "zdroj": "https://benefitstreetpartners.com/benefit-street-partners-secures-10-billion-for-its-flagship-u-s-real-estate-debt-strategy-marking-the-largest-fundraise-in-the-firms-history-for-the-asset-class/"
+    },
+    "nazev:beos ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "BEOS AG",
+      "duvod": "BEOS AG je vlastním webem doloženě součástí Swiss Life Asset Managers od roku 2018 (viz citace). Databáze již vede skupinu Swiss Life Asset Managers pod řádkem #52 (Swiss Life AM Deutschland) - jde tedy o duplicitu skupiny, ne o samostatný subjekt s vlastní investiční strategií nezávislou na mateřské skupině.",
+      "zdroj": "https://www.beos.net/en/beos-ag/about-us"
+    },
+    "nazev:bf.capital gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "BF.capital GmbH",
+      "duvod": "Vlastní web BF.direkt AG (mateřské holdingové společnosti, kterou databáze již vede jako věřitele pod #24) výslovně řadí BF.capital GmbH mezi svých šest specializovaných dceřiných společností a popisuje ji jako subjekt provádějící 'Private Credit Investments für institutionelle Anleger in den Segmenten Real Estate-, Infrastructure- und Corporate Debt' v rámci skupiny. Přestože BF.capital má vlastní tým a od konce 2024 vlastní licenci BaFin jako investiční podnik, strukturálně jde o operativní jednotku téže skupiny, ne o samostatný nezávislý dluhový fond mimo skupinu BF.direkt - podle pravidla 'jedna skupina se neoslovuje dvakrát' -> zamítnout jako duplicitu.",
+      "zdroj": "https://www.bf-direkt.de/leistungen"
+    },
+    "nazev:big bau investitionsgesellschaft mbh - ein unternehmen der big-bau": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "BIG BAU Investitionsgesellschaft mbH - ein Unternehmen der BIG-BAU",
+      "duvod": "BIG-BAU se na vlastním webu popisuje jako developer a poradce/Treuhänder pro obce a města ve stavebním a projektovém rozvoji, spravuje svěřenecký majetek (Treuhandvermögen) v hodnotě cca 2,6 mld. eur pro cizí zadavatele (obce), nikoli vlastní investiční kapitál alokovaný do nemovitostí. Nejde tedy o investora alokujícího vlastní equity ani o poskytovatele nemovitostního dluhu, ale o developersko-servisní/trustee firmu - mimo cílovou databázi.",
+      "zdroj": "https://www.big-bau.de/"
+    },
+    "nazev:bkn capital sa": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "BKN Capital SA",
+      "duvod": "(Sídlo Lucembursko, posuzováno pro německý trh – člen BAI.) BKN Capital SA je podle vlastního webu lucemburský AIFM poskytující 'turn-key' fondové a administrativní služby institucionálním investorům, bankovním i nebankovním věřitelům a správcům aktiv - tedy fund services/administrátor cizích fondů, nikoli sám investor či věřitel. Zmínka o real estate debt na webu se týká asset expertizy poskytované klientským fondům, ne vlastní investiční/úvěrové činnosti BKN. Jde o typ subjektu explicitně vyloučený zadáním (fund services/Vertreter).",
+      "zdroj": "https://www.bkncapital.com/"
+    },
+    "nazev:blackstone europe fund management s.à.r.l. - germany": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Blackstone Europe Fund Management S.à.r.l. - Germany",
+      "duvod": "Blackstone dlouhodobě a doložitelně kupuje nemovitosti v Německu (kancelářské komplexy, rezidenční portfolia) přes vlastní realitní fondy – viz tiskové zprávy na blackstone.com. Skupina má rovněž globální real estate debt byznys (BREDS), takže v principu pokrývá i nemovitostní dluh, ale to se z německy zaměřených stránek přímo nepodařilo doložit citací. Zařazuji jako investora do equity, s poznámkou na debt potenciál k dalšímu ověření.",
+      "zdroj": "https://www.blackstone.com/news/press/blackstone-and-quantum-agree-to-acquire-a-90-000-sqm-office-complex-in-berlin/"
+    },
+    "nazev:catella real estate ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Catella Real Estate AG",
+      "duvod": "Catella Real Estate AG je regulovaná KVG, která přímo alokuje kapitál investorů do nemovitostí přes vlastní otevřené fondy (institucionální i retail), s deklarovaným zaměřením na konkrétní typy aktiv a evropské regiony. Jde o equity investora, ne o poskytovatele dluhu – žádná zmínka o financování/úvěrech na webu nebyla nalezena.",
+      "zdroj": "https://www.catella.com/en/germany/property-funds/about-us/creag"
+    },
+    "nazev:collineo asset management gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Collineo Asset Management GmbH",
+      "duvod": "Toto je přesně profil nemovitostního VĚŘITELE, který hledáme: Collineo je nezávislý asset manager poskytující mezzanine kapitál pro projektové developery a vlastníky nemovitostí (bydlení, kancelář, hotel, retail, logistika, čtvrťový rozvoj), sponzoři jsou pojišťovny a penzijní fondy. Konkrétní ticket size a LTV se z domovské stránky nepodařilo získat (přesměrování na dev.collineo-group.com), doporučuji dohledat Finanzierungskriterien samostatně.",
+      "zdroj": "https://collineo-group.com/en/"
+    },
+    "nazev:deutsche investment kapitalverwaltung ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Deutsche Investment Kapitalverwaltung AG",
+      "duvod": "Firma je regulovaná KVG, která přímo formuluje vlastní Ankaufsprofil (jen čtyři konkrétní třídy aktiv) a spravuje speciální nemovitostní fondy pro institucionální investory – jde o equity investora do nemovitostí v Německu. Impressum s jmény představenstva se v rámci limitu 5–6 načtení nepodařilo dohledat.",
+      "zdroj": "https://www.deutsche-investment.com/"
+    },
+    "nazev:die wohnkompanie holding gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "DIE WOHNKOMPANIE Holding GmbH",
+      "duvod": "DIE WOHNKOMPANIE je developer, ne investor/kupující. Vlastní web popisuje výhradně vývoj nových rezidenčních projektů a čtvrtí (\"Wir entwickeln Lebensräume\") pro prodej koncovým uživatelům a kapitálovým partnerům; žádná zmínka o nákupu stávajících nemovitostí do vlastního portfolia nebyla nalezena. Dle zadání: developer, který nekupuje = zamítnout.",
+      "zdroj": "https://www.wohnkompanie.de/"
+    },
+    "nazev:domicil real estate ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Domicil Real Estate AG",
+      "duvod": "Domicil aktivně a pravidelně kupuje rezidenční portfolia v Německu (350–400 mil. EUR/rok), i když je typicky rychle dál prodává (převod na vlastnická bydlení) nebo nakupuje jménem institucionálních klientů. Přesto jde o reálného, aktivního kupce nemovitostí s jasným Ankaufsprofilem, který je relevantní protistranou pro prodej rezidenčních portfolií. Není to čistý fund-services/custodian bez nemovitostní strategie – strategie je konkrétní a doložená.",
+      "zdroj": "https://www.domicil-group.de/unternehmen/ueber-uns/"
+    },
+    "nazev:dsr asset management gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "DSR Asset Management GmbH",
+      "duvod": "DSR Asset Management je čistě servisní poskytovatel (property management, facility management, technický servis) \"für Investoren, Immobilieneigentümer und -betreiber\" – tedy služby TŘETÍM stranám, které nemovitosti vlastní, ne vlastní kapitálová alokace do nemovitostí. Web neobsahuje žádnou zmínku o vlastním investování, správě fondu nebo nemovitostním dluhu. Odpovídá vylučovací kategorii \"správce/poskytovatel služeb bez vlastní investiční strategie\".",
+      "zdroj": "https://www.dsr-asset.com/start"
+    },
+    "nazev:dws grundbesitz gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "DWS Grundbesitz GmbH",
+      "duvod": "DWS Grundbesitz GmbH je etablovaná regulovaná KVG spravující několik velkých otevřených nemovitostních fondů (grundbesitz europa/global/Fokus Deutschland), které přímo nakupují komerční nemovitosti v Evropě včetně Německa – jasný equity investor do nemovitostí, doložitelné z vlastního webu DWS. Žádná zmínka o nemovitostním dluhu nalezena, jde o čistě kapitálové (equity) fondy.",
+      "zdroj": "https://www.dws.de/investieren/fonds-im-fokus/grundbesitz-europa/"
+    },
+    "nazev:dws real estate gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "DWS Real Estate GmbH",
+      "duvod": "DWS Real Estate GmbH je doložitelně propojenou společností (verbundenes Unternehmen) DWS Grundbesitz GmbH v rámci DWS Gruppe - vykonává pro ni transakční a asset-management služby. Skupina DWS je v databázi již vedena pod DWS Grundbesitz GmbH, takže jde o duplicitu skupiny - nemá smysl oslovovat obě entity zvlášť.",
+      "zdroj": "https://download.dws.com/download/asset/0837b403-3e68-4929-8911-be58fc11fdc5?tenant=ActiveEmea"
+    },
+    "nazev:efonds ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "eFonds AG",
+      "duvod": "eFonds AG je dle vlastního webu digitální servisní partner a platforma pro zprostředkování a administraci uzavřených alternativních investičních fondů pro banky, finanční zprostředkovatele a broker pooly. Sama nealokuje kapitál do nemovitostí, je to distribuční/administrační fund-services subjekt - spadá pod výluku.",
+      "zdroj": "https://www.efonds.com/"
+    },
+    "nazev:garbe industrial real estate gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "GARBE Industrial Real Estate GmbH",
+      "duvod": "GARBE Industrial Real Estate GmbH je jeden z předních investorů/developerů a asset manažerů logistických a průmyslových nemovitostí v Německu a Evropě, s vlastním zveřejněným Ankaufsprofil a doloženým AuM přes 10 mld. EUR. Jde o equity investora (kupuje, vyvíjí, vlastní a spravuje nemovitosti pro vlastní fondy/investory), nikoli o poskytovatele nemovitostního dluhu třetím stranám - 'finanziert Projekte' se vztahuje na financování vlastních developerských projektů.",
+      "zdroj": "https://www.garbe-industrial.de/ankaufsprofil/ | https://www.garbe-industrial.de/garbe-industrial-real-estate-knackt-im-ersten-halbjahr-die-10-milliarden-euro-marke-bei-den-assets-under-management/"
+    },
+    "nazev:generali real estate s.p.a.": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Generali Real Estate S.p.A.",
+      "duvod": "Generali Real Estate přímo vlastní a spravuje nemovitosti v Německu (234 nemovitostí, cca 5 mld. EUR, včetně nedávných akvizic ve Frankfurtu) a má i dedikovaný real estate debt fond GREDIF/GREDIF II se senior loans (LTV do cca 60 %). Jde tedy jak o equity investora, tak o poskytovatele nemovitostního dluhu - role 'oboji'. Německá aktivita je doložena přes registrovanou německou pobočku (Zweigniederlassung Deutschland, HRB 76846).",
+      "zdroj": "https://www.generalirealestate.com/article/generali-real-estate-grows-its-portfolio-in-frankfurt-with-the-completion-of-two-office-buildings-acquisitions/ | https://www.generalirealestate.com/our-funds/"
+    },
+    "nazev:grr garbe retail real estate gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "GRR GARBE Retail Real Estate GmbH",
+      "duvod": "GRR GARBE Retail Real Estate GmbH je na vlastním webu skupiny GARBE (garbe.world) vedena jako jedna z lokací/společností skupiny GARBE, vedle GARBE Industrial Real Estate GmbH. Skupinu GARBE v databázi vede GARBE Industrial Real Estate GmbH - jde o duplicitu skupiny, nemá smysl oslovovat obě entity GARBE zvlášť.",
+      "zdroj": "https://www.garbe.world/location/grr-garbe-retail-real-estate-gmbh/"
+    },
+    "nazev:hahn-immobilien-beteiligungs ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Hahn-Immobilien-Beteiligungs AG",
+      "duvod": "Hahn-Immobilien-Beteiligungs AG je holding skupiny Hahn, která od roku 1982 nakupuje, vyvíjí a spravuje maloobchodní/mixed-use nemovitosti a umísťuje je do vlastních uzavřených fondů pro investory (equity investor do nemovitostí). Doloženo z vlastního webu (segment, AuM, počet fondů). Žádná zmínka o poskytování nemovitostního dluhu třetím stranám.",
+      "zdroj": "https://www.hahnag.de/ | https://www.hahnag.de/immobilien/"
+    },
+    "nazev:hansainvest hanseatische investment-gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "HANSAINVEST Hanseatische Investment-GmbH",
+      "duvod": "HANSAINVEST je dle vlastního webu Service-KVG, která zakládá a administruje fondy pro externí klienty/asset managery ('Gemeinsam legen wir mit Ihnen Ihren eigenen Wertpapierfonds auf und sind kompetenter Partner in der Administration'), nealokuje vlastní kapitál. Spravuje přes 540 fondů a >65 mld. EUR jako servisní platforma (fund services/Master-KVG pro Real Assets) - spadá pod výluku 'fund services/custodian'.",
+      "zdroj": "https://www.hansainvest.de/de/unternehmen"
+    },
+    "nazev:hansemerkur grundvermögen ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "HanseMerkur Grundvermögen AG",
+      "duvod": "HMG je investiční a asset manager pojišťovací skupiny HanseMerkur, který sám nakupuje a spravuje kancelářské a rezidenční nemovitosti v Německu (Top-7 města a růstové lokality). Jde o vlastní kapitál (equity) - web nezmiňuje poskytování nemovitostního dluhu, jen equity investice a fondy pro spolu-investory. Vhodný investor do databáze.",
+      "zdroj": "https://www.hmg.de/unternehmen"
+    },
+    "nazev:intreal international real estate kapitalverwaltungsgesellschaft mbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "IntReal International Real Estate Kapitalverwaltungsgesellschaft mbH",
+      "duvod": "IntReal je nezávislá 'service-KVG', která zakládá a administruje nemovitostní fondy výhradně pro externí (třetí) správce/manažery. Sama nealokuje vlastní kapitál ani nekupuje nemovitosti na vlastní účet - jde o fund-administration/AIFM platformu (back office, launch fondů), ne o investora. Odpovídá vyloučené kategorii 'fund services/custodian/Vertreter' ze zadání.",
+      "zdroj": "https://www.intreal.com/en/company/"
+    },
+    "nazev:jamestown us-immobilien gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "JAMESTOWN US-Immobilien GmbH",
+      "duvod": "Jamestown US-Immobilien GmbH je americký realitní specialista s explicitní investiční prioritou v USA a vlastní organizací přímo na místě. Ačkoli skupina od roku 2018 provozuje i samostatný fond 'Jamestown Europa', jádrová a v seznamu uvedená entita (US-Immobilien GmbH) je vázána na americké fondy (Jamestown 27-32 apod.), tedy mimo cílový region DE/AT/CH. Zamítnuto z důvodu geografie dle zadání.",
+      "zdroj": "https://www.jamestown.de/"
+    },
+    "nazev:kanam grund kapitalverwaltungsgesellschaft mbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "KanAm Grund Kapitalverwaltungsgesellschaft mbH",
+      "duvod": "KanAm Grund je frankfurtská KVG spravující nemovitostní fondy (např. Leading Cities Invest, byť tento konkrétní fond je nyní v likvidaci) a institucionální mandáty, které nakupují office/retail/logistics/hotel/residential nemovitosti přímo v DACH regionu (Německo, Rakousko, Švýcarsko) i dalších evropských zemích. Jde o equity investice, web nezmiňuje nemovitostní dluh.",
+      "zdroj": "https://www.kanam-grund-group.com/real-estate"
+    },
+    "nazev:kartesia management s.à.r.l.": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Kartesia Management S.à.r.l.",
+      "duvod": "Kartesia je čistě korporátní private debt manažer poskytující flexibilní financování (direct lending, special situations, structured credit) malým a středním evropským firmám (tickety cca 10-150 mil. €). Web explicitně cílí na 'European companies' a 'lower mid-market' bez jakékoli zmínky o nemovitostech - odpovídá vyloučené kategorii 'čistě korporátní private debt bez nemovitostí' ze zadání.",
+      "zdroj": "https://kartesia.com/our-expertise/"
+    },
+    "nazev:kingstone investment management gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "KINGSTONE Investment Management GmbH",
+      "duvod": "KINGSTONE je mnichovská rodinná realitní skupina, která equity investuje do bytových, pečovatelských a kancelářských nemovitostí v Německu, Rakousku, CEE a Beneluxu. Skupina navíc přes sesterskou platformu KINGSTONE Debt Advisory (kingstone-da.com) poskytuje nemovitostní dluh - konkrétně mezzanine a whole-loan financování v Německu a Rakousku s AuM 1 mld. € - to je pro nás nejcennější nález: reálný real estate debt poskytovatel v DACH regionu.",
+      "zdroj": "https://kingstone-da.com/"
+    },
+    "nazev:klarphos s.à r.l.": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Klarphos S.à r.l.",
+      "duvod": "Klarphos je lucemburský fund-of-funds, který staví portfolia pro institucionální klienty formou alokací (LP podíly) do cizích fondů spravovaných externími top-kvartilovými manažery napříč třídami aktiv (private debt, private equity, real estate, infrastruktura). Sama přímo nekupuje nemovitosti ani neposkytuje nemovitostní dluh - jde o alokátora/poradce, ne o přímého investora nebo věřitele. Nejde o real estate debt fond, i když do private debt fondů investuje.",
+      "zdroj": "https://www.klarphos.com/"
+    },
+    "nazev:lbbw immobilien management gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "LBBW Immobilien Management GmbH",
+      "duvod": "Developer vlastních projektů: kupuje pozemky a vyvíjí bytové a komerční nemovitosti v jižním Německu a Berlíně k prodeji. Nealokuje kapitál do cizích nemovitostí ani neposkytuje financování třetím stranám — stejné pravidlo jako u DIE WOHNKOMPANIE a Soravia. Je to dcera banky LBBW; bankovní financování skupiny je mimo rozsah databáze. LBBW Immobilien Development skutečně nakupuje pozemky a vyvíjí bytové a komerční nemovitosti v jihoněmeckých regionech a Berlíně - jde o věcnou developerskou/investiční činnost do nemovitostí (celý cyklus od akvizice pozemku po hotovou nemovitost), nikoli o bankovní úvěrovou činnost mateřské LBBW banky. Posouzeno věcně jako nemovitostní investor/developer, proto zařazeno navzdory bankovní mateřské skupině.",
+      "zdroj": "https://www.lbbw-immobilien.de/de/development/"
+    },
+    "nazev:meag munich ergo assetmanagement gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "MEAG MUNICH ERGO AssetManagement GmbH",
+      "duvod": "MEAG na vlastním webu doloženě alokuje kapitál (equity) do nemovitostí napříč Německem a Evropou ve všech hlavních segmentech (kancelářské, rezidenční, logistika, retail), s AuM cca 15 mld. EUR. Nemovitostní DLUH se na webu nepodařilo samostatně doložit: sekce tiskových zpráv (meag.com/en/inform/34340.html) zmiňuje MEAG jako poskytovatele/aranžéra dluhového financování, ale výhradně u infrastrukturních a energetických projektů (železnice, obnovitelné zdroje, datacentra), nikoli u nemovitostí. Proto role zůstává jen \"investor\" – real estate debt u MEAG NENÍ z vlastního webu doložený, přestože skupina nabízí \"infrastructure debt & equity\" jako samostatnou třídu aktiv.",
+      "zdroj": "https://www.meag.com/en/invest/institutional/asset-class-real-estate.html"
+    },
+    "nazev:metlife investment management europe limited": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "MetLife Investment Management Europe Limited",
+      "duvod": "Vlastní web skupiny (metlife.com/investments, německá lokalizace en-de) přímo uvádí obě strategie odděleně – equity a komerční hypoteční úvěry (real estate debt) – jako nabízené produkty. NEMOVITOSTNÍ DLUH je tedy u MetLife IM přímo doložen: 'Financing for owners and developers across property types, including fixed, floating and transitional structures.' Nepodařilo se ale najít samostatnou stránku popisující výhradně německou/DACH knihu obchodů (mimo existence kanceláře v Mnichově) – produktová stránka působí jako globální šablona lokalizovaná do němčiny (en-de).",
+      "zdroj": "https://www.metlife.com/investments/en-de/financing-solutions/real-estate-financing/commercial-mortgage-loans"
+    },
+    "nazev:palmira capital partners gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Palmira Capital Partners GmbH",
+      "duvod": "Firma na vlastním webu jasně deklaruje roli evropského investora a asset managera pro logistické a industriální nemovitosti s AuM 3,1 mld. EUR a přítomností v Německu, Rakousku, Beneluxu, Španělsku a Polsku. Jde o equity stranu (akvizice a správa nemovitostí/fondů) – žádná zmínka o poskytování nemovitostního dluhu na webu není.",
+      "zdroj": "https://www.palmira-capital.com/"
+    },
+    "nazev:pemberton asset management s.a. – germany": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Pemberton Asset Management S.A. – Germany",
+      "duvod": "Pemberton je čistě korporátní private debt manager (senior direct lending, asset-based finance, NAV financing, working capital, kapitálová řešení pro buyouty a add-on akvizice) bez jakékoli nemovitostní strategie. Na vlastním webu není zmínka o nemovitostech ani nemovitostním financování – odpovídá pravidlu ze zadání, že čistě korporátní private debt (typicky Kartesia, Pemberton, Apera) se zamítá.",
+      "zdroj": "https://www.pembertonam.com/"
+    },
+    "nazev:pgim real estate germany ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "PGIM Real Estate Germany AG",
+      "duvod": "Vlastní web skupiny PGIM (pgim.com) přímo dokládá poskytování nemovitostního DLUHU v Německu: senior úvěr přes 300 mil. EUR na logistické portfolio a 325 mil. EUR na maloobchodní portfolio, v obou případech v rámci evropské 'European Core Debt' strategie PGIM Real Estate. Konkrétně posuzovaná entita 'PGIM Real Estate Germany AG' je dle obchodního rejstříku (sekundární zdroj, jen vodítko – Northdata/Creditreform) KAGB-licencovaná KVG spravující institucionální nemovitostní fondy/Spezial-AIF, což by odpovídalo i roli equity investora, ale tuto konkrétní aktivitu se z vlastního webu firmy nepodařilo doložit citací (pgimrealestate.com vracel chybu 421 při přímém přístupu). Role je proto konzervativně nastavena jen na 'financovani', doloženo z webu skupiny. Real estate debt je zde jasně potvrzený nález.",
+      "zdroj": "https://www.pgim.com/us/en/borrower/about/newsroom/press-releases/pgim-real-estate-provides-over-300m-to-finance-geographically-diversified-logistics-portfolio-across-germany"
+    },
+    "nazev:pimco prime real estate gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "PIMCO Prime Real Estate GmbH",
+      "duvod": "Vlastní web firmy přímo potvrzuje jak equity investice do nemovitostí (Core/Core+, Evropa/USA/APAC), tak nemovitostní DLUH – originaci seniorních komerčních hypoték ('lending business'). Sídlo firmy je v Mnichově, což potvrzuje německou/DACH aktivitu. Real estate debt je zde jasně potvrzený nález, byť podrobnější typologie úvěrů (mezzanine, whole loan atd.) se z přímo načtených stránek nepodařilo doslovně doložit.",
+      "zdroj": "https://www.pimcoprimerealestate.com/en/"
+    },
+    "nazev:praemia reim germany ag": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Praemia REIM Germany AG",
+      "duvod": "Firma na vlastním webu potvrzuje roli equity investičního manažera pro institucionální klienty se zaměřením na zdravotnické a rezidenční nemovitosti, se skupinovým AuM 33 mld. EUR. Žádná zmínka o poskytování nemovitostního dluhu na webu nalezena.",
+      "zdroj": "https://www.praemiareim.de/"
+    },
+    "nazev:principal real estate gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Principal Real Estate GmbH",
+      "duvod": "Vlastní web skupiny (principalam.com) deklaruje aktivitu ve všech čtyřech kvadrantech komerčních nemovitostí vč. private debt, a konkrétně dokládá evropskou (vč. německé) přítomnost přes hotelovou strategii a kancelář ve Frankfurtu. Nemovitostní dluh je zmíněn obecně jako 'private debt' v rámci skupinové nabídky, ale konkrétní produkt (senior/mezzanine/whole loan) specificky pro Německo se z vlastního webu nepodařilo doslovně doložit – doporučeno ověřit dalším zdrojem/kontaktem.",
+      "zdroj": "https://www.principalam.com/us/investment-teams/principal-real-estate"
+    },
+    "nazev:salux real estate gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zaradit",
+      "nazev": "Salux Real Estate GmbH",
+      "duvod": "Salux provozuje Senior Debt Bridge Fund, který financuje rezidenční nemovitosti a projektové developery v Německu krátkodobými úvěry tam, kde to banky nenabízejí rychle. To je přímo real estate debt (bridge + senior + development financing) na obytné nemovitosti v cílovém regionu DACH – nejcennější typ nálezu pro list 3.",
+      "zdroj": "https://www.salux-re.de/"
+    },
+    "nazev:soravia investment holding gmbh": {
+      "datum": "2026-09-03",
+      "verdikt": "zamitnout",
+      "nazev": "Soravia Investment Holding GmbH",
+      "duvod": "Soravia je developerská skupina, která identifikuje, staví a prodává VLASTNÍ nemovitostní projekty. Sekce webu pro investory ('Investieren') nenabízí nákup cizích nemovitostí ani poskytování dluhu třetím stranám – nabízí soukromým a institucionálním investorům participaci na FINANCOVÁNÍ VLASTNÍCH developerských projektů Soravia (fundraising pro sebe, ne alokace kapitálu do nemovitostí jiných). Odpovídá to pravidlu ze zadání: 'jen developuje vlastní projekty' = zamítnout. Dokládá to i kauza SC Finance Four GmbH, kde retailoví investoři půjčovali peníze DO soravijských projektů, nikoli naopak.",
+      "zdroj": "https://www.soravia.at/en/investieren/"
     }
   }
 }
