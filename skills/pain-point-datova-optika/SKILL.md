@@ -59,6 +59,23 @@ Ke každé otázce napiš, co v téhle bolesti platí. Když odpověď v podklad
 
 Každá otázka má i krátké jméno (v závorce). Otázku používej, když se ptáš; jméno, když na to místo odkazuješ. Podrobné doptávací otázky jsou v `references/sest-otazek.md`.
 
+**Ke každé odpovědi napiš i stav artefaktu.** Těch šest otázek je totéž co šest architektonických vrstev, jen jiným slovníkem — a každá vrstva má typický artefakt a roli, která za něj odpovídá. Bez toho se u bolesti nepozná, jestli chybí rozhodnutí, nebo dokument.
+
+| Vrstva | Otázka | Typický artefakt | Role |
+| --- | --- | --- | --- |
+| **Business vlastník** | kdo rozhoduje | vlastnictví domény (obchod, nájmy, právní) | business owner / data owner |
+| **KPI a cíle** | co tím trpí | definice KPI, cílové hodnoty | vlastník KPI |
+| **Procesy** | kde to vzniká | procesní mapa, RACI | vlastník procesu |
+| **Aplikace** | kde to bydlí | system of record na každou entitu | vlastník aplikace |
+| **Data** | o co vlastně jde | entity, atributy, vazby | data steward |
+| **Metadata** | je to zapsané | business glossary, katalog, lineage | data steward + IT |
+
+Stav vrstvy má **čtyři hodnoty a nic jiného**: `je` (artefakt existuje a víš který) · `částečně` (něco existuje, ne v úplnosti) · `chybí` (artefakt neexistuje) · `nevíme` (neověřovala jsi to).
+
+> ⚠️ **`chybí` a `nevíme` nejsou totéž.** `chybí` je nález o firmě. `nevíme` je nález o tvém rozboru a patří k němu otázka. Když si nejsi jistá, piš `nevíme`.
+
+**Proč to stojí za tu práci.** U 125 bolestí ve firmě vyšlo, že **KPI není doložené ani u jedné** a metadata chybí u 120 z nich, přičemž procesy a systémy popsané jsou. Ze samotných šesti otázek to vidět nebylo, protože odpověď na „co tím trpí" se dá vyplnit dopadem — a **dopad není KPI**: říká, jak moc to bolí, ne co je cílová hodnota. Rozdíl je vidět jen tehdy, když se u té odpovědi pojmenuje artefakt.
+
 **1. KDO ROZHODUJE** *(odpovědnost)* — Kdo má právo říct, co je v téhle věci pravda?
 Pozor, není to totéž jako „kdo to dělá". Ten, kdo agendu vykonává, obvykle nemá mandát rozhodnout, jak se to má dělat. Zajímá nás ten, kdo rozhoduje.
 
@@ -156,13 +173,13 @@ Diagnóza: [A#: lidský název] · slabé místo: [jméno místa] · zásah: [ty
 Symptom: [kdo, co, jak často, kolik času]
 Co se děje: [1–2 věty, srozumitelné i pro toho, kdo o datech nic neví]
 
-Šest otázek:
-• Kdo rozhoduje — …
-• Co tím trpí — …
-• Kde to vzniká — …
-• Kde to bydlí — …
-• O co vlastně jde — …
-• Je to zapsané — …
+Šest otázek a stav vrstvy:
+• Kdo rozhoduje [je|částečně|chybí|nevíme] — … (artefakt: …)
+• Co tím trpí [je|částečně|chybí|nevíme] — … (artefakt: …)
+• Kde to vzniká [je|částečně|chybí|nevíme] — … (artefakt: …)
+• Kde to bydlí [je|částečně|chybí|nevíme] — … (artefakt: …)
+• O co vlastně jde [je|částečně|chybí|nevíme] — … (artefakt: …)
+• Je to zapsané [je|částečně|chybí|nevíme] — … (artefakt: …)
 
 Zásah: [typ] — [co konkrétně udělat, 1–2 věty]
 Předpoklady: [co musí být dřív / žádné, protože …]
@@ -248,6 +265,7 @@ U dávky **nepiš plný rozbor ke každé bolesti**, pokud si ho uživatel nevy�
 
 - Má každá bolest symptom **a** „co se děje", a jsou to dvě různé věty?
 - Prošla všech šest otázek, a je u chybějících `CHYBÍ` nebo `TOHLE NEVÍM` místo domyšlené odpovědi?
+- Má **každá ze šesti vrstev** vyplněný stav (`je` / `částečně` / `chybí` / `nevíme`) a u něj pojmenovaný artefakt? A je `nevíme` použité tam, kde jsem to neověřovala, místo `chybí`?
 - Je slabé místo jedno, určené kaskádou z kroku 3 (a ne prostě to, kde to nejvíc bolí)?
 - Má slabé místo diagnózu ze seznamu A1–A12? U A12 je napsáno, že cesta k datům je celá?
 - Prošly všechny tři otázky o AI, a je u „až po" jmenovaný předpoklad?
