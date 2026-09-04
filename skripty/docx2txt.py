@@ -20,9 +20,24 @@ import xml.etree.ElementTree as ET
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
 
+def dlouha_cesta(cesta):
+    """Prefix pro obejiti limitu 260 znaku na Windows.
+
+    Proc: `Alfa/47 standardizace vstupu/Knihovna dokumentu/...` ma pres 260
+    znaku a `open()` na nem hlasi "neexistuje", i kdyz soubor existuje
+    (dolozeno 4. 9. 2026 - 12 z 31 popisu se timhle tise ztratilo).
+    Mimo Windows se nedela nic.
+    """
+    if os.name != "nt":
+        return cesta
+    p = os.path.abspath(cesta)
+    prefix = chr(92) * 2 + "?" + chr(92)
+    return p if p.startswith(prefix) else prefix + p
+
+
 def docx_na_text(cesta):
     """Vrati text .docx souboru. Odstavce oddelene novym radkem."""
-    with zipfile.ZipFile(cesta) as z:
+    with zipfile.ZipFile(dlouha_cesta(cesta)) as z:
         # hlavni telo dokumentu; hlavicky a zapati zamerne ignorujeme
         with z.open("word/document.xml") as f:
             strom = ET.parse(f)
@@ -65,12 +80,12 @@ def main():
         cil = sys.argv[sys.argv.index("--do") + 1]
     prepsat = "--prepsat" in sys.argv
 
-    if os.path.isfile(zdroj):
+    if os.path.isfile(dlouha_cesta(zdroj)):
         sys.stdout.reconfigure(encoding="utf-8")
         print(docx_na_text(zdroj))
         return 0
 
-    if not os.path.isdir(zdroj):
+    if not os.path.isdir(dlouha_cesta(zdroj)):
         print(f"CHYBA: {zdroj} neexistuje", file=sys.stderr)
         return 1
     if not cil:
