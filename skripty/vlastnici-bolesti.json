@@ -1,0 +1,113 @@
+{
+  "_pozn": "Business vlastnik u kazde ze 125 bolesti v prioritizacni mape. Zdroj: Airtable Stakeholder & Use Case Tracker (appAvvKuQ8ozGMxOR), tabulky Pain Points a Stakeholders, cteno 7. 9. 2026 pres MCP konektor. Airtable nema v tomhle prostredi API klic, takze se to nedá stahnout skriptem - tenhle soubor JE ten zaznam.",
+
+  "_urovne": {
+    "dolozeny": "clovek tu bolest sam vyslovil v rozhovoru (vazba Pain Point -> Stakeholder v Airtable)",
+    "pravdepodobny": "z role, ktera to podle rozboru ma rozhodnout, a ta role v bazi stakeholderu jednoznacne patri jednomu cloveku",
+    "role": "rozbor jmenuje roli, ale te roli v bazi neodpovida prave jeden clovek - vlastnik je role, ne jmeno",
+    "nedohledano": "ani jedno z toho"
+  },
+
+  "stakeholders": {
+    "S-002": { "jmeno": "Jan Dvořák", "role": "Analytik", "oddeleni": "Analytik" },
+    "S-003": { "jmeno": "Zuzana Kosová", "role": "Treasury management", "oddeleni": "Treasury management" },
+    "S-004": { "jmeno": "Jan Čajánek", "role": "", "oddeleni": "" },
+    "S-005": { "jmeno": "Petr Varga", "role": "Obchodní ředitel", "oddeleni": "Obchod" },
+    "S-006": { "jmeno": "Tereza Hofmann", "role": "Vedoucí nákupu — obchod", "oddeleni": "Obchodní partneři – Čechy" },
+    "S-007": { "jmeno": "Petra Svatošová", "role": "Právník", "oddeleni": "Právní" },
+    "S-008": { "jmeno": "Jiří Smyčka", "role": "Realitní makléř", "oddeleni": "" },
+    "S-009": { "jmeno": "Vojtěch Němeček", "role": "Property manager", "oddeleni": "Správa nájmů" },
+    "S-010": { "jmeno": "Klára Holečková", "role": "Back office manažer", "oddeleni": "" },
+    "S-011": { "jmeno": "Martina Homolová", "role": "Projektová koordinátorka", "oddeleni": "Reality Čechy" },
+    "S-012": { "jmeno": "Jakub Hovorka", "role": "IT", "oddeleni": "AI a IT" },
+    "S-013": { "jmeno": "Jan Petřek", "role": "Realitní makléř", "oddeleni": "Reality Morava" },
+    "S-014": { "jmeno": "Jan Dušek", "role": "Vedoucí Reality Čechy", "oddeleni": "Reality Čechy" },
+    "S-015": { "jmeno": "Pavel Šustr", "role": "IT konzultant", "oddeleni": "Marketing" },
+    "S-016": { "jmeno": "Josef Hlaváček", "role": "Ekonom", "oddeleni": "Finance" },
+    "S-017": { "jmeno": "Michaela Šiška", "role": "Asistentka", "oddeleni": "Obchod" },
+    "S-018": { "jmeno": "Martin Brož", "role": "Head of Marketing", "oddeleni": "Marketing" },
+    "S-019": { "jmeno": "Pavel Langer", "role": "", "oddeleni": "IT" },
+    "S-020": { "jmeno": "Petr Jiříček", "role": "spolumajitel", "oddeleni": "" },
+    "S-021": { "jmeno": "Jaroslav Ton", "role": "majitel", "oddeleni": "" },
+    "S-022": { "jmeno": "Lukáš Kopejtko", "role": "Právník", "oddeleni": "Právní" },
+    "S-023": { "jmeno": "Miloš Vondráček", "role": "Realitní makléř", "oddeleni": "Reality Čechy" },
+    "S-024": { "jmeno": "Anna Hrušková", "role": "HR Business Partner", "oddeleni": "HR" },
+    "S-025": { "jmeno": "Martin Dudjak", "role": "Senior Fundraiser", "oddeleni": "Fond" },
+    "S-026": { "jmeno": "Vladan Jurča", "role": "Oblastní manažer – Morava", "oddeleni": "Obchodní partneři – Morava" },
+    "S-027": { "jmeno": "Šárka Pěničková", "role": "Účetní", "oddeleni": "Finance" },
+    "S-028": { "jmeno": "Milan Kleban", "role": "Fundraiser", "oddeleni": "Fond" },
+    "S-029": { "jmeno": "Věra Bártová", "role": "Mzdová účetní", "oddeleni": "Finance" },
+    "S-030": { "jmeno": "Kristýna Gruner", "role": "Customer Care", "oddeleni": "" }
+  },
+
+  "_pozn_s011": "U S-011 jsou v Airtable pole Role a Department promichane (Role='RealityČechy', Department='Projektová koordinátorka'). Tady jsou srovnane do spravneho vyznamu.",
+
+  "pain_stakeholder": {
+    "P-002": "S-006", "P-004": "S-006", "P-005": "S-002", "P-006": "S-002",
+    "P-007": "S-002", "P-008": "S-002", "P-009": "S-003", "P-010": "S-003",
+    "P-011": "S-003", "P-012": "S-003", "P-013": "S-007", "P-014": "S-007",
+    "P-015": "S-007", "P-016": "S-009", "P-017": "S-009", "P-018": "S-009",
+    "P-019": "S-009", "P-020": "S-009", "P-021": "S-012", "P-022": "S-012",
+    "P-023": "S-011", "P-024": "S-011", "P-025": "S-011", "P-026": "S-024",
+    "P-027": "S-024", "P-028": "S-024", "P-029": "S-024", "P-030": "S-005",
+    "P-031": "S-005", "P-032": "S-005", "P-033": "S-005", "P-034": "S-005",
+    "P-035": "S-008", "P-036": "S-008", "P-037": "S-008", "P-038": "S-008",
+    "P-039": "S-010", "P-040": "S-010", "P-041": "S-010", "P-042": "S-022",
+    "P-043": "S-022", "P-044": "S-022", "P-045": "S-022", "P-046": "S-010",
+    "P-047": "S-013", "P-048": "S-013", "P-049": "S-013", "P-050": "S-013",
+    "P-051": "S-014", "P-052": "S-014", "P-053": "S-014", "P-054": "S-023",
+    "P-055": "S-023", "P-056": "S-023", "P-057": "S-023", "P-058": "S-015",
+    "P-059": "S-015", "P-060": "S-015", "P-061": "S-015", "P-062": "S-015",
+    "P-063": "S-017", "P-064": "S-017", "P-065": "S-017", "P-066": "S-017",
+    "P-067": "S-025", "P-068": "S-025", "P-069": "S-025", "P-070": "S-025",
+    "P-071": "S-026", "P-072": "S-026", "P-073": "S-027", "P-074": "S-028",
+    "P-075": "S-028", "P-076": "S-028", "P-077": "S-016", "P-078": "S-016",
+    "P-079": "S-018", "P-080": "S-018", "P-081": "S-018", "P-082": "S-018",
+    "P-083": "S-018", "P-084": "S-018", "P-085": "S-019", "P-086": "S-019",
+    "P-087": "S-019", "P-088": "S-019", "P-089": "S-020", "P-090": "S-020",
+    "P-091": "S-020", "P-092": "S-020", "P-093": "S-020", "P-094": "S-029",
+    "P-095": "S-029", "P-096": "S-029", "P-097": "S-030"
+  },
+
+  "_pozn_duplicity": "P-098 je v Airtable pouzite sedmkrat a P-003 dvakrat, takze Pain ID tam neni identifikator. Tyhle se paruji podle klice, ktery jim dala prioritizacni mapa. Viz pamet o nespolehlivem Pain ID.",
+
+  "pain_stakeholder_key": {
+    "P-003-1": "S-006",
+    "P-003-2": "S-006",
+    "P-028a": "S-024",
+    "P-028b": "S-024",
+    "P-028c": "S-024",
+    "P-028d": "S-024",
+    "P-098-1": "S-030",
+    "P-098-2": "S-004",
+    "P-098-4": "",
+    "P-098-6": "S-004",
+    "P-098-7": "S-004"
+  },
+
+  "_pozn_alfa": "20 bolesti A-01..A-20 pochazi z popisu procesnich kroku v projektu Alfa, ne z rozhovoru - v Airtable zaznam nemaji. Vlastnik se u nich bere z role, kterou rozbor jmenuje v poli 'rozhodne'. Kdyz te roli v bazi stakeholderu odpovida prave jeden clovek, je vlastnik pravdepodobny; jinak je vlastnikem role.",
+
+  "role_na_cloveka": {
+    "obchodní ředitel": "S-005",
+    "Head of Marketing": "S-018",
+    "treasury": "S-003",
+    "majitel": "S-021"
+  },
+
+  "role_bez_cloveka": {
+    "vedoucí IT": "V bázi stakeholderů není nikdo s rolí vedoucí IT. Pavel Langer je vedený pod oddělením IT bez role, Jakub Hovorka jako IT v AI a IT. Governance navíc mluví o čekání na nové IT vedení, takže to jméno se dopisovat nemá.",
+    "CFO": "V bázi stakeholderů není nikdo s rolí CFO. Josef Hlaváček je vedený jako Ekonom ve Finance, což není totéž.",
+    "vedoucí právního oddělení": "V bázi jsou dva právníci (Petra Svatošová, Lukáš Kopejtko) a ani jeden není vedený jako vedoucí."
+  },
+
+  "alfa_vlastnik": {
+    "A-01": "vedoucí IT", "A-02": "vedoucí IT", "A-03": "vedoucí IT",
+    "A-04": "Head of Marketing", "A-05": "vedoucí IT", "A-06": "vedoucí IT",
+    "A-07": "obchodní ředitel", "A-08": "obchodní ředitel", "A-09": "CFO",
+    "A-10": "vedoucí právního oddělení", "A-11": "vedoucí právního oddělení",
+    "A-12": "treasury", "A-13": "treasury", "A-14": "treasury",
+    "A-15": "vedoucí právního oddělení", "A-16": "vedoucí právního oddělení",
+    "A-17": "obchodní ředitel", "A-18": "majitel",
+    "A-19": "obchodní ředitel", "A-20": "CFO"
+  }
+}

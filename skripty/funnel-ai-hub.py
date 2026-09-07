@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
-"""Obnovi sekci Fanel na AI Hubu (/prioritizacni-mapa).
+"""Obnovi sekci Funnel na AI Hubu (/prioritizacni-mapa).
 
 Jeden prikaz udela cely retez:
   1. stahne zive ukoly z Freela (projekt 561017, 5 listu)
   2. vytezi z popisu sablonu v2 (tolerantni parser, hodnota i z dalsiho radku)
-  3. spocita faze fanelu, business case a "na cem to stoji"
-  4. vlozi/prepise blok <script id="fn-data"> a sekci Fanel v prioritizacni-mapa.html
+  3. spocita faze funnelu, business case a "na cem to stoji"
+  4. vlozi/prepise blok <script id="fn-data"> a sekci Funnel v prioritizacni-mapa.html
   5. overi, ze vsechna cisla sedi (Python zrcadlo logiky ve fn.js, Node tu neni)
 
 Pouziti:
-    python fanel-ai-hub.py             # cely retez
-    python fanel-ai-hub.py --nahled    # spocita a vypise, do stranky NEZAPISE
-    python fanel-ai-hub.py --overit    # jen overi cisla uz nasazene stranky
+    python funnel-ai-hub.py             # cely retez
+    python funnel-ai-hub.py --nahled    # spocita a vypise, do stranky NEZAPISE
+    python funnel-ai-hub.py --overit    # jen overi cisla uz nasazene stranky
 
 Po zapisu je jeste potreba zmenu commitnout a pushnout v repu salutem-ai-hub
 (deploy = git push origin main) a POTOM OVERIT, ze deploy ve Vercelu neskoncil
 jako Blocked - push sam nasazeni nezaruci.
 
-Vsechny ceske texty jsou ve fanel-ai-hub.popisky.json, aby v .py nebyla
+Vsechny ceske texty jsou ve funnel-ai-hub.popisky.json, aby v .py nebyla
 diakritika (viz poznamka o mojibake v pameti projektu).
 
 Nastaveni: FREELO_EMAIL a FREELO_API_KEY v ~/.claude/settings.json (env).
@@ -43,10 +43,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 HOME = os.path.expanduser('~')
 SETTINGS = os.path.join(HOME, '.claude', 'settings.json')
 HUB = os.path.join(HOME, 'salutem-ai-hub', 'prioritizacni-mapa.html')
-L = json.load(open(os.path.join(HERE, 'fanel-ai-hub.popisky.json'), encoding='utf-8'))
+L = json.load(open(os.path.join(HERE, 'funnel-ai-hub.popisky.json'), encoding='utf-8'))
 
 PID = 561017
-LISTY = {                       # jen listy, ktere do fanelu patri
+LISTY = {                       # jen listy, ktere do funnelu patri
     1946848: L['listy']['produkcni'],
     1946850: L['listy']['vzdelavaci'],
     1931437: L['listy']['compliance'],
@@ -74,7 +74,7 @@ def freelo_get(path, auth, params=None):
         url += '?' + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={
         'Authorization': 'Basic ' + auth,
-        'User-Agent': 'salutem-ai-hub-fanel',
+        'User-Agent': 'salutem-ai-hub-funnel',
         'Content-Type': 'application/json'})
     for pokus in range(5):
         try:
@@ -168,7 +168,7 @@ def parsuj(raw):
     return pole
 
 
-# ---------------------------------------------------------------- zarazeni do fanelu
+# ---------------------------------------------------------------- zarazeni do funnelu
 def faze_ukolu(u, f):
     labs = set(u['labels'])
     if u['list_id'] == LIST_UDRZOVANI:
@@ -263,21 +263,21 @@ def postav(ukoly, stranka_html):
 
 
 # ---------------------------------------------------------------- vlozeni do stranky
-BLOKY = [('        /* ===== Fanel ===== */', '\n        /* ===== END Fanel ===== */\n'),
-         ('    <!-- ============ 0. FANEL ============ -->',
-          '\n    <!-- ============ END FANEL ============ -->\n\n'),
-         ('    <!-- fanel data -->', '\n    <!-- END fanel data -->\n')]
-FANEL_LINK = '<a href="#fanel" class="main">' + L['odkaz'] + '</a>'
+BLOKY = [('        /* ===== Funnel ===== */', '\n        /* ===== END Funnel ===== */\n'),
+         ('    <!-- ============ 0. FUNNEL ============ -->',
+          '\n    <!-- ============ END FUNNEL ============ -->\n\n'),
+         ('    <!-- funnel data -->', '\n    <!-- END funnel data -->\n')]
+FUNNEL_LINK = '<a href="#funnel" class="main">' + L['odkaz'] + '</a>'
 ODKAZ_MAIN = '<a href="#tabulka" class="main">' + L['odkaz_tabulka'] + '</a>'
 ODKAZ_PLAIN = '<a href="#tabulka">' + L['odkaz_tabulka'] + '</a>'
 KOTVA = '    <!-- ============ 1. LOGIKA ============ -->'
 
 
 def vloz(h, data):
-    sablony = os.path.join(HERE, 'fanel-ai-hub')
-    css = open(os.path.join(sablony, 'fanel.css'), encoding='utf-8').read()
-    sekce = open(os.path.join(sablony, 'fanel.html'), encoding='utf-8').read()
-    js = open(os.path.join(sablony, 'fanel.js'), encoding='utf-8').read()
+    sablony = os.path.join(HERE, 'funnel-ai-hub')
+    css = open(os.path.join(sablony, 'funnel.css'), encoding='utf-8').read()
+    sekce = open(os.path.join(sablony, 'funnel.html'), encoding='utf-8').read()
+    js = open(os.path.join(sablony, 'funnel.js'), encoding='utf-8').read()
     json_radek = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
     assert '</script' not in json_radek, 'data obsahuji </script'
 
@@ -289,22 +289,22 @@ def vloz(h, data):
             h = h[:i] + h[j + len(b):]
 
     i = h.rindex('    </style>')
-    h = h[:i] + css.rstrip('\n') + '\n        /* ===== END Fanel ===== */\n' + h[i:]
+    h = h[:i] + css.rstrip('\n') + '\n        /* ===== END Funnel ===== */\n' + h[i:]
 
-    h = h.replace(FANEL_LINK + '\n                ', '')
+    h = h.replace(FUNNEL_LINK + '\n                ', '')
     if h.count(ODKAZ_MAIN) == 1:
-        h = h.replace(ODKAZ_MAIN, FANEL_LINK + '\n                ' + ODKAZ_PLAIN)
+        h = h.replace(ODKAZ_MAIN, FUNNEL_LINK + '\n                ' + ODKAZ_PLAIN)
     elif h.count(ODKAZ_PLAIN) == 1:
-        h = h.replace(ODKAZ_PLAIN, FANEL_LINK + '\n                ' + ODKAZ_PLAIN)
+        h = h.replace(ODKAZ_PLAIN, FUNNEL_LINK + '\n                ' + ODKAZ_PLAIN)
     else:
         raise AssertionError('odkaz na tabulku v pm-jump nenalezen')
 
     assert h.count(KOTVA) == 1, 'kotva LOGIKA nenalezena prave jednou'
     h = h.replace(KOTVA, sekce.rstrip('\n')
-                  + '\n    <!-- ============ END FANEL ============ -->\n\n' + KOTVA)
+                  + '\n    <!-- ============ END FUNNEL ============ -->\n\n' + KOTVA)
 
-    blok = ('    <!-- fanel data -->\n    <script id="fn-data" type="application/json">'
-            + json_radek + '</script>\n' + js.rstrip('\n') + '\n    <!-- END fanel data -->\n')
+    blok = ('    <!-- funnel data -->\n    <script id="fn-data" type="application/json">'
+            + json_radek + '</script>\n' + js.rstrip('\n') + '\n    <!-- END funnel data -->\n')
     i = h.rindex('</body>')
     return h[:i] + blok + h[i:]
 
@@ -368,14 +368,14 @@ def prehled(data):
             print('  ', i['id'], i['nazev'][:56], i['stitky'])
     bez = [i for i in items if i['faze'] == 'bez_stavu']
     if bez:
-        print('\nBEZ STITKU PIPELINE (fanel je neumi zaradit):')
+        print('\nBEZ STITKU PIPELINE (funnel je neumi zaradit):')
         for i in bez:
             print('  ', i['id'], i['nazev'][:56])
 
 
 # ---------------------------------------------------------------- main
 def main():
-    ap = argparse.ArgumentParser(description='Obnovi sekci Fanel na AI Hubu.')
+    ap = argparse.ArgumentParser(description='Obnovi sekci Funnel na AI Hubu.')
     ap.add_argument('--nahled', action='store_true', help='spocitat a vypsat, do stranky nezapisovat')
     ap.add_argument('--overit', action='store_true', help='jen overit cisla uz nasazene stranky')
     a = ap.parse_args()
@@ -410,7 +410,7 @@ def main():
         return 1
 
     if a.nahled:
-        out = os.path.join(HERE, 'fanel-ai-hub.nahled.json')
+        out = os.path.join(HERE, 'funnel-ai-hub.nahled.json')
         json.dump(data, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         print('\n5/5 nahled - do stranky se nezapisovalo. Data:', out)
         return 0

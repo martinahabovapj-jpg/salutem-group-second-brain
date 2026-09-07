@@ -1,5 +1,5 @@
     <script>
-        // ===================== FANEL =====================
+        // ===================== FUNNEL =====================
         (function () {
             var el = document.getElementById('fn-data');
             if (!el) return;
@@ -81,7 +81,7 @@
                 var realizace = cnt(function (i) { return i.faze === 'realizace'; });
                 var realBezBc = cnt(function (i) { return i.faze === 'realizace' && i.bc !== 'plny'; });
                 var h = '';
-                h += '<div class="fn-kpi"><div class="fn-kpi-v">' + celkem + '</div><div class="fn-kpi-l">zadání je dnes ve fanelu. ' + sZadanim + ' z nich má ve Freelu sepsané zadání, u zbytku je zatím jen název</div></div>';
+                h += '<div class="fn-kpi"><div class="fn-kpi-v">' + celkem + '</div><div class="fn-kpi-l">zadání je dnes ve funnelu. ' + sZadanim + ' z nich má ve Freelu sepsané zadání, u zbytku je zatím jen název</div></div>';
                 h += '<div class="fn-kpi ' + (bcPlny > 1 ? '' : 'bad') + '"><div class="fn-kpi-v">' + bcPlny + '</div><div class="fn-kpi-l">' + sklon(bcPlny, 'zadání má', 'zadání mají', 'zadání má') + ' vyčíslený přínos v Kč za rok. Bez čísla se nedá prioritizovat</div></div>';
                 h += '<div class="fn-kpi ' + (realBezBc ? 'bad' : '') + '"><div class="fn-kpi-v">' + realBezBc + ' z ' + realizace + '</div><div class="fn-kpi-l">věcí, které se právě staví, nemá vyčíslený přínos</div></div>';
                 var nezapsano = cnt(function (i) { return i.blok === 'nezapsano'; });
@@ -208,21 +208,21 @@
                 if (c) c.textContent = rs.length + ' z ' + IT.length;
             }
 
-            // ---- hranice fanelu ----
+            // ---- hranice funnelu ----
             (function () {
                 var bez = cnt(function (i) { return i.faze === 'bez_stavu'; });
                 var dve = cnt(function (i) { return i.dve_stitky; });
                 var park = cnt(function (i) { return i.faze === 'parkoviste'; });
-                var h = '<strong>Co fanel dnes neumí a proč.</strong><br>';
+                var h = '<strong>Co funnel dnes neumí a proč.</strong><br>';
                 h += '<strong>1. Nemá čas.</strong> Ukazuje snímek, ne jak se fronta vyprazdňuje. Časová osa přijde, až bude víc než jeden snímek — dřív by to byla čára mezi dvěma body.<br>';
-                h += '<strong>2. Nerozliší „schváleno k realizaci" od „staví se".</strong> Ve Freelu je na obojí jeden štítek <em>in process</em>. Kdo to chce vidět odděleně, musí přidat štítek — fanel to pak ukáže sám.<br>';
-                h += '<strong>3. ' + bez + ' ' + sklon(bez, 'zadání nemá', 'zadání nemají', 'zadání nemá') + ' štítek pipeline</strong>, takže je fanel neumí zařadit a drží je ve sloupci Bez stavu. ';
-                h += dve ? 'Další ' + dve + ' ' + sklon(dve, 'má', 'mají', 'má') + ' štítky dva naráz, což pravidlo „právě jeden štítek" zakazuje; fanel je řadí podle toho pozdějšího a označuje je v tabulce.<br>' : '<br>';
+                h += '<strong>2. Nerozliší „schváleno k realizaci" od „staví se".</strong> Ve Freelu je na obojí jeden štítek <em>in process</em>. Kdo to chce vidět odděleně, musí přidat štítek — funnel to pak ukáže sám.<br>';
+                h += '<strong>3. ' + bez + ' ' + sklon(bez, 'zadání nemá', 'zadání nemají', 'zadání nemá') + ' štítek pipeline</strong>, takže je funnel neumí zařadit a drží je ve sloupci Bez stavu. ';
+                h += dve ? 'Další ' + dve + ' ' + sklon(dve, 'má', 'mají', 'má') + ' štítky dva naráz, což pravidlo „právě jeden štítek" zakazuje; funnel je řadí podle toho pozdějšího a označuje je v tabulce.<br>' : '<br>';
                 var bezVl = cnt(function (i) { return !i.vlastnik; });
                 h += '<strong>3b. ' + bezVl + ' ' + sklon(bezVl, 'zadání nemá', 'zadání nemají', 'zadání nemá')
                    + ' ve Freelu vlastníka</strong>, takže není komu se ptát na stav. '
                    + 'U ' + cnt(function (i) { return !i.zadavatel; }) + ' není zapsaný zadavatel, takže není komu to předat.<br>';
-                h += '<strong>4. Parkoviště není fáze, je to nerozhodnuto.</strong> ' + park + ' ' + sklon(park, 'zadání tam leží', 'zadání tam leží', 'zadání tam leží') + ' bez ano i bez ne. Ve fanelu to visí na kraji záměrně, aby to nezapadlo.<br>';
+                h += '<strong>4. Parkoviště není fáze, je to nerozhodnuto.</strong> ' + park + ' ' + sklon(park, 'zadání tam leží', 'zadání tam leží', 'zadání tam leží') + ' bez ano i bez ne. Ve funnelu to visí na kraji záměrně, aby to nezapadlo.<br>';
                 h += '<strong>5. Business case v Kč má ' + cnt(function (i) { return i.bc === 'plny'; }) + ' zadání ze ' + IT.length + '.</strong> Ne proto, že by čísla nešla spočítat, ale proto, že se do Freela nedopsala. Dokud tam nebudou, je prioritizace věc dojmu.';
                 byId('fn-hranice').innerHTML = h;
             })();

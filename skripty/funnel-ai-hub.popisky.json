@@ -1,6 +1,6 @@
 {
-  "_pozn": "Vsechny ceske texty sekce Fanel. V .py nesmi byt diakritika, jinak vznikne mojibake.",
-  "odkaz": "Fanel: kde co je",
+  "_pozn": "Vsechny ceske texty sekce Funnel. V .py nesmi byt diakritika, jinak vznikne mojibake.",
+  "odkaz": "Funnel: kde co je",
   "odkaz_tabulka": "Tabulka všech 125 bolestí",
   "bez_vlastnika": "bez vlastníka",
   "listy": {
@@ -105,7 +105,7 @@
     {
       "key": "bez_stavu",
       "nazev": "Bez stavu",
-      "popis": "Aktivní úkol bez štítku pipeline. Ve fanelu ho není kde ukázat, dokud štítek nedostane."
+      "popis": "Aktivní úkol bez štítku pipeline. Ve funnelu ho není kde ukázat, dokud štítek nedostane."
     }
   ],
   "bc": [
