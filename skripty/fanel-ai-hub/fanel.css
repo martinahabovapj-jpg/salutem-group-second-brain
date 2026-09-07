@@ -1,0 +1,59 @@
+        /* ===== Fanel ===== */
+        .fn-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 24px 0 6px; }
+        .fn-kpi { background: var(--white); border: 1px solid var(--gray-200); border-left: 4px solid var(--blue); border-radius: 10px; padding: 16px 18px; }
+        .fn-kpi.warn { border-left-color: var(--warning, #F59E0B); }
+        .fn-kpi.bad { border-left-color: #DC2626; }
+        .fn-kpi-v { font-size: 1.7rem; font-weight: 800; color: var(--blue); line-height: 1.1; }
+        .fn-kpi-l { font-size: .81rem; color: var(--gray-600); margin-top: 6px; line-height: 1.45; }
+
+        .fn-res { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 16px 0 8px; }
+        .fn-res-c { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px 18px; }
+        .fn-res-c .n { font-size: 1.45rem; font-weight: 800; color: var(--blue); line-height: 1.1; }
+        .fn-res-c .n small { font-size: .8rem; font-weight: 600; color: var(--gray-500); margin-left: 6px; }
+        .fn-res-c h4 { font-size: .95rem; color: var(--blue); margin: 8px 0 6px; font-weight: 600; }
+        .fn-res-c p { font-size: .85rem; line-height: 1.6; color: var(--gray-600); margin: 0; }
+        .fn-res-c.ano { border-top: 3px solid #16A34A; }
+        .fn-res-c.az_po { border-top: 3px solid #F59E0B; }
+        .fn-res-c.ne { border-top: 3px solid var(--gray-400); }
+
+        .fn-bars { margin: 20px 0 4px; }
+        .fn-bar { display: grid; grid-template-columns: 200px 1fr 84px; gap: 14px; align-items: center; padding: 4px 0; border: none; background: none; width: 100%; text-align: left; font: inherit; cursor: pointer; }
+        .fn-bar:hover .fn-bar-l { color: var(--gray-900); }
+        .fn-bar[aria-pressed="true"] .fn-bar-l { color: var(--blue); font-weight: 700; }
+        .fn-bar-l { font-size: .87rem; color: var(--gray-700); text-align: right; line-height: 1.3; }
+        .fn-bar-t { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 6px; height: 26px; overflow: hidden; }
+        .fn-bar-f { height: 100%; border-radius: 5px 0 0 5px; background: var(--blue); min-width: 2px; transition: width .2s; }
+        .fn-bar-n { font-size: .95rem; font-weight: 700; color: var(--blue); }
+        .fn-bar-n small { font-weight: 500; color: var(--gray-500); font-size: .78rem; }
+        .fn-bar.f-napad .fn-bar-f, .fn-bar.f-zadani .fn-bar-f { background: #93A9CE; }
+        .fn-bar.f-bcase .fn-bar-f { background: #C7D2E4; }
+        .fn-bar.f-schvaleni .fn-bar-f { background: #F59E0B; }
+        .fn-bar.f-realizace .fn-bar-f { background: var(--blue); }
+        .fn-bar.f-pilot .fn-bar-f { background: #4ADE80; }
+        .fn-bar.f-provoz .fn-bar-f { background: #16A34A; }
+        .fn-bar.f-vyhodnoceno .fn-bar-f { background: #065F46; }
+        .fn-bar.f-parkoviste .fn-bar-f { background: var(--gray-400); }
+        .fn-bar.f-bez_stavu .fn-bar-f { background: #DC2626; }
+        .fn-bar-empty .fn-bar-n { color: var(--gray-400); }
+
+        .fn-faze-note { font-size: .84rem; color: var(--gray-500); line-height: 1.6; margin: 10px 0 0; max-width: 900px; }
+        .fn-chips { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin: 20px 0 10px; }
+        .fn-chips label { font-size: .8rem; color: var(--gray-500); margin-right: 2px; }
+        .fn-chip { padding: 5px 12px; border-radius: 20px; border: 1px solid var(--gray-300); background: var(--white); font-size: .82rem; color: var(--gray-700); cursor: pointer; font-family: inherit; }
+        .fn-chip[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: var(--white); font-weight: 600; }
+        .fn-count { font-size: .8rem; color: var(--gray-500); margin-left: 6px; }
+
+        .fn-bc-plny { background: #DCFCE7; color: #166534; }
+        .fn-bc-castecny { background: #FEF3C7; color: #92400E; }
+        .fn-bc-zadny { background: #FEE2E2; color: #991B1B; }
+        .fn-bl-zadavatel { background: #FEF3C7; color: #92400E; }
+        .fn-bl-rozhodnuti { background: #FFE4E6; color: #9F1239; }
+        .fn-bl-vstup { background: #E0E7FF; color: #3730A3; }
+        .fn-bl-ai_tym { background: #DCFCE7; color: #166534; }
+        .fn-bl-nezapsano { background: var(--gray-200); color: var(--gray-600); }
+        .fn-cell-sub { display: block; font-size: .78rem; color: var(--gray-500); line-height: 1.45; margin-top: 3px; }
+
+        @media (max-width: 720px) {
+            .fn-bar { grid-template-columns: 128px 1fr 60px; gap: 8px; }
+            .fn-bar-l { font-size: .78rem; }
+        }
