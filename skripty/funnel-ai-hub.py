@@ -227,7 +227,7 @@ def postav(ukoly, stranka_html):
             v_provozu_od=f.get(KEY['odkdy'], ''), podukoly=u['subtasks'],
             dve_stitky=len(stitky) > 1, stitky=stitky))
 
-    # zasobnik bolesti bereme z pm-data na tez strance, aby cisla nemela dva zdroje
+    # zasobnik podnetu bereme z pm-data na tez strance, aby cisla nemela dva zdroje
     B = json.loads(re.search(r'<script id="pm-data" type="application/json">(.*?)</script>',
                              stranka_html, re.S).group(1))['bolesti']
 

@@ -70,29 +70,29 @@ Freelu**:
 jinak popsat kategorii — uprav `funnel-ai-hub.popisky.json` a pusť skript.
 Do `.py` se diakritika nepíše, na Windows z ní vzniká mojibake.
 
-## Druhý skript na téže stránce: vlastníci bolestí
+## Druhý skript na téže stránce: vlastníci podnětů
 
-`skripty/vlastnici-bolesti.py` dopisuje do tabulky všech 125 bolestí sloupec
+`skripty/vlastnici-podnetu.py` dopisuje do tabulky všech 125 podnětů sloupec
 **Vlastník**. Je to samostatná věc od funnelu a pouští se jen když se změní
 vazby v Airtable:
 
 ```
-python ~/salutem-group-second-brain/skripty/vlastnici-bolesti.py --nahled
-python ~/salutem-group-second-brain/skripty/vlastnici-bolesti.py
+python ~/salutem-group-second-brain/skripty/vlastnici-podnetu.py --nahled
+python ~/salutem-group-second-brain/skripty/vlastnici-podnetu.py
 ```
 
 > ⚠️ **Airtable tady nemá API klíč** — jde jen přes MCP konektor v Claude Code.
 > Vazby se proto nedají stáhnout automaticky a záznamem *je*
-> `skripty/vlastnici-bolesti.json`. Když se v Airtable něco změní, musí se
+> `skripty/vlastnici-podnetu.json`. Když se v Airtable něco změní, musí se
 > dopsat tam ručně (nebo si o to říct Claudovi, ten na Airtable dosáhne).
 
 Vlastník má tři úrovně průkaznosti a ta úroveň je na stránce vidět: *řekl to
-sám* (člověk bolest vyslovil v rozhovoru), *pravděpodobný* (z role, která to má
+sám* (člověk podnět vyslovil v rozhovoru), *pravděpodobný* (z role, která to má
 rozhodnout) a *jen role* (roli neodpovídá právě jeden člověk). Jména se
 k rolím vedoucí IT, vedoucí právního a CFO vědomě nedopisují.
 
 Oba skripty sahají na jinou část stránky, takže si navzájem nepřepisují práci:
-funnel na `fn-data` a sekci Funnel, vlastníci na `pm-data` a tabulku 125 bolestí.
+funnel na `fn-data` a sekci Funnel, vlastníci na `pm-data` a tabulku 125 podnětů.
 
 ## Proč to není živý dashboard
 
@@ -102,7 +102,7 @@ Sekce „AI agenda" na hlavní stránce Hubu živě čte Freelo přes
 1. **Odolnost.** Živý dashboard už jednou zmizel, když Freelo vrátilo rate
    limit a prázdná odpověď se zacachovala. Snímek tenhle problém nemá.
 2. **Funnel má něco, co v Freelu není** — mapování štítků na fáze, kategorie
-   „na čem to stojí" a zásobník bolestí z prioritizační mapy. To se počítá,
+   „na čem to stojí" a zásobník podnětů z prioritizační mapy. To se počítá,
    ne čte.
 
 Definice fází a nálezy z prvního snímku (7. 9. 2026) jsou v second brainu

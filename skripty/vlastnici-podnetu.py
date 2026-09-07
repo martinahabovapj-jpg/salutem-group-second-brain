@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Doplni business vlastnika ke kazde ze 125 bolesti v prioritizacni mape.
+"""Doplni business vlastnika ke kazde ze 125 podnetu v prioritizacni mape.
 
-Cte vlastnici-bolesti.json (vazby z Airtable, cteno pres MCP konektor) a zapisuje
+Cte vlastnici-podnetu.json (vazby z Airtable, cteno pres MCP konektor) a zapisuje
 do bloku <script id="pm-data"> na prioritizacni-mapa.html tri nova pole:
 
     vlastnik        jmeno cloveka, nebo prazdne
     vlastnik_role   role toho cloveka, nebo role bez jmena
     vlastnik_zdroj  dolozeny | pravdepodobny | role | nedohledano
 
-Pri prvnim spusteni prida i sloupec Vlastnik do tabulky vsech 125 bolesti
+Pri prvnim spusteni prida i sloupec Vlastnik do tabulky vsech 125 podnetu
 a filtr podle vlastnika. Skript je idempotentni - da se pustit znovu.
 
 Pouziti:
-    python vlastnici-bolesti.py            # zapise
-    python vlastnici-bolesti.py --nahled   # jen vypise, nezapisuje
+    python vlastnici-podnetu.py            # zapise
+    python vlastnici-podnetu.py --nahled   # jen vypise, nezapisuje
 
 POZOR: Airtable tu nema API klic (jde jen pres MCP konektor v Claude Code),
-takze vazby se nedaji stahnout automaticky. vlastnici-bolesti.json JE ten zaznam;
+takze vazby se nedaji stahnout automaticky. vlastnici-podnetu.json JE ten zaznam;
 kdyz se v Airtable neco zmeni, musi se rucne dopsat tam.
 """
 import argparse
@@ -31,7 +31,7 @@ from collections import Counter
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 HERE = os.path.dirname(os.path.abspath(__file__))
 HUB = os.path.join(os.path.expanduser('~'), 'salutem-ai-hub', 'prioritizacni-mapa.html')
-M = json.load(open(os.path.join(HERE, 'vlastnici-bolesti.json'), encoding='utf-8'))
+M = json.load(open(os.path.join(HERE, 'vlastnici-podnetu.json'), encoding='utf-8'))
 
 SH = M['stakeholders']
 PAIN = M['pain_stakeholder']
@@ -41,7 +41,7 @@ ROLE_NO = M['role_bez_cloveka']
 ALFA = M['alfa_vlastnik']
 
 
-def vlastnik_bolesti(b):
+def vlastnik_podnetu(b):
     """Vraci (jmeno, role, zdroj). Poradi je zamerne: klic pred Pain ID,
     protoze Pain ID neni unikatni (P-098 sedmkrat)."""
     key = b.get('key') or ''
@@ -56,7 +56,7 @@ def vlastnik_bolesti(b):
         if s:
             return s['jmeno'], s['role'], 'dolozeny'
 
-    # 2. bolesti z Alfy: vlastnik z role, kterou jmenuje rozbor
+    # 2. podnety z Alfy: vlastnik z role, kterou jmenuje rozbor
     role = ALFA.get(key)
     if role:
         sid2 = ROLE_OK.get(role)
@@ -73,7 +73,7 @@ def vlastnik_bolesti(b):
 def obohat(B):
     zmen = 0
     for b in B:
-        jm, role, zdroj = vlastnik_bolesti(b)
+        jm, role, zdroj = vlastnik_podnetu(b)
         if (b.get('vlastnik'), b.get('vlastnik_role'), b.get('vlastnik_zdroj')) != (jm, role, zdroj):
             zmen += 1
         b['vlastnik'] = jm
@@ -84,9 +84,9 @@ def obohat(B):
 
 # ------------------------------------------------------------------ uprava stranky
 # Pozor: kratsi varianta hlavicky je i v shortTable() v JS, proto je v kotve i Dopad.
-TH_OLD = ('<th>ID</th><th>Bolest</th><th class="num">h/týd</th>'
+TH_OLD = ('<th>ID</th><th>Podnět</th><th class="num">h/týd</th>'
           '<th class="num">Dopad</th>')
-TH_NEW = ('<th>ID</th><th>Bolest</th><th>Vlastník</th><th class="num">h/týd</th>'
+TH_NEW = ('<th>ID</th><th>Podnět</th><th>Vlastník</th><th class="num">h/týd</th>'
           '<th class="num">Dopad</th>')
 
 TD_OLD = """                  + '<td class="num">' + (r.cas_h_tyden || '—') + '</td>'"""
@@ -121,7 +121,7 @@ HOOK_OLD = """        ['f-q', 'f-dg', 'f-ai', 'f-z', 'f-l', 'f-src'].forEach(fun
 HOOK_NEW = """        ['f-q', 'f-dg', 'f-ai', 'f-z', 'f-l', 'f-src', 'f-vl'].forEach(function (id) {"""
 
 # vlTd + naplneni roletky vlastniku. Vklada se pred funkci render().
-POMOCNE = """        // ---- Vlastník bolesti ----
+POMOCNE = """        // ---- Vlastník podnětu ----
         var VLZ = {
             dolozeny: ['vl-dolozeny', 'řekl to sám'],
             pravdepodobny: ['vl-pravdepodobny', 'pravděpodobný'],
@@ -173,11 +173,11 @@ CSS = """        .vl { display: inline-block; margin-top: 4px; padding: 1px 7px;
         .vl-sub { display: block; font-size: .76rem; color: var(--gray-500); line-height: 1.4; }
 """
 
-LEAD_OLD = ('Sloupec <strong>Zdroj</strong> říká, ze kterého sběru bolest je: '
+LEAD_OLD = ('Sloupec <strong>Zdroj</strong> říká, ze kterého sběru podnět je: '
             '<span class="tag tag-src-rozhovor">rozhovor</span> nebo '
             '<span class="tag tag-src-alfa">popis kroku</span>.')
 LEAD_NEW = (LEAD_OLD + ' Sloupec <strong>Vlastník</strong> je business vlastník: '
-            '<span class="vl vl-dolozeny">řekl to sám</span> člověk, který tu bolest '
+            '<span class="vl vl-dolozeny">řekl to sám</span> člověk, který ten podnět '
             'vyslovil v rozhovoru · <span class="vl vl-pravdepodobny">pravděpodobný</span> '
             'odvozeno z role, která to má rozhodnout, a ta role patří jednomu člověku · '
             '<span class="vl vl-role">jen role</span> roli v bázi neodpovídá právě jeden '
@@ -231,7 +231,7 @@ def main():
 
     zmen = obohat(B)
     poc = Counter(b['vlastnik_zdroj'] for b in B)
-    print('bolesti: %d | zmeneno: %d' % (len(B), zmen))
+    print('podnetu: %d | zmeneno: %d' % (len(B), zmen))
     print('\nODKUD JE VLASTNIK')
     for k in ('dolozeny', 'pravdepodobny', 'role', 'nedohledano'):
         print('  %-16s %3d' % (k, poc.get(k, 0)))
@@ -240,7 +240,7 @@ def main():
     for jm, n in Counter(b['vlastnik'] for b in B if b['vlastnik_zdroj'] == 'dolozeny').most_common():
         hod = sum((b.get('cas_h_tyden') or 0) for b in B
                   if b['vlastnik'] == jm and b['vlastnik_zdroj'] == 'dolozeny')
-        print('  %-22s %3d bolesti  %3d h/tyden' % (jm, n, hod))
+        print('  %-22s %3d podnetu  %3d h/tyden' % (jm, n, hod))
 
     print('\nVLASTNIK JE ROLE, NE JMENO')
     for role, n in Counter(b['vlastnik_role'] for b in B if b['vlastnik_zdroj'] == 'role').most_common():

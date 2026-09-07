@@ -1,7 +1,7 @@
 {
   "_pozn": "Vsechny ceske texty sekce Funnel. V .py nesmi byt diakritika, jinak vznikne mojibake.",
   "odkaz": "Funnel: kde co je",
-  "odkaz_tabulka": "Tabulka všech 125 bolestí",
+  "odkaz_tabulka": "Tabulka všech 125 podnětů",
   "bez_vlastnika": "bez vlastníka",
   "listy": {
     "produkcni": "Produkční větev",
@@ -55,7 +55,7 @@
   "nezapsano_na_co": "není zapsané, na co se čeká",
   "nezapsano_na_koho": "není zapsané, na koho se čeká",
   "odbavuje_ai": "odbavuje AI tým sám",
-  "zdroj": "Freelo projekt 561017 (listy Produkční větev, Vzdělávací větev, Compliance, Udržování, Parkoviště) a prioritizační mapa 125 bolestí",
+  "zdroj": "Freelo projekt 561017 (listy Produkční větev, Vzdělávací větev, Compliance, Udržování, Parkoviště) a prioritizační mapa 125 podnětů",
   "faze": [
     {
       "key": "napad",

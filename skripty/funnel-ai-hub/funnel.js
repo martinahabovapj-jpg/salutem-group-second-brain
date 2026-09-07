@@ -23,12 +23,12 @@
             var FAZE = FN.faze, BCL = FN.bc_popisky, BLL = FN.blok_popisky;
             var FKEY = FAZE.map(function (f) { return f.key; });
 
-            // ---- zásobník bolestí ----
+            // ---- zásobník podnětů ----
             (function () {
                 var h = '';
                 FN.zasobnik.forEach(function (z) {
                     h += '<div class="fn-res-c ' + esc(z.key) + '">'
-                       + '<div class="n">' + z.pocet + ' <small>' + sklon(z.pocet, 'bolest', 'bolesti', 'bolestí') + ' · ' + z.hodin + ' h/týdně</small></div>'
+                       + '<div class="n">' + z.pocet + ' <small>' + sklon(z.pocet, 'podnět', 'podněty', 'podnětů') + ' · ' + z.hodin + ' h/týdně</small></div>'
                        + '<h4>' + esc(z.nazev) + '</h4><p>' + esc(z.popis) + '</p></div>';
                 });
                 byId('fn-zasobnik').innerHTML = h;

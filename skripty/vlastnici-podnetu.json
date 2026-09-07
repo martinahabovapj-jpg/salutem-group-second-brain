@@ -1,8 +1,8 @@
 {
-  "_pozn": "Business vlastnik u kazde ze 125 bolesti v prioritizacni mape. Zdroj: Airtable Stakeholder & Use Case Tracker (appAvvKuQ8ozGMxOR), tabulky Pain Points a Stakeholders, cteno 7. 9. 2026 pres MCP konektor. Airtable nema v tomhle prostredi API klic, takze se to nedá stahnout skriptem - tenhle soubor JE ten zaznam.",
+  "_pozn": "Business vlastnik u kazde ze 125 podnetu v prioritizacni mape. Zdroj: Airtable Stakeholder & Use Case Tracker (appAvvKuQ8ozGMxOR), tabulky Pain Points a Stakeholders, cteno 7. 9. 2026 pres MCP konektor. Airtable nema v tomhle prostredi API klic, takze se to nedá stahnout skriptem - tenhle soubor JE ten zaznam.",
 
   "_urovne": {
-    "dolozeny": "clovek tu bolest sam vyslovil v rozhovoru (vazba Pain Point -> Stakeholder v Airtable)",
+    "dolozeny": "clovek ten podnět sam vyslovil v rozhovoru (vazba Pain Point -> Stakeholder v Airtable)",
     "pravdepodobny": "z role, ktera to podle rozboru ma rozhodnout, a ta role v bazi stakeholderu jednoznacne patri jednomu cloveku",
     "role": "rozbor jmenuje roli, ale te roli v bazi neodpovida prave jeden clovek - vlastnik je role, ne jmeno",
     "nedohledano": "ani jedno z toho"
@@ -85,7 +85,7 @@
     "P-098-7": "S-004"
   },
 
-  "_pozn_alfa": "20 bolesti A-01..A-20 pochazi z popisu procesnich kroku v projektu Alfa, ne z rozhovoru - v Airtable zaznam nemaji. Vlastnik se u nich bere z role, kterou rozbor jmenuje v poli 'rozhodne'. Kdyz te roli v bazi stakeholderu odpovida prave jeden clovek, je vlastnik pravdepodobny; jinak je vlastnikem role.",
+  "_pozn_alfa": "20 podnetu A-01..A-20 pochazi z popisu procesnich kroku v projektu Alfa, ne z rozhovoru - v Airtable zaznam nemaji. Vlastnik se u nich bere z role, kterou rozbor jmenuje v poli 'rozhodne'. Kdyz te roli v bazi stakeholderu odpovida prave jeden clovek, je vlastnik pravdepodobny; jinak je vlastnikem role.",
 
   "role_na_cloveka": {
     "obchodní ředitel": "S-005",
