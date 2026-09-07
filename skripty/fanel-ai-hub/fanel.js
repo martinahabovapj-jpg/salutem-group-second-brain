@@ -116,6 +116,27 @@
                 byId('fn-bc').innerHTML = h;
             })();
 
+            // ---- kdo co drží ----
+            (function () {
+                var V = FN.vlastnici || [];
+                if (!V.length) { return; }
+                var h = '<table class="pm"><thead><tr><th>Vlastník</th>'
+                      + '<th class="num">zadání</th><th class="num">z toho aktivních</th>'
+                      + '<th class="num">z toho čeká</th><th class="num">bez čísla</th></tr></thead><tbody>';
+                V.forEach(function (v) {
+                    h += '<tr><td>' + (v.je_prazdny
+                            ? '<span class="fn-chybi">' + esc(v.jmeno) + '</span>'
+                            : '<strong>' + esc(v.jmeno) + '</strong>') + '</td>'
+                       + '<td class="num"><strong>' + v.pocet + '</strong></td>'
+                       + '<td class="num">' + (v.aktivni || '—') + '</td>'
+                       + '<td class="num">' + (v.ceka || '—') + '</td>'
+                       + '<td class="num">' + (v.bez_cisla
+                            ? '<span class="tag fn-bc-zadny">' + v.bez_cisla + '</span>' : '—') + '</td></tr>';
+                });
+                h += '</tbody></table>';
+                byId('fn-vlastnici').innerHTML = h;
+            })();
+
             // ---- na čem to stojí ----
             (function () {
                 var h = '<table class="pm"><thead><tr><th style="width:250px">Na čem to stojí</th><th class="num">počet</th><th>Konkrétně u kterých zadání</th></tr></thead><tbody>';
@@ -172,8 +193,9 @@
                        + (r.dalsi_krok ? '<span class="fn-cell-sub">Další krok: ' + esc(r.dalsi_krok) + '</span>' : '')
                        + (r.v_provozu_od ? '<span class="fn-cell-sub">V provozu od ' + esc(r.v_provozu_od) + '</span>' : '')
                        + '</td>'
+                       + '<td style="font-size:.85rem">' + (r.vlastnik ? esc(r.vlastnik) : '<span class="fn-chybi">nikdo</span>') + '</td>'
+                       + '<td style="font-size:.85rem">' + (r.zadavatel ? esc(r.zadavatel) : '<span class="fn-chybi">nezapsán</span>') + '</td>'
                        + '<td style="color:var(--gray-500);font-size:.85rem">' + esc(r.vetev) + '</td>'
-                       + '<td style="font-size:.85rem">' + (r.zadavatel ? esc(r.zadavatel) : '<span style="color:var(--gray-400)">nezapsán</span>') + '</td>'
                        + '<td><span class="tag fn-bc-' + esc(r.bc) + '">' + esc(label(BCL, r.bc)) + '</span>'
                        + (bcTxt ? '<span class="fn-cell-sub">' + esc(bcTxt.slice(0, 110)) + (bcTxt.length > 110 ? '…' : '') + '</span>' : '')
                        + '</td>'
@@ -196,6 +218,10 @@
                 h += '<strong>2. Nerozliší „schváleno k realizaci" od „staví se".</strong> Ve Freelu je na obojí jeden štítek <em>in process</em>. Kdo to chce vidět odděleně, musí přidat štítek — fanel to pak ukáže sám.<br>';
                 h += '<strong>3. ' + bez + ' ' + sklon(bez, 'zadání nemá', 'zadání nemají', 'zadání nemá') + ' štítek pipeline</strong>, takže je fanel neumí zařadit a drží je ve sloupci Bez stavu. ';
                 h += dve ? 'Další ' + dve + ' ' + sklon(dve, 'má', 'mají', 'má') + ' štítky dva naráz, což pravidlo „právě jeden štítek" zakazuje; fanel je řadí podle toho pozdějšího a označuje je v tabulce.<br>' : '<br>';
+                var bezVl = cnt(function (i) { return !i.vlastnik; });
+                h += '<strong>3b. ' + bezVl + ' ' + sklon(bezVl, 'zadání nemá', 'zadání nemají', 'zadání nemá')
+                   + ' ve Freelu vlastníka</strong>, takže není komu se ptát na stav. '
+                   + 'U ' + cnt(function (i) { return !i.zadavatel; }) + ' není zapsaný zadavatel, takže není komu to předat.<br>';
                 h += '<strong>4. Parkoviště není fáze, je to nerozhodnuto.</strong> ' + park + ' ' + sklon(park, 'zadání tam leží', 'zadání tam leží', 'zadání tam leží') + ' bez ano i bez ne. Ve fanelu to visí na kraji záměrně, aby to nezapadlo.<br>';
                 h += '<strong>5. Business case v Kč má ' + cnt(function (i) { return i.bc === 'plny'; }) + ' zadání ze ' + IT.length + '.</strong> Ne proto, že by čísla nešla spočítat, ale proto, že se do Freela nedopsala. Dokud tam nebudou, je prioritizace věc dojmu.';
                 byId('fn-hranice').innerHTML = h;

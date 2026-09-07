@@ -111,6 +111,7 @@ def stahni():
             ukoly.append(dict(
                 id=t['id'], name=t['name'], list=nazev, list_id=lid,
                 labels=[x['name'] for x in (t.get('labels') or [])],
+                vlastnik=(t.get('worker') or {}).get('fullname', ''),
                 subtasks=t.get('count_subtasks'), desc=popis))
             time.sleep(0.35)                     # setrne k API
     return ukoly
@@ -217,7 +218,8 @@ def postav(ukoly, stranka_html):
         items.append(dict(
             id=u['id'], nazev=u['name'], vetev=u['list'], faze=faze_ukolu(u, f),
             bc=business_case(f), blok=blok, blok_text=blok_text,
-            zadavatel=f.get(KEY['zadavatel'], ''),
+            vlastnik=u.get('vlastnik', ''),                 # kdo to drzi ve Freelu (worker)
+            zadavatel=f.get(KEY['zadavatel'], ''),          # kdo si o to rekl (sablona v2)
             zadani=bool(f.get(KEY['popis']) or f.get(KEY['zadavatel'])),
             prinos=f.get(KEY['prinos'], ''), investice=f.get(KEY['investice'], ''),
             hodiny=f.get(KEY['hodiny'], ''), navratnost=f.get(KEY['navratnost'], ''),
@@ -239,9 +241,24 @@ def postav(ukoly, stranka_html):
                              pocet=len(sub), hodin=hodin(sub)))
     faze = [dict(key=f['key'], nazev=f['nazev'], popis=f['popis'],
                  pocet=sum(1 for i in items if i['faze'] == f['key'])) for f in L['faze']]
+
+    # kdo co drzi. Bez vlastnika je vzdy posledni radek, i kdyz je nejvetsi.
+    jmena = sorted(set(i['vlastnik'] for i in items if i['vlastnik']))
+    vlastnici = []
+    for jm in jmena + ['']:
+        moje = [i for i in items if i['vlastnik'] == jm]
+        if not moje:
+            continue
+        vlastnici.append(dict(
+            jmeno=jm or L['bez_vlastnika'], je_prazdny=(jm == ''), pocet=len(moje),
+            aktivni=sum(1 for i in moje if i['faze'] in ('realizace', 'pilot')),
+            ceka=sum(1 for i in moje if i['faze'] in ('schvaleni', 'zadani')),
+            bez_cisla=sum(1 for i in moje if i['bc'] == 'zadny')))
+
     return dict(
         aktualizovano=datetime.date.today().isoformat(), zdroj=L['zdroj'],
         faze=faze, bc_popisky=L['bc'], blok_popisky=L['blok'], zasobnik=zasobnik,
+        vlastnici=vlastnici,
         bolesti_celkem=len(B), bolesti_hodin=hodin(B), items=items)
 
 
@@ -322,6 +339,8 @@ def over(data, hlasite=True):
         set(i['bc'] for i in items) <= set(b['key'] for b in bcl))
     chk('vsechny klice blokace jsou popsane',
         set(i['blok'] for i in items) <= set(b['key'] for b in bll))
+    chk('vlastnici se scitaji na pocet zadani',
+        sum(v['pocet'] for v in data.get('vlastnici', [])) == len(items))
     return chyby
 
 
@@ -338,6 +357,10 @@ def prehled(data):
     naz = {b['key']: b['nazev'] for b in data['blok_popisky']}
     for k, v in Counter(i['blok'] for i in items).most_common():
         print('  %-40s %3d' % (naz[k], v))
+    print('\nKDO CO DRZI (vlastnik = worker ve Freelu)')
+    for v in data.get('vlastnici', []):
+        print('  %-24s %3d zadani | aktivnich %2d | ceka %2d | bez cisla %2d'
+              % (v['jmeno'], v['pocet'], v['aktivni'], v['ceka'], v['bez_cisla']))
     dve = [i for i in items if i['dve_stitky']]
     if dve:
         print('\nDVA STITKY NARAZ (porusuje "prave jeden stitek"):')

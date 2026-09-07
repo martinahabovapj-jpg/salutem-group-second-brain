@@ -1,9 +1,8 @@
 {
   "_pozn": "Vsechny ceske texty sekce Fanel. V .py nesmi byt diakritika, jinak vznikne mojibake.",
-
   "odkaz": "Fanel: kde co je",
   "odkaz_tabulka": "Tabulka všech 125 bolestí",
-
+  "bez_vlastnika": "bez vlastníka",
   "listy": {
     "produkcni": "Produkční větev",
     "vzdelavaci": "Vzdělávací větev",
@@ -11,7 +10,6 @@
     "udrzovani": "Udržování nástrojů, aplikací atd",
     "parkoviste": "Parkoviště — k rozhodnutí"
   },
-
   "pipe": {
     "nova": "nová poptávka",
     "backlog": "backlog",
@@ -19,7 +17,6 @@
     "process": "in process",
     "pilot": "v testovacím provozu"
   },
-
   "keys": {
     "zadavatel": "ZADAVATEL",
     "cisla": "PROBLÉM V ČÍSLECH",
@@ -40,48 +37,131 @@
     "citat": "CITÁT",
     "odkdy": "V PROVOZU OD"
   },
-
   "v1_zarazky": [
-    "NÁZEV", "POPIS", "STATUS", "ÚROVEŇ", "SMĚR", "ÚSPORA HODIN", "ÚSPORA KČ",
-    "INVESTICE", "DATUM ZAHÁJENÍ", "DATUM DOKONČENÍ", "PŘÍNOS", "ODKAZ", "ZDROJ"
+    "NÁZEV",
+    "POPIS",
+    "STATUS",
+    "ÚROVEŇ",
+    "SMĚR",
+    "ÚSPORA HODIN",
+    "ÚSPORA KČ",
+    "INVESTICE",
+    "DATUM ZAHÁJENÍ",
+    "DATUM DOKONČENÍ",
+    "PŘÍNOS",
+    "ODKAZ",
+    "ZDROJ"
   ],
-
   "nezapsano_na_co": "není zapsané, na co se čeká",
   "nezapsano_na_koho": "není zapsané, na koho se čeká",
   "odbavuje_ai": "odbavuje AI tým sám",
-
   "zdroj": "Freelo projekt 561017 (listy Produkční větev, Vzdělávací větev, Compliance, Udržování, Parkoviště) a prioritizační mapa 125 bolestí",
-
   "faze": [
-    { "key": "napad", "nazev": "Nápad", "popis": "Poptávka je zapsaná a zařazená, zadání ještě nevzniklo. Štítek nová poptávka." },
-    { "key": "zadani", "nazev": "Zadání se dopracovává", "popis": "Zadání píšeme se zadavatelem a čekáme na jeho odpovědi. Štítek backlog." },
-    { "key": "bcase", "nazev": "Business case", "popis": "Zadání stojí a počítá se přínos, investice a návratnost. Dnes to není samostatný stav ve Freelu, proto je sloupec prázdný." },
-    { "key": "schvaleni", "nazev": "Ke schválení", "popis": "Čeká se na rozhodnutí někoho mimo AI tým. Štítek on hold." },
-    { "key": "realizace", "nazev": "V realizaci", "popis": "AI tým to staví. Štítek in process." },
-    { "key": "pilot", "nazev": "Pilot", "popis": "Běží u pilotních uživatelů a měří se. Štítek v testovacím provozu." },
-    { "key": "provoz", "nazev": "V provozu", "popis": "Předané a živé. List Udržování, štítek pipeline se odebírá." },
-    { "key": "vyhodnoceno", "nazev": "Vyhodnoceno", "popis": "Po nasazení se přeměřil přínos a business case se zkalibroval. Zatím to nemá ani jeden use case." },
-    { "key": "parkoviste", "nazev": "Parkoviště", "popis": "Odložené k rozhodnutí. Nepadlo ani ano, ani ne." },
-    { "key": "bez_stavu", "nazev": "Bez stavu", "popis": "Aktivní úkol bez štítku pipeline. Ve fanelu ho není kde ukázat, dokud štítek nedostane." }
+    {
+      "key": "napad",
+      "nazev": "Nápad",
+      "popis": "Poptávka je zapsaná a zařazená, zadání ještě nevzniklo. Štítek nová poptávka."
+    },
+    {
+      "key": "zadani",
+      "nazev": "Zadání se dopracovává",
+      "popis": "Zadání píšeme se zadavatelem a čekáme na jeho odpovědi. Štítek backlog."
+    },
+    {
+      "key": "bcase",
+      "nazev": "Business case",
+      "popis": "Zadání stojí a počítá se přínos, investice a návratnost. Dnes to není samostatný stav ve Freelu, proto je sloupec prázdný."
+    },
+    {
+      "key": "schvaleni",
+      "nazev": "Ke schválení",
+      "popis": "Čeká se na rozhodnutí někoho mimo AI tým. Štítek on hold."
+    },
+    {
+      "key": "realizace",
+      "nazev": "V realizaci",
+      "popis": "AI tým to staví. Štítek in process."
+    },
+    {
+      "key": "pilot",
+      "nazev": "Pilot",
+      "popis": "Běží u pilotních uživatelů a měří se. Štítek v testovacím provozu."
+    },
+    {
+      "key": "provoz",
+      "nazev": "V provozu",
+      "popis": "Předané a živé. List Udržování, štítek pipeline se odebírá."
+    },
+    {
+      "key": "vyhodnoceno",
+      "nazev": "Vyhodnoceno",
+      "popis": "Po nasazení se přeměřil přínos a business case se zkalibroval. Zatím to nemá ani jeden use case."
+    },
+    {
+      "key": "parkoviste",
+      "nazev": "Parkoviště",
+      "popis": "Odložené k rozhodnutí. Nepadlo ani ano, ani ne."
+    },
+    {
+      "key": "bez_stavu",
+      "nazev": "Bez stavu",
+      "popis": "Aktivní úkol bez štítku pipeline. Ve fanelu ho není kde ukázat, dokud štítek nedostane."
+    }
   ],
-
   "bc": [
-    { "key": "plny", "nazev": "Přínos v Kč vyčíslený" },
-    { "key": "castecny", "nazev": "Jen dílčí čísla" },
-    { "key": "zadny", "nazev": "Žádné číslo" }
+    {
+      "key": "plny",
+      "nazev": "Přínos v Kč vyčíslený"
+    },
+    {
+      "key": "castecny",
+      "nazev": "Jen dílčí čísla"
+    },
+    {
+      "key": "zadny",
+      "nazev": "Žádné číslo"
+    }
   ],
-
   "blok": [
-    { "key": "zadavatel", "nazev": "Čekáme na zadavatele" },
-    { "key": "rozhodnuti", "nazev": "Čekáme na rozhodnutí" },
-    { "key": "vstup", "nazev": "Čekáme na vstup (data, člověk, systém)" },
-    { "key": "ai_tym", "nazev": "Odbavuje AI tým sám" },
-    { "key": "nezapsano", "nazev": "Nezapsáno" }
+    {
+      "key": "zadavatel",
+      "nazev": "Čekáme na zadavatele"
+    },
+    {
+      "key": "rozhodnuti",
+      "nazev": "Čekáme na rozhodnutí"
+    },
+    {
+      "key": "vstup",
+      "nazev": "Čekáme na vstup (data, člověk, systém)"
+    },
+    {
+      "key": "ai_tym",
+      "nazev": "Odbavuje AI tým sám"
+    },
+    {
+      "key": "nezapsano",
+      "nazev": "Nezapsáno"
+    }
   ],
-
   "zasobnik": [
-    { "key": "ano", "ai": "ano", "nazev": "Jde pustit hned", "popis": "Data existují, je jasné, co je pravda, a pravidla jsou zapsaná. Zbývá čtení, porovnávání, vytěžování nebo generování, tedy práce pro stroj." },
-    { "key": "az_po", "ai": "až po", "nazev": "Čeká na předpoklad", "popis": "Nejdřív musí padnout rozhodnutí nebo se zapsat pravidlo. Teprve pak má AI o co se opřít." },
-    { "key": "ne", "ai": "ne", "nazev": "Není práce pro AI", "popis": "Přenos hotových údajů, změna postupu nebo rozhodnutí. Patří to na propojení systémů nebo na vedení, ne na model." }
+    {
+      "key": "ano",
+      "ai": "ano",
+      "nazev": "Jde pustit hned",
+      "popis": "Data existují, je jasné, co je pravda, a pravidla jsou zapsaná. Zbývá čtení, porovnávání, vytěžování nebo generování, tedy práce pro stroj."
+    },
+    {
+      "key": "az_po",
+      "ai": "až po",
+      "nazev": "Čeká na předpoklad",
+      "popis": "Nejdřív musí padnout rozhodnutí nebo se zapsat pravidlo. Teprve pak má AI o co se opřít."
+    },
+    {
+      "key": "ne",
+      "ai": "ne",
+      "nazev": "Není práce pro AI",
+      "popis": "Přenos hotových údajů, změna postupu nebo rozhodnutí. Patří to na propojení systémů nebo na vedení, ne na model."
+    }
   ]
 }
