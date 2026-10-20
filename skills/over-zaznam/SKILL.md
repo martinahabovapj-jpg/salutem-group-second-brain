@@ -116,11 +116,117 @@ Proto u **každého** tvrzení typu „X neexistuje" nebo „nikde není" platí
 **Nenapiš „hledal jsem v celé složce".** Napiš, ve kterých knihovnách — jinak
 nikdo nepozná, jestli je negativní nález nález, nebo slepé místo nástroje.
 
+#### 🔴 Timeout není slepé místo. Nepleť si to
+
+Vyžádal si to agent, který na tom 14. 8. 2026 spálil 34 hledání místo dvaceti.
+
+**Fulltext přes `Salutem - Dokumenty`, `IT Governance - Dokumenty` a `OneDrive`
+spadne na 20s timeout.** Vypadá to úplně stejně jako „nic tam není" — a když si
+to spleteš, vyrobíš falešné „neexistuje" v knihovně, která to hledané obsahuje.
+
+Jmenovitý průchod velké knihovny se proto **musí dělat jinou technikou:**
+
+1. **hledej podle jmen souborů**, ne podle obsahu (`Get-ChildItem -Recurse |
+   Where-Object { $_.Name -like ... }` — ne `-Include`, ten tiše nefiltruje)
+2. **`.docx` si nejdřív převeď** přes `skripty\docx2txt.py` a grepuj text
+3. teprve pak fulltext, a to **po podsložkách**, ne přes celou knihovnu
+
+Doložený výnos: takhle se ve druhém, jmenovitém průchodu `IT Governance` našel
+`Interface ADOL.docx` — firemní analýza rozhraní, bez které by z celého tvrzení
+vyšlo jen prázdné „nedoloženo".
+
 **Konkrétní past, potvrzená dvakrát 13. 8. 2026:** `Get-ChildItem -Recurse
 -Include` umí **tiše nefiltrovat** a vrátit méně, než existuje. Žádná chyba se
 nevypíše. Když na výsledku něco stojí, **zopakuj hledání jinak** — např.
 `-Recurse | Where-Object { $_.Name -like ... }`. V jednom běhu se tím našel
 doklad, na kterém stál celý verdikt; bez druhého pokusu by vyšel opačný.
+
+### 🔴 Pojistka číslo tři: knihovny se prohledávají u KAŽDÉHO tvrzení
+
+Pojistka číslo dvě výš platila jen pro tvrzení typu „X neexistuje". **To je moc
+úzké a 14. 8. 2026 se tím propadly dva nálezy ze tří.**
+
+Ani jeden z nich nebyl formulovaný jako negativní existence — byly to nálezy
+typu *„záznam staví argument na něčem, co doklad nemá"*. Agent knihovnu
+`Salutem - Dokumenty` nehledal, protože pravidlo mu to nenařizovalo, a vydal
+VYVRÁCENO. Druhý průchod v té knihovně našel **21 typových smluv s poli
+`[DOPLNIT]`**, tedy přesně ten artefakt, který nález rušil. Navržená revize by
+do báze vepsala novou chybu.
+
+**Nové pravidlo: kdykoli hledáš doklad nebo protidoklad, projdi knihovny
+jmenovitě** — ne jen u „neexistuje". Knihovny jsou `AI - Dokumenty`,
+`Salutem - Dokumenty`, `IT Governance - Dokumenty`, `SReal - Dokumenty`,
+`OneDrive - P&J Capital s.r.o`. Do reportu vypiš, které jsi opravdu prošel.
+
+**A jedna konkrétní záměna, která se stala:** `03 SReal` **není** podsložka
+`AI - Dokumenty`, ale `Salutem - Dokumenty`. Než napíšeš cestu do reportu,
+ověř, ve které knihovně ten soubor leží.
+
+### 🔴 Pojistka číslo čtyři: protidoklad musí pokrýt celý rozsah tvrzení
+
+Druhý propad ze 14. 8. 2026. Tvrzení mluvilo o **„API katastru"** obecně; první
+průchod prověřil **WSDP**, zjistil, že je celá placená, a vydal VYVRÁCENO.
+Jenže ČÚZK má paralelně **bezúplatné REST API KN** (`api-kn.cuzk.gov.cz`,
+v provozu od 1. 7. 2024), jehož podmínky doslova říkají *„Využívání API je
+bezplatné"* a stanovují limit volání za časový úsek. Model „zdarma do limitu"
+tedy existuje — revize by zapsala nepravdu.
+
+Než vydáš VYVRÁCENO, odpověz si: **je protidoklad o celém tom, o čem je
+tvrzení, nebo jen o jedné jeho části?** Když tvrzení mluví obecně a ty jsi
+prověřil jednu konkrétní službu, produkt nebo variantu, **nemáš vyvrácení** —
+máš NEDOLOŽENO k tomu číslu a DOLOŽITELNÉ upřesnění k tomu, co jsi našel.
+
+### 🔴 Pojistka číslo pět: u přepisu ověř, komu ta věta patří
+
+Automatické přepisy často **nemají označené mluvčí** a v hlavičce na to samy
+varují. 14. 8. 2026 na tom padl nález: první průchod jeden řádek diskvalifikoval
+jako repliku tazatelky, a jiný řádek — taky tazatelčin — citoval jako slova
+dotazované právničky. Vynechal přitom řádky, kde dotazovaná říká opak toho, co
+jí nález přisuzoval (*„kdybychom to měli, tak to by bylo supr"*).
+
+Postup: **než připíšeš citát člověku, přečti si dvacet řádků kolem** a urči, kdo
+mluví, z průběhu dialogu. Když to určit nejde, napiš to — přepis pak dokládá,
+**že něco padlo**, ne kdo to řekl. A pozor na řádky, které začínají přitakáním
+(*„Já to taky."*): to není odklon od tvrzení, ale souhlas s ním.
+
+### 🔴 Pojistka číslo šest: grepni formulaci tvrzení, ne jeho citovaný zdroj
+
+Nejjemnější past z celé dávky 14. 8. 2026, a stála o vlásek za zápisem nepravdy
+do báze.
+
+Záznam tvrdil, že *„jediným schváleným prostředím pro firemní data je Copilot"*,
+a jmenoval u toho směrnici. První průchod směrnici přečetl, zjistil, že tam
+Copilot je jen jako **příklad**, a vydal VYVRÁCENO. Udělal to i den předtím jiný
+běh — **shodně, a oba se mýlili stejně.**
+
+Ta věta totiž stojí **doslova** v jiném dokumentu: `06 Standardy a šablony\
+📘 Strategický manuál Tone of Voice_ Salutem AI (v3.md`, §4. Chybná byla
+**adresa**, ne tvrzení. Revize by přitom smazala doložený compliance rozpor.
+
+> **Když je chybou atribuce, kontrola jmenovaného zdroje ji najít nemůže.**
+> Grepuj **charakteristickou formulaci samotného tvrzení** napříč všemi
+> knihovnami, ne jen zdroj, na který se záznam odvolává. Jedno takové hledání
+> tenhle doklad našlo.
+
+A pozor na to, co z toho plyne pro pojistku číslo jedna: **shoda dvou reportů
+ověřovače taky není potvrzení.** Když oba prověřovaly jmenovaný zdroj, mají
+stejnou slepotu — ne nezávislý souhlas.
+
+### Rozdíl v definici není chyba v tvrzení
+
+Třetí propad ze 14. 8. 2026, a je to jiný druh chyby než ty dva výš. Nález
+tvrdil, že číslo v záznamu je špatně. Druhý průchod ho nezávisle přepočítal —
+**sedělo do posledního čísla**. Rozdíl vznikl ve třech nepřiznaných volbách:
+jak se zachází s „Nevím", jestli „polovina" znamená medián nebo podíl, a jestli
+pásmo „pod tři hodiny" zahrnuje hranici.
+
+**Když se výsledek rozejde kvůli definici, a ne kvůli součtu, není to
+VYVRÁCENO — je to DOLOŽITELNÉ:** číslo platí, chybí u něj metodika. Vyvrácení
+si nech na případ, kdy artefakt říká něco jiného.
+
+A hledej **vlastní příčinu**: v tom případě to bylo tím, že jedna sekce
+používala vedle sebe **tři různé jmenovatele (61, 64, 65)** a ani jeden
+nepřiznávala. To je silnější nález než spor o jedno číslo.
 
 ### Časové značky souborů nejsou datum vzniku
 
@@ -280,10 +386,21 @@ skillu: tvrdí, že existující záznam je špatně, a spouští tím editaci.
 Druhý agent má jediný úkol: **pokusit se ten protidoklad zneplatnit.** Ptá se:
 
 1. Mluví protidoklad skutečně o tomtéž, nebo jen o něčem podobném?
-2. Je protidoklad artefakt, nebo přepis / jiný záznam / AI výstup?
-3. Není původní tvrzení pravdivé **ke svému datu** — tedy ZASTARALÉ, ne VYVRÁCENO?
+2. **Pokrývá protidoklad celý rozsah tvrzení**, nebo jen jednu jeho část? (WSDP
+   není „API katastru"; jedna služba není celá platforma.)
+3. Je protidoklad artefakt, nebo přepis / jiný záznam / AI výstup? U přepisu:
+   **má označené mluvčí?**
+4. **Prošel první průchod všechny knihovny jmenovitě?** Když ne, dohledej to sám —
+   14. 8. 2026 tudy padly dva nálezy ze tří.
+5. Není původní tvrzení pravdivé **ke svému datu** — tedy ZASTARALÉ, ne VYVRÁCENO?
+6. **U čísel: přepočítej to nezávisle, než se podíváš na jeho výpočet.** Když
+   sedí a rozdíl je v definici, je to DOLOŽITELNÉ, ne VYVRÁCENO.
+7. **Dá se navržená oprava provést doslova, aniž by poškodila správný text?**
+   Je u ní citace původního znění?
 
-Ta trojka je nejčastější záměna a plete se nejvíc.
+Pětka je nejčastější záměna a plete se nejvíc. **Čtyřka je nejčastější příčina
+propadu** — a je to porucha nástroje, ne úsudku, takže ji nepozná nikdo, kdo se
+na ni nezaměří.
 
 > **Druhý průchod neověřuje, jestli je nález pravdivý.** Ověřuje, jestli
 > **verdikt, odůvodnění a navržená oprava** odpovídají tomu, co se doložilo.
@@ -357,7 +474,12 @@ Výsledek: bilance ukazovala jeden ověřený záznam ze tří.
   někdo uhádl — a když to uhádne špatně, poškodí správný text. Vždy uveď
   **původní znění** a **nové znění**.
 - **Netvrď „neexistuje" po jednom rekurzivním hledání.** Knihovny jmenovitě,
-  jinak je to slepé místo nástroje vydávané za nález.
+  jinak je to slepé místo nástroje vydávané za nález. A **platí to u každého
+  tvrzení**, ne jen u těch, která jsou formulovaná negativně.
+- **Nevydávej VYVRÁCENO, když jsi prověřil jen část toho, o čem tvrzení mluví.**
+- **Nepřipisuj citát člověku z přepisu, který nemá označené mluvčí**, dokud ho
+  neurčíš z průběhu dialogu.
+- **Nevydávej VYVRÁCENO, když ti číslo sedí a rozchází se jen definice.**
 
 ## Proč to vzniklo
 

@@ -51,7 +51,7 @@ kalendáře pro nahrávacího bota, ne o propojení na osobu.
 
 ## Výstupní rituál — na konci každé práce
 
-Dvě věci, obě krátké, obě povinné.
+Tři věci, všechny krátké, všechny povinné.
 
 **1. Komentář do Freelo úkolu.** Struktura:
 
@@ -66,6 +66,12 @@ Freelo je stav. Tam se ráno kouká. Bez tohohle komentáře stojí příští r
 
 **2. Datovaný záznam do sekce „Průběh stavby"** v souboru use casu.
 Sem jde, **co jsme se dozvěděli a proč se něco změnilo** — ne stav.
+
+**3. Výkaz času do HLAVNÍHO Freelo úkolu use casu** (ne do dílčích; jeden výkaz za den, při další práci navýšit) (`POST /v1/task/{id}/work-reports`, `date_reported`, `minutes`, `note`).
+Čas se měří z interakce v transkriptu, ne z délky session: práce modelu + mezery
+před zprávou uživatele do 10 min. Delší pauzy se nepočítají. Martině ukaž rozpad.
+**Vždy spočítej skriptem** `python ~/.claude/skills/prace-na-use-casu/vykaz_casu.py`
+(volitelně `--od <čas UTC>` pro část dne). Nepočítej to ručně ani odhadem.
 
 ### Kam co patří
 

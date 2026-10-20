@@ -117,6 +117,111 @@ Když totéž tvrdí tři záznamy, má to nejčastěji **jeden zdroj** — a te
 najít. „Brand manuál firma nemá" bylo zapsané konzistentně na třech místech
 a všude špatně; sada ležela v `IT Governance - Dokumenty\AI\brandguide`.
 
+### 🟢 Zápisy z porad — zdroj, který se našel až 14. 8. 2026
+
+Do 14. 8. 2026 měl archiv skoro jen **přepisy hovorů**, tedy zdroj úrovně 3 —
+dokládají, co kdo řekl. Proto většina otázek končila na ČÁSTEČNĚ: v přepisech
+lidé o věcech *mluví*, ale rozhodnutí v nich není.
+
+**Existují ale zápisy z porad, které báze neznala** — dohromady **41** ve dvou
+složkách knihovny `Salutem - Dokumenty`:
+
+| Kde | Co v tom je |
+|---|---|
+| `Salutem - Dokumenty\Porady Hodonín\` | 21 zápisů, každý pátek |
+| `Salutem - Dokumenty\00 SP\00 Zápisy\` | 20 zápisů, krátkodobé pronájmy (12/2025–7/2026) |
+| `Salutem - Dokumenty\01 SG\Projekty\Alfa\<projekt>\` | **datované specifikace a denní dashboardy** — pro projekty Alfa nejsilnější zdroj v archivu |
+| `Salutem - Dokumenty\01 SG\Projekty\Alfa\10 Řízení\Projekt Alfa rozsah - doporučení.xlsx` | 🟢 **master tabulka rozhodovacích stavů Alfy** — tady se pozná, co je hotové, rozpracované a předané komu |
+| `IT Governance\06. Evidence\` | evidence a migrace |
+
+> ⚠️ **Opraveno 14. 8. 2026 odpoledne:** dopoledne tu stálo, že ekvivalentem
+> `00 Zápisy` pro Alfu je `10 Řízení\Schůzky\`. **Není** — jsou tam jen `.mp4`
+> a `.pptx`, žádné zápisy. Rozhodovací stavy drží ta master tabulka výš, kterou
+> báze nezná. Ověřeno plným textem 109 souborů Alfy.
+
+**Který zdroj na co:** `00 Zápisy` a `Porady Hodonín` drží provozní agendy
+(krátkodobé pronájmy, Hodonín). **Otázky k projektům Alfa v nich nenajdeš** —
+14. 8. 2026 to jeden běh doložil: nula výskytů „generátor / zástav / treasury"
+ve všech dvaceti. Pro Alfu jdi do `01 SG\Projekty\Alfa\`.
+
+**Tři různí agenti na to 14. 8. ukázali nezávisle na sobě** a všichni tři to
+napsali jako vedlejší nález — u otázek *„jaký je rozsah / co se rozhodlo"* je to
+nejsilnější zdroj, jaký archivní agent má.
+
+**Zápis z porady je datovaný dokument, ne přepis** — tedy zdroj úrovně 2. Píše se
+do něj, co se rozhodlo a kdo to schválil. Odtud se 14. 8. zavřela otázka o výběru
+PMS nástroje (*„vybral se nový system a to PMS, který se jmenuje Previo –
+schváleno JT"*), kterou přepisy zavřít neumožnily.
+
+### 🔴 Ale ne všechno, co vypadá jako zápis z porady, jím je
+
+**Nejjemnější past, kterou tenhle nový zdroj přinesl** — odhalil ji druhý průchod
+14. 8. 2026 a shodil s ní jedno zavření.
+
+První průchod se opřel o „zápis z porady o architektuře z 2. 7. 2026". Ve
+skutečnosti to bylo **automaticky generované AI shrnutí hovoru**. Poznalo se to
+z metadat PDF:
+
+```
+/Title   = tmp.summary-….html
+/Creator = HeadlessChrome
+```
+
+Ležel mezi přepisy, **neměl přítomné ani mluvčí**, a samotný přepis té schůzky
+v archivu není. To není zdroj úrovně 2, ale **úrovně 4 — AI výstup.** Dokládá
+jen to, co model napsal.
+
+**Proto u každého „zápisu" zkontroluj metadata, než ho použiješ jako doklad
+rozhodnutí:**
+
+- `/Creator = HeadlessChrome` nebo `/Title` začínající `tmp.summary` → **AI výstup**
+- chybí seznam přítomných a jmenovaní mluvčí → podezřelé, ověř dál
+- u `.docx`: `dc:creator`, `lastModifiedBy`, počet revizí, `TotalTime`.
+  `TotalTime = 1 min` a nula revizí znamená, že dokument nikdo neotevřel
+
+**A pozor na záměnu složek:** týž běh si spletl `Porady Hodonín\` (21 zápisů,
+agenda nájmů) s `00 SP\00 Zápisy\` (20 souborů, krátkodobé pronájmy) a rozdíl
+v počtu vysvětlil jako chybu v zadání. Jsou to **dvě různé složky s různou
+agendou** — když se ti nesejde počet souborů, je to signál, ne šum.
+
+**U každé otázky typu „jak se rozhodlo / co se vybralo / kdo to převzal začni
+tady, ne v přepisech.** A platí u nich stejná past jako u všech dokumentů:
+rozhodnutí z února mohlo být v červnu změněné — projdi je v pořadí a řiď se
+nejnovějším.
+
+### 🔴 Knihovny prohledávej jmenovitě, u každého tvrzení
+
+Oba zdroje výš byly tři měsíce nedohledané ne proto, že by byly schované, ale
+protože se hledalo **jedním rekurzivním záběrem od kořene** — a ten tiše vrací
+méně, než existuje. Žádná chyba se nevypíše.
+
+Knihovny jsou `AI - Dokumenty`, `Salutem - Dokumenty`, `IT Governance -
+Dokumenty`, `SReal - Dokumenty`, `OneDrive - P&J Capital s.r.o`. Do reportu
+vypiš, které jsi opravdu prošel. **Pozor:** `03 SReal` není podsložka
+`AI - Dokumenty`, ale `Salutem - Dokumenty`.
+
+### 🔴 U přepisu ověř, komu ta věta patří
+
+Automatické přepisy často **nemají označené mluvčí** a v hlavičce na to samy
+varují. 14. 8. 2026 na tom padl jeden nález: citát tazatelky se vydával za slova
+dotazované. **Než připíšeš větu člověku, přečti si dvacet řádků kolem** a urči
+mluvčího z průběhu dialogu. Když to nejde, napiš to — přepis pak dokládá, *že
+něco padlo*, ne kdo to řekl.
+
+### Přepisy jsou převedené do textu, nepřeváděj je znovu
+
+Přepisy jsou `.docx` a čtou se přes `skripty\docx2txt.py`. **Celou složku
+převedeš jedním příkazem:**
+
+```
+python skripty\docx2txt.py "<...>\99 Archiv zdrojů\prepisy" --do <cilova-slozka>
+```
+
+Dokud ten skript neexistoval, psal si každý běh vlastní převod a stálo ho to
+**třetinu rozpočtu na hledání** (doloženo 14. 8. 2026 na dvou bězích). Když ti
+zadání dá cestu k už převedeným textům, grepuj tam. První řádek každého souboru
+nese cestu k originálu pro citaci.
+
 ### Rozpočet na hledání
 
 **Orientačně 15 hledání.** Je to signál, ne zeď: po patnácti napiš, co máš, a

@@ -6,6 +6,13 @@
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\01 SG\\Projekty\\Alfa",
       "poznamka": "Živé projektové úložiště. Do second brainu jde jen to, co má výsledek. Log: 02 Use casy/alfa-prehled-projektu.md"
     },
+    "SG Projekty (mimo Alfu)": {
+      "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\01 SG\\Projekty",
+      "poznamka": "Sousedi Alfy, ktere sync do 9. 9. 2026 nehlidal: Datovy sklad, Import_leadu_KzK, Minitym, Weby (Portal pro externi partnery), Vzor projektu a dve tabulky v koreni. Log: 02 Use casy/alfa-prehled-projektu.md, sekce Uplny audit z 9. 9.",
+      "ignorovat": [
+        "Alfa"
+      ]
+    },
     "Přepisy hovorů": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\AI - Dokumenty\\99 Archiv zdrojů\\prepisy",
       "poznamka": "Log: _prehled.md v téže složce. Podsložka auto-whisper = strojové přepisy z nahrávek (zkomolené, jména a čísla ověřuj)."
@@ -25,7 +32,9 @@
     "SReal — Sales": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\Salutem - Dokumenty\\03 SReal\\Sales",
       "poznamka": "Podklady pro obchod: 2pager, Investiční Klíč, personalizovaná nabídka, zadání k úpravám Raynetu.",
-      "ignorovat": ["Smlouvy"]
+      "ignorovat": [
+        "Smlouvy"
+      ]
     },
     "IT Governance — AI": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\AI",
@@ -34,7 +43,9 @@
     "IT Governance — přístupy, licence, evidence": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\06. Evidence",
       "poznamka": "Firemní softwarová evidence — zdroj pro tabulku AI nástrojů na Hubu.",
-      "ignorovat": ["Uživatelé a zaměstnanci"]
+      "ignorovat": [
+        "Uživatelé a zaměstnanci"
+      ]
     },
     "IT Governance — návody pro uživatele": {
       "cesta": "C:\\Users\\habova\\P&J Capital s.r.o\\IT Governance - Dokumenty\\04. Návody – uživatel",
@@ -47,6 +58,7 @@
     "03 SReal/Klienti": "45 tisíc souborů, klientská data — do second brainu nikdy",
     "03 SReal/Projekty Salutem Real": "11 tisíc souborů provozní dokumentace; vzory smluv se berou cíleně, ne hlídáním",
     "IT Governance/03. TNS": "7 tisíc souborů technické dokumentace TNS; hlídat až bude důvod",
-    "IT Governance/Zálohy": "zálohy, nikdy"
+    "IT Governance/Zálohy": "zálohy, nikdy",
+    "01 SG/Projekty/Alfa (v ramci zdroje 'SG Projekty')": "Alfa ma vlastni zdroj s vlastnim stavem; v 'SG Projekty' je vyloucena pres 'ignorovat', aby se soubory nepocitaly dvakrat"
   }
 }

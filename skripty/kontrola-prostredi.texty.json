@@ -1,0 +1,37 @@
+{
+  "_popis": "Ceske texty pro kontrola-prostredi.py. V .py zdrojaku zadna diakritika nesmi byt - viz stejne pravidlo u financovani-beh.py.",
+
+  "nadpis": "KONTROLA POČÍTAČE — půjde na něm měsíční refresh?",
+  "podnadpis": "Projde se devět věcí. Když všechny projdou, můžeš spustit refresh.cmd.",
+
+  "ok": "OK",
+  "chyba": "CHYBA",
+  "varovani": "POZOR",
+
+  "python_verze": "Python {verze}",
+  "python_stary": "Python je ve verzi {verze}, potřeba je aspoň 3.8. Přeinstaluj z python.org.",
+
+  "knihovna_ok": "Knihovna {jmeno}",
+  "knihovna_chybi": "Knihovna {jmeno} chybí. Spusť v příkazovém řádku: python -m pip install {jmeno}",
+
+  "master_ok": "Master sešit — {pocet} subjektů, list „{list}\" načten",
+  "master_chybi": "Master sešit nenalezen na cestě:\n     {cesta}\n     Zkontroluj, jestli je disk O: připojený. Cestu lze upravit v financovani-beh.config.json.",
+  "master_zamceny": "Master sešit se nedá otevřít — nejspíš ho má někdo otevřený v Excelu. Zavři ho a spusť kontrolu znovu.",
+
+  "zapis_ok": "Zápis do složky běhu",
+  "zapis_chyba": "Do složky s během se nedá zapisovat. Bez toho si běh nezapamatuje, co bylo minule.\n     Cesta: {cesta}",
+
+  "sit_ok": "{jmeno} odpovídá",
+  "sit_chyba": "{jmeno} neodpovídá ({duvod}).\n     Není to otázka licence, ale sítě — firemní firewall nebo proxy. Řekni to IT nebo Martině Habové.",
+
+  "vysledek_ok": "VŠECHNO PROŠLO. Refresh na tomhle počítači poběží.",
+  "vysledek_chyba": "NĚCO NEPROŠLO — viz řádky označené CHYBA. Dokud to neopravíš, refresh spolehlivě neproběhne.",
+  "vysledek_varovani": "Prošlo to, ale s výhradou — viz řádky POZOR. Refresh poběží, jen část kontrol bude slepá.",
+
+  "ares_jmeno": "ARES (obchodní rejstřík)",
+  "isir_jmeno": "ISIR (insolvenční rejstřík)",
+  "rpo_jmeno": "RPO (slovenský rejstřík)",
+  "web_jmeno": "Běžný web (zkouška ven)",
+
+  "rpo_varovani": "Bez RPO se nezkontroluje 13 slovenských subjektů. České kontroly poběží dál."
+}

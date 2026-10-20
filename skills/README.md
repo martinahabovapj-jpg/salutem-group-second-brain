@@ -8,39 +8,17 @@ složce a má soubor `SKILL.md` s hlavičkou (`name`, `description`) a návodem.
 
 | Skill | K čemu slouží | Kdy se spustí |
 |-------|---------------|---------------|
+| [`anti-ai-psani`](anti-ai-psani/SKILL.md) | Poslední průchod nad **hotovým** textem. Neříká, co napsat — říká, co vyhodit a čím to nahradit: protiklady „není to X, je to Y", kategorie místo instancí, přídavná jména bez čísel, analogie, mrtvé úvody a přechody. Má devítibodový audit s tvarem výstupu a rozlišuje psaný text (celý průchod) od mluveného (jen podmnožina). | Vždy před odesláním textu, který bude někdo čítat — záznam, stránka, komentář, report. A když řekneš „přepiš to", „zní to jako AI", „udělej to lidsky". |
 | [`freelo-projekt-z-prepisu`](freelo-projekt-z-prepisu/SKILL.md) | Z přepisu callu (porady, schůzky) postaví projekt ve Freelu — projekt, to-do listy, úkoly a podúkoly. Určuje, jak projekt strukturovat, pojmenovat a věrně zachytit realitu z callu. | Když zmíníš přepis/zápis z hovoru nebo řekneš „založ z toho projekt ve Freelu", „vytvoř to-do listy z callu" apod. |
 | [`freelo-rozpracovat-ukol-z-prepisu`](freelo-rozpracovat-ukol-z-prepisu/SKILL.md) | Vezme **jeden existující úkol** ve Freelu a rozpracuje ho na podúkoly (případně checklisty) podle přepisu callu. Nezakládá projekt ani nové úkoly — pracuje uvnitř jednoho konkrétního úkolu. | Když řekneš „dopracuj tenhle úkol", „doplň podúkoly k úkolu z callu", „rozpracuj úkol podle přepisu", „naplánuj kroky k tomuhle úkolu" apod. |
 | [`sync-zdroju`](sync-zdroju/SKILL.md) | Pravidelné **dobírání nových zdrojů** do second brainu: zjistí, co v hlídaných složkách (Alfa, přepisy, podklady, SReal, IT Governance) přibylo od posledního syncu, roztřídí to na znalost × pracovní soubor × stav a řekne, kam se zapisuje, že je to vytěžené. Používá skript [`skripty/sync-zdroju.py`](../skripty/sync-zdroju.py). | Sám od sebe na začátku práce se second brainem a na konci session; nebo když řekneš „co je nového", „přibylo něco", „projdi Alfu", „doplň second brain". |
 | [`prace-na-use-casu`](prace-na-use-casu/SKILL.md) | Určuje **pořadí úkonů** při práci na AI use casu: co všechno se musí přečíst (second brain, Freelo úkol včetně komentářů, governance, šablony, živý systém), než se cokoli navrhne — a co se musí zapsat, než se práce ukončí (handoff komentář do Freela + datovaný záznam do second brainu). | Když řekneš „pojďme stavět", „navrhni řešení", „pokračujeme na use casu", „co dneska s tím use casem", „rozpracuj zadání" apod. |
-| `freelo-triage-poptavky` — **žije v repu `salutem-ai-adopce`, ne tady** (viz varování pod tabulkou) | Vezme **jednu nebo více poptávek** (use-casů na AI automatizaci) a provede každou celou kvalifikací podle operačního modelu produkční větve: checklist „patří to nám?", devět otázek, compliance brána, ROI výpočet, verdikt dráhy a analýza podílníků. Výstup je triage report u poptávky (+ souhrnná prioritizační tabulka u dávky). | Když řekneš „vyhodnoť tuhle poptávku", „projeď triage", „kvalifikuj požadavek", „patří to nám?", „spočítej business case", „projeď těchhle 5 poptávek", „srovnej požadavky podle priority" apod. |
-| [`pain-point-datova-optika`](pain-point-datova-optika/SKILL.md) | Vezme **bolest popsanou uživatelem** (z rozhovoru, tabulky, požadavku) a projde ji šesti stejnými otázkami: najde slabé místo, stanoví diagnózu z pevného seznamu A1–A12, ověří třemi otázkami, jestli je to práce pro AI, a navrhne typ zásahu a předpoklady. Výstupem není řešení, ale rozbor — u dávky navíc seskupení podle příčiny a seznam rozhodnutí, která odblokují nejvíc bolestí. **Předchází triage:** tady se řeší „v čem je příčina", tam „jakou dráhou a za kolik". Návratnost ani dráhu nepočítá. | Když řekneš „co je tady vlastně problém", „projeď mi tenhle pain point", „je to case pro AI?", „zanalyzuj těchhle 20 bolestí z rozhovorů", „seskup mi to podle příčiny" — nebo jen vložíš přepis rozhovoru či tabulku pain pointů. |
-
-> ⚠️ **`freelo-triage-poptavky` tady záměrně není. Nezakládej ho sem znovu.**
->
-> Jeho domov je `salutem-ai-adopce/skills/freelo-triage-poptavky/` — tam leží
-> vedle masterů v `docs/`, ze kterých za běhu čte pravidla, a vedle
-> `scripts/business_case.py`, který je jediný výpočetní engine služby.
->
-> Doložený omyl (15. 7. – 3. 9. 2026): kopie skillu se sem odštěpila
-> **15. 7. v 15:30** a do masteru pak přišel v 15:46 nový format reportu
-> a v 16:06 navrhování štítku. Kopie se už neaktualizovala, ale **byla to
-> ona, co se instalovala** — takže triage sedm týdnů běžela bez navrhování
-> štítku a bez plnění polí šablony use casu, i když to schválený
-> `zivotni-cyklus-poptavky` vyžaduje. Naposledy takhle proběhla 2. 9. 2026.
-> Opraveno 3. 9. 2026 smazáním téhle kopie.
->
-> **Proč to `install` neodhalil:** kontroluje chybějící `SKILL.md`, ne to,
-> jestli obsah odpovídá masteru. Kopie navíc vypadala novější, protože
-> instalace přepsala datum souboru.
->
-> Triage se instaluje z jeho vlastního repa:
->
-> ```powershell
-> Copy-Item -Recurse -Force $HOME\salutem-ai-adopce\salutem-ai-adopce\skills\freelo-triage-poptavky $HOME\.claude\skills\
-> ```
->
-> Ta dvojitá složka v cestě je opravdu tam — repo je vnořené o úroveň hloub
-> (`salutem-ai-adopce\salutem-ai-adopce`), vedle rozbaleného zipu.
+| [`outline-article`](outline-article/SKILL.md) | Formát každé stránky ve firemní znalostní bázi **Outline**: shrnutí na začátku, šest typů obsahu (Přehled, Návod, FAQ, Referenční přehled, Vysvětlení, Zápis), hlavička Typ/Vlastník/Stav/Aktualizováno/Tagy na konci, dělení dlouhých témat a schválení před zápisem. Obsahuje i pravidla pro **zápisy z porad** (osnova, co do zápisu nepatří). | Když se má cokoli zapsat nebo upravit v Outline, včetně „udělej zápis z porady / z catch-upu do Outline“. |
+| [`over-zaznam`](over-zaznam/SKILL.md) | Ověří jeden záznam ve second brainu: najde tvrzení, která stojí jako fakt, ale nikdo je nedoložil. Jeden běh = jeden záznam, nejvýš osm tvrzení. | „Ověř tenhle záznam“, „projdi, co v tom je pravda“, „audit záznamu“. |
+| [`zavri-otazku`](zavri-otazku/SKILL.md) | Zavře jednu otevřenou otázku ze sekce „Co zatím nevíme“: co je platný doklad, kdy se otázka zavřít nesmí a jak vypadá výstup. | „Zavři otázky“, „projdi, co nevíme“, „ověř tenhle bod“. |
+| [`pain-point-datova-optika`](pain-point-datova-optika/SKILL.md) | Rozbor podnětu šesti stejnými otázkami (kdo rozhoduje, co tím trpí, kde informace vzniká a bydlí, o jaká data jde, je pravidlo zapsané), diagnóza a ověření, jestli je to práce pro AI. | „Co je tady vlastně problém“, „projeď mi tenhle podnět“, „je to case pro AI?“. |
+| [`financovani-mesicni-beh`](financovani-mesicni-beh/SKILL.md) | Měsíční kontrolní běh databáze financování: návrhy změn z veřejných rejstříků, které schvaluje člověk. Data zůstávají na O:, v repu jsou jen skripty. | Když se má spustit nebo vysvětlit měsíční běh databáze financování. |
+| [`freelo-triage-poptavky`](freelo-triage-poptavky/SKILL.md) | Vezme **jednu nebo více poptávek** (use-casů na AI automatizaci) a provede každou celou kvalifikací podle operačního modelu produkční větve: checklist „patří to nám?", devět otázek, compliance brána, ROI výpočet, verdikt dráhy a analýza podílníků. Výstup je triage report u poptávky (+ souhrnná prioritizační tabulka u dávky). | Když řekneš „vyhodnoť tuhle poptávku", „projeď triage", „kvalifikuj požadavek", „patří to nám?", „spočítej business case", „projeď těchhle 5 poptávek", „srovnej požadavky podle priority" apod. |
 
 ## Jak skilly nainstalovat do Claude Code
 
