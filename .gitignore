@@ -1,2 +1,34 @@
-﻿__pycache__/
+__pycache__/
 *.pyc
+
+# mesicni beh nad databazi financovani: provozni cache, ne znalost
+# pamet mezi behy patri VEDLE MASTERU na O:, ne do repa. Kdyby byla
+# verzovana tady, vznikly by dva ruzne stavy a druhy spoustec by pri prvnim
+# behu dostal zaplavu falesnych zmen.
+skripty/financovani-beh.stav.json
+skripty/stranky/
+skripty/k-precteni/
+skripty/zalohy/
+skripty/navrhy.json
+skripty/*.log
+
+# stazena data a pracovni slozky, ktere se pokazde vyrobi znovu
+# seznam CNB je 4,7 MB a stahuje se mesicne - verzovat ho znamena
+# nafouknout repo o kopii, kterou nikdo nikdy neotevre
+skripty/cnb-fki.xlsx
+skripty/k-posouzeni/
+skripty/k-posouzeni-investor/
+skripty/k-posouzeni-cnb/
+skripty/dossier40.json
+
+# vystupy resersi a pracovni data databaze financovani: data, ne znalost
+# (repo drzi jen skilly a skripty; data zustavaji na O: a u autora)
+skripty/davka-*.json
+skripty/k-posouzeni*/
+skripty/kontrola-ico-*.json
+skripty/kontrola-list*.json
+skripty/objevy.json
+skripty/financovani-beh-dach.stav.json
+skripty/kdo-dach-vestavena-data.py
+skripty/vlastnici-podnetu.json
+skripty/*.xlsx

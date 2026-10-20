@@ -38,6 +38,21 @@ MAX_VYPIS = 40
 PRILIS_SIROKO = 200
 
 
+def dlouha_cesta(p):
+    """Windows neumi os.stat nad cestou delsi nez ~260 znaku a vrati OSError.
+
+    V Alfe je takovych souboru 33 (popisy procesnich kroku maji dlouhe nazvy
+    v hluboke strukture) a sync je do 8. 9. 2026 tise preskakoval - pocet
+    souboru byl o 33 mensi, nez kolik jich na disku je, a nove soubory
+    s dlouhou cestou se ve vypisu NIKDY neobjevily. Prefix \\\\?\\ ten limit
+    obchazi. Vyzaduje absolutni cestu bez '..' a s obycejnymi zpetnymi
+    lomitky.
+    """
+    if os.name != "nt" or p.startswith("\\\\?\\"):
+        return p
+    return "\\\\?\\" + os.path.abspath(p)
+
+
 def load_json(path, default):
     if not os.path.isfile(path):
         return default
@@ -77,8 +92,12 @@ def walk(root, ignorovat=None):
                 continue
             full = os.path.join(dirpath, name)
             try:
-                st = os.stat(full)
-            except OSError:
+                st = os.stat(dlouha_cesta(full))
+            except OSError as e:
+                # nikdy nepreskakovat potichu - tise zmizely soubor je horsi
+                # nez hlasna chyba (doloz. 8. 9. 2026: 33 souboru v Alfe)
+                print("  !! nelze precist (%d znaku): %s [%s]"
+                      % (len(full), rel_dir, name))
                 continue
             rel = os.path.relpath(full, root)
             files.append((rel, st.st_mtime, st.st_size, ext))

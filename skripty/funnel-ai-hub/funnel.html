@@ -1,0 +1,59 @@
+    <!-- ============ 0. FUNNEL ============ -->
+    <section class="pm-section alt" id="funnel">
+        <div class="pm-wrap">
+            <div class="pm-eyebrow">Kde co je</div>
+            <h2 class="pm-h2">Funnel: čím to prochází od podnětu do provozu</h2>
+            <p class="pm-lead">Podněty pod sebou v jedné tabulce neřeknou, jak se věci posouvají. Tohle je ta samá agenda rozložená do fází: co je jen nápad, u čeho se dopisuje zadání, co čeká na rozhodnutí, co se staví, co běží u lidí a co je v provozu. <strong>U každé fáze je zvlášť vidět, jestli k tomu existuje business case a na čem to stojí</strong> — jestli si to odbavíme sami, nebo čekáme na zadavatele, na data nebo na rozhodnutí.</p>
+
+            <div class="pm-note">
+                <strong>Jak to čtěte.</strong> Nad funnelem je <em>zásobník podnětů</em> — 125 věcí z rozhovorů a z popisů procesních kroků. Ve funnelu jsou <em>zadání</em>, tedy use casy, které už mají ve Freelu vlastní úkol. Jeden podnět může dát víc zadání a jedno zadání může sebrat víc podnětů, <strong>takže se ta dvě čísla nesčítají a nemají se odečítat.</strong> Funnel je živý stav z Freela, ne plán.
+            </div>
+
+            <h3 class="pm-h3">Zásobník: 125 podnětů, ze kterých se zadání berou</h3>
+            <p class="pm-p">Zásobník není fronta. Dvě třetiny hodin v něm nečekají na nástroj, ale na rozhodnutí nebo na zápis pravidla — a to je informace, kterou prioritizace potřebuje dřív než pořadí.</p>
+            <div class="fn-res" id="fn-zasobnik"></div>
+
+            <h3 class="pm-h3">Funnel: kolik zadání je v které fázi</h3>
+            <p class="pm-p">Klikni na sloupec a tabulka zadání se zúží na tu fázi. <strong>Fáze se odvozuje ze štítku pipeline a z listu ve Freelu, ne z dojmu</strong> — kritérium každé fáze je vypsané v tabulce pod grafem.</p>
+            <div class="fn-bars" id="fn-bars"></div>
+            <p class="fn-faze-note" id="fn-bars-note"></p>
+            <div class="pm-table-wrap" id="fn-krit"></div>
+
+            <div class="fn-kpis" id="fn-kpis"></div>
+
+            <h3 class="pm-h3">Vstup do prioritizace: má to vůbec business case?</h3>
+            <p class="pm-p">Tohle je ten průřez, kvůli kterému funnel vzniká. Fáze říká, jak daleko věc je. Business case říká, jestli víme, co přinese. <strong>Když se ty dva pohledy položí na sebe, je vidět, co se staví bez čísla.</strong> Přínos se počítá jednou metodou (500 Kč/h, adopční koeficient podle úrovně) — jinak se projekty nedají porovnat.</p>
+            <div class="pm-table-wrap" id="fn-bc"></div>
+
+            <h3 class="pm-h3">Kdo co drží</h3>
+            <p class="pm-p">Dva různí vlastníci, oba patří do první úrovně. <strong>Vlastník</strong> je ten, kdo zadání drží u nás — řešitel úkolu ve Freelu. <strong>Zadavatel</strong> je ten, kdo si o to řekl a komu se to vrací k převzetí. Když chybí vlastník, není komu se ptát na stav; když chybí zadavatel, není komu to předat.</p>
+            <div class="pm-table-wrap" id="fn-vlastnici"></div>
+
+            <h3 class="pm-h3">Na čem to stojí a kdo to musí odbavit</h3>
+            <p class="pm-p">Druhý průřez: u každého zadání to, čí je další krok. „Čekáme" má vždycky mít adresáta — když u položky není napsané na koho a na co, není to stav, ale mezera.</p>
+            <div class="pm-table-wrap" id="fn-blok"></div>
+
+            <h3 class="pm-h3">Všechna zadání ve funnelu</h3>
+            <div class="fn-chips" id="fn-chips">
+                <label>Fáze</label>
+            </div>
+            <div class="pm-table-wrap">
+                <table class="pm" id="fn-tbl">
+                    <thead>
+                        <tr>
+                            <th>Fáze</th>
+                            <th>Zadání (use case)</th>
+                            <th>Vlastník</th>
+                            <th>Zadavatel</th>
+                            <th>Větev</th>
+                            <th>Business case</th>
+                            <th>Na čem to stojí</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fn-tbody"></tbody>
+                </table>
+            </div>
+
+            <div class="pm-note warn" id="fn-hranice"></div>
+        </div>
+    </section>

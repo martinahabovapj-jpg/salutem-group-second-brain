@@ -82,7 +82,49 @@ a napiš důvod do `_nehlidat`.
 > (`_prehled.md`) jako `⬜`, včetně toho, co v tom čeká. Na sync se
 > u přesunů nespoléhej — hlídá přírůstky, ne přesuny.
 
-Aktuálně hlídané: **Alfa · přepisy · podklady · SReal (manuály a Sales) ·
+> 🔴 **Druhá past, doložená 8. 9. 2026: soubory s cestou nad ~260 znaků byly
+> pro sync neviditelné.** Windows na nich vrátí z `os.stat` chybu a skript ji
+> polykal v `except OSError: continue`. V Alfě se tak **tiše přeskakovalo
+> 33 souborů**, mezi nimi popisy procesních kroků 017, 025, 055 a 081 — tedy
+> ten nejcennější zdroj, jaký ve firmě je. Nešlo to poznat: počet souborů byl
+> konzistentně o 33 menší a nový soubor s dlouhou cestou se ve výpisu **nikdy
+> neobjevil**.
+>
+> Opraveno prefixem `\\?\` a tím, že se nečitelný soubor **vypíše** místo
+> přeskočení. Kdyby se ve výpisu objevila řádka `!! nelze precist`, není to
+> kosmetika — je to soubor, o kterém nikdo neví.
+>
+> **Obecné pravidlo:** hlídač, který vrátí méně a nic neřekne, je horší než
+> hlídač, který spadne. Totéž byl nález ze 13. 8. o rekurzivním hledání, které
+> minulo celou knihovnu `Salutem - Dokumenty`.
+
+> 🔴 **Čtvrtá past, doložená 9. 9. 2026: sync hlídá přírůstky, ne úplnost.**
+> Soubor, který se nikdy nezměnil, se ve výpisu neobjeví **nikdy** — a to
+> není chyba, to je definice. Devět synců od 11. 8. proto devětkrát minulo
+> celou složku `12 AI Roadmapa`, protože je ze 16. 6. 2026 a od té doby ji
+> nikdo neupravil. Ležel v ní souhrnný service dokument s dvanácti use-casy
+> za 2,5 milionu ročně, definice tří větví služby a tři otevřená compliance
+> rozhodnutí se jmenovitými vlastníky. Vedle toho `Řídící principy.docx`
+> projektu 17 (1. 7. 2026), který zavíral otázku otevřenou od 18. 8.,
+> a **FAQ produktu se 43 odpověďmi**, o kterém báze měsíc psala „nevyužitý
+> poklad", aniž ho někdo otevřel.
+>
+> **Pravidlo:** raz za kvartál projít hlídaný zdroj **celý, soubor po
+> souboru** — `python inventura.py --slozky` (sloupec „posledni zmena" na
+> první pohled ukáže složky, které stojí od června) a pak `inventura.py`
+> bez parametrů proti logu vytěžení. Nový soubor je vidět v syncu; **starý
+> soubor, který nikdo nečetl, je vidět jen v inventuře.**
+
+> 🔴 **Třetí past: kořen `AI - Dokumenty` sync nehlídá.** Dokument položený do
+> kořene se ve výpisu neobjeví nikdy — a co není zařazené, to pro bázi
+> neexistuje. Doloženo 8. 9. 2026: předání katastrálního agenta leželo
+> v kořeni od 31. 8. se šesti ověřenými kódy operací ČÚZK, a **4. 9. se do
+> báze zapsalo, že ty kódy chybí.** Proto se na začátku každého syncu
+> **podívej do kořene báze** (`ls` stačí) a co tam leží, zařaď týž den.
+> Zařazení a vytěžení jsou dvě různé věci; to první stojí pět minut.
+
+Aktuálně hlídané: **Alfa · zbytek `01 SG/Projekty` mimo Alfu (přidáno
+9. 9. 2026) · přepisy · podklady · SReal (manuály a Sales) ·
 IT Governance (AI, evidence softwaru, návody)**. Stav k 13. 8. 2026:
 ~1 000 souborů po zúžení dvou nejširších zdrojů (SReal Sales 296 → 42
 bez vzorů smluv, IT Governance evidence 626 → 11 bez karet majetku lidí).
@@ -99,6 +141,28 @@ Ne všechno, co přibylo, se vytěžuje. Roztřiď to **než začneš čít**:
 
 Rychlý test: *„Kdyby autor odešel z firmy, ztratíme tím něco, co se nedá
 znovu vyrobit?"* Když ano, je to znalost.
+
+> 🔴 **Koš se nedá určit z názvu a cesty. Doloženo 9. 9. 2026.**
+> `14 VBR úroky - Pohoda/20 Etapa 3 - Příprava/Příprava testování.docx`
+> šel osm syncu do koše „stav projektu", protože tak zní. **Uvnitř je
+> testovací strategie CML a konektoru do POHODY** — pět úrovní testů
+> u dvou aplikací, které si firma staví, konkrétní příkazy a tři přiznané
+> mezery. Nemá to s úroky nic společného.
+>
+> **Pravidlo:** u dokumentu, který má aspoň deset stran, se otevírá obsah,
+> ne jen název. Trojice koší se přiřazuje po pohledu dovnitř.
+
+> 🔴 **A druhá věc: „odškrtnuto" není „přečteno".** U dlouhého dokumentu se
+> snadno vytěží ta část, která odpovídá na otázku, se kterou ho člověk
+> otevřel, a zbytek zůstane ležet. Doloženo na metodice podpisového procesu
+> (projekt 57): vzala se z ní **pravidla pořadí podpisů**, ale rozdělení
+> odpovědností po třech rolích, pětibodová kontrola po podpisu klienta
+> a hranice „co právní nepřipravuje" v bázi měsíc nebyly — přestože log
+> projekt vedl jako vytěžený.
+>
+> **Pravidlo:** po vytěžení dlouhého dokumentu projdi jeho osnovu a odškrtni
+> si kapitolu po kapitole, co z ní v záznamu je. Skript `osnova.py`
+> (nadpisy podle stylu + zkrácené odstavce + hlavičky tabulek) na to stačí.
 
 ## Co se do second brainu nikdy nepřenáší
 
@@ -129,6 +193,8 @@ se za rok nedá ověřit, odkud číslo pochází.
 - **Doplňuj do existujících souborů**, když téma už existuje. Nový soubor zakládej, jen když jde o nové téma.
 - **Nikdy nepřepisuj starý text** — připiš revizi s datem a důvodem (viz `prace-na-use-casu`).
 - **Zkomolené přepisy označ.** Automatické přepisy z Teams mají chyby ve jménech, číslech i názvech nástrojů. Nikdy z nich neciteuj číslo ani jméno bez ověření jinde — a do textu napiš `⚠️ neověřeno`.
+- **PDF bez textové vrstvy se čte přes render do PNG, ne přes OCR.** Když `pypdf` vrátí u čtyřstránkového dokumentu tři znaky, není to nutně sken — tisk z Microsoft Loopu nebo z webu vypadá stejně. Vyrenderuj stránky (`pymupdf`: `page.get_pixmap(dpi=170).save("s1.png")`) a přečti obrázek. Doloženo 8. 9. 2026 na `zapis_standup_ai_automatizace10_8.pdf`, který od 13. 8. ležel odepsaný jako „PDF agenti nepřečtou, chybí poppler". Poppler s tím nemá co dělat.
+- **AI souhrny ze schůzek mají vlastní varování a platí pro ně stejné pravidlo jako pro zkomolené přepisy.** Poznámky z Microsoft Loopu nesou v hlavičce „Obsah v poznámkách generovaný pomocí AI může být nesprávný" a názvy nástrojů v nich bývají zkomolené („Clode AI" = Claude). Berou se jako doklad, že věc padla, ne jako citace.
 
 ## Jak o tom mluvit s uživatelem
 

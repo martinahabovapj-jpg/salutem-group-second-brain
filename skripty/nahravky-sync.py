@@ -260,8 +260,12 @@ def prepis_whisper(src, outdir, model_name):
         beam_size=5, condition_on_previous_text=False,
     )
 
+    # Pise se do .part a teprve hotovy soubor se prejmenuje. Kdyz beh nekdo
+    # zabije uprostred (14. 9. 2026), nezustane po nem 0bajtovy .txt, ktery
+    # vypada jako hotovy prepis a nahravka se uz nikdy neprepise.
+    part = out_txt + ".part"
     n = 0
-    with open(out_txt, "w", encoding="utf-8") as fh:
+    with open(part, "w", encoding="utf-8") as fh:
         fh.write("# %s\n\n" % base)
         fh.write("> Automaticky prepis (Whisper %s), neopraveny. "
                  "Jmena, cisla a nazvy nastroju jsou casto zkomolene — "
@@ -274,6 +278,16 @@ def prepis_whisper(src, outdir, model_name):
         os.remove(wav)
     except OSError:
         pass
+    if n == 0:
+        # Whisper nenasel zadnou rec — prazdny vystup nezapisujeme, hlasime.
+        try:
+            os.remove(part)
+        except OSError:
+            pass
+        print("     PRAZDNY prepis (0 useku) — nahravka nejspis nema rec, "
+              "soubor se neuklada")
+        return None
+    os.replace(part, out_txt)
     print("     hotovo: %d useku, %.0f min prace" % (n, (time.time() - t0) / 60))
     return out_txt
 
@@ -366,6 +380,9 @@ def main():
     ap.add_argument("--limit", type=int, default=0,
                     help="nejvys N prepisu za beh (0 = bez limitu)")
     ap.add_argument("--model", default=None, help="whisper model (prebije config)")
+    ap.add_argument("--jen", default=None,
+                    help="prepsat jen nahravky, ktere maji v nazvu tento text "
+                         "(kdyz jedna schuzka speha a nechces cekat na frontu)")
     args = ap.parse_args()
 
     cfg = load_json(CONFIG, None)
@@ -478,6 +495,16 @@ def main():
             ceka.append(rec)
 
     # 3) prepis zaznamu
+    if args.jen:
+        # vybrane napred, zbytek zustane "ceka na dalsi beh"
+        hledany = norm(args.jen)
+        vybrane = [r for r in k_prepisu if hledany in norm(r["soubor"])]
+        k_prepisu = vybrane + [r for r in k_prepisu if r not in vybrane]
+        if not vybrane:
+            print("--jen '%s': zadna cekajici nahravka to v nazvu nema" % args.jen)
+        elif not args.limit:
+            args.limit = len(vybrane)
+
     if args.prepis and k_prepisu:
         davka = k_prepisu[:args.limit] if args.limit else k_prepisu
         print("Prepisuji %d nahravek (model %s)...\n" % (len(davka), model_name))
